@@ -33,8 +33,10 @@ function sendToSiteOwner()
   $user_message = htmlspecialchars($_POST['message']);
   $package_type = htmlspecialchars($_POST['package-type']);
   $services_array = $_POST['services'];
+  $title = 'Services enquiry from ' . $user_name;
+  $preview = 'You\'ve received an online enquiry from ' . $user_name .
 
-  $site_email = $_ENV['SITE_EMAIL'];
+    $site_email = $_ENV['SITE_EMAIL'];
 
   // To address and name
   $mail->addAddress($site_email, 'Site Contact Form');
@@ -49,37 +51,29 @@ function sendToSiteOwner()
   $subject = 'A message from ' . $_ENV['SITE_NAME'];
   $mail->Subject = $subject;
 
-  $message = "
-    <html>
-      <head>
-        <title>$subject</title>
-      </head>
-
-      <body>
-        <p>The following message was submitted from $user_name.</p>
-        <p>
-          <em>
-            $user_message
-          </em>
-        </p>
-        <p>
-          They selected the following services:
-        </p>
-        <p>
-        ";
-
+  $services_list = '';
   foreach ($services_array as $service) {
-    $message .= "<p> $service </p>";
+    $services_list .= '<p margin="8px 16px";>' . $service . '</p>';
   }
 
-  $message .= "
-        </p>
-      </body>
-    </html>
-  ";
+  $template = file_get_contents('../mjml/services-enquiry.php');
+
+  $variables = [
+    'title' => $title,
+    'preview' => $preview,
+    'user_name' => $user_name,
+    'user_email' => $user_email,
+    'user_message' => $user_message,
+    'services_list' => $services_list
+  ];
+
+
+  foreach ($variables as $key => $value) {
+    $template = str_replace('{{ ' . $key . ' }}', $value, $template);
+  }
 
   // Body message
-  $mail->Body = $message;
+  $mail->Body = $template;
 
   // Plain Text Version of message
   $mail->AltBody = 'The following message was submitted from ' . $user_name . ': ' . $user_message;
@@ -94,63 +88,63 @@ function sendToSiteOwner()
 
 }
 
-function sendConfirmationToSender()
-{
+// function sendConfirmationToSender()
+// {
 
-  $mail = setUpMailServer();
+//   $mail = setUpMailServer();
 
-  $errors = [];
+//   $errors = [];
 
-  $user_name = htmlspecialchars($_POST['name']);
-  $user_email = htmlspecialchars($_POST['email']);
-  $user_message = htmlspecialchars($_POST['message']);
+//   $user_name = htmlspecialchars($_POST['name']);
+//   $user_email = htmlspecialchars($_POST['email']);
+//   $user_message = htmlspecialchars($_POST['message']);
 
-  $site_email = $_ENV['SITE_EMAIL'];
-  $site_from = 'Site Contact Form';
-  $site_name = $_ENV['SITE_NAME'];
+//   $site_email = $_ENV['SITE_EMAIL'];
+//   $site_from = 'Site Contact Form';
+//   $site_name = $_ENV['SITE_NAME'];
 
-  // To address and name
-  $mail->addAddress($user_email, $user_name);
+//   // To address and name
+//   $mail->addAddress($user_email, $user_name);
 
-  // Replies go to this address and name
-  $mail->addReplyTo($site_email, $site_name);
+//   // Replies go to this address and name
+//   $mail->addReplyTo($site_email, $site_name);
 
-  // Send as HTML (as opposed to Plain Text)
-  $mail->isHTML(true);
+//   // Send as HTML (as opposed to Plain Text)
+//   $mail->isHTML(true);
 
-  // 
-  $subject = "Confirmation of form submitted on $site_name.";
-  $mail->Subject = $subject;
+//   // 
+//   $subject = "Confirmation of form submitted on $site_name.";
+//   $mail->Subject = $subject;
 
-  $message = "
-    <html>
-      <head>
-        <title>$subject</title>
-      </head>
+//   $message = "
+//     <html>
+//       <head>
+//         <title>$subject</title>
+//       </head>
 
-      <body>
-        <p>Hi $user_name, 
-        <p>Thank you for submitting the following message on our website:</p>
-        <p>
-          <em>
-            $user_message
-          </em>
-        </p>
-        <p>We will get back to you with a reply within 1-3 business days</p>
-      </body>
-    </html>
-  ";
+//       <body>
+//         <p>Hi $user_name, 
+//         <p>Thank you for submitting the following message on our website:</p>
+//         <p>
+//           <em>
+//             $user_message
+//           </em>
+//         </p>
+//         <p>We will get back to you with a reply within 1-3 business days</p>
+//       </body>
+//     </html>
+//   ";
 
-  // Body message
-  $mail->Body = $message;
+//   // Body message
+//   $mail->Body = $message;
 
-  // Plain Text Version of message
-  $mail->AltBody = "Hi $user_name, thank you for submitting the following message on our website: $user_message. We will get back to you with a reply within 1-3 business days.";
+//   // Plain Text Version of message
+//   $mail->AltBody = "Hi $user_name, thank you for submitting the following message on our website: $user_message. We will get back to you with a reply within 1-3 business days.";
 
-  try {
-    $mail->send();
-  } catch (Exception $e) {
-    return $e;
-  }
+//   try {
+//     $mail->send();
+//   } catch (Exception $e) {
+//     return $e;
+//   }
 
-}
+// }

@@ -1,0 +1,19 @@
+<mj-section>
+  <mj-column>
+    <mj-divider border-color="#06d083"></mj-divider>
+  </mj-column>
+</mj-section>
+<mj-section background-color="#000" padding="0">
+<mj-column >
+  <mj-button background-color="transparent" color="#fff" align="center" href="https://www.amdesigned.com.au">
+    AMDesigned
+  </mj-text>
+    <!-- <mj-button align="left" background-color="#000" color="#fff" font-weight="600" text-transform="uppercase" border-radius="8px" href="https://www.amdesigned.com.au">AMDesigned</mj-button> -->
+
+</mj-column>
+<!-- 
+<mj-column >
+    <mj-button align="right" background-color="#000" color="#fff" font-weight="600" text-transform="uppercase" border-radius="8px" href="https://www.facebook.com/amdesigned">Facebook</mj-button>
+
+</mj-column> -->
+</mj-section>

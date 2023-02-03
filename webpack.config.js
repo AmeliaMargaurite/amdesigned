@@ -86,11 +86,17 @@ module.exports = {
 					to: path.join(__dirname, "dist/favicon"),
 				},
 				{
-					from: "src/mjml/*.mjml",
+					// from regex ignores files starting with _ as they're includes
+					// not whole files
+					from: "src/mjml/[^_]*(?:\\.mjml)",
 					to: "mjml/[name].php",
 					transform: {
 						transformer(content, absoluteFrom) {
-							return mjml2html(content.toString()).html;
+							const filename = absoluteFrom.split("mjml\\_");
+							if (filename.length === 1) {
+								return mjml2html(content.toString(), { filePath: "src/mjml/" })
+									.html;
+							}
 						},
 					},
 				},

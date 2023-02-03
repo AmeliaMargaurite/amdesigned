@@ -22,7 +22,8 @@ html(lang="en")
       posthog.init('phc_Q5ZatJXkoZzmKWt3AMoS43jKkUdAKFU6IjSfMf3WYqP',{api_host:'https://app.posthog.com'})
     block scripts
   body
-    - var pages = {'home': '/', 'contact': '/contact', 'examples': '/examples', 'services': '/services'}
+    - var pages = {'home': '/', 'contact': '/contact', 'examples': '/examples'}
+    //- 'services': '/services' removed for now
     +page_header(title)
     main#main(class=title.toLowerCase())
       block content

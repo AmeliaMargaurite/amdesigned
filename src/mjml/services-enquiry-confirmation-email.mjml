@@ -1,0 +1,20 @@
+<mjml>
+  <mj-include path="./_head.mjml" />
+  <mj-body background-color="#282828" >
+    <mj-include path="./_header.mjml"/>
+    <!-- START -->
+
+    <mj-section padding="0">
+      <mj-column padding="0">
+        <mj-text line-height="38px" font-size="20px" color="#000" font-family="helvetica" padding="0 25px">
+        Thanks for getting in touch. We're excited to read your message and getting back to you shortly. </mj-text>
+        <mj-text>
+        - AMDesigned Team
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- END -->
+    <mj-include path="./_footer.mjml" />
+  </mj-body>
+</mjml>

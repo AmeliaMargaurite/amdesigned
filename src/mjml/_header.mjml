@@ -1,0 +1,8 @@
+<mj-section vertical-align="bottom">
+  <mj-column>
+    <mj-button background-color="transparent" color="#000" font-size="60px" align="center" line-height="33%">AMDesigned</mj-button>
+    <mj-text font-size="18px" align="center" line-height="0.5px">Because one size doesn't fit all</mj-text>
+    <mj-divider border-color="#06d083"></mj-divider>
+
+  </mj-column>
+</mj-section>
