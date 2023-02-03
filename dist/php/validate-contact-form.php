@@ -64,7 +64,7 @@ if (
     $sendContactForm_errors = $contact_form->sendContactForm();
 
     if ($sendContactForm_errors && count($sendContactForm_errors) > 0) {
-      $errors += $sendContactForm_errors;
+      $errors[array_key_first($sendContactForm_errors)] += $sendContactForm_errors[0];
       exitWithFailure($errors);
 
     } else {
