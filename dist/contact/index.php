@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | AMDesigned</title>
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.2740740c26558f820ce8.js"> </script>
-    <link href="/css/main.f44657f34019d5af75b01594bf6790c4.css" rel="stylesheet" />
+    <meta name="description"
+      content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://amdesigned.com.au//contact" />
+    <meta property="og:title" content="Contact | Company Name" />
+    <meta property="og:description"
+      content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
+    <meta property="og:image"
+      content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
+    <meta property="og:image:alt"
+      content="Laptop open, on screen is a small business website for interior design, blogging, articles" />
+    <meta name="twitter:title" content="Contact | Company Name" />
+    <meta name="twitter:description"
+      content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
+    <meta name="twitter:image"
+      content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.1.3b25f29432f15ed3d5f4.js"> </script>
+    <link href="/css/main.8cb9e15e7e916a2f52efe04be6014ecb.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -50,7 +66,7 @@
         <ul>
           <li><a href="/">home</a></li>
           <li><a class="current" href="/contact">contact</a></li>
-          <li><a href="/examples">examples</a></li>
+          <li><a href="/showcase">showcase</a></li>
         </ul>
       </nav>
     </header>
@@ -122,7 +138,7 @@
       <ul>
         <li><a href="/">home</a></li>
         <li><a class="current" href="/contact">contact</a></li>
-        <li><a href="/examples">examples</a></li>
+        <li><a href="/showcase">showcase</a></li>
       </ul>
       <ul>
         <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
