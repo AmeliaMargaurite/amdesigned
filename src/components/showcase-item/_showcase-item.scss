@@ -1,0 +1,43 @@
+.showcase-item__wrapper {
+	display: grid;
+	column-gap: 3.2rem;
+	padding: 3.2rem;
+	border-radius: 0.8rem;
+	background-color: hsl(var(--dark), 0.1);
+	transition: background-color 0.5s ease-in-out;
+
+	&:hover {
+		background-color: hsl(var(--highlight), 0.1);
+		transition: background-color 0.5s ease-in-out;
+	}
+
+	& .content__wrapper {
+		display: grid;
+		grid-template-rows: max-content auto max-content;
+		row-gap: 1.6rem;
+
+		& .title {
+			font-size: 2.4rem;
+		}
+
+		& .description {
+			font-size: 1.6rem;
+		}
+	}
+
+	& .image__wrapper {
+		display: grid;
+	}
+
+	& .image-w-placeholder {
+		min-height: 20rem;
+		& img {
+			max-height: 40rem;
+			object-position: left;
+		}
+	}
+
+	@media (min-width: $medium) {
+		grid-template-columns: 1fr 2fr;
+	}
+}

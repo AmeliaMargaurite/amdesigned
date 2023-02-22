@@ -3,12 +3,30 @@ include ./page_footer.pug
 block variables
 doctype html 
 
+- var companyName = 'Company Name'
+- var base_url = 'https://amdesigned.com.au/'
+
 html(lang="en")
   head 
     meta(charset="UTF-8") 
     meta(http-equiv="X-UA-Compatible", content="IE=edge" )
     meta(name="viewport", content="width=device-width, initial-scale=1.0" )
     title= title === 'Home' ? 'AMDesigned' : title === 'not-found' ? 'Uh oh... | AMDesigned' : title + ' | AMDesigned'
+
+    meta( name="description" content=page_description ? page_description : "AMDesigned")
+    meta( property="og:locale" content="en_AU" )
+    //- Facebook
+    meta( property="og:url" content=slug ? base_url + slug : base_url )
+    meta( property="og:title" content= title === 'Home' ? companyName : title + ' | ' + companyName)
+    meta( property="og:description" content=page_description ? page_description : "AMDesigned")
+    meta( property="og:image" content=page_image ? `${base_url}${page_image}` : "" )
+    meta( property="og:image:alt" content=page_image_alt ? page_image_alt : "" )
+
+    //- Twitter
+    meta( name="twitter:title" content=title === 'Home' ? companyName : title + ' | ' + companyName )
+    meta( name="twitter:description" content=page_description ? page_description : "AMDesigned")
+    meta( name="twitter:image" content=page_image ? `${base_url}${page_image}` : "" )
+
     script(src=require("../ts/index.ts")) 
     link(href=require('../scss/main.scss') rel='stylesheet')
     link(rel="apple-touch-icon" sizes="180x180" href=require("../favicon/apple-touch-icon.png"))
@@ -22,7 +40,7 @@ html(lang="en")
       posthog.init('phc_Q5ZatJXkoZzmKWt3AMoS43jKkUdAKFU6IjSfMf3WYqP',{api_host:'https://app.posthog.com'})
     block scripts
   body
-    - var pages = {'home': '/', 'contact': '/contact', 'examples': '/examples'}
+    - var pages = {'home': '/', 'contact': '/contact', 'showcase': '/showcase'}
     //- 'services': '/services' removed for now
     +page_header(title)
     main#main(class=title.toLowerCase())

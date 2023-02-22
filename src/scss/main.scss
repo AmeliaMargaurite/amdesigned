@@ -11,6 +11,7 @@
 @import "./pages/contact";
 @import "./pages/services";
 @import "./pages/notFound";
+@import "./pages/showcase";
 
 body {
 	display: grid;
@@ -72,4 +73,14 @@ ul {
 section {
 	display: grid;
 	row-gap: 1.6rem;
+}
+
+.sr-only {
+	clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }

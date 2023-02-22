@@ -42,7 +42,7 @@ module.exports = {
 		notFound404: "./src/pages/notFound404.pug",
 		contact: "./src/pages/contact.php.pug",
 		confirmation: "./src/pages/confirmation.pug",
-		examples: "./src/pages/examples.pug",
+		showcase: "./src/pages/showcase.pug",
 		services: "./src/pages/services.pug",
 		termsConditions: "./src/pages/terms-and-conditions.pug",
 		privacyPolicy: "./src/pages/privacy-policy.pug",
