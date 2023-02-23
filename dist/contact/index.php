@@ -21,8 +21,8 @@
       content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.1.3b25f29432f15ed3d5f4.js"> </script>
-    <link href="/css/main.8cb9e15e7e916a2f52efe04be6014ecb.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.6.d3bb671f014f04d3f70e.js"> </script>
+    <link href="/css/main.9a4bf11a79b355354e9f93ff05e6034f.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -58,11 +58,13 @@
     </script>
   </head>
   <body>
-    <header> <a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo" href="/">
-        <h1>AMDesigned</h1>
-      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()"
-        tabindex="0"><span></span><span></span><span></span></button>
-      <nav id="nav">
+    <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
+        href="/">
+        <p class="company-name">AMDesigned</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="/">home</a></li>
           <li><a class="current" href="/contact">contact</a></li>

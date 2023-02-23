@@ -21,8 +21,8 @@
       content="Fast, easy website creation for businesses. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://amdesigned.com.au//assets/img/web-sites-small-medium-business-ecommerce-seo.9bdc7e42c23c19af.jpg" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.2740740c26558f820ce8.js"> </script>
-    <link href="/css/main.8cb9e15e7e916a2f52efe04be6014ecb.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.1.34ca692fb98ece1d5b1b.js"> </script>
+    <link href="/css/main.9a4bf11a79b355354e9f93ff05e6034f.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -58,11 +58,13 @@
     </script>
   </head>
   <body>
-    <header> <a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo" href="/">
-        <h1>AMDesigned</h1>
-      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()"
-        tabindex="0"><span></span><span></span><span></span></button>
-      <nav id="nav">
+    <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
+        href="/">
+        <p class="company-name">AMDesigned</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a class="current" href="/">home</a></li>
           <li><a href="/contact">contact</a></li>
@@ -71,21 +73,21 @@
       </nav>
     </header>
     <main class="home" id="main">
-      <section class="cta-home"><span class="wrapper">
-          <p class="text top"><em><strong>Unique builds</strong></em></p>
-          <p class="cta-heading">Because <span class="highlight">one size </span><span
-              class="stripe"><span></span><span>doesn't</span></span> fit all</p>
-          <p class="text bottom"><em>Let us make your business shine with a custom built website</em></p><a class="btn"
-            href="/services"> Learn more<span class="icon arrow right"></span></a>
-        </span></section>
+      <section class="cta-home"><span class="section__content"><span class="wrapper">
+            <p class="text top"><em><strong>Unique builds</strong></em></p>
+            <p class="cta-heading">Because <span class="highlight">one size </span><span
+                class="stripe"><span></span><span>doesn't</span></span> fit all</p>
+            <p class="text bottom"><em>Let us make your business shine with a custom built website</em></p><a
+              class="btn" href="/services"> Learn more<span class="icon arrow right"></span></a>
+          </span></span></section>
       <section class="second">
-        <div class="wrapper">
+        <div class="section__content">
           <h2>Need a website, but don't know where to start?</h2>
           <p class="subtext"><em>Relax. You've come to the right place.</em></p>
         </div>
       </section>
-      <section class="third">
-        <div class="wrapper">
+      <section class="third chevron-both">
+        <div class="section__content">
           <h2>Leave it to the experts </h2>
           <p class="subtext">With years of experience building websites, you can rest easy with AMDesigned on the case.
             We focus on the most important parts for a business website:</p>
@@ -96,55 +98,56 @@
           </ul>
         </div>
       </section>
-      <section class="build-options">
-        <h2>Build options </h2>
-        <p class="subtext">Get to know our general website packages. But because we know no two businesses are alike
-          ever website package is tailor-made to your needs. </p>
-        <div class="options__wrapper"> <span class="option">
-            <p class="title">Let's split it</p>
-            <ul role="list">
-              <li class="included"><a href="/services#design">Design</a></li>
-              <li class="included"><a href="/services#build">Build</a></li>
-              <li><a href="/services#hosting">Hosting</a></li>
-              <li><a href="/services#domain-purchase">Domain purchase</a></li>
-              <li class="included"><a href="/services#seo-accessibility">SEO & Accessibility</a></li>
-              <li class="included"><a href="/services#analytics">Analytics set up</a></li>
-              <li><a href="/services#maintenance">Ongoing maintenance</a></li>
-            </ul>
-            <p class="price"><em>Starting at $x.xx</em></p><a class="btn full-width secondary"
-              href="/contact?package=Let's Split It&amp;type=mid"> This is me<span class="icon arrow right"></span></a>
-          </span><span class="option hero">
-            <p class="title">We'll do it all</p>
-            <ul role="list">
-              <li class="included"><a href="/services#design">Design</a></li>
-              <li class="included"><a href="/services#build">Build</a></li>
-              <li class="included"><a href="/services#hosting">Hosting</a></li>
-              <li class="included"><a href="/services#domain-purchase">Domain purchase</a></li>
-              <li class="included"><a href="/services#seo-accessibility">SEO & Accessibility</a></li>
-              <li class="included"><a href="/services#analytics">Analytics set up</a></li>
-              <li class="included"><a href="/services#maintenance">Ongoing maintenance</a></li>
-            </ul>
-            <p class="price"><em>Starting at $x.xx</em></p><a class="btn full-width"
-              href="/contact?package=Please do it all&amp;type=high"> Just what I want<span
-                class="icon arrow right"></span></a>
-          </span><span class="option">
-            <p class="title">Just the basics</p>
-            <ul role="list">
-              <li class="included"><a href="/services#design">Design</a></li>
-              <li class="included"><a href="/services#build">Build</a></li>
-              <li><a href="/services#hosting">Hosting</a></li>
-              <li><a href="/services#domain-purchase">Domain purchase</a></li>
-              <li><a href="/services#seo-accessibility">SEO & Accessibility</a></li>
-              <li><a href="/services#analytics">Analytics set up</a></li>
-              <li><a href="/services#maintenance">Ongoing maintenance</a></li>
-            </ul>
-            <p class="price"><em>Starting at $x.xx</em></p><a class="btn full-width secondary"
-              href="/contact?package=Just the basics&amp;type=low"> Sign me up!<span
-                class="icon arrow right"></span></a>
-          </span></div>
-      </section>
-      <section class="fourth">
-        <div class="wrapper">
+      <section class="build-options"> <span class="section__content">
+          <h2>Build options </h2>
+          <p class="subtext">Get to know our general website packages. But because we know no two businesses are alike
+            every website package is tailor-made to your needs. </p>
+          <div class="options__wrapper"> <span class="option">
+              <p class="title">Let's split it</p>
+              <ul role="list">
+                <li class="included"><a href="/services#design">Design</a></li>
+                <li class="included"><a href="/services#build">Build</a></li>
+                <li><a href="/services#hosting">Hosting</a></li>
+                <li><a href="/services#domain-purchase">Domain purchase</a></li>
+                <li class="included"><a href="/services#seo-accessibility">SEO & Accessibility</a></li>
+                <li class="included"><a href="/services#analytics">Analytics set up</a></li>
+                <li><a href="/services#maintenance">Ongoing maintenance</a></li>
+              </ul>
+              <p class="price"><em>Starting at $650AUD</em></p><a class="btn full-width secondary"
+                href="/contact?package=Let's Split It&amp;type=mid"> This is me<span
+                  class="icon arrow right"></span></a>
+            </span><span class="option hero">
+              <p class="title">We'll do it all</p>
+              <ul role="list">
+                <li class="included"><a href="/services#design">Design</a></li>
+                <li class="included"><a href="/services#build">Build</a></li>
+                <li class="included"><a href="/services#hosting">Hosting</a></li>
+                <li class="included"><a href="/services#domain-purchase">Domain purchase</a></li>
+                <li class="included"><a href="/services#seo-accessibility">SEO & Accessibility</a></li>
+                <li class="included"><a href="/services#analytics">Analytics set up</a></li>
+                <li class="included"><a href="/services#maintenance">Ongoing maintenance</a></li>
+              </ul>
+              <p class="price"><em>Starting at $1150AUD</em></p><a class="btn full-width"
+                href="/contact?package=Please do it all&amp;type=high"> Just what I want<span
+                  class="icon arrow right"></span></a>
+            </span><span class="option">
+              <p class="title">Just the basics</p>
+              <ul role="list">
+                <li class="included"><a href="/services#design">Design</a></li>
+                <li class="included"><a href="/services#build">Build</a></li>
+                <li><a href="/services#hosting">Hosting</a></li>
+                <li><a href="/services#domain-purchase">Domain purchase</a></li>
+                <li><a href="/services#seo-accessibility">SEO & Accessibility</a></li>
+                <li><a href="/services#analytics">Analytics set up</a></li>
+                <li><a href="/services#maintenance">Ongoing maintenance</a></li>
+              </ul>
+              <p class="price"><em>Starting at $350AUD</em></p><a class="btn full-width secondary"
+                href="/contact?package=Just the basics&amp;type=low"> Sign me up!<span
+                  class="icon arrow right"></span></a>
+            </span></div>
+        </span></section>
+      <section class="fourth folds">
+        <div class="section__content">
           <h2>Next steps </h2><span class="list"><span class="big-list-item"><span class="marker">1</span><span
                 class="content">
                 <p>Get in touch! If you found a package above that fits your needs, go on and give it a click and send

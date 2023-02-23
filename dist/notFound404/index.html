@@ -15,8 +15,8 @@
     <meta name="twitter:title" content="not-found | Company Name" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.3.1f46a2f3be8cec5d639a.js"> </script>
-    <link href="/css/main.8cb9e15e7e916a2f52efe04be6014ecb.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.c07603eeee954fb7e5f8.js"> </script>
+    <link href="/css/main.9a4bf11a79b355354e9f93ff05e6034f.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -52,11 +52,13 @@
     </script>
   </head>
   <body>
-    <header> <a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo" href="/">
-        <h1>AMDesigned</h1>
-      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()"
-        tabindex="0"><span></span><span></span><span></span></button>
-      <nav id="nav">
+    <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
+        href="/">
+        <p class="company-name">AMDesigned</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="/">home</a></li>
           <li><a href="/contact">contact</a></li>
@@ -65,31 +67,32 @@
       </nav>
     </header>
     <main class="not-found" id="main">
-      <section><span class="first">
-          <h1>Whoops...</h1><span>
-            <p>Well... this is awkward. We're not sure where you were heading, but it seems that place doesn't exist.
-            </p>
-            <p>Maybe it was one of these popular pages?</p>
-            <ul>
-              <li><a href="/">Home </a></li>
-              <li><a href="/contact">Contact </a></li>
-              <li><a href="/services">Services </a></li>
-            </ul>
-          </span>
-        </span><span class="second"><span class="image-w-placeholder"> <img class="placeholder-image"
-              src="/assets/img/page-not-found.ea535c00c1ea3568.jpg">
-            <picture>
-              <source
-                srcset="/assets/img/page-not-found.8e658fdaeb521c08.webp 480w,/assets/img/page-not-found.81b426cdf33f94cb.webp 640w,/assets/img/page-not-found.cf146e625b27bf61.webp 800w,/assets/img/page-not-found.7a40d66a45f48105.webp 1024w,/assets/img/page-not-found.c32fb9cc8b24a907.webp 1450w,/assets/img/page-not-found.02b3ca29103c40b4.webp 1920w"
-                type="image/webp"><img src="/assets/img/page-not-found.172ee2a2ad3e848c.jpg" alt="test">
-            </picture>
-          </span>
-          <p class="attribute">Photo by <a
-              href="https://unsplash.com/@jerroams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeremy
-              Allouche</a> on <a
-              href="https://unsplash.com/photos/Y5LbTY_0MMU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-          </p>
-        </span></section>
+      <section><span class="section__content"><span class="first">
+            <h1>Whoops...</h1><span>
+              <p>Well... this is awkward. We're not sure where you were heading, but it seems that place doesn't exist.
+              </p>
+              <p>Maybe it was one of these popular pages?</p>
+              <ul>
+                <li><a href="/">Home </a></li>
+                <li><a href="/contact">Contact </a></li>
+                <li><a href="/services">Services </a></li>
+              </ul>
+            </span>
+          </span><span class="second">
+            <figure class="image-w-placeholder"> <img class="placeholder-image"
+                src="/assets/img/page-not-found.ea535c00c1ea3568.jpg">
+              <picture>
+                <source
+                  srcset="/assets/img/page-not-found.6208f60ad361209b.webp 100w,/assets/img/page-not-found.abc166e2fb415f95.webp 100w,/assets/img/page-not-found.6d6aefb871414cc3.webp 260w,/assets/img/page-not-found.7b6351a4aa988818.webp 420w,/assets/img/page-not-found.06d49d4414570cdf.webp 580w,/assets/img/page-not-found.2316a33e72f79e07.webp 740w,/assets/img/page-not-found.18b65a0e5540ef9b.webp 900w,/assets/img/page-not-found.f623ea28bde610be.webp 1060w,/assets/img/page-not-found.19fb5dcab9c6bded.webp 1220w,/assets/img/page-not-found.728269fcb9fbea4c.webp 1380w,/assets/img/page-not-found.82ad5a89b9c8fc54.webp 1540w"
+                  type="image/webp"><img src="/assets/img/page-not-found.172ee2a2ad3e848c.jpg" alt="test">
+              </picture>
+              <figcaption>Photo by <a
+                  href="https://unsplash.com/@jerroams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeremy
+                  Allouche</a> on <a
+                  href="https://unsplash.com/photos/Y5LbTY_0MMU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+              </figcaption>
+            </figure>
+          </span></span></section>
     </main>
     <footer>
       <ul>
