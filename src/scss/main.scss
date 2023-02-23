@@ -55,6 +55,7 @@ section .section__content {
 	row-gap: 3.2rem;
 	padding-inline: var(--page_padding);
 	align-content: flex-start;
+	width: 100%;
 
 	@media (min-width: $medium) {
 		max-width: $medium;
@@ -62,7 +63,10 @@ section .section__content {
 	}
 
 	@media (min-width: $large) {
-		width: 100%;
+		max-width: 1200px;
+	}
+
+	@media (min-width: $xlarge) {
 		max-width: $large;
 	}
 }
