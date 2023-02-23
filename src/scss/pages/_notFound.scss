@@ -2,7 +2,7 @@ main.not-found {
 	align-content: flex-start;
 	row-gap: 3.2rem;
 
-	section {
+	.section__content {
 		column-gap: 6.4rem;
 	}
 
@@ -15,8 +15,8 @@ main.not-found {
 		font-size: 1.4rem;
 	}
 
-	@media (min-width: $medium) {
-		section {
+	@media (min-width: $small) {
+		.section__content {
 			grid-template-columns: 1fr 1fr;
 		}
 	}

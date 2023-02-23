@@ -2,14 +2,15 @@ include ../btn/btn.pug
 
 mixin cta-home
   section.cta-home
-    span.wrapper 
-      p.text.top: em: strong Unique builds
-      p.cta-heading Because 
-        span.highlight one size 
-        span.stripe
-          span
-          span doesn't
-        |  fit all
-      p.text.bottom: em Let us make your business shine with a custom built website
-      +btn({icon: {class: 'arrow right', side: 'right'}})(href="/services") Learn more
-    //- img(src=require('./cta-home-background.svg'))
+    span.section__content
+      span.wrapper 
+        p.text.top: em: strong Unique builds
+        p.cta-heading Because 
+          span.highlight one size 
+          span.stripe
+            span
+            span doesn't
+          |  fit all
+        p.text.bottom: em Let us make your business shine with a custom built website
+        +btn({icon: {class: 'arrow right', side: 'right'}})(href="/services") Learn more
+      //- img(src=require('./cta-home-background.svg'))

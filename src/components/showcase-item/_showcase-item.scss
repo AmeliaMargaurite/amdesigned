@@ -1,14 +1,14 @@
 .showcase-item__wrapper {
 	display: grid;
 	column-gap: 3.2rem;
-	padding: 3.2rem;
-	border-radius: 0.8rem;
-	background-color: hsl(var(--dark), 0.1);
-	transition: background-color 0.5s ease-in-out;
+	padding: 6.4rem;
 
-	&:hover {
-		background-color: hsl(var(--highlight), 0.1);
-		transition: background-color 0.5s ease-in-out;
+	&.chevrons-down {
+		--background: hsl(var(--highlight), 0.3);
+		&:nth-child(even) {
+			--background: var(--body-bg);
+			// background: hsl(var(--highlight), 0.5);
+		}
 	}
 
 	& .content__wrapper {

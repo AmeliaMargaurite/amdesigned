@@ -1,4 +1,4 @@
-.cta-home {
+.cta-home .section__content {
 	display: grid;
 	background: linear-gradient(
 		115deg,
@@ -11,6 +11,8 @@
 	padding: 0;
 
 	.wrapper {
+		display: grid;
+		row-gap: 1.6rem;
 		align-content: center;
 		padding: 3.2rem;
 

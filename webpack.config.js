@@ -1,11 +1,10 @@
 const PugPlugin = require("pug-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const autoprefixer = require("autoprefixer");
+const webpack = require("webpack");
 const mjml2html = require("mjml");
 
-const autoprefixer = require("autoprefixer");
 const path = require("path");
-const webpack = require("webpack");
-
 const sourcePath = path.join(__dirname, "src");
 
 const alterPugFolderStructure = (pathData) => {
@@ -57,12 +56,20 @@ module.exports = {
 			Images: path.join(__dirname, "./src/images/"),
 			Gallery: path.join(__dirname, "./src/components/gallery"),
 		},
+		extensions: [".tsx", ".ts", ".js"],
 	},
 	// inline-source-map not for production use!
 	devtool: "inline-source-map",
 	devServer: {
 		static: "./dist",
 		historyApiFallback: { index: "/notFound404/index.html" },
+		devMiddleware: {
+			// writeToDisk: (filePath) => {
+			// 	console.log(filePath);
+			// 	return /\.php$/.test(filePath);
+			// },
+			// writeToDisk: true,
+		},
 	},
 	plugins: [
 		new PugPlugin({
@@ -84,6 +91,10 @@ module.exports = {
 				{
 					from: path.join(__dirname, "src/favicon"),
 					to: path.join(__dirname, "dist/favicon"),
+				},
+				{
+					from: path.join(__dirname, "src/root-files"),
+					to: path.join(__dirname, "dist/"),
 				},
 				{
 					// from regex ignores files starting with _ as they're includes

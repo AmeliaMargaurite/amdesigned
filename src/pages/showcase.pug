@@ -10,19 +10,21 @@ block variables
   - var page_image_alt = 'Laptop open, on screen is a small business website for interior design, blogging, articles'
 
 block content
-  h1 Showcase! 
   section.showcase__section
-    +showcase-item({image: {path: '../images/wip-work-in-progress.jpg', alt: 'test'}, title: 'E-Commerce - Walkers Creek', link: 'https://walkerscreek.com.au'})
-      | Walkers Creek is a camping storage solutions business based on the Sunshine Coast, Australia. They were in need of a website to sell their awesome items, and potentially attract wholesalers. Working with their needs we built a fast, user-friendly, fully-responsive e-commerce website which has seen thousands of site hits and hundreds of sales -- so far!
-      br
-      br
-      | The build included a custom built backend for the owners to login and create, edit and update products, as well as keep track of processed sales and even send their customers postage confirmation emails.We continue to work with the great family behind Walkers Creek to tweak and improve their site and analytics.
+    span.section__content
+      h1 Showcase!
+      span
+        +showcase-item({image: {path: '../images/wip-work-in-progress.jpg', alt: 'Walkers Creek industrial sewing machine, in the process of sewing a leather Walkers Creek label to a new camping supply product'}, title: 'E-Commerce - Walkers Creek', link: 'https://walkerscreek.com.au'})(class="chevrons-down")
+          | Walkers Creek is a camping storage solutions business based on the Sunshine Coast, Australia. They were in need of a website to sell their awesome items, and potentially attract wholesalers. Working with their needs we built a fast, user-friendly, fully-responsive e-commerce website which has seen thousands of site hits and hundreds of sales -- so far!
+          br
+          br
+          | The build included a custom built backend for the owners to login and create, edit and update products, as well as keep track of processed sales and even send their customers postage confirmation emails.We continue to work with the great family behind Walkers Creek to tweak and improve their site and analytics.
 
-    +showcase-item({image: {path: '../images/hairdresser-stylist-appointments.jpg', alt: 'test'}, title: 'Online Booking - Jenny\'s Hairdressing',  link: 'https://www.jennys.amdesigned.com.au'})
-      | The fabulous Jenny has been working her magic for years and finally had decided to build her own hairdressing empire. She had everything ready to go, but no website for customers to see what she offered and to book in! Jenny came to us, and we discussed what she needed for her business to grow and flurish. 
-      br
-      br
-      | Together we settled on a stunningly website that was so simple for all to use, where her customers could easily book with their favourite hairdresser. With the backend we built Jenny is able to add new services, allocate which of her lovely staff is able to perform them, and how long they go for. Along with being able to set staff availability, Jenny is able to give her customers real-time accurate booking confidence! She also uses it in store to book in customers who drop in or call up.
+        +showcase-item({image: {path: '../images/hairdresser-stylist-appointments.jpg', alt: 'Female appearing person with long, wavy brunette hair, eyes closed, looking serene.'}, title: 'Online Booking - Jenny\'s Hairdressing',  link: 'https://www.jennys.amdesigned.com.au'})(class="chevrons-down")
+          | The fabulous Jenny has been working her magic for years and finally had decided to build her own hairdressing empire. She had everything ready to go, but no website for customers to see what she offered and to book in! Jenny came to us, and we discussed what she needed for her business to grow and flurish. 
+          br
+          br
+          | Together we settled on a stunningly website that was so simple for all to use, where her customers could easily book with their favourite hairdresser. With the backend we built Jenny is able to add new services, allocate which of her lovely staff is able to perform them, and how long they go for. Along with being able to set staff availability, Jenny is able to give her customers real-time accurate booking confidence! She also uses it in store to book in customers who drop in or call up.
 
-    //- +showcase-item({image: {path: '../images/page-not-found.jpg', alt: 'test'}, title: 'Informational - Beach Bean Cafe',  link: 'https://amdesigned.com.au'})
-    //-   | Tester description  
+        //- +showcase-item({image: {path: '../images/page-not-found.jpg', alt: 'test'}, title: 'Informational - Beach Bean Cafe',  link: 'https://amdesigned.com.au'})(class="chevrons-down")
+        //-   | Tester description  

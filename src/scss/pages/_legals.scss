@@ -1,0 +1,25 @@
+.policy__wrapper,
+.tcs__wrapper {
+	row-gap: 3.2rem;
+
+	&,
+	& span {
+		display: grid;
+	}
+
+	& .item__wrapper {
+		row-gap: 1.6rem;
+
+		& .sub-item__wrapper {
+			row-gap: 0.8rem;
+
+			& .sub-sub-item__wrapper {
+				row-gap: 0.4rem;
+
+				& span {
+					row-gap: 0.4rem;
+				}
+			}
+		}
+	}
+}

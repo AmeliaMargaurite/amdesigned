@@ -1,15 +1,15 @@
 mixin page_header(active)
-  header 
+  header.chevron-down
     a.skip-to-content-link(href="#main") Skip to content
     a.logo(href="/")
-      h1 AMDesigned
+      p.company-name AMDesigned
 
-    button.menu__button(id= 'hamburger', onclick='toggleMenu()' tabindex="0")
-        span
-        span
-        span
-
-    nav#nav  
+    button.menu__button(id= 'hamburger', onclick='toggleMenu()' tabindex="0", aria-controls="main-menu", aria-label="Open the menu" )
+        span(aria-hidden="true", focusable="false")
+        span(aria-hidden="true", focusable="false")
+        span(aria-hidden="true", focusable="false")
+        
+    nav#main-menu(role="navigation", aria-label="Main menu")
       
       ul 
         each val, key in pages

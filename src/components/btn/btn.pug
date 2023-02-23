@@ -1,6 +1,6 @@
-mixin btn({icon=undefined})
+mixin btn({icon=undefined, type=undefined})
 
-  if attributes.onclick
+  if attributes.onclick || type === 'button'
     button.btn&attributes(attributes) 
       if icon
         if icon.side === 'left'
@@ -8,7 +8,7 @@ mixin btn({icon=undefined})
         block 
         if icon.side === 'right'
           span.icon(class=icon.class)
-  else if attributes.href 
+  else if attributes.href || type === 'a'
     a.btn&attributes(attributes) 
       if icon
         if icon.side === 'left'

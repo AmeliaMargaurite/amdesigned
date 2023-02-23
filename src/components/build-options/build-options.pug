@@ -2,48 +2,49 @@ include ../btn/btn.pug
 
 mixin build-options 
   section.build-options 
-    h2 Build options 
-    p.subtext Get to know our general website packages. But because we know no two businesses are alike ever website package is tailor-made to your needs. 
+    span.section__content
+      h2 Build options 
+      p.subtext Get to know our general website packages. But because we know no two businesses are alike every website package is tailor-made to your needs. 
 
-    .options__wrapper 
-      span.option 
-        p.title Let's split it
-        ul(role="list")
-          li.included: a(href="/services#design") Design
-          li.included: a(href="/services#build") Build
-          li: a(href="/services#hosting") Hosting
-          li: a(href="/services#domain-purchase") Domain purchase
-          li.included: a(href="/services#seo-accessibility") SEO & Accessibility
-          li.included: a(href="/services#analytics") Analytics set up
-          li: a(href="/services#maintenance") Ongoing maintenance
-        p.price: em Starting at $x.xx
-        +btn({icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Let\'s Split It&type=mid', class="full-width secondary") This is me
-        
+      .options__wrapper 
+        span.option 
+          p.title Let's split it
+          ul(role="list")
+            li.included: a(href="/services#design") Design
+            li.included: a(href="/services#build") Build
+            li: a(href="/services#hosting") Hosting
+            li: a(href="/services#domain-purchase") Domain purchase
+            li.included: a(href="/services#seo-accessibility") SEO & Accessibility
+            li.included: a(href="/services#analytics") Analytics set up
+            li: a(href="/services#maintenance") Ongoing maintenance
+          p.price: em Starting at $650AUD
+          +btn({icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Let\'s Split It&type=mid', class="full-width secondary") This is me
+          
 
-      span.option.hero 
-        p.title We'll do it all
-        ul(role="list")
-          li.included: a(href="/services#design") Design
-          li.included: a(href="/services#build") Build
-          li.included: a(href="/services#hosting") Hosting
-          li.included: a(href="/services#domain-purchase") Domain purchase
-          li.included: a(href="/services#seo-accessibility") SEO & Accessibility
-          li.included: a(href="/services#analytics") Analytics set up
-          li.included: a(href="/services#maintenance") Ongoing maintenance
-        p.price: em Starting at $x.xx
-        +btn({ icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Please do it all&type=high', class="full-width") Just what I want
-        
+        span.option.hero 
+          p.title We'll do it all
+          ul(role="list")
+            li.included: a(href="/services#design") Design
+            li.included: a(href="/services#build") Build
+            li.included: a(href="/services#hosting") Hosting
+            li.included: a(href="/services#domain-purchase") Domain purchase
+            li.included: a(href="/services#seo-accessibility") SEO & Accessibility
+            li.included: a(href="/services#analytics") Analytics set up
+            li.included: a(href="/services#maintenance") Ongoing maintenance
+          p.price: em Starting at $1150AUD
+          +btn({ icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Please do it all&type=high', class="full-width") Just what I want
+          
 
-      span.option 
-        p.title Just the basics
-        ul(role="list")
-          li.included: a(href="/services#design") Design
-          li.included: a(href="/services#build") Build
-          li: a(href="/services#hosting") Hosting
-          li: a(href="/services#domain-purchase") Domain purchase
-          li: a(href="/services#seo-accessibility") SEO & Accessibility
-          li: a(href="/services#analytics") Analytics set up
-          li: a(href="/services#maintenance") Ongoing maintenance
-        p.price: em Starting at $x.xx
-        +btn({ icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Just the basics&type=low', class="full-width secondary") Sign me up!
-        
+        span.option 
+          p.title Just the basics
+          ul(role="list")
+            li.included: a(href="/services#design") Design
+            li.included: a(href="/services#build") Build
+            li: a(href="/services#hosting") Hosting
+            li: a(href="/services#domain-purchase") Domain purchase
+            li: a(href="/services#seo-accessibility") SEO & Accessibility
+            li: a(href="/services#analytics") Analytics set up
+            li: a(href="/services#maintenance") Ongoing maintenance
+          p.price: em Starting at $350AUD
+          +btn({ icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Just the basics&type=low', class="full-width secondary") Sign me up!
+          

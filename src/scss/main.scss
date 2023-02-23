@@ -1,6 +1,7 @@
 @import "./resets";
 @import "./variables";
 @import "./icons";
+@import "./section-decorations";
 @import "./header";
 @import "./footer";
 @import "./inputs";
@@ -12,16 +13,14 @@
 @import "./pages/services";
 @import "./pages/notFound";
 @import "./pages/showcase";
+@import "./pages/legals";
 
 body {
 	display: grid;
 	min-height: 100vh;
 	grid-template-rows: max-content auto max-content;
-	background: linear-gradient(
-		45deg,
-		hsl(var(--dark), 0.01),
-		hsl(var(--dark), 0.05)
-	);
+	background: var(--body-bg);
+	row-gap: 3.2rem;
 
 	@media (min-width: $wholeMenuMinWidth) {
 		overflow-y: auto !important;
@@ -31,11 +30,31 @@ body {
 		row-gap: 6.4rem;
 	}
 }
-
 main {
 	display: grid;
 	row-gap: 6.4rem;
-	padding: var(--page_padding);
+}
+// main {
+// 	display: grid;
+// 	row-gap: 6.4rem;
+// 	padding: var(--page_padding);
+
+// 	@media (min-width: $medium) {
+// 		max-width: $medium;
+// 		margin-inline: auto;
+// 	}
+
+// 	@media (min-width: $large) {
+// 		width: 100%;
+// 		max-width: $large;
+// 	}
+// }
+
+section .section__content {
+	display: grid;
+	row-gap: 3.2rem;
+	padding-inline: var(--page_padding);
+	align-content: flex-start;
 
 	@media (min-width: $medium) {
 		max-width: $medium;
@@ -83,4 +102,16 @@ section {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+figcaption {
+	text-align: center;
+	line-height: 2;
+	font-size: 1.6rem;
+}
+
+.backwards {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: left;
 }

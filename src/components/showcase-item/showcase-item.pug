@@ -2,7 +2,7 @@ include ../btn/btn.pug
 include ../image-w-placeholder/image-w-placeholder.pug
 
 mixin showcase-item({image, title, description, link})
-  span.showcase-item__wrapper 
+  span.showcase-item__wrapper&attributes(attributes) 
     span.image__wrapper 
       +image-w-placeholder(image)
     span.content__wrapper
