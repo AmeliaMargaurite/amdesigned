@@ -15,6 +15,23 @@ const packageTypes = {
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 
+// If user has come from privacy or tcs pages
+// They likely don't want a website
+const page = params.get("page");
+if (page) {
+	const subjectEl: HTMLInputElement | null =
+		document.querySelector("input#subject");
+	if (subjectEl) {
+		subjectEl.value = page;
+		const otherInput = document.querySelector(
+			"input#other"
+		) as HTMLInputElement;
+		if (otherInput) {
+			otherInput.checked = true;
+		}
+	}
+}
+
 // Check if user selected a website package
 const websitePackage = params.get("package");
 
