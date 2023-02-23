@@ -21,8 +21,8 @@
       content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.6.d3bb671f014f04d3f70e.js"> </script>
-    <link href="/css/main.9a4bf11a79b355354e9f93ff05e6034f.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.f3f2bd006fce28702661.js"> </script>
+    <link href="/css/main.9cb2e401a76d3fc9de801b58fc7a6273.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -73,68 +73,68 @@
       </nav>
     </header>
     <main class="contact" id="main">
-      <section><span class="contact-form__wrapper">
-          <h1>Let's connect </h1><?php require('../php/contact_form.php') ?><form class="contact-form"
-            action="../php/validate-contact-form.php?back=/contact" method="POST" id="contact-form"> <label
-              for="subject">
-              <p>Subject: </p><input type="subject" id="subject" name="subject" required pattern="string"
-                value="<?= $inputs['subject'] ?? "I'd like a website" ?>" title="Alphanumeric with accents allowed">
-              <p class="warning"></p>
-            </label><label for="name">
-              <p>Name:</p><input type="text" id="name" name="name" required pattern="string"
-                title="Alphanumeric with accents allowed" value="<?= $inputs['name'] ?? '' ?>">
-              <p class="warning"></p>
-            </label><label for="email">
-              <p>Email: </p><input type="email" id="email" name="email" pattern="email" required
-                value="<?= $inputs['email'] ?? '' ?>">
-              <p class="warning"></p>
-            </label>
-            <fieldset for="services">
-              <legend id="services">Services you may be interested in:</legend>
-              <p class="warning"></p><label for="design">
-                <p>Design</p><input type="checkbox" required id="design" value="design" name="services[]">
-              </label><label for="build">
-                <p>Build</p><input type="checkbox" required id="build" value="build" name="services[]">
-              </label><label for="hosting">
-                <p>Hosting</p><input type="checkbox" required id="hosting" value="hosting" name="services[]">
-              </label><label for="domain-purchase">
-                <p>Domain purchase</p><input type="checkbox" required id="domain-purchase" value="domain-purchase"
-                  name="services[]">
-              </label><label for="seo-accessibility">
-                <p>SEO & Accessibility</p><input type="checkbox" required id="seo-accessibility"
-                  value="seo-accessibility" name="services[]">
-              </label><label for="analytics">
-                <p>Analytics</p><input type="checkbox" required id="analytics" value="analytics" name="services[]">
-              </label><label for="maintenance">
-                <p>Ongoing maintenance</p><input type="checkbox" required id="maintenance" value="maintenance"
-                  name="services[]">
+      <section><span class="section__content"><span class="contact-form__wrapper">
+            <h1>Let's connect </h1><?php require('../php/contact_form.php') ?><form class="contact-form"
+              action="../php/validate-contact-form.php?back=/contact" method="POST" id="contact-form"> <label
+                for="subject">
+                <p>Subject: </p><input type="subject" id="subject" name="subject" required pattern="string"
+                  value="<?= $inputs['subject'] ?? "I'd like a website" ?>" title="Alphanumeric with accents allowed">
+                <p class="warning"></p>
+              </label><label for="name">
+                <p>Name:</p><input type="text" id="name" name="name" required pattern="string"
+                  title="Alphanumeric with accents allowed" value="<?= $inputs['name'] ?? '' ?>">
+                <p class="warning"></p>
+              </label><label for="email">
+                <p>Email: </p><input type="email" id="email" name="email" pattern="email" required
+                  value="<?= $inputs['email'] ?? '' ?>">
+                <p class="warning"></p>
               </label>
-            </fieldset><label for="message">
-              <p>Message: </p><textarea name="message" id="message" cols="30" rows="10" required
-                title="Not allowed: equals sign, greater than or less than signs, curly or square brackets"><?= $inputs['message'] ?? '' ?></textarea>
-              <p class="warning"></p>
-            </label><label for="pot" aria-hidden="true"><input type="hidden" name="pot" readonly></label><input
-              type="hidden" name="token" value="<?= $token ?>"><input type="hidden" name="package-type"
-              id="package-type"><button class="btn primary" type="submit" name="submit" onclick="validateCheckboxes()"
-              value="submit"> Send<span class="icon paper-plane"></span></button>
-          </form>
-          <p class="warning">
-            <script
-              src="/js/contact_form.e74c637e2b26252e9122.js">
-            </script>
-          </p>
-        </span><span class="mock-chat__wrapper">
-          <h3>It usually goes something like...</h3><span class="mock-chat"> <span class="chat-bubble you">
-              <p class="user">you</p>
-              <p class="chat">Hi, I need a website, can you help?</p>
-            </span><span class="chat-bubble us">
-              <p class="chat">Absolutely! Let's make something amazing</p>
-              <p class="user">us</p>
-            </span><span class="chat-bubble you">
-              <p class="user">you</p>
-              <p class="chat emoji">&#128170;</p>
-            </span></span>
-        </span></section>
+              <fieldset for="services">
+                <legend id="services">Services you may be interested in:</legend>
+                <p class="warning"></p><label for="design">
+                  <p>Design</p><input type="checkbox" required id="design" value="design" name="services[]">
+                </label><label for="build">
+                  <p>Build</p><input type="checkbox" required id="build" value="build" name="services[]">
+                </label><label for="hosting">
+                  <p>Hosting</p><input type="checkbox" required id="hosting" value="hosting" name="services[]">
+                </label><label for="domain-purchase">
+                  <p>Domain purchase</p><input type="checkbox" required id="domain-purchase" value="domain-purchase"
+                    name="services[]">
+                </label><label for="seo-accessibility">
+                  <p>SEO & Accessibility</p><input type="checkbox" required id="seo-accessibility"
+                    value="seo-accessibility" name="services[]">
+                </label><label for="analytics">
+                  <p>Analytics</p><input type="checkbox" required id="analytics" value="analytics" name="services[]">
+                </label><label for="maintenance">
+                  <p>Ongoing maintenance</p><input type="checkbox" required id="maintenance" value="maintenance"
+                    name="services[]">
+                </label>
+              </fieldset><label for="message">
+                <p>Message: </p><textarea name="message" id="message" cols="30" rows="10" required
+                  title="Not allowed: equals sign, greater than or less than signs, curly or square brackets"><?= $inputs['message'] ?? '' ?></textarea>
+                <p class="warning"></p>
+              </label><label for="pot" aria-hidden="true"><input type="hidden" name="pot" readonly></label><input
+                type="hidden" name="token" value="<?= $token ?>"><input type="hidden" name="package-type"
+                id="package-type"><button class="btn primary" type="submit" name="submit" onclick="validateCheckboxes()"
+                value="submit"> Send<span class="icon paper-plane"></span></button>
+            </form>
+            <p class="warning">
+              <script
+                src="/js/contact_form.e74c637e2b26252e9122.js">
+              </script>
+            </p>
+          </span><span class="mock-chat__wrapper">
+            <h3>It usually goes something like...</h3><span class="mock-chat"> <span class="chat-bubble you">
+                <p class="user">you</p>
+                <p class="chat">Hi, I need a website, can you help?</p>
+              </span><span class="chat-bubble us">
+                <p class="chat">Absolutely! Let's make something amazing</p>
+                <p class="user">us</p>
+              </span><span class="chat-bubble you">
+                <p class="user">you</p>
+                <p class="chat emoji">&#128170;</p>
+              </span></span>
+          </span></span></section>
     </main>
     <footer>
       <ul>
