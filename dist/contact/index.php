@@ -21,7 +21,7 @@
       content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.81f5c5f09dfad1c55a14.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.6.d3bb671f014f04d3f70e.js"> </script>
     <link href="/css/main.d8d1aeded9087e214430bda6808ab4c0.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -108,6 +108,8 @@
                 </label><label for="maintenance">
                   <p>Ongoing maintenance</p><input type="checkbox" required id="maintenance" value="maintenance"
                     name="services[]">
+                </label><label for="other">
+                  <p>Other</p><input type="checkbox" required id="other" value="other" name="services[]">
                 </label>
               </fieldset><label for="message">
                 <p>Message: </p><textarea name="message" id="message" cols="30" rows="10" required
@@ -120,7 +122,7 @@
             </form>
             <p class="warning">
               <script
-                src="/js/contact_form.e74c637e2b26252e9122.js">
+                src="/js/contact_form.0a58198a100e334b17bc.js">
               </script>
             </p>
           </span><span class="mock-chat__wrapper">
