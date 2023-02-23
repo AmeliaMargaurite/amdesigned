@@ -21,8 +21,8 @@
       content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.6.d3bb671f014f04d3f70e.js"> </script>
-    <link href="/css/main.d8d1aeded9087e214430bda6808ab4c0.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.3.5a6eb12038a2547b6c0d.js"> </script>
+    <link href="/css/main.03546416cad0407bd541c031ce78b93e.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
