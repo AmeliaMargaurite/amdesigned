@@ -72,7 +72,7 @@ mixin contact_form
     
     input(type="hidden", name="token" value!="\<?= $token ?\>")
 
-    input(type="hidden", name="package-type", id="package-type")
+    input(type="hidden", name="package_type", id="package-type")
     +btn({icon: {class: "paper-plane", side: 'right'}})(type="submit", class="primary", name="submit", onclick="validateCheckboxes()", value="submit") Send
       
   p.warning

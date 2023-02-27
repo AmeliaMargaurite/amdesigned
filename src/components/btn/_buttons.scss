@@ -72,6 +72,12 @@ a.btn {
 		background-color: var(--text-color);
 	}
 
+	&.disabled {
+		pointer-events: none;
+		cursor: default;
+		background: hsl(var(--dark), 0.6);
+	}
+
 	@media (min-width: $medium) {
 		&:not(.full-width) {
 			max-width: max-content;

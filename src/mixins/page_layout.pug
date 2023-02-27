@@ -42,6 +42,9 @@ html(lang="en")
   body
     - var pages = {'home': '/', 'contact': '/contact'}
     //- , 'showcase': '/showcase','services': '/services' removed for now
+    span.loading__wrapper#loading__wrapper 
+      span.loader Loading...
+
     +page_header(title)
     main#main(class=title.toLowerCase())
       block content

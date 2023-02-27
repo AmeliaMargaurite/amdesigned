@@ -119,3 +119,17 @@ figcaption {
 	direction: rtl;
 	text-align: left;
 }
+
+.loading__wrapper {
+	position: fixed;
+	display: none;
+	inset: 0;
+	background: hsl(var(--dark), 0.9);
+	z-index: 100;
+	color: hsl(var(--light));
+	align-items: center;
+	justify-content: center;
+	&.active {
+		display: grid;
+	}
+}

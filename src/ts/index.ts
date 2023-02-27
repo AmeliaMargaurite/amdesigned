@@ -5,6 +5,8 @@ export {};
 declare global {
 	interface Window {
 		toggleMenu: () => void;
+		showLoading: () => void;
+		showLoadingBtn: (e?: any) => void;
 	}
 }
 
@@ -69,3 +71,21 @@ window.addEventListener(
 );
 
 window.toggleMenu = toggleMenu;
+
+const showLoading = () => {
+	const loadingWrapper = document.getElementById("loading__wrapper");
+	loadingWrapper?.classList.add("active");
+};
+
+window.showLoading = showLoading;
+
+const showLoadingBtn = (el: HTMLButtonElement | HTMLAnchorElement) => {
+	el.classList.add("disabled");
+
+	const icon = el.querySelector("span.icon");
+	if (icon) {
+		icon.className = "icon spinner spinner-active";
+	}
+};
+
+window.showLoadingBtn = showLoadingBtn;
