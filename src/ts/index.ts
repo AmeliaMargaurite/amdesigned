@@ -34,8 +34,8 @@ const openMenu = () => {
 	hamburger?.classList.add("open");
 	nav?.classList.add("open");
 
-	document.body.style.overflowY = "auto";
-	window.removeEventListener("keydown", closeMenuOnEsc);
+	document.body.style.overflowY = "hidden";
+	window.addEventListener("keydown", closeMenuOnEsc);
 	hamburger.setAttribute("aria-expanded", "true");
 };
 
