@@ -8,20 +8,20 @@
     <meta name="description"
       content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta property="og:locale" content="en_AU" />
-    <meta property="og:url" content="https://amdesigned.com.au//contact" />
+    <meta property="og:url" content="https://www.amdesigned.com.au//contact" />
     <meta property="og:title" content="Contact | AMDesigned" />
     <meta property="og:description"
       content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta property="og:image"
-      content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
+      content="https://www.amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
     <meta property="og:image:alt"
       content="Laptop open, on screen is a small business website for interior design, blogging, articles" />
     <meta name="twitter:title" content="Contact | AMDesigned" />
     <meta name="twitter:description"
       content="Contact us now for a fast, easy website creation for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
-      content="https://amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.81f5c5f09dfad1c55a14.js"> </script>
+      content="https://www.amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.f3f2bd006fce28702661.js"> </script>
     <link href="/css/main.a2fcbf2be001eb9d54c8aa86d8b914e9.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
