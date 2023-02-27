@@ -39,7 +39,7 @@ if (
 ) {
 
   // Check for correct token
-  if (!empty($_POST['token'])) {
+  if (!empty($_POST['token'] && $_SESSION['token'])) {
     if (!hash_equals($_SESSION['token'], $_POST['token'])) {
       exitWithFailure(['contact-form' => '001-a: Form submitted incorrectly']);
     }
