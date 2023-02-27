@@ -13,6 +13,13 @@
 	input.warning {
 		border-color: hsl(var(--warning));
 	}
+
+	p.subtext {
+		font-size: 1.6rem;
+		font-style: italic;
+		line-height: 1.2;
+	}
+
 	p.warning {
 		display: none;
 		color: hsl(var(--warning), 0.8);

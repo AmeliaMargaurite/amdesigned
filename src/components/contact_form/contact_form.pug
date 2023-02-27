@@ -58,7 +58,11 @@ mixin contact_form
 
 
     label(for="message") 
-      p Message: 
+      span 
+        p Let us know a bit about your business: 
+        p.subtext  What do you do, what are your customers like, what area do you service.
+          br
+          | What do you want to achieve with having a website?
       textarea(name="message", id="message", cols="30", rows="10", required, title="Not allowed: equals sign, greater than or less than signs, curly or square brackets") <?= $inputs['message'] ?? '' ?>
       p.warning
 
