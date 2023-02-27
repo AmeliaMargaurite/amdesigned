@@ -21,8 +21,8 @@
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.81f5c5f09dfad1c55a14.js"> </script>
-    <link href="/css/main.a2fcbf2be001eb9d54c8aa86d8b914e9.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.1.34ca692fb98ece1d5b1b.js"> </script>
+    <link href="/css/main.3c7b7e21c76ce02806ae98266fe4a318.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -110,8 +110,11 @@
                 </label><label for="other">
                   <p>Other</p><input type="checkbox" required id="other" value="other" name="services[]">
                 </label>
-              </fieldset><label for="message">
-                <p>Message: </p><textarea name="message" id="message" cols="30" rows="10" required
+              </fieldset><label for="message"> <span>
+                  <p>Let us know a bit about your business: </p>
+                  <p class="subtext"> What do you do, what are your customers like, what area do you service.<br>What do
+                    you want to achieve with having a website?</p>
+                </span><textarea name="message" id="message" cols="30" rows="10" required
                   title="Not allowed: equals sign, greater than or less than signs, curly or square brackets"><?= $inputs['message'] ?? '' ?></textarea>
                 <p class="warning"></p>
               </label><label for="pot" aria-hidden="true"><input type="hidden" name="pot" readonly></label><input
