@@ -1,7 +1,7 @@
 .contact-form {
-	& *:not(input[type="checkbox"]):focus {
+	& *:not(:has(input[type="checkbox"])):focus {
 		outline: 0.2rem solid hsl(var(--highlight));
-		outline-offset: 0.4rem;
+		outline-offset: 0.2rem;
 	}
 
 	label:has(input[type="checkbox"]:focus) {
