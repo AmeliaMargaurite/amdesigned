@@ -21,8 +21,8 @@
       content="Fast, easy custom websites for businesses. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.1.11ba6bbe0ca094e2d1bc.js"> </script>
-    <link href="/css/main.3c7b7e21c76ce02806ae98266fe4a318.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.8ba118b738194b6a233b.js"> </script>
+    <link href="/css/main.e756c75397ad8b18be9c2a627fdd26dc.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -57,7 +57,7 @@
       })
     </script>
   </head>
-  <body>
+  <body><span class="loading__wrapper" id="loading__wrapper"> <span class="loader">Loading...</span></span>
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
         href="/">
         <p class="company-name">AMDesigned</p>
@@ -77,7 +77,8 @@
             <p class="cta-heading">Because <span class="highlight">one size </span><span
                 class="stripe"><span></span><span>doesn't</span></span> fit all</p>
             <p class="text bottom"><em>Let us make your business shine with a custom built website</em></p><a
-              class="btn" href="/contact"> Enquire now<span class="icon arrow right"></span></a>
+              class="btn" onclick="showLoadingBtn(this)" href="/contact">Enquire now<span
+                class="icon arrow right"></span></a>
           </span></span></section>
       <section class="second">
         <div class="section__content">
@@ -113,7 +114,7 @@
                 <li>Ongoing maintenance</li>
               </ul>
               <p class="price"><em>Starting at $650AUD</em></p><a class="btn full-width secondary"
-                href="/contact?package=Let's Split It&amp;type=mid"> This is me<span
+                onclick="showLoadingBtn(this)" href="/contact?package=Let's Split It&amp;type=mid">This is me<span
                   class="icon arrow right"></span></a>
             </span><span class="option hero">
               <p class="title">We'll do it all</p>
@@ -125,8 +126,8 @@
                 <li class="included"> SEO & Accessibility</li>
                 <li class="included"> Analytics set up</li>
               </ul>
-              <p class="price"><em>Starting at $1150AUD</em></p><a class="btn full-width"
-                href="/contact?package=Please do it all&amp;type=high"> Just what I want<span
+              <p class="price"><em>Starting at $1150AUD</em></p><a class="btn full-width" onclick="showLoadingBtn(this)"
+                href="/contact?package=Please do it all&amp;type=high">Just what I want<span
                   class="icon arrow right"></span></a>
             </span><span class="option">
               <p class="title">Just the basics</p>
@@ -140,7 +141,7 @@
                 <li>Ongoing maintenance</li>
               </ul>
               <p class="price"><em>Starting at $350AUD</em></p><a class="btn full-width secondary"
-                href="/contact?package=Just the basics&amp;type=low"> Sign me up!<span
+                onclick="showLoadingBtn(this)" href="/contact?package=Just the basics&amp;type=low">Sign me up!<span
                   class="icon arrow right"></span></a>
             </span></div>
         </span></section>
@@ -151,8 +152,8 @@
                 <p>Get in touch! If you found a package above that fits your needs, go on and give it a click and send
                   us a message. We'll be in touch to really get into the nitty-gritty of your shiney new website.</p>Not
                 sure what your needs are, or they just don't quite fit one of the above packages? Don't stress! We
-                tailor-make every package to suit your business. <a class="btn mini" href="/contact?package=custom">
-                  Send us a message<span class="icon arrow right"></span></a>
+                tailor-make every package to suit your business. <a class="btn mini" onclick="showLoadingBtn(this)"
+                  href="/contact?package=custom">Send us a message<span class="icon arrow right"></span></a>
               </span></span><span class="big-list-item"><span class="marker">2</span><span class="content">
                 <p>Based on your message we'll get in touch and send you a quick questionnaire to learn more about you,
                   your business and what your ideas for a website. We find this is the most efficient way of gathering

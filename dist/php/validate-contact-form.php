@@ -20,7 +20,6 @@ function exitWithFailure(array $messages)
       $buildQueries = '?' . $key . '=' . $message;
     }
     error_log($message, 0);
-    var_dump($message);
   }
 
   $url = $params['back'] ? $params['back'] : '/error';
@@ -39,7 +38,7 @@ if (
 ) {
 
   // Check for correct token
-  if (!empty($_POST['token'] && $_SESSION['token'])) {
+  if (!empty($_POST['token'] && isset($_SESSION['token']))) {
     if (!hash_equals($_SESSION['token'], $_POST['token'])) {
       exitWithFailure(['contact-form' => '001-a: Form submitted incorrectly']);
     }
@@ -54,14 +53,14 @@ if (
     ['name' => 'email', 'type' => 'email', 'required' => true],
     ['name' => 'message', 'type' => 'string', 'required' => true],
     ['name' => 'subject', 'type' => 'string', 'required' => false],
-    ['name' => 'package-type', 'type' => 'string', 'required' => false],
+    ['name' => 'package_type', 'type' => 'string', 'required' => false],
     ['name' => 'services', 'type' => 'string_array', 'required' => true]
   ]);
-  // dd($_POST['services']);
+
   if ($errors && count($errors) > 0) {
     exitWithFailure($errors);
   } else {
-    $sendContactForm_errors = $contact_form->sendContactForm();
+    $sendContactForm_errors = $contact_form->sendForm();
 
     if ($sendContactForm_errors && count($sendContactForm_errors) > 0) {
       $errors[array_key_first($sendContactForm_errors)] += $sendContactForm_errors[0];

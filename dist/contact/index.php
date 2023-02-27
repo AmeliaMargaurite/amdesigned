@@ -21,8 +21,8 @@
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.5330a3646f0133d2bc97.js"> </script>
-    <link href="/css/main.3c7b7e21c76ce02806ae98266fe4a318.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.3.de55f9208f4895d76b4a.js"> </script>
+    <link href="/css/main.e756c75397ad8b18be9c2a627fdd26dc.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -57,7 +57,7 @@
       })
     </script>
   </head>
-  <body>
+  <body><span class="loading__wrapper" id="loading__wrapper"> <span class="loader">Loading...</span></span>
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
         href="/">
         <p class="company-name">AMDesigned</p>
@@ -118,9 +118,9 @@
                   title="Not allowed: equals sign, greater than or less than signs, curly or square brackets"><?= $inputs['message'] ?? '' ?></textarea>
                 <p class="warning"></p>
               </label><label for="pot" aria-hidden="true"><input type="hidden" name="pot" readonly></label><input
-                type="hidden" name="token" value="<?= $token ?>"><input type="hidden" name="package-type"
-                id="package-type"><button class="btn primary" type="submit" name="submit" onclick="validateCheckboxes()"
-                value="submit"> Send<span class="icon paper-plane"></span></button>
+                type="hidden" name="token" value="<?= $token ?>"><input type="hidden" name="package_type"
+                id="package-type"><button class="btn primary" onclick="validateCheckboxes()" type="submit" name="submit"
+                value="submit">Send<span class="icon paper-plane"></span></button>
             </form>
             <p class="warning">
               <script
