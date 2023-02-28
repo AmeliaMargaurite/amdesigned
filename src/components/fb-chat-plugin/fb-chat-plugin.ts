@@ -14,7 +14,6 @@ if (chatbox) {
 }
 
 window.fbAsyncInit = function () {
-	// @ts-nocheck
 	FB.init({
 		xfbml: true,
 		version: "v16.0",
