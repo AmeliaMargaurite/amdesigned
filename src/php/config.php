@@ -1,5 +1,5 @@
 <?php
-$local = '/pug-test'; // localhost 
+$local = '/localhost'; // localhost 
 session_start();
 define('IS_LIVE', getenv("ENVIRONMENT") === 'production');
 define('HOME_PATH', IS_LIVE ? '' : $local); // Used in url paths

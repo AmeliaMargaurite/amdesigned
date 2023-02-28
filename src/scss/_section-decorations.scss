@@ -2,7 +2,7 @@
 	--skew-angle: -2deg;
 	--skew: skewY(var(--skew-angle));
 	--background: hsl(var(--highlight));
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	padding-block: var(--padding);
 	position: relative;
@@ -21,7 +21,7 @@
 .chevron-both {
 	--background: hsl(var(--highlight), 0.5);
 	--height: 3.2rem;
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	padding-block: var(--padding);
 	position: relative;
@@ -51,7 +51,7 @@
 .chevron-top {
 	--background: hsl(var(--highlight), 0.3);
 	--height: 3.2rem;
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	padding-block: var(--padding);
 	position: relative;
@@ -72,7 +72,7 @@
 .chevron-bottom {
 	--background: hsl(var(--highlight), 0.3);
 	--height: 3.2rem;
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	padding-block: var(--padding);
 	position: relative;
@@ -95,7 +95,7 @@
 .chevrons-down {
 	--background: hsl(var(--highlight), 0.3);
 	--height: 3.2rem;
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	padding-block: var(--padding);
 	position: relative;
@@ -127,9 +127,7 @@
 .chevron-down {
 	--background: hsl(var(--highlight), 0.3);
 	--height: 3.2rem;
-	--padding: calc(var(--height) * 1.5);
-
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	position: relative;
 	// background: hsl(var(--dark));
@@ -154,7 +152,7 @@
 .spikes {
 	--background: hsl(var(--highlight), 0.3);
 	--height: 3.2rem;
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	padding-block: var(--padding);
 
@@ -196,7 +194,7 @@
 		var(--valley-color)
 	);
 	--height: 3.2rem;
-	--padding: calc(var(--height) * 1.5);
+	--padding: calc(var(--height) * 2);
 
 	padding-block: var(--padding);
 	position: relative;
@@ -227,8 +225,8 @@
 .bell {
 	--background: hsl(var(--highlight), 0.3);
 	--height: 3rem;
+
 	position: relative;
-	// background: hsl(var(--dark));
 	background: var(--background);
 
 	&::before,

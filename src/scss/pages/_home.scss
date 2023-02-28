@@ -15,11 +15,15 @@
 
 	section.second {
 		text-align: center;
+
+		.section__content {
+			// padding-block: 6.4rem;
+		}
 	}
 
 	section.third {
 		ul {
-			padding-left: 1.6rem;
+			padding-left: 3.2rem;
 		}
 	}
 
@@ -31,9 +35,9 @@
 	}
 
 	@media (min-width: $small) {
-		section:nth-child(odd):not(.cta-home) {
-			padding: 6.4rem;
-		}
+		// section:not(.cta-home) {
+		// 	padding: 6.4rem 3.2rem;
+		// }
 
 		section.third {
 			ul {

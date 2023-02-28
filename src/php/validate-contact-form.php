@@ -46,7 +46,7 @@ if (
     exitWithFailure(['contact-form' => '001-b: Form submitted incorrectly']);
   }
 
-  $contact_form = new ContactFormController();
+  $contact_form = new ContactFormController('contact_form');
   $errors = $contact_form->checkFields([
     ['name' => 'pot', 'type' => 'empty', 'required' => false],
     ['name' => 'name', 'type' => 'string', 'required' => true],

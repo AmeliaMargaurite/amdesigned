@@ -34,21 +34,6 @@ main {
 	display: grid;
 	row-gap: 6.4rem;
 }
-// main {
-// 	display: grid;
-// 	row-gap: 6.4rem;
-// 	padding: var(--page_padding);
-
-// 	@media (min-width: $medium) {
-// 		max-width: $medium;
-// 		margin-inline: auto;
-// 	}
-
-// 	@media (min-width: $large) {
-// 		width: 100%;
-// 		max-width: $large;
-// 	}
-// }
 
 section .section__content {
 	display: grid;
@@ -58,16 +43,23 @@ section .section__content {
 	width: 100%;
 
 	@media (min-width: $medium) {
-		max-width: $medium;
-		margin-inline: auto;
-	}
-
-	@media (min-width: $large) {
+		padding-inline: unset;
 		max-width: 1200px;
+		margin-inline: auto;
 	}
 
 	@media (min-width: $xlarge) {
 		max-width: $large;
+	}
+}
+
+section {
+	display: grid;
+	row-gap: 1.6rem;
+	&:not(.cta-home) {
+		@media (min-width: $small) {
+			padding: 6.4rem 3.2rem;
+		}
 	}
 }
 
@@ -91,11 +83,6 @@ p {
 ul {
 	line-height: 2;
 	padding-left: 6.4rem;
-}
-
-section {
-	display: grid;
-	row-gap: 1.6rem;
 }
 
 .sr-only {

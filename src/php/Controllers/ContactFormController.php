@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 
+include_once('../config.php');
 include_once(SEND_WITH_PHP_MAILER);
 
 /**
@@ -16,30 +17,6 @@ class ContactFormController extends FormController
   public $subject;
   public $package_type;
   public $services;
-  public function __construct()
-  {
-    // check if pot is used, if so fail
-    // check inputs are not empty
-    // check email is email format
-    // trust user is input all other inputs in correct format
-    // but don't trust they're not malicious
-
-    foreach ($_POST as $key => $val) {
-      if (isset($_POST[$key]) && !empty($_POST[$key])) {
-        $this->$key = $val;
-        $_SESSION['contact_form'][$key] = $val;
-
-      } else {
-        $this->$key = null;
-        $_SESSION['contact_form'][$key] = null;
-      }
-    }
-  }
-  /**
-   * $fields = [
-   *  ['name' => 'name', 'type' => 'string']
-   * ]
-   */
 
   public function sendForm()
   {
