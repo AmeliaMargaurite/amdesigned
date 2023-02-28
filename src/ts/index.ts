@@ -104,6 +104,11 @@ const resetBtns = () => {
 		}
 	});
 };
-window.addEventListener("beforeunload", resetBtns);
+document.addEventListener("visibilitychange", resetBtns);
+
+// window.addEventListener("popstate", (e) => {
+// 	console.log({ e });
+// 	return false;
+// });
 
 window.showLoadingBtn = showLoadingBtn;
