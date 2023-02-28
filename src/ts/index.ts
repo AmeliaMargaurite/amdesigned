@@ -83,14 +83,26 @@ const showLoadingBtn = (el: HTMLButtonElement | HTMLAnchorElement) => {
 	el.classList.add("disabled");
 	el.classList.add("btn-to-reset");
 	const icon = el.querySelector("span.icon");
+
 	if (icon) {
+		icon.setAttribute("data-old-classes", icon.className);
 		icon.className = "icon spinner spinner-active";
 	}
 };
 
 const resetBtns = () => {
-	const btns = document.querySelectorAll("btn-to-reset");
-	btns.forEach((btn) => btn.replaceWith(btn.cloneNode(true)));
+	const btns = document.querySelectorAll(".btn-to-reset");
+	btns.forEach((btn) => {
+		btn.classList.remove("disabled");
+		btn.classList.remove("btn-to-reset");
+		const icon = btn.querySelector(".icon") as HTMLSpanElement;
+		if (icon) {
+			const classes = icon.dataset.oldClasses;
+			if (classes) {
+				icon.className = classes;
+			}
+		}
+	});
 };
 window.addEventListener("beforeunload", resetBtns);
 
