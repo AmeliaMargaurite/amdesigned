@@ -81,11 +81,17 @@ window.showLoading = showLoading;
 
 const showLoadingBtn = (el: HTMLButtonElement | HTMLAnchorElement) => {
 	el.classList.add("disabled");
-
+	el.classList.add("btn-to-reset");
 	const icon = el.querySelector("span.icon");
 	if (icon) {
 		icon.className = "icon spinner spinner-active";
 	}
 };
+
+const resetBtns = () => {
+	const btns = document.querySelectorAll("btn-to-reset");
+	btns.forEach((btn) => btn.replaceWith(btn.cloneNode(true)));
+};
+window.addEventListener("beforeunload", resetBtns);
 
 window.showLoadingBtn = showLoadingBtn;
