@@ -21,7 +21,7 @@
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.6e6be840a98c2cc0781f.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.3.07551e280c0eac7205e3.js"> </script>
     <link href="/css/main.a273468aee985e950d5b5a8e7d616604.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -129,7 +129,7 @@
             </form>
             <p class="warning">
               <script
-                src="/js/contact_form.0a58198a100e334b17bc.js">
+                src="/js/contact_form.09df9380b3d6611bf24b.js">
               </script>
             </p>
           </span><span class="mock-chat__wrapper">
@@ -144,6 +144,11 @@
                 <p class="chat emoji">&#128170;</p>
               </span></span>
           </span></span></section>
+      <div id="fb-root"></div>
+      <div class="fb-customerchat" id="fb-customer-chat"></div>
+      <script
+        src="/js/fb-chat-plugin.8c70ce7905f3ce59289c.js">
+      </script>
     </main>
     <footer>
       <ul>
