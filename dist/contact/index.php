@@ -21,8 +21,8 @@
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.c32016244dbd534a94c8.js"> </script>
-    <link href="/css/main.bf2a22888ac857f4e388d7ee2fff963e.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.1.fe8c187cb94bfe37eaf9.js"> </script>
+    <link href="/css/main.a273468aee985e950d5b5a8e7d616604.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -55,7 +55,7 @@
       posthog.init('phc_Q5ZatJXkoZzmKWt3AMoS43jKkUdAKFU6IjSfMf3WYqP', {
         api_host: 'https://app.posthog.com'
       })
-    </script>
+    </script><?php session_start() ?>
   </head>
   <body><span class="loading__wrapper" id="loading__wrapper"> <span class="loader">Loading...</span></span>
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
@@ -107,6 +107,11 @@
                 </label><label for="maintenance">
                   <p>Ongoing maintenance</p><input type="checkbox" required id="maintenance" value="maintenance"
                     name="services[]">
+                </label><label for="ecommerce">
+                  <p>E-commerce / Web store</p><input type="checkbox" required id="ecommerce" value="ecommerce"
+                    name="services[]">
+                </label><label for="blog">
+                  <p>Blog</p><input type="checkbox" required id="blog" value="blog" name="services[]">
                 </label><label for="other">
                   <p>Other</p><input type="checkbox" required id="other" value="other" name="services[]">
                 </label>
