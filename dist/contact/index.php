@@ -21,8 +21,8 @@
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0676732b479ac8f528f2.js"> </script>
-    <link href="/css/main.a273468aee985e950d5b5a8e7d616604.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.4c531562005022b3979b.js"> </script>
+    <link href="/css/main.6c72497fac45b5035ed5125947bbf13e.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -66,8 +66,9 @@
           focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
       <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
-          <li><a href="/">home</a></li>
-          <li><a class="current" href="/contact">contact</a></li>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a class="current" href="/contact" onclick="closeMenu()">contact</a></li>
+          <li><a href="/showcase" onclick="closeMenu()">showcase</a></li>
         </ul>
       </nav>
     </header>
@@ -149,6 +150,7 @@
       <ul>
         <li><a href="/">home</a></li>
         <li><a class="current" href="/contact">contact</a></li>
+        <li><a href="/showcase">showcase</a></li>
       </ul>
       <ul>
         <li> <a href="/terms-and-conditions">Terms and conditions</a></li>

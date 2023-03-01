@@ -21,8 +21,8 @@
       content="Showcase of super fast, stylish websites created by AMDesigned for businesses. Contact us now to secure yours and wow your customers!" />
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/contact-order-online-small-medium-business-website.f684525854ca2d7d.jpg" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.3.07551e280c0eac7205e3.js"> </script>
-    <link href="/css/main.a273468aee985e950d5b5a8e7d616604.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.6.bb2247b38fd275d518dd.js"> </script>
+    <link href="/css/main.6c72497fac45b5035ed5125947bbf13e.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -66,64 +66,50 @@
           focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
       <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/contact">contact</a></li>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/contact" onclick="closeMenu()">contact</a></li>
+          <li><a class="current" href="/showcase" onclick="closeMenu()">showcase</a></li>
         </ul>
       </nav>
     </header>
     <main class="showcase" id="main">
-      <section class="showcase__section"><span class="section__content">
-          <h1>Showcase!</h1><span><span class="showcase-item__wrapper chevrons-down"> <span class="image__wrapper">
-                <figure class="image-w-placeholder"> <img class="placeholder-image"
-                    src="/assets/img/wip-work-in-progress.a48bcb42a3760fa0.jpg">
-                  <picture>
-                    <source
-                      srcset="/assets/img/wip-work-in-progress.24b3f19e7250e3e4.webp 100w,/assets/img/wip-work-in-progress.28ca1497ed7bf9b6.webp 100w,/assets/img/wip-work-in-progress.0e860bdd11070a2a.webp 260w,/assets/img/wip-work-in-progress.300cea4c5481cf36.webp 420w,/assets/img/wip-work-in-progress.c11ff2cdcd378639.webp 580w,/assets/img/wip-work-in-progress.f547028919a50bea.webp 740w,/assets/img/wip-work-in-progress.e409354270b23e9e.webp 900w,/assets/img/wip-work-in-progress.8dec701db4155043.webp 1060w,/assets/img/wip-work-in-progress.42844893a8c2e8bb.webp 1220w,/assets/img/wip-work-in-progress.e71faac586ffe79b.webp 1380w"
-                      type="image/webp"><img src="/assets/img/wip-work-in-progress.1942bb051f7f07f1.jpg"
-                      alt="Walkers Creek industrial sewing machine, in the process of sewing a leather Walkers Creek label to a new camping supply product">
-                  </picture>
-                </figure>
-              </span><span class="content__wrapper">
-                <p class="title">E-Commerce - Walkers Creek</p>
-                <p class="description"> Walkers Creek is a camping storage solutions business based on the Sunshine
-                  Coast, Australia. They were in need of a website to sell their awesome items, and potentially attract
-                  wholesalers. Working with their needs we built a fast, user-friendly, fully-responsive e-commerce
-                  website which has seen thousands of site hits and hundreds of sales -- so far!<br /><br />The build
-                  included a custom built backend for the owners to login and create, edit and update products, as well
-                  as keep track of processed sales and even send their customers postage confirmation emails.We continue
-                  to work with the great family behind Walkers Creek to tweak and improve their site and analytics.</p>
-                <a class="btn mini" onclick="showLoadingBtn(this)" href="https://walkerscreek.com.au"
-                  target="_blank"><span class="icon external-link"></span>View website</a>
-              </span></span><span class="showcase-item__wrapper chevrons-down"> <span class="image__wrapper">
-                <figure class="image-w-placeholder"> <img class="placeholder-image"
-                    src="/assets/img/hairdresser-stylist-appointments.1689316c6ac49fdd.jpg">
-                  <picture>
-                    <source
-                      srcset="/assets/img/hairdresser-stylist-appointments.3690d2626bf219fb.webp 100w,/assets/img/hairdresser-stylist-appointments.9f0a1d18391a22b6.webp 100w,/assets/img/hairdresser-stylist-appointments.c0ee645cf8d5486c.webp 260w,/assets/img/hairdresser-stylist-appointments.fc6d5a286a7c3ead.webp 420w,/assets/img/hairdresser-stylist-appointments.aebf4291c4e7adbc.webp 580w,/assets/img/hairdresser-stylist-appointments.e2b54adb71e7dfb5.webp 740w,/assets/img/hairdresser-stylist-appointments.96bf9355b4056741.webp 900w,/assets/img/hairdresser-stylist-appointments.18142a3031174f0b.webp 1060w,/assets/img/hairdresser-stylist-appointments.510feffefb698a86.webp 1220w,/assets/img/hairdresser-stylist-appointments.6abc3e512355f967.webp 1380w,/assets/img/hairdresser-stylist-appointments.25f3829986710af9.webp 1540w"
-                      type="image/webp"><img src="/assets/img/hairdresser-stylist-appointments.a701ab7bd8d8df2c.jpg"
-                      alt="Female appearing person with long, wavy brunette hair, eyes closed, looking serene.">
-                  </picture>
-                </figure>
-              </span><span class="content__wrapper">
-                <p class="title">Online Booking - Jenny's Hairdressing</p>
-                <p class="description"> The fabulous Jenny has been working her magic for years and finally had decided
-                  to build her own hairdressing empire. She had everything ready to go, but no website for customers to
-                  see what she offered and to book in! Jenny came to us, and we discussed what she needed for her
-                  business to grow and flurish. <br /><br />Together we settled on a stunningly website that was so
-                  simple for all to use, where her customers could easily book with their favourite hairdresser. With
-                  the backend we built Jenny is able to add new services, allocate which of her lovely staff is able to
-                  perform them, and how long they go for. Along with being able to set staff availability, Jenny is able
-                  to give her customers real-time accurate booking confidence! She also uses it in store to book in
-                  customers who drop in or call up.</p><a class="btn mini" onclick="showLoadingBtn(this)"
-                  href="https://www.jennys.amdesigned.com.au" target="_blank"><span
-                    class="icon external-link"></span>View website</a>
-              </span></span></span>
-        </span></section>
+      <section class="showcase__section"><span class="section__content"><span>
+            <h1>Showcase!</h1>
+            <p>A small selection of works from AMDesigned</p>
+          </span><span class="showcase-items__wrapper"><span class="showcase-item__wrapper"><span
+                class="content__wrapper"><span class="header">
+                  <p class="name">Walkers Creek</p>
+                  <p class="type">E-Commerce</p>
+                </span><span class="icon__wrapper"><span class="icon large hand-holding-dollar"></span></span><span
+                  class="footer">
+                  <p class="features">Stripe payments, product backend control, contact form, SEO</p><a
+                    class="btn full-width mini" onclick="showLoadingBtn(this)" href="https://walkerscreek.com.au"
+                    target="_blank">View website<span class="icon external-link"></span></a>
+                </span></span></span><span class="showcase-item__wrapper"><span class="content__wrapper"><span
+                  class="header">
+                  <p class="name">Jennys Haidressing</p>
+                  <p class="type">Service</p>
+                </span><span class="icon__wrapper"><span class="icon large scissors"></span></span><span class="footer">
+                  <p class="features">Booking form, booking management system, SEO, analytics</p><a
+                    class="btn full-width mini" onclick="showLoadingBtn(this)"
+                    href="https://www.jennys.amdesigned.com.au" target="_blank">View website<span
+                      class="icon external-link"></span></a>
+                </span></span></span><span class="showcase-item__wrapper"><span class="content__wrapper"><span
+                  class="header">
+                  <p class="name">Bright Eyes Electrical</p>
+                  <p class="type">Informational</p>
+                </span><span class="icon__wrapper"><span class="icon large lightbulb regular"></span></span><span
+                  class="footer">
+                  <p class="features">SEO, analytics, contact form, design</p><a class="btn full-width mini"
+                    onclick="showLoadingBtn(this)" href="https://bright-eyes-electrical.amdesigned.com.au"
+                    target="_blank">View website<span class="icon external-link"></span></a>
+                </span></span></span></span></span></section>
     </main>
     <footer>
       <ul>
         <li><a href="/">home</a></li>
         <li><a href="/contact">contact</a></li>
+        <li><a class="current" href="/showcase">showcase</a></li>
       </ul>
       <ul>
         <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
