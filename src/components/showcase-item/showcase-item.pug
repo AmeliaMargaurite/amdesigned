@@ -1,12 +1,19 @@
 include ../btn/btn.pug
 include ../image-w-placeholder/image-w-placeholder.pug
 
-mixin showcase-item({image, title, description, link})
-  span.showcase-item__wrapper&attributes(attributes) 
-    span.image__wrapper 
-      +image-w-placeholder(image)
-    span.content__wrapper
-      p.title #{title}
-      p.description 
-        block 
-      +btn({icon: {class: 'external-link', side: 'left'}})(href= link, target="_blank" class="mini") View website
+mixin showcase-item({type, name, features, link, icon})
+	span.showcase-item__wrapper&attributes(attributes)
+		//- span.image__wrapper 
+		//-   +image-w-placeholder(image)
+		span.content__wrapper
+			span.header
+				p.name #{ name }
+				p.type #{ type }
+			span.icon__wrapper
+				span.icon.large(class=icon ? icon : "screwdriver-wrench")
+			span.footer
+				p.features #{ features }
+				+btn({icon: {class: 'external-link', side: 'right'}}).full-width.mini(
+					href=link,
+					target="_blank"
+				) View website

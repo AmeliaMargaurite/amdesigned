@@ -1,18 +1,25 @@
 mixin page_header(active)
-  header.chevron-down
-    a.skip-to-content-link(href="#main") Skip to content
-    a.logo(href="/")
-      p.company-name AMDesigned
+	header.chevron-down
+		a.skip-to-content-link(href="#main") Skip to content
+		a.logo(href="/")
+			p.company-name AMDesigned
 
-    button.menu__button(id= 'hamburger', onclick='toggleMenu()' tabindex="0", aria-controls="main-menu", aria-label="Open the menu" )
-        span(aria-hidden="true", focusable="false")
-        span(aria-hidden="true", focusable="false")
-        span(aria-hidden="true", focusable="false")
-        
-    nav#main-menu(role="navigation", aria-label="Main menu")
-      
-      ul 
-        each val, key in pages
-          li
-            a(href= val class= active.toLowerCase() === key ? 'current': undefined) #{key}
-        
+		button#hamburger.menu__button(
+			onclick="toggleMenu()",
+			tabindex="0",
+			aria-controls="main-menu",
+			aria-label="Open the menu"
+		)
+			span(aria-hidden="true", focusable="false")
+			span(aria-hidden="true", focusable="false")
+			span(aria-hidden="true", focusable="false")
+
+		nav#main-menu(role="navigation", aria-label="Main menu")
+			ul
+				each val, key in pages
+					li
+						a(
+							href=val,
+							class=active.toLowerCase() === key ? "current" : undefined,
+							onclick="closeMenu()"
+						) #{ key }

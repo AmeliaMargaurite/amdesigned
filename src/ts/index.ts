@@ -7,6 +7,7 @@ declare global {
 		toggleMenu: () => void;
 		showLoading: () => void;
 		showLoadingBtn: (e?: any) => void;
+		closeMenu: () => void;
 	}
 }
 
@@ -112,3 +113,4 @@ document.addEventListener("visibilitychange", resetBtns);
 // });
 
 window.showLoadingBtn = showLoadingBtn;
+window.closeMenu = closeMenu;
