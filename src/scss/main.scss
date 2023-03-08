@@ -8,12 +8,14 @@
 @import "./gallery";
 @import "./basics";
 @import "./components";
+@import "./sections";
 @import "./pages/home";
 @import "./pages/contact";
 @import "./pages/services";
 @import "./pages/notFound";
 @import "./pages/showcase";
 @import "./pages/legals";
+@import "./pages/article";
 
 body {
 	display: grid;

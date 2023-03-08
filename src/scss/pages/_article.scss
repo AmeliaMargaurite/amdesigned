@@ -1,0 +1,33 @@
+.article {
+	margin-top: -7vw;
+
+	.hero_img {
+		display: grid;
+		img {
+			max-height: 65vh;
+			object-fit: cover;
+		}
+	}
+
+	.tags .content,
+	.categories .content {
+		display: flex;
+		gap: 0.8rem;
+		& p {
+			padding: 0 0.8rem;
+			border-radius: 0.8rem;
+			background: hsl(var(--highlight), 0.6);
+		}
+	}
+
+	.categories .content p {
+		background: hsl(var(--highlight), 0.3);
+	}
+
+	img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+}

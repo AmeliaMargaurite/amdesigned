@@ -1,0 +1,11 @@
+extends ../mixins/page_layout.pug
+include ../sections/articles-section/articles-section.pug
+
+block variables
+	- var title = "Articles";
+
+block phpScripts
+	<?php include_once('./load_articles.php') ?>
+
+block content
+	+articles-section

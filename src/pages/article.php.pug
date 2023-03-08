@@ -1,0 +1,38 @@
+extends ../mixins/page_layout.pug
+
+block phpScripts
+	<?php include_once('./load_article.php') ?>
+
+block variables
+	- var mainClass = "article";
+	- var title = "<?php echo $article->title ?? 'Whoops!' ?>";
+	- var page_description = "";
+	- var slug = "/showcase";
+	//- - var page_image = require("../images/contact-order-online-small-medium-business-website.jpg");
+	- var page_image_alt = "";
+
+block content
+	<?php if ($article !== null) :?>
+	span.hero_img
+		img(src!="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg")
+	section.showcase__section
+		span.section__content
+			span
+				span.last_updated Last updated
+					p!= "<?= $article->updated_at ?>"
+				span.title
+					p!= "<?= $article->title?>"
+				//- span#summary 
+				span.tags
+					span.content!= "<?= $article->tags?>"
+				span.categories
+					span.content!= "<?= $article->categories?>"
+				span.content__wrapper
+					span!= "<?= $article->content?>"
+				span#published_at
+	<?php else : ?>
+	span.section__content
+		span
+			h1 Whoops
+			p The article you were looking for doesn't seem to exist
+	<?php endif ?>

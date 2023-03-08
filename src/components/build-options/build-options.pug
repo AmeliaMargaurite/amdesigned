@@ -1,97 +1,107 @@
 include ../btn/btn.pug
 
-mixin build-options 
-  section.build-options 
-    span.section__content
-      h2 Build options 
-      p.subtext Get to know our general website packages. But because we know no two businesses are alike every website package is tailor-made to your needs. 
+mixin build-options
+	section.build-options 
+		|
+		span.section__content
+			h2 Build options
+			p.subtext Get to know our general website packages. But because we know no two businesses are alike every website package is tailor-made to your needs.
 
-      .options__wrapper 
-        span.option 
-          p.title Let's split it
-          ul(role="list")
-            li.included  Design
-                  //- a(href="/services#design")
-                
-            li.included  Build
-                  //- a(href="/services#build")
-                
-            li Hosting
-                  //- a(href="/services#hosting")
-                
-            li Domain purchase
-                  //- a(href="/services#domain-purchase")
-                
-            li.included  SEO & Accessibility
-                  //- a(href="/services#seo-accessibility")
-                
-            li.included  Analytics set up
-                  //- a(href="/services#analytics")
-                
-            li Ongoing maintenance
-                  //- a(href="/services#maintenance")
-                
-          p.price: em Starting at $1150AUD
-          +btn({icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Let\'s Split It&type=mid', class="full-width secondary")
-            | This is me
-          
+			.options__wrapper 
+				|
+				span.option 
+					|
+					p.title Let's split it
+					ul(role="list")
+						li.included Design
+							//- a(href="/services#design")
 
-        span.option.hero 
-          p.title We'll do it all
-          ul(role="list")
-            li.included  Design
-                  //- a(href="/services#design")
-                
-            li.included  Build
-                  //- a(href="/services#build")
-                
-            li.included  Hosting
-                  //- a(href="/services#hosting")
-                
-            li.included  Domain purchase
-                  //- a(href="/services#domain-purchase")
-                
-            li.included  SEO & Accessibility
-                  //- a(href="/services#seo-accessibility")
-                
-            li.included  Analytics set up
-                  //- a(href="/services#analytics")
-                
-            //- li.included  Ongoing maintenance
-                  //- a(href="/services#maintenance")
-                
-          p.price: em Starting at $2150AUD
-          +btn({ icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Please do it all&type=high', class="full-width")
-            | Just what I want
-          
+						li.included Build
+							//- a(href="/services#build")
 
-        span.option 
-          p.title Just the basics
-          ul(role="list")
-            li.included  Design
-                  //- a(href="/services#design")
-                
-            li.included  Build
-                  //- a(href="/services#build")
-                
-            li Hosting
-                  //- a(href="/services#hosting")
-                
-            li Domain purchase
-                  //- a(href="/services#domain-purchase")
-                
-            li SEO & Accessibility
-                  //- a(href="/services#seo-accessibility")
-                
-            li Analytics set up
-                  //- a(href="/services#analytics")
-                
-            li Ongoing maintenance
-                  //- a(href="/services#maintenance")
-                
-          p.price: em Starting at $850AUD
-          +btn({ icon: {class: 'arrow right', side: 'right'}})(href='/contact?package=Just the basics&type=low', class="full-width secondary")
-            | Sign me up!
-      p.note 
-            strong Note: 
-            | AMDesigned custom builds each and every website. This results in blazing fast, user-friendly websites that everyone loves. It also means if any updates to the website are wanted later on it's best that a web development professional do them. Luckily we offer great rates for these update!
+						li Hosting
+							//- a(href="/services#hosting")
+
+						li Domain purchase
+							//- a(href="/services#domain-purchase")
+
+						li.included SEO & Accessibility
+							//- a(href="/services#seo-accessibility")
+
+						li.included Analytics set up
+							//- a(href="/services#analytics")
+
+						//- li Ongoing maintenance
+							//- a(href="/services#maintenance")
+
+					p.price: em Starting at $1150AUD
+					+btn({icon: {class: 'arrow right', side: 'right'}}).full-width.secondary(
+						href="/contact?package=Let's Split It&type=mid"
+					)
+						| This is me
+
+				span.option.hero 
+					|
+					p.title We'll do it all
+					ul(role="list")
+						li.included Design
+							//- a(href="/services#design")
+
+						li.included Build
+							//- a(href="/services#build")
+
+						li.included Hosting
+							//- a(href="/services#hosting")
+
+						li.included Domain purchase
+							//- a(href="/services#domain-purchase")
+
+						li.included SEO & Accessibility
+							//- a(href="/services#seo-accessibility")
+
+						li.included Analytics set up
+							//- a(href="/services#analytics")
+
+						//- li.included  Ongoing maintenance
+							//- a(href="/services#maintenance")
+
+					p.price: em Starting at $2150AUD
+					+btn({ icon: {class: 'arrow right', side: 'right'}}).full-width(
+						href="/contact?package=Please do it all&type=high"
+					)
+						| Just what I want
+
+				span.option 
+					|
+					p.title Just the basics
+					ul(role="list")
+						li.included Design
+							//- a(href="/services#design")
+
+						li.included Build
+							//- a(href="/services#build")
+
+						li Hosting
+							//- a(href="/services#hosting")
+
+						li Domain purchase
+							//- a(href="/services#domain-purchase")
+
+						li SEO & Accessibility
+							//- a(href="/services#seo-accessibility")
+
+						li Analytics set up
+							//- a(href="/services#analytics")
+
+						//- li Ongoing maintenance
+							//- a(href="/services#maintenance")
+
+					p.price: em Starting at $850AUD
+					+btn({ icon: {class: 'arrow right', side: 'right'}}).full-width.secondary(
+						href="/contact?package=Just the basics&type=low"
+					)
+						| Sign me up!
+			p.note 
+				|
+				strong Note:
+				| AMDesigned custom builds each and every website. This results in blazing fast, user-friendly websites that everyone loves. It also means if any updates to the website are wanted later on it's best that a web development professional do them. Luckily we offer great rates for these update!

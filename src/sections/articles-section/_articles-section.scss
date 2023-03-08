@@ -1,0 +1,23 @@
+.articles__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3.2rem;
+	.article__card {
+		display: grid;
+		padding: 1.6rem;
+		text-decoration: none;
+		color: hsl(var(--dark));
+		box-shadow: 2px 2px 10px -4px hsl(var(--highlight), 0.4),
+			0 0 12px -4px hsl(var(--dark), 0.8);
+		border-radius: 0.8rem;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 40rem;
+
+		img {
+			width: 100%;
+			aspect-ratio: 4/3;
+			object-fit: cover;
+		}
+	}
+}

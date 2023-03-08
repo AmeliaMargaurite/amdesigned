@@ -18,6 +18,19 @@
 	}
 }
 
+.line {
+	position: relative;
+	background: pink;
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		background: red;
+		mask-image: url("../images/line-path.svg");
+	}
+}
+
 .chevron-both {
 	--background: hsl(var(--highlight), 0.5);
 	--height: 3.2rem;
@@ -109,6 +122,7 @@
 		height: var(--height);
 		background-repeat: 3;
 		mask-image: url("../images/svg-path.svg");
+		mask-size: 100vw var(--height); // needed for firefox
 	}
 
 	&::before {

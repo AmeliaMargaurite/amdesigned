@@ -1,0 +1,13 @@
+mixin articles-section
+	section.articles-section
+		span#articles.section__content
+			span
+				h1 Articles
+				p Articles I wrote
+			span.articles__wrapper
+				<?php foreach ($articles as $article): ?>
+				a.article__card(href!="/article/<?= $article->slug ?>")
+					img(src!="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg")
+					p.title!= "<?= $article->title ?>"
+					p.summary!= "<?= $article->summary ?>"
+				<?php endforeach ?>
