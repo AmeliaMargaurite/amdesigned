@@ -1,21 +1,22 @@
+<?php include_once('./load_articles.php') ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confirmation | AMDesigned</title>
+    <title>Articles | AMDesigned</title>
     <meta name="description" content="AMDesigned" />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:url" content="https://www.amdesigned.com.au/" />
-    <meta property="og:title" content="Confirmation | AMDesigned" />
+    <meta property="og:title" content="Articles | AMDesigned" />
     <meta property="og:description" content="AMDesigned" />
     <meta property="og:image" content="" />
     <meta property="og:image:alt" content="" />
-    <meta name="twitter:title" content="Confirmation | AMDesigned" />
+    <meta name="twitter:title" content="Articles | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.1e55f846a0f8fc53934e.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
     <link href="/css/main.4aa0df2ddcece7e22ea37f1f43d754bf.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -79,11 +80,16 @@
         </ul>
       </nav>
     </header>
-    <main class="confirmation" id="main">
-      <section><span class="section__content">
-          <h1>Success! </h1>
-          <p>Your contact form has been submitted. We'll be in contact soon!</p>
-        </span></section>
+    <main class="articles" id="main">
+      <section class="articles-section"><span class="section__content" id="articles"><span>
+            <h1>Articles</h1>
+            <p>Articles I wrote</p>
+          </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?><a class="article__card"
+              href="/article/<?= $article->slug ?>"><img
+                src="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg">
+              <p class="title"><?= $article->title ?></p>
+              <p class="summary"><?= $article->summary ?></p>
+            </a><?php endforeach ?></span></span></section>
     </main>
     <footer>
       <ul>

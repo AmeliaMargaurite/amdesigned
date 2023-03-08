@@ -1,21 +1,22 @@
+<?php include_once('./load_article.php') ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confirmation | AMDesigned</title>
+    <title><?php echo $article->title ?? 'Whoops!' ?> | AMDesigned</title>
     <meta name="description" content="AMDesigned" />
     <meta property="og:locale" content="en_AU" />
-    <meta property="og:url" content="https://www.amdesigned.com.au/" />
-    <meta property="og:title" content="Confirmation | AMDesigned" />
+    <meta property="og:url" content="https://www.amdesigned.com.au//showcase" />
+    <meta property="og:title" content="&lt;?php echo $article-&gt;title ?? 'Whoops!' ?&gt; | AMDesigned" />
     <meta property="og:description" content="AMDesigned" />
     <meta property="og:image" content="" />
     <meta property="og:image:alt" content="" />
-    <meta name="twitter:title" content="Confirmation | AMDesigned" />
+    <meta name="twitter:title" content="&lt;?php echo $article-&gt;title ?? 'Whoops!' ?&gt; | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.1e55f846a0f8fc53934e.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.10.a394cfe2feb1edba2c53.js"> </script>
     <link href="/css/main.4aa0df2ddcece7e22ea37f1f43d754bf.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -79,11 +80,18 @@
         </ul>
       </nav>
     </header>
-    <main class="confirmation" id="main">
-      <section><span class="section__content">
-          <h1>Success! </h1>
-          <p>Your contact form has been submitted. We'll be in contact soon!</p>
-        </span></section>
+    <main class="article" id="main"><?php if ($article !== null) :?><span class="hero_img"><img
+          src="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg" /></span>
+      <section class="showcase__section"><span class="section__content"><span><span class="last_updated">Last updated<p>
+                <?= $article->updated_at ?></p></span><span class="title">
+              <p><?= $article->title?></p>
+            </span><span class="tags"><span class="content"><?= $article->tags?></span></span><span
+              class="categories"><span class="content"><?= $article->categories?></span></span><span
+              class="content__wrapper"><span><?= $article->content?></span></span><span
+              id="published_at"></span></span></span></section><?php else : ?><span class="section__content"><span>
+          <h1>Whoops</h1>
+          <p>The article you were looking for doesn't seem to exist</p>
+        </span></span><?php endif ?>
     </main>
     <footer>
       <ul>

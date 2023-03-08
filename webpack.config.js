@@ -34,6 +34,12 @@ const alterPugFolderStructure = (pathData) => {
 	return nestedDir ? `${nestedDir}/${name}/index.html` : `${name}/index.html`;
 };
 
+const renameIfFolder = (context) => {
+	console.log(context);
+
+	// path.join(__dirname, "dist/");
+};
+
 module.exports = {
 	mode: "development",
 	entry: {
@@ -45,6 +51,8 @@ module.exports = {
 		services: "./src/pages/services.pug",
 		termsConditions: "./src/pages/terms-and-conditions.pug",
 		privacyPolicy: "./src/pages/privacy-policy.pug",
+		articles: "./src/pages/articles.php.pug",
+		article: "./src/pages/article.php.pug",
 	},
 	output: {
 		path: path.join(__dirname, "dist/"),
@@ -95,6 +103,14 @@ module.exports = {
 				{
 					from: path.join(__dirname, "src/root-files"),
 					to: path.join(__dirname, "dist/"),
+				},
+				{
+					from: path.join(__dirname, "src/article/"),
+					to: path.join(__dirname, "dist/article"),
+				},
+				{
+					from: path.join(__dirname, "src/articles/"),
+					to: path.join(__dirname, "dist/articles"),
 				},
 				{
 					// from regex ignores files starting with _ as they're includes
