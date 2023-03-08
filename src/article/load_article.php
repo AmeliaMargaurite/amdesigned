@@ -12,10 +12,9 @@ $api_addon = 'api/articles';
 
 $client = new Client();
 $res = $client->get($base_url . $api_addon . $article_slug);
-// echo $res->getBody();
-$article = json_decode($res->getBody());
 
-// if ($article === null) {
-//   header('Location: /articles/notFound404');
-// }
+$article = json_decode($res->getBody());
+if ($article && getType($article) === 'array' && count($article)) {
+  $article = $article[0];
+}
 ?>

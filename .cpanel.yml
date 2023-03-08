@@ -3,6 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home2/ameliama/amdesigned.com.au
     - /bin/cp -R dist/. $DEPLOYPATH
-    - cd /home2/ameliama/amdesigned.com.au
-    - composer install
-    - composer dumpautoload
