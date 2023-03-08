@@ -67,7 +67,8 @@
     </script>
   </head>
   <body><span class="loading__wrapper" id="loading__wrapper"><span class="loader">Loading...</span></span>
-    <header class="line"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo" href="/">
+    <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
+        href="/">
         <p class="company-name">AMDesigned</p>
       </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
         aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
