@@ -20,18 +20,18 @@ block content
 		section.article__section
 			span.section__content
 				span
+					span.title
+						h1!= "<?= $article->title?>"
 					span.last_updated Last updated
 						p!= "<?= $article->updated_at ?>"
-					span.title
-						p!= "<?= $article->title?>"
-					//- span#summary 
-					span.tags
-						span#content.content!= "<?= $article->tags?>"
-					span.categories
-						span.content!= "<?= $article->categories?>"
-					span.content__wrapper
-						span!= "<?= $article->content?>"
-					span#published_at
+				//- span#summary 
+				//- span.tags
+				//- 	span#content.content!= "<?= $article->tags?>"
+				//- span.categories
+				//- 	span.content!= "<?= $article->categories?>"
+				span.content__wrapper
+					span!= "<?= $article->content?>"
+				span#published_at
 	<?php else : ?>
 	section
 		span.section__content

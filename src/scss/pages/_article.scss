@@ -1,6 +1,10 @@
 .article {
 	margin-top: -7vw;
-
+	.article__section {
+		max-width: 600px;
+		margin: auto;
+		padding-block: 0;
+	}
 	.hero_img {
 		display: grid;
 		img {
