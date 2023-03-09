@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="&lt;?= $article-&gt;title ?? 'Whoops!' ?&gt; | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.8.1b6d8c23c3108d19ba04.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.10.a394cfe2feb1edba2c53.js"> </script>
     <link href="/css/main.4aa0df2ddcece7e22ea37f1f43d754bf.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -81,8 +81,8 @@
         </ul>
       </nav>
     </header>
-    <main class="&lt;?php $article-&gt;title ? 'article' : 'no-article' ?&gt;" id="main">
-      <?php if ($article !== null) :?><script type="application/ld+json">
+    <main class="<?= $article->title ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><script
+        type="application/ld+json">
         {
           "@content": "https://schema.org",
           "@type": "BlogPosting",
