@@ -1,7 +1,7 @@
 .article {
 	margin-top: -7vw;
 	.article__section {
-		max-width: 600px;
+		max-width: 850px;
 		margin: auto;
 		padding-block: 0;
 	}
@@ -26,6 +26,19 @@
 
 	.categories .content p {
 		background: hsl(var(--highlight), 0.3);
+	}
+
+	.article-content {
+		display: grid;
+		row-gap: 0.8rem;
+	}
+
+	.title__wrapper {
+		line-height: 1.2;
+		.last_updated {
+			font-size: 1.6rem;
+			color: hsl(var(--dark), 0.6);
+		}
 	}
 
 	img {
