@@ -5,7 +5,7 @@ block phpScripts
 	<?php include_once('./load_article.php') ?>
 
 block variables
-	- var mainClass = "<?php $article->title ? 'article' : 'no-article' ?>";
+	- var mainClass = "<?= $article->title ? 'article' : 'no-article' ?>";
 	- var title = "<?= $article->title ?? 'Whoops!' ?>";
 	- var page_description = "";
 	- var slug = "/showcase";

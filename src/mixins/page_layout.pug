@@ -129,7 +129,7 @@ html(lang="en")
 			span.loader Loading...
 
 		+page_header(title)
-		main#main(class=mainClass ? mainClass : title.toLowerCase())
+		main#main(class!=mainClass ? mainClass : title.toLowerCase())
 			block content
 
 		+page_footer(title)
