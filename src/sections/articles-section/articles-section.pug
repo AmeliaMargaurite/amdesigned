@@ -6,8 +6,19 @@ mixin articles-section
 				p Articles I wrote
 			span.articles__wrapper
 				<?php foreach ($articles as $article): ?>
-				a.article__card(href!="/article/<?= $article->slug ?>")
-					img(src!="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg")
-					p.title!= "<?= $article->title ?>"
-					p.summary!= "<?= $article->summary ?>"
+					<?php $thumbnail = $img_url . 'thumbnail/' . $article->hero_img_filename . '.webp ' ?>
+					<?php $small = $img_url . 'small/' . $article->hero_img_filename . '.webp ' ?>
+					<?php $medium = $img_url . 'medium/' . $article->hero_img_filename . '.webp ' ?>
+					<?php $large = $img_url . 'large/' . $article->hero_img_filename . '.webp ' ?>
+					<?php $xLarge = $img_url . 'xLarge/' . $article->hero_img_filename . '.webp ' ?>
+					a.article__card(href!="/article/<?= $article->slug ?>")
+						figure
+							picture
+								source(srcset="", type="image/webp")
+								img(
+									src!="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg",
+									alt="<?= $article->hero_img_alt ?>"
+								)
+						p.title!= "<?= $article->title ?>"
+						p.summary!= "<?= $article->summary ?>"
 				<?php endforeach ?>

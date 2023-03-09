@@ -1,4 +1,5 @@
 extends ../mixins/page_layout.pug
+include ../components/article-schema-json.pug
 
 block phpScripts
 	<?php include_once('./load_article.php') ?>
@@ -13,6 +14,7 @@ block variables
 
 block content
 	<?php if ($article !== null) :?>
+		+article-schema-json
 		span.hero_img
 			img(src!="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg")
 		section.showcase__section
@@ -24,7 +26,7 @@ block content
 						p!= "<?= $article->title?>"
 					//- span#summary 
 					span.tags
-						span.content!= "<?= $article->tags?>"
+						span.content#content!= "<?= $article->tags?>"
 					span.categories
 						span.content!= "<?= $article->categories?>"
 					span.content__wrapper
