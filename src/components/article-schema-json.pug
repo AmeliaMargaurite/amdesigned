@@ -6,7 +6,7 @@ mixin article-schema-json
 			"@id": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
 			"mainEntityOfPage": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
 			"headline": "<?= $article->title ?>",
-			"name": "<?= $article->title ?>"
+			"name": "<?= $article->title ?>",
 			"description": "<?= $article->summary ?>",
 			"datePublished": "<?= $article->created_at ?>",
 			"dateModified": "<?= $article->updated_at ?>",
@@ -18,8 +18,7 @@ mixin article-schema-json
 			"image": {
 				"@type": "ImageObject",
 				"@id": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg",
-				"url": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg",
-			}
-			"url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>",
-
+				"url": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg"
+			},
+			"url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>"
 		}

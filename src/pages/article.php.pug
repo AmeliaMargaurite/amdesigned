@@ -5,8 +5,8 @@ block phpScripts
 	<?php include_once('./load_article.php') ?>
 
 block variables
-	- var mainClass = "<?= $article->title ? 'article' : 'no-article' ?>";
-	- var title = "<?= $article->title ?? 'Whoops!' ?>";
+	- var mainClass = "<?= $article ? 'article' : 'no-article' ?>";
+	- var title = "<?= $article ? $article->title : 'Whoops!' ?>";
 	- var page_description = "";
 	- var slug = "/showcase";
 	//- - var page_image = require("../images/contact-order-online-small-medium-business-website.jpg");
@@ -33,8 +33,9 @@ block content
 						span!= "<?= $article->content?>"
 					span#published_at
 	<?php else : ?>
-	span.section__content
-		span
-			h1 Whoops
-			p The article you were looking for doesn't seem to exist
+	section
+		span.section__content
+			span
+				h1 Whoops
+				p The article you were looking for doesn't seem to exist
 	<?php endif ?>
