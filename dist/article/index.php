@@ -5,18 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $article->title ?? 'Whoops!' ?> | AMDesigned</title>
+    <title><?= $article ? $article->title : 'Whoops!' ?> | AMDesigned</title>
     <meta name="description" content="AMDesigned" />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:url" content="https://www.amdesigned.com.au//showcase" />
-    <meta property="og:title" content="&lt;?= $article-&gt;title ?? 'Whoops!' ?&gt; | AMDesigned" />
+    <meta property="og:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
     <meta property="og:description" content="AMDesigned" />
     <meta property="og:image" content="" />
     <meta property="og:image:alt" content="" />
-    <meta name="twitter:title" content="&lt;?= $article-&gt;title ?? 'Whoops!' ?&gt; | AMDesigned" />
+    <meta name="twitter:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.10.a394cfe2feb1edba2c53.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
     <link href="/css/main.4aa0df2ddcece7e22ea37f1f43d754bf.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -81,7 +81,7 @@
         </ul>
       </nav>
     </header>
-    <main class="<?= $article->title ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><script
+    <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><script
         type="application/ld+json">
         {
           "@content": "https://schema.org",
@@ -89,7 +89,7 @@
           "@id": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
           "mainEntityOfPage": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
           "headline": "<?= $article->title ?>",
-          "name": "<?= $article->title ?>"
+          "name": "<?= $article->title ?>",
           "description": "<?= $article->summary ?>",
           "datePublished": "<?= $article->created_at ?>",
           "dateModified": "<?= $article->updated_at ?>",
@@ -101,10 +101,9 @@
           "image": {
             "@type": "ImageObject",
             "@id": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg",
-            "url": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg",
-          }
-          "url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>",
-
+            "url": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg"
+          },
+          "url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>"
         }
       </script><span class="hero_img"><img src="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg" /></span>
       <section class="article__section"><span class="section__content"><span><span class="last_updated">Last updated<p>
@@ -113,10 +112,11 @@
             </span><span class="tags"><span class="content" id="content"><?= $article->tags?></span></span><span
               class="categories"><span class="content"><?= $article->categories?></span></span><span
               class="content__wrapper"><span><?= $article->content?></span></span><span
-              id="published_at"></span></span></span></section><?php else : ?><span class="section__content"><span>
-          <h1>Whoops</h1>
-          <p>The article you were looking for doesn't seem to exist</p>
-        </span></span><?php endif ?>
+              id="published_at"></span></span></span></section><?php else : ?><section><span
+          class="section__content"><span>
+            <h1>Whoops</h1>
+            <p>The article you were looking for doesn't seem to exist</p>
+          </span></span></section><?php endif ?>
     </main>
     <footer>
       <ul>
