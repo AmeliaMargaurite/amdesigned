@@ -76,7 +76,7 @@ module.exports = {
 			// 	console.log(filePath);
 			// 	return /\.php$/.test(filePath);
 			// },
-			// writeToDisk: true,
+			writeToDisk: true,
 		},
 	},
 	plugins: [

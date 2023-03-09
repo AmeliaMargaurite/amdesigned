@@ -16,8 +16,8 @@
     <meta name="twitter:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
-    <link href="/css/main.4aa0df2ddcece7e22ea37f1f43d754bf.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.6.bb2247b38fd275d518dd.js"> </script>
+    <link href="/css/main.47ed19297d26832041c6af7b005e4aea.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -106,14 +106,11 @@
           "url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>"
         }
       </script><span class="hero_img"><img src="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg" /></span>
-      <section class="article__section"><span class="section__content"><span><span class="last_updated">Last updated<p>
-                <?= $article->updated_at ?></p></span><span class="title">
-              <p><?= $article->title?></p>
-            </span><span class="tags"><span class="content" id="content"><?= $article->tags?></span></span><span
-              class="categories"><span class="content"><?= $article->categories?></span></span><span
-              class="content__wrapper"><span><?= $article->content?></span></span><span
-              id="published_at"></span></span></span></section><?php else : ?><section><span
-          class="section__content"><span>
+      <section class="article__section"><span class="section__content"><span><span class="title">
+              <h1><?= $article->title?></h1>
+            </span><span class="last_updated">Last updated<p><?= $article->updated_at ?></p></span></span><span
+            class="content__wrapper"><span><?= $article->content?></span></span><span id="published_at"></span></span>
+      </section><?php else : ?><section><span class="section__content"><span>
             <h1>Whoops</h1>
             <p>The article you were looking for doesn't seem to exist</p>
           </span></span></section><?php endif ?>
