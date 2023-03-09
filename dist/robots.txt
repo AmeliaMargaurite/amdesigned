@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /terms-and-conditions
 Disallow: /privacy-policy
-Sitemap: https://amdesigned.com.au/sitemap.txt
+Sitemap: https://access.amdesigned.com.au/sitemap.xml

@@ -85,9 +85,20 @@
       <section class="articles-section"><span class="section__content" id="articles"><span>
             <h1>Articles</h1>
             <p>Articles I wrote</p>
-          </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?><a class="article__card"
-              href="/article/<?= $article->slug ?>"><img
-                src="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg">
+          </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?>
+            <?php $thumbnail = $img_url . 'thumbnail/' . $article->hero_img_filename . '.webp ' ?>
+            <?php $small = $img_url . 'small/' . $article->hero_img_filename . '.webp ' ?>
+            <?php $medium = $img_url . 'medium/' . $article->hero_img_filename . '.webp ' ?>
+            <?php $large = $img_url . 'large/' . $article->hero_img_filename . '.webp ' ?>
+            <?php $xLarge = $img_url . 'xLarge/' . $article->hero_img_filename . '.webp ' ?><a class="article__card"
+              href="/article/<?= $article->slug ?>">
+              <figure>
+                <picture>
+                  <source srcset="" type="image/webp"><img
+                    src="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg"
+                    alt="&lt;?= $article-&gt;hero_img_alt ?&gt;">
+                </picture>
+              </figure>
               <p class="title"><?= $article->title ?></p>
               <p class="summary"><?= $article->summary ?></p>
             </a><?php endforeach ?></span></span></section>
