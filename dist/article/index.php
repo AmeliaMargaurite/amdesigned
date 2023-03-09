@@ -5,19 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $article ? $article->title : 'Whoops!' ?> | AMDesigned</title>
+    <title><?= $article ? htmlspecialchars($article->title) : 'Whoops!' ?> | AMDesigned</title>
     <meta name="description" content="AMDesigned" />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:url" content="https://www.amdesigned.com.au//showcase" />
-    <meta property="og:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
+    <meta property="og:title"
+      content="&lt;?= $article ? htmlspecialchars($article-&gt;title) : 'Whoops!' ?&gt; | AMDesigned" />
     <meta property="og:description" content="AMDesigned" />
     <meta property="og:image" content="" />
     <meta property="og:image:alt" content="" />
-    <meta name="twitter:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
+    <meta name="twitter:title"
+      content="&lt;?= $article ? htmlspecialchars($article-&gt;title) : 'Whoops!' ?&gt; | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.6.bb2247b38fd275d518dd.js"> </script>
-    <link href="/css/main.47ed19297d26832041c6af7b005e4aea.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.10.a394cfe2feb1edba2c53.js"> </script>
+    <link href="/css/main.07b48ed9eaae8fc2f83c40e2145e63c6.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -81,8 +83,8 @@
         </ul>
       </nav>
     </header>
-    <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><script
-        type="application/ld+json">
+    <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?>
+      <?php $date = new DateTime($article->updated_at); ?><script type="application/ld+json">
         {
           "@content": "https://schema.org",
           "@type": "BlogPosting",
@@ -105,11 +107,12 @@
           },
           "url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>"
         }
-      </script><span class="hero_img"><img src="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg" /></span>
-      <section class="article__section"><span class="section__content"><span><span class="title">
-              <h1><?= $article->title?></h1>
-            </span><span class="last_updated">Last updated<p><?= $article->updated_at ?></p></span></span><span
-            class="content__wrapper"><span><?= $article->content?></span></span><span id="published_at"></span></span>
+      </script><span class="hero_img"><img
+          src="<?= htmlspecialchars($img_url) . 'medium/' . htmlspecialchars($article->hero_img_filename) ?>.jpg" /></span>
+      <section class="article__section"><span class="section__content"><span class="title__wrapper"><span class="title">
+              <h1><?= htmlspecialchars($article->title)?></h1>
+            </span><span class="last_updated">Last updated <?= $date->format('jS F Y') ?></span></span><span
+            class="article-content" id="content"><?= $article->content?></span><span id="published_at"></span></span>
       </section><?php else : ?><section><span class="section__content"><span>
             <h1>Whoops</h1>
             <p>The article you were looking for doesn't seem to exist</p>
