@@ -5,8 +5,8 @@ block phpScripts
 	<?php include_once('./load_article.php') ?>
 
 block variables
-	- var mainClass = "article";
-	- var title = "<?php echo $article->title ?? 'Whoops!' ?>";
+	- var mainClass = "<?php $article->title ? 'article' : 'no-article' ?>";
+	- var title = "<?= $article->title ?? 'Whoops!' ?>";
 	- var page_description = "";
 	- var slug = "/showcase";
 	//- - var page_image = require("../images/contact-order-online-small-medium-business-website.jpg");
@@ -17,7 +17,7 @@ block content
 		+article-schema-json
 		span.hero_img
 			img(src!="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg")
-		section.showcase__section
+		section.article__section
 			span.section__content
 				span
 					span.last_updated Last updated
@@ -26,7 +26,7 @@ block content
 						p!= "<?= $article->title?>"
 					//- span#summary 
 					span.tags
-						span.content#content!= "<?= $article->tags?>"
+						span#content.content!= "<?= $article->tags?>"
 					span.categories
 						span.content!= "<?= $article->categories?>"
 					span.content__wrapper
