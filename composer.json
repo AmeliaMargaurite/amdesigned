@@ -7,7 +7,8 @@
     "autoload": {
         "files": [
             "src/php/Helpers/redirects.php",
-            "src/php/Helpers/util.php"
+            "src/php/Helpers/util.php",
+            "src/php/Helpers/buildSrcsets.php"
         ],
         "psr-4": {
             "App\\": "src/php/"
