@@ -6,18 +6,21 @@ mixin articles-section
 				p Articles I wrote
 			span.articles__wrapper
 				<?php foreach ($articles as $article): ?>
-					<?php $thumbnail = $img_url . 'thumbnail/' . $article->hero_img_filename . '.webp ' ?>
-					<?php $small = $img_url . 'small/' . $article->hero_img_filename . '.webp ' ?>
-					<?php $medium = $img_url . 'medium/' . $article->hero_img_filename . '.webp ' ?>
-					<?php $large = $img_url . 'large/' . $article->hero_img_filename . '.webp ' ?>
-					<?php $xLarge = $img_url . 'xLarge/' . $article->hero_img_filename . '.webp ' ?>
+				<?php $webpFile = $article->hero_img_filename . '.webp'; ?>
+					<?php $thumbnail = $img_url . 'thumbnail/' . $webpFile . ' 200w' ?>
+					<?php $small = $img_url . 'small/' . $webpFile . $webpFile . ' 425w' ?>
+					<?php $medium = $img_url . 'medium/' . $webpFile . ' 900w' ?>
+					<?php $large = $img_url . 'large/' . $webpFile . ' 1024w' ?>
+					<?php $xLarge = $img_url . 'xLarge/' . $webpFile . ' 1440w' ?>
+					<?php $srcset = array($thumbnail, $small, $medium, $large, $xLarge) ?>
+					<?php $srcset = implode(',', $srcset) ?>
 					a.article__card(href!="/article/<?= $article->slug ?>")
 						figure
 							picture
-								source(srcset="", type="image/webp")
+								source(srcset!="<?= $srcset ?>", type="image/webp")
 								img(
 									src!="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg",
-									alt="<?= $article->hero_img_alt ?>"
+									alt!="<?= $article->hero_img_alt ?>"
 								)
 						p.title!= "<?= $article->title ?>"
 						p.summary!= "<?= $article->summary ?>"

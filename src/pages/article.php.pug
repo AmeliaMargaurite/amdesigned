@@ -6,7 +6,7 @@ block phpScripts
 
 block variables
 	- var mainClass = "<?= $article ? 'article' : 'no-article' ?>";
-	- var title = "<?= $article ? htmlspecialchars($article->title) : 'Whoops!' ?>";
+	- var title = "<?= $article ? $article->title : 'Whoops!' ?>";
 	- var page_description = "";
 	- var slug = "/showcase";
 	//- - var page_image = require("../images/contact-order-online-small-medium-business-website.jpg");
@@ -19,13 +19,14 @@ block content
 		+article-schema-json
 		span.hero_img
 			img(
-				src!="<?= htmlspecialchars($img_url) . 'medium/' . htmlspecialchars($article->hero_img_filename) ?>.jpg"
+				src!="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg",
+				alt!="<?= $article->hero_img_alt ?>"
 			)
 		section.article__section
 			span.section__content
 				span.title__wrapper
 					span.title
-						h1!= "<?= htmlspecialchars($article->title)?>"
+						h1!= "<?= $article->title?>"
 					span.last_updated Last updated
 						!= " <?= $date->format('jS F Y') ?>"
 				//- span#summary 
