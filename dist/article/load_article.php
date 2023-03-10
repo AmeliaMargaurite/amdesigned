@@ -8,7 +8,7 @@ $article = null;
 $article_slug = null;
 if (IS_LIVE) {
   $uri_parts = explode('uri=', $_SERVER["QUERY_STRING"]);
-  if (count($uri_parts) > 0 && !empty($uri_parts[1])) {
+  if ($uri_parts && !empty($uri_parts[1])) {
     $article_slug = '/' . htmlspecialchars($uri_parts[1]);
   }
 } else {
@@ -28,7 +28,7 @@ if ($article_slug) {
 
   $article = json_decode($res->getBody());
 
-  if ($article && getType($article) === 'array' && count($article)) {
+  if ($article && getType($article) === 'array') {
     $article = $article[0];
   }
 }
