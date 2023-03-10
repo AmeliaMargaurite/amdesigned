@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.9.accb87cd6372a3e0a956.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.5.f913097ba371517fecfe.js"> </script>
     <link href="/css/main.223f3dec9c1161aaf1ea45dcf08984fd.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -82,36 +82,38 @@
       </nav>
     </header>
     <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?>
-      <?php $date = new DateTime($article->updated_at); ?><script type="application/ld+json">
-        {
-          "@content": "https://schema.org",
-          "@type": "BlogPosting",
-          "@id": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
-          "mainEntityOfPage": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
-          "headline": "<?= $article->title ?>",
-          "name": "<?= $article->title ?>",
-          "description": "<?= $article->summary ?>",
-          "datePublished": "<?= $article->created_at ?>",
-          "dateModified": "<?= $article->updated_at ?>",
-          "author": {
-            "@type": "Person",
-            "name": "Amelia Margaurite",
-            "url": "https://www.linkedin.com/in/amelia-margaurite-150456201/"
-          },
-          "image": {
-            "@type": "ImageObject",
-            "@id": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg",
-            "url": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg"
-          },
-          "url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>"
-        }
-      </script><span class="hero_img"><img src="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg"
-          alt="<?= $article->hero_img_alt ?>" /></span>
+      <?php $date = new DateTime($article->updated_at); ?><span class="hero_img"><img
+          src="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg" alt="<?= $article->hero_img_alt ?>"
+          width="100%" height="auto" /></span>
       <section class="article__section"><span class="section__content"><span class="title__wrapper"><span class="title">
               <h1><?= $article->title?></h1>
             </span><span class="last_updated">Last updated <?= $date->format('jS F Y') ?></span></span><span
-            class="article-content" id="content"><?= $article->content?></span><span id="published_at"></span></span>
-      </section><?php else : ?><section><span class="section__content"><span>
+            class="article-content" id="content"><?= $article->content?></span><span id="published_at"></span>
+          <script type="application/ld+json">
+            {
+              "@content": "https://schema.org",
+              "@type": "BlogPosting",
+              "@id": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
+              "mainEntityOfPage": "https://www.amdesigned.com.au/article/<?= $article->slug ?>#content",
+              "headline": "<?= $article->title ?>",
+              "name": "<?= $article->title ?>",
+              "description": "<?= $article->summary ?>",
+              "datePublished": "<?= $article->created_at ?>",
+              "dateModified": "<?= $article->updated_at ?>",
+              "author": {
+                "@type": "Person",
+                "name": "Amelia Margaurite",
+                "url": "https://www.linkedin.com/in/amelia-margaurite-150456201/"
+              },
+              "image": {
+                "@type": "ImageObject",
+                "@id": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg",
+                "url": "https://www.access.amdesigned.com.au/storage/gallery/small/<?= $article->hero_img_filename ?>.jpg"
+              },
+              "url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>"
+            }
+          </script>
+        </span></section><?php else : ?><section><span class="section__content"><span>
             <h1>Whoops</h1>
             <p>The article you were looking for doesn't seem to exist</p>
           </span></span></section><?php endif ?>
