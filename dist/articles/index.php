@@ -16,8 +16,8 @@
     <meta name="twitter:title" content="Articles | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
-    <link href="/css/main.07b48ed9eaae8fc2f83c40e2145e63c6.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.8.1b6d8c23c3108d19ba04.js"> </script>
+    <link href="/css/main.223f3dec9c1161aaf1ea45dcf08984fd.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -86,17 +86,19 @@
             <h1>Articles</h1>
             <p>Articles I wrote</p>
           </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?>
-            <?php $thumbnail = $img_url . 'thumbnail/' . $article->hero_img_filename . '.webp ' ?>
-            <?php $small = $img_url . 'small/' . $article->hero_img_filename . '.webp ' ?>
-            <?php $medium = $img_url . 'medium/' . $article->hero_img_filename . '.webp ' ?>
-            <?php $large = $img_url . 'large/' . $article->hero_img_filename . '.webp ' ?>
-            <?php $xLarge = $img_url . 'xLarge/' . $article->hero_img_filename . '.webp ' ?><a class="article__card"
-              href="/article/<?= $article->slug ?>">
+            <?php $webpFile = $article->hero_img_filename . '.webp'; ?>
+            <?php $thumbnail = $img_url . 'thumbnail/' . $webpFile . ' 200w' ?>
+            <?php $small = $img_url . 'small/' . $webpFile . $webpFile . ' 425w' ?>
+            <?php $medium = $img_url . 'medium/' . $webpFile . ' 900w' ?>
+            <?php $large = $img_url . 'large/' . $webpFile . ' 1024w' ?>
+            <?php $xLarge = $img_url . 'xLarge/' . $webpFile . ' 1440w' ?>
+            <?php $srcset = array($thumbnail, $small, $medium, $large, $xLarge) ?>
+            <?php $srcset = implode(',', $srcset) ?><a class="article__card" href="/article/<?= $article->slug ?>">
               <figure>
                 <picture>
-                  <source srcset="" type="image/webp"><img
+                  <source srcset="<?= $srcset ?>" type="image/webp"><img
                     src="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg"
-                    alt="&lt;?= $article-&gt;hero_img_alt ?&gt;">
+                    alt="<?= $article->hero_img_alt ?>">
                 </picture>
               </figure>
               <p class="title"><?= $article->title ?></p>
