@@ -16,11 +16,12 @@ block content
 	<?php if ($article !== null) :?>
 		<?php $date = new DateTime($article->updated_at); ?>
 
-		+article-schema-json
 		span.hero_img
 			img(
 				src!="<?= $img_url . 'medium/' . $article->hero_img_filename ?>.jpg",
-				alt!="<?= $article->hero_img_alt ?>"
+				alt!="<?= $article->hero_img_alt ?>",
+				width="100%",
+				height="auto"
 			)
 		section.article__section
 			span.section__content
@@ -36,6 +37,7 @@ block content
 				//- 	span.content!= "<?= $article->categories?>"
 				span#content.article-content!= "<?= $article->content?>"
 				span#published_at
+				+article-schema-json
 	<?php else : ?>
 	section
 		span.section__content
