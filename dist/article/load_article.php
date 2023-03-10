@@ -19,7 +19,7 @@ if (IS_LIVE) {
 if ($article_slug) {
   $base_url = $_SERVER['HTTP_HOST'] === 'localhost:3001' ? 'http://127.0.0.1:8000/' : 'https://www.access.amdesigned.com.au/';
 
-  $img_url = $base_url . 'storage/gallery/';
+  $img_path = $base_url . 'storage/gallery/';
   $api_addon = 'api/articles';
   $url = $base_url . $api_addon . $article_slug;
 
