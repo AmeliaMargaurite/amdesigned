@@ -20,16 +20,21 @@ block content
 			<?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
 			<?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
 			<?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?>
-			figure(height="65vh", width="100%")
+			figure(width="100%", height="400")
 				picture
-					source(srcset!="<?= $webp_srcset ?>", type="image/webp")
+					source(
+						srcset!="<?= $webp_srcset ?>",
+						type="image/webp",
+						width="100%",
+						height="400"
+					)
 					img(
 						sizes="(max-width: 1400px) 100vw, 1400px",
 						srcset!="<?= $jpg_srcset ?>",
 						src!="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.jpg",
 						alt!="<?= $article->hero_img_alt ?>",
-						width="auto",
-						height="65vh"
+						width="100%",
+						height="400"
 					)
 		section.article__section
 			span.section__content
