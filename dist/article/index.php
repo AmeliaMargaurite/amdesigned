@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.10.a394cfe2feb1edba2c53.js"> </script>
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.9.accb87cd6372a3e0a956.js"> </script>
     <link href="/css/main.4031d5e849c42f5d501c51d11ad2ece9.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
@@ -85,7 +85,8 @@
       <?php $date = new DateTime($article->updated_at); ?><span
         class="hero_img"><?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
         <?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
-        <?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?><figure>
+        <?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?><figure height="65vh"
+          width="100%">
           <picture>
             <source srcset="<?= $webp_srcset ?>" type="image/webp" /><img sizes="(max-width: 1400px) 100vw, 1400px"
               srcset="<?= $jpg_srcset ?>" src="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.jpg"
