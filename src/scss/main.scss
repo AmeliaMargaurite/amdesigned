@@ -60,7 +60,7 @@ section {
 	row-gap: 1.6rem;
 	&:not(.cta-home) {
 		@media (min-width: $small) {
-			padding: 6.4rem 3.2rem;
+			padding: 3.2rem;
 		}
 	}
 }
