@@ -16,8 +16,8 @@
     <meta name="twitter:title" content="Articles | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.10.a394cfe2feb1edba2c53.js"> </script>
-    <link href="/css/main.223f3dec9c1161aaf1ea45dcf08984fd.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
+    <link href="/css/main.4007cf339748c75e79bd3d2f896f8b35.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -83,16 +83,13 @@
     </header>
     <main class="articles" id="main">
       <section class="articles-section"><span class="section__content" id="articles"><span>
-            <h1>Articles</h1>
-            <p>Articles I wrote</p>
+            <h1>Recent articles</h1>
+            <p>Informative articles for businesses with, or wanting, a website</p>
           </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?>
             <?php $webpFile = $article->hero_img_filename . '.webp'; ?>
-            <?php $thumbnail = $img_url . 'thumbnail/' . $webpFile . ' 200w' ?>
-            <?php $small = $img_url . 'small/' . $webpFile . $webpFile . ' 425w' ?>
+            <?php $small = $img_url . 'large/' . $webpFile . $webpFile . ' 425w' ?>
             <?php $medium = $img_url . 'medium/' . $webpFile . ' 900w' ?>
-            <?php $large = $img_url . 'large/' . $webpFile . ' 1024w' ?>
-            <?php $xLarge = $img_url . 'xLarge/' . $webpFile . ' 1440w' ?>
-            <?php $srcset = array($thumbnail, $small, $medium, $large, $xLarge) ?>
+            <?php $srcset = array( $small, $medium) ?>
             <?php $srcset = implode(',', $srcset) ?><a class="article__card" href="/article/<?= $article->slug ?>">
               <figure>
                 <picture>
