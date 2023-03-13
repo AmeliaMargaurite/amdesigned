@@ -1,15 +1,11 @@
 .showcase__section {
 	gap: 3.2rem;
 	.section__content {
-		// row-gap: unset;
 	}
 
 	.showcase-items__wrapper {
 		display: flex;
 		flex-wrap: wrap;
-
-		// display: grid;
-		// grid-auto-flow: column;
-		gap: 1.6rem;
+		gap: 3.2rem;
 	}
 }
