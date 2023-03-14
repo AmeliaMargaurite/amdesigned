@@ -23,7 +23,7 @@
     <meta name="twitter:image"
       content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
     <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.1e55f846a0f8fc53934e.js"> </script>
-    <link href="/css/main.78f273f530d35ea3420894c275b80c9f.css" rel="stylesheet" />
+    <link href="/css/main.295086d929ecce7377e512b168b2ba1a.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
