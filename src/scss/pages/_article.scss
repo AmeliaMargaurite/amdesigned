@@ -1,15 +1,29 @@
 .article {
 	margin-top: -7vw;
+
 	.article__section {
 		max-width: 850px;
 		margin: auto;
 		padding-block: 0;
 	}
+
 	.hero_img {
 		display: grid;
 		img {
 			// max-height: 65vh;
 			object-fit: cover;
+		}
+	}
+
+	ul {
+		line-height: 1.5;
+		h2 {
+			font-size: 1.8rem;
+			a {
+				text-decoration: none;
+				    color: hsl(var(--dark));
+    font-weight: 600;
+			}
 		}
 	}
 
