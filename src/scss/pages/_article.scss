@@ -20,9 +20,10 @@
 		h2 {
 			font-size: 1.8rem;
 			a {
-				text-decoration: none;
-				    color: hsl(var(--dark));
-    font-weight: 600;
+				color: hsl(var(--dark));
+				font-weight: 600;
+				text-decoration-color: hsl(var(--highlight));
+				text-decoration-thickness: 0.2rem;
 			}
 		}
 	}
