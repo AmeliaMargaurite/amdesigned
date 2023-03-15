@@ -15,7 +15,7 @@ Header unset ETag
     Header set Cache-Control "max-age=31449600"
 </FilesMatch>
 
-
+<IfModule mod_expires.c>
 # BROWSER CACHING USING EXPIRES HEADERS
 ExpiresActive On
 ExpiresDefault "access plus 2592000 seconds"
@@ -40,6 +40,7 @@ ExpiresByType application/javascript "access plus 1 month"
 # Others
 ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
 
 
 			

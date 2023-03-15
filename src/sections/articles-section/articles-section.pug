@@ -22,6 +22,7 @@ mixin articles-section
 									src!="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg",
 									alt!="<?= $article->hero_img_alt ?>"
 								)
-						p.title!= "<?= $article->title ?>"
-						p.summary!= "<?= $article->summary ?>"
+						span.content
+							p.title!= "<?= $article->title ?>"
+							p.summary!= "<?= $article->summary ?>"
 				<?php endforeach ?>

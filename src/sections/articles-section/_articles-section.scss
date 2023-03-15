@@ -13,11 +13,12 @@
 	.article__card {
 		display: grid;
 		grid-template-rows: max-content max-content auto;
-		padding: 3.2rem;
+		// padding: 3.2rem;
 		text-decoration: none;
 		color: hsl(var(--dark));
 		box-shadow: 0 0 10px -4px hsl(var(--dark), 0.4);
 		border-radius: 2rem;
+		overflow: hidden;
 		transition: box-shadow 0.5s ease;
 
 		&:hover {
@@ -30,15 +31,28 @@
 			transition: box-shadow 0.25s ease;
 		}
 
+		picture {
+			display: grid;
+		}
+
 		img {
 			width: 100%;
 			aspect-ratio: 4/3;
 			object-fit: cover;
-			border-radius: 1.6rem;
+			// border-radius: 1.6rem;
 		}
 
-		.title {
-			font-weight: 600;
+		.content {
+			display: grid;
+			padding: 1.6rem;
+
+			p {
+				line-height: 1.2;
+			}
+
+			.title {
+				font-weight: 600;
+			}
 		}
 	}
 }
