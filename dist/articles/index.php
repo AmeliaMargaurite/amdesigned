@@ -16,8 +16,8 @@
     <meta name="twitter:title" content="Articles | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.8.1b6d8c23c3108d19ba04.js"> </script>
-    <link href="/css/main.386ebe9fab6d56f272e9c97fab7d8072.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
+    <link href="/css/main.49ee9ac1f62c79ad149e919894965725.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -98,9 +98,10 @@
                     src="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg"
                     alt="<?= $article->hero_img_alt ?>">
                 </picture>
-              </figure>
-              <p class="title"><?= $article->title ?></p>
-              <p class="summary"><?= $article->summary ?></p>
+              </figure><span class="content">
+                <p class="title"><?= $article->title ?></p>
+                <p class="summary"><?= $article->summary ?></p>
+              </span>
             </a><?php endforeach ?></span></span></section>
     </main>
     <footer>
