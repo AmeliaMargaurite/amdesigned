@@ -1,11 +1,12 @@
 .showcase-item__wrapper {
 	display: grid;
 	grid-template-rows: max-content max-content auto;
-	padding: 3.2rem;
+	// padding: 3.2rem;
 	text-decoration: none;
 	color: hsl(var(--dark));
 	box-shadow: 0 0 10px -4px hsl(var(--dark), 0.4);
 	border-radius: 2rem;
+	overflow: hidden;
 	transition: box-shadow 0.5s ease;
 
 	p {
@@ -14,19 +15,16 @@
 
 	.content__wrapper {
 		display: grid;
-		gap: 3.2rem;
 	}
 
-	.header,
 	.footer {
 		display: grid;
 		row-gap: 0.8rem;
-	}
-
-	.footer {
+		padding: 3.2rem;
 		.features {
 			line-height: 1.2;
 			font-size: 1.6rem;
+			color: hsl(var(--dark), 0.7);
 
 			&__title {
 				font-weight: 600;
