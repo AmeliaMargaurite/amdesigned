@@ -45,6 +45,7 @@
 		.content {
 			display: grid;
 			padding: 1.6rem;
+			row-gap: 1.6rem;
 
 			p {
 				line-height: 1.2;
@@ -52,6 +53,13 @@
 
 			.title {
 				font-weight: 600;
+				font-size: 2rem;
+			}
+
+			.author {
+				color: hsl(var(--dark), 0.7);
+				font-size: 1.6rem;
+				text-transform: uppercase;
 			}
 
 			.summary {
