@@ -14,15 +14,16 @@
     <meta property="og:description"
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta property="og:image"
-      content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
+      content="/assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
     <meta property="og:image:alt"
-      content="Large computer monitor sitting behind smaller open laptop, both screens showing web sites. Text overlay reads: &quot;Let's build something special together. AMDesigned for all your business website needs&quot;" />
+      content="Large computer monitor sitting behind smaller open laptop, both screens showing web sites. Text overlay reads: "
+      Let's build something special together. AMDesigned for all your business website needs"" />
     <meta name="twitter:title" content="Contact | AMDesigned" />
     <meta name="twitter:description"
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
-      content="https://www.amdesigned.com.au//assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.2.4c531562005022b3979b.js"> </script>
+      content="/assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.4.1e55f846a0f8fc53934e.js"> </script>
     <link href="/css/main.02ca0bb5b0ee90e5d96a78c6f8d50fb3.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />

@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= $article ? $article->title : 'Whoops!' ?> | AMDesigned</title>
-    <meta name="description" content="AMDesigned" />
+    <meta name="description" content="<?= $article ? $article->summary : 'Whoops' ?> " />
     <meta property="og:locale" content="en_AU" />
-    <meta property="og:url" content="https://www.amdesigned.com.au//showcase" />
-    <meta property="og:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
-    <meta property="og:description" content="AMDesigned" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
-    <meta name="twitter:title" content="&lt;?= $article ? $article-&gt;title : 'Whoops!' ?&gt; | AMDesigned" />
-    <meta name="twitter:description" content="AMDesigned" />
-    <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.10.a394cfe2feb1edba2c53.js"> </script>
+    <meta property="og:url" content="https://www.amdesigned.com.au/article/<?= $article ? $article->slug : '' ?>" />
+    <meta property="og:title" content="<?= $article ? $article->title : 'Whoops!' ?> | AMDesigned" />
+    <meta property="og:description" content="<?= $article ? $article->summary : 'Whoops' ?> " />
+    <meta property="og:image"
+      content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
+    <meta property="og:image:alt" content="<?= $article ? $article->hero_img_alt : ''?>" />
+    <meta name="twitter:title" content="<?= $article ? $article->title : 'Whoops!' ?> | AMDesigned" />
+    <meta name="twitter:description" content="<?= $article ? $article->summary : 'Whoops' ?> " />
+    <meta name="twitter:image"
+      content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
     <link href="/css/main.02ca0bb5b0ee90e5d96a78c6f8d50fb3.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
