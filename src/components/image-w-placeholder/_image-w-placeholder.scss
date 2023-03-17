@@ -10,6 +10,7 @@
 
 	// Styling picture incase image fails to load
 	picture {
+		display: grid;
 		background: rgb(0, 98, 99);
 		background: radial-gradient(
 			circle,
