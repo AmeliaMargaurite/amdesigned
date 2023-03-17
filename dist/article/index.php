@@ -18,8 +18,8 @@
     <meta name="twitter:description" content="<?= $article ? $article->summary : 'Whoops' ?> " />
     <meta name="twitter:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.9.accb87cd6372a3e0a956.js"> </script>
-    <link href="/css/main.02ca0bb5b0ee90e5d96a78c6f8d50fb3.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.8.1b6d8c23c3108d19ba04.js"> </script>
+    <link href="/css/main.2a32efe6590933623ba8c291726c00cd.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -106,13 +106,15 @@
       <?php $date = new DateTime($article->updated_at); ?><span
         class="hero_img"><?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
         <?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
-        <?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?><figure width="100%"
-          height="400">
+        <?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?><figure
+          class="image-w-placeholder"><img class="placeholder-image"
+            src="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg" width="100%" height="400px"
+            style="height: 400px !important" />
           <picture>
-            <source srcset="<?= $webp_srcset ?>" type="image/webp" width="100%" height="400" /><img
+            <source srcset="<?= $webp_srcset ?>" type="image/webp" width="100%" height="400px" /><img
               sizes="(max-width: 1400px) 100vw, 1400px" srcset="<?= $jpg_srcset ?>"
               src="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.jpg" alt="<?= $article->hero_img_alt ?>"
-              width="100%" height="400" />
+              width="100%" height="400px" style="height: 400px !important" />
           </picture>
         </figure></span>
       <section class="article__section"><span class="section__content"><span class="title__wrapper"><span class="title">

@@ -16,8 +16,8 @@
     <meta name="twitter:title" content="Articles | AMDesigned" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.8.1b6d8c23c3108d19ba04.js"> </script>
-    <link href="/css/main.02ca0bb5b0ee90e5d96a78c6f8d50fb3.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/index.7.0308db7797e9174e888c.js"> </script>
+    <link href="/css/main.2a32efe6590933623ba8c291726c00cd.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -106,14 +106,15 @@
             <p>Informative articles for businesses with, or wanting, a website</p>
           </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?>
             <?php $webpFile = $article->hero_img_filename . '.webp'; ?>
-            <?php $small = $img_url . 'large/' . $webpFile . $webpFile . ' 425w' ?>
-            <?php $medium = $img_url . 'medium/' . $webpFile . ' 900w' ?>
+            <?php $small = $img_path . 'large/' . $webpFile . $webpFile . ' 425w' ?>
+            <?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
             <?php $srcset = array( $small, $medium) ?>
             <?php $srcset = implode(',', $srcset) ?><a class="article__card" href="/article/<?= $article->slug ?>">
-              <figure>
+              <figure class="image-w-placeholder"><img class="placeholder-image"
+                  src="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg">
                 <picture>
                   <source srcset="<?= $srcset ?>" type="image/webp"><img
-                    src="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg"
+                    src="<?= $img_path . 'medium/' .  $article->hero_img_filename?>.jpg"
                     alt="<?= $article->hero_img_alt ?>">
                 </picture>
               </figure><span class="content"><span>
