@@ -8,6 +8,18 @@
 		grid-column: 1;
 	}
 
+	// Styling picture incase image fails to load
+	picture {
+		background: rgb(0, 98, 99);
+		background: radial-gradient(
+			circle,
+			rgba(0, 98, 99, 1) 0%,
+			rgba(98, 67, 1, 1) 100%
+		);
+		text-align: center;
+		color: white;
+	}
+
 	.placeholder-image {
 		position: relative;
 		z-index: -1;

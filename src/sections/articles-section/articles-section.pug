@@ -7,19 +7,22 @@ mixin articles-section
 			span.articles__wrapper
 				<?php foreach ($articles as $article): ?>
 				<?php $webpFile = $article->hero_img_filename . '.webp'; ?>
-					//- <?php $thumbnail = $img_url . 'thumbnail/' . $webpFile . ' 200w' ?>
-					<?php $small = $img_url . 'large/' . $webpFile . $webpFile . ' 425w' ?>
-					<?php $medium = $img_url . 'medium/' . $webpFile . ' 900w' ?>
-					//- <?php $large = $img_url . 'large/' . $webpFile . ' 1024w' ?>
-					//- <?php $xLarge = $img_url . 'xLarge/' . $webpFile . ' 1440w' ?>
+					//- <?php $thumbnail = $img_path . 'thumbnail/' . $webpFile . ' 200w' ?>
+					<?php $small = $img_path . 'large/' . $webpFile . $webpFile . ' 425w' ?>
+					<?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
+					//- <?php $large = $img_path . 'large/' . $webpFile . ' 1024w' ?>
+					//- <?php $xLarge = $img_path . 'xLarge/' . $webpFile . ' 1440w' ?>
 					<?php $srcset = array( $small, $medium) ?>
 					<?php $srcset = implode(',', $srcset) ?>
 					a.article__card(href!="/article/<?= $article->slug ?>")
-						figure
+						figure.image-w-placeholder
+							img.placeholder-image(
+								src!="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg"
+							)
 							picture
 								source(srcset!="<?= $srcset ?>", type="image/webp")
 								img(
-									src!="<?= $img_url . 'medium/' .  $article->hero_img_filename?>.jpg",
+									src!="<?= $img_path . 'medium/' .  $article->hero_img_filename?>.jpg",
 									alt!="<?= $article->hero_img_alt ?>"
 								)
 						span.content

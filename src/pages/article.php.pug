@@ -20,13 +20,20 @@ block content
 			<?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
 			<?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
 			<?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?>
-			figure(width="100%", height="400")
+			- var img_height = "400px";
+			figure.image-w-placeholder
+				img.placeholder-image(
+					src!="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg",
+					width="100%",
+					height=img_height,
+					style=`height: ${img_height} !important`
+				)
 				picture
 					source(
 						srcset!="<?= $webp_srcset ?>",
 						type="image/webp",
 						width="100%",
-						height="400"
+						height=img_height
 					)
 					img(
 						sizes="(max-width: 1400px) 100vw, 1400px",
@@ -34,7 +41,8 @@ block content
 						src!="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.jpg",
 						alt!="<?= $article->hero_img_alt ?>",
 						width="100%",
-						height="400"
+						height=img_height,
+						style=`height: ${img_height} !important`
 					)
 		section.article__section
 			span.section__content
