@@ -8,7 +8,13 @@
 	--warning: 0, 100%, 50%;
 
 	// SITE BASICS
-	--body-bg: hsl(var(--light));
+	--body-bg: hsl(var(--dark), 0.05);
+	--body-bg: linear-gradient(
+			hsl(var(--highlight), 0.01),
+			hsl(var(--highlight), 0.01)
+		),
+		linear-gradient(hsl(var(--dark), 0.05), hsl(var(--dark), 0.05)),
+		linear-gradient(hsl(var(--light)), hsl(var(--light)));
 
 	// COLOURS
 	--green: 120, 100%, 43%;
