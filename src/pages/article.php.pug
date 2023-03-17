@@ -7,10 +7,10 @@ block phpScripts
 block variables
 	- var mainClass = "<?= $article ? 'article' : 'no-article' ?>";
 	- var title = "<?= $article ? $article->title : 'Whoops!' ?>";
-	- var page_description = "";
-	- var slug = "/showcase";
-	//- - var page_image = require("../images/contact-order-online-small-medium-business-website.jpg");
-	- var page_image_alt = "";
+	- var page_description = "<?= $article ? $article->summary : 'Whoops' ?> ";
+	- var slug = "article/<?= $article ? $article->slug : '' ?>";
+	- var page_image = "<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>";
+	- var page_image_alt = "<?= $article ? $article->hero_img_alt : ''?>";
 
 block content
 	<?php if ($article !== null) :?>

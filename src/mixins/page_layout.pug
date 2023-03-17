@@ -17,38 +17,32 @@ html(lang="en")
 
 		meta(
 			name="description",
-			content=page_description ? page_description : "AMDesigned"
+			content!=page_description ? page_description : "AMDesigned"
 		)
 		meta(property="og:locale", content="en_AU")
 		//- Facebook
-		meta(property="og:url", content=slug ? base_url + slug : base_url)
+		meta(property="og:url", content!=slug ? base_url + slug : base_url)
 		meta(
 			property="og:title",
-			content=!title === "Home" ? companyName : title + " | " + companyName
+			content!=!title === "Home" ? companyName : title + " | " + companyName
 		)
 		meta(
 			property="og:description",
-			content=page_description ? page_description : "AMDesigned"
+			content!=page_description ? page_description : "AMDesigned"
 		)
-		meta(
-			property="og:image",
-			content=page_image ? `${base_url}${page_image}` : ""
-		)
-		meta(property="og:image:alt", content=page_image_alt ? page_image_alt : "")
+		meta(property="og:image", content!=page_image ? page_image : "")
+		meta(property="og:image:alt", content!=page_image_alt ? page_image_alt : "")
 
 		//- Twitter
 		meta(
 			name="twitter:title",
-			content=title === "Home" ? companyName : title + " | " + companyName
+			content!=title === "Home" ? companyName : title + " | " + companyName
 		)
 		meta(
 			name="twitter:description",
-			content=page_description ? page_description : "AMDesigned"
+			content!=page_description ? page_description : "AMDesigned"
 		)
-		meta(
-			name="twitter:image",
-			content=page_image ? `${base_url}${page_image}` : ""
-		)
+		meta(name="twitter:image", content!=page_image ? page_image : "")
 
 		script(src=require("../ts/index.ts")) 
 		link(href=require("../scss/main.scss"), rel="stylesheet")
