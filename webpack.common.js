@@ -8,6 +8,7 @@ const path = require("path");
 const sourcePath = path.join(__dirname, "src");
 
 const alterPugFolderStructure = (pathData) => {
+	// console.log({ pathData });
 	const sourceFile = pathData.filename;
 	const relativeFile = path.relative(sourcePath, sourceFile);
 	const { dir, name } = path.parse(relativeFile);
@@ -41,7 +42,6 @@ const renameIfFolder = (context) => {
 };
 
 module.exports = {
-	mode: "development",
 	entry: {
 		index: "./src/pages/index.pug",
 		notFound404: "./src/pages/notFound404.pug",
@@ -66,19 +66,7 @@ module.exports = {
 		},
 		extensions: [".tsx", ".ts", ".js"],
 	},
-	// inline-source-map not for production use!
-	devtool: "inline-source-map",
-	devServer: {
-		static: "./dist",
-		historyApiFallback: { index: "/notFound404/index.html" },
-		devMiddleware: {
-			// writeToDisk: (filePath) => {
-			// 	console.log(filePath);
-			// 	return /\.php$/.test(filePath);
-			// },
-			// writeToDisk: true,
-		},
-	},
+
 	plugins: [
 		new PugPlugin({
 			filename: alterPugFolderStructure,
