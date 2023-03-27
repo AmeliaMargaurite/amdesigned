@@ -125,6 +125,27 @@
               </span>
             </a><?php endforeach ?></span></span></section>
     </main>
+    <script type="application/ld+json">
+      {
+        "@content": "https://schema.org",
+        "@type": "Organization",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baarn, The Netherlands",
+          "postalCode": "3743BR",
+          "streetAddress": "Nieuw Baarnstraat"
+        },
+        "email": "hello(at)amdesigned.com.au",
+        "name": "AMDesigned",
+        "currenciesAccepted": "AUD, EUR, USD",
+        "url": "https://amdesigned.com.au",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "hello(at)amdesigned.com.au",
+          "contactType": "customer service"
+        }]
+      }
+    </script>
     <footer>
       <ul>
         <li><a href="/">home</a></li>
