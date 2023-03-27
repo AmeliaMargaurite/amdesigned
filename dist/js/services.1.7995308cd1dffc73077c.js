@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkamdesigned=self.webpackChunkamdesigned||[]).push([[872],{890:()=>{const s=window.location.hash;if(s){const e=document.querySelector(s);e&&e.classList.add("highlight")}}},s=>{s(s.s=890)}]);
