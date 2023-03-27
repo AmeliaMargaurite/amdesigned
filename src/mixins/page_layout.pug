@@ -1,6 +1,7 @@
 include ./page_header.pug
 include ./page_footer.pug
 include ../components/fb-chat-plugin/fb-chat-plugin.pug
+include ../components/business-schema-json.pug
 block variables
 block phpScripts
 doctype html 
@@ -151,4 +152,5 @@ html(lang="en")
 		main#main(class!=mainClass ? mainClass : title.toLowerCase())
 			block content
 
+		+business-schema-json
 		+page_footer(title)
