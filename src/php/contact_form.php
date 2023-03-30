@@ -1,6 +1,6 @@
 <?php
 
-// include('../php/config.php');
+// include(dirname(__DIR__, 1) . '/php/config.php');
 // session_start();
 if (empty($_SESSION['token'])) {
   $_SESSION['token'] = bin2hex(random_bytes(32));

@@ -1,5 +1,5 @@
 <?php
-include_once('./config.php');
+include_once(__DIR__ . '/config.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -31,7 +31,7 @@ function sendToSiteOwner()
   $user_name = htmlspecialchars($_POST['name']);
   $user_email = htmlspecialchars($_POST['email']);
   $user_message = htmlspecialchars($_POST['message']);
-  $package_type = htmlspecialchars($_POST['package-type']);
+  $package_type = htmlspecialchars(isset($_POST['package-type']) ? $_POST['package-type'] : null);
   $services_array = $_POST['services'];
   $title = 'Services enquiry from ' . $user_name;
   $preview = 'You\'ve received an online enquiry from ' . $user_name .

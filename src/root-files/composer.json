@@ -6,12 +6,12 @@
     },
     "autoload": {
         "files": [
-            "php/Helpers/redirects.php",
-            "php/Helpers/util.php",
-            "php/Helpers/buildSrcsets.php"
+            "public_html/php/Helpers/redirects.php",
+            "public_html/php/Helpers/util.php",
+            "public_html/php/Helpers/buildSrcsets.php"
         ],
         "psr-4": {
-            "App\\": "php/"
+            "App\\": "public_html/php/"
         }
     }
 }

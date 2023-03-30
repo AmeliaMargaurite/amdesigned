@@ -88,10 +88,10 @@ module.exports = {
 					from: path.join(__dirname, "src/favicon"),
 					to: path.join(__dirname, "dist/favicon"),
 				},
-				{
-					from: path.join(__dirname, "src/root-files"),
-					to: path.join(__dirname, "dist/"),
-				},
+				// {
+				// 	from: path.join(__dirname, "src/root-files"),
+				// 	to: path.join(__dirname, "dist/"),
+				// },
 				{
 					from: path.join(__dirname, "src/article/"),
 					to: path.join(__dirname, "dist/article"),

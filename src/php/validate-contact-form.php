@@ -3,7 +3,7 @@
 use App\Controllers\ContactFormController;
 
 
-include_once('./config.php');
+include_once(__DIR__ . '/config.php');
 
 function exitWithFailure(array $messages)
 {

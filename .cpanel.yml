@@ -1,5 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/ameliama/amdesigned.com.au
-    - /bin/cp -R dist/. $DEPLOYPATH
+    - export ROOT=/home2/ameliama/amdesigned.com.au
+    - export PUBLIC_HTML="$ROOT/public_html"
+    - /bin/cp -R src/root-files/. $ROOT
+    - /bin/rm -Rf $PUBLIC_HTML
+    - /bin/cp -R dist/. $PUBLIC_HTML
