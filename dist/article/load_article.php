@@ -1,6 +1,6 @@
 <?php
 
-include_once('../php/config.php');
+include_once(dirname(__DIR__, 1) . '/php/config.php');
 
 use GuzzleHttp\Client;
 

@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-include_once('../config.php');
+include_once(dirname(__DIR__, 1) . '/config.php');
 include_once(SEND_WITH_PHP_MAILER);
 
 /**
