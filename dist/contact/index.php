@@ -183,7 +183,7 @@
     </main>
     <script type="application/ld+json">
       {
-        "@content": "https://schema.org",
+        "@context": "https://schema.org",
         "@type": "Organization",
         "address": {
           "@type": "PostalAddress",
