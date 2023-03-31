@@ -153,7 +153,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Baarn, The Netherlands",
