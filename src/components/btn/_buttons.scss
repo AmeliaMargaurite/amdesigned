@@ -31,7 +31,7 @@ a.btn {
 		transform: translateY(-100%);
 		width: 120%;
 		height: 150%;
-		background: (--hover-mask-color);
+		background: var(--hover-mask-color);
 		mask-image: url("../images/background-curve.svg");
 		mask-position: bottom center;
 		transition: transform 0.5s ease-in-out;
