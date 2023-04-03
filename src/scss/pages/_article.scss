@@ -5,6 +5,17 @@
 		padding-block: 0;
 	}
 
+	// Give more clickable space for link - accessibility
+	ul.content-list {
+		column-count: 2;
+		li p {
+			display: grid;
+			a {
+				padding: 0.8rem;
+			}
+		}
+	}
+
 	.hero_img {
 		display: grid;
 		img {
