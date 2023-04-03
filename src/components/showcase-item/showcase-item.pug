@@ -3,25 +3,19 @@ include ../image-w-placeholder/image-w-placeholder.pug
 
 mixin showcase-item({type, name, features, link, icon, img, img_alt})
 	a.showcase-item__wrapper&attributes(attributes)(href=link, target="_blank")
-		//- span.image__wrapper 
-		//-   +image-w-placeholder(image)
 		span.content__wrapper
-			//- span.header
-			//- 	p.name #{ name }
-				//- p.type #{ type }
-
 			span.img__wrapper(data-label=type)
 				figure
+					img.placeholder-image(src=require("../../images/" + img + "?size=100"))
 					picture
-						//- source(srcset!="<?= $srcset ?>", type="image/webp")
+						source(
+							srcset=require("../../images/" + img + "?format=webp"),
+							type="image/webp"
+						)
 						img(src=require("../../images/" + img), alt=img_alt)
 
 			span.footer
-				p.features__title Features
-				p.features #{ features }
-				//- span.icon__wrapper
-				//- 	span.icon.large(class=icon ? icon : "screwdriver-wrench")
-				//- +btn({icon: {class: 'external-link', side: 'right'}}).full-width.mini(
-				//- 	href=link,
-				//- 	target="_blank"
-				//- ) View website
+				p.features
+					- var array = features.split(",");
+					each feature, index in array
+						| #{ feature.toUpperCase().trim() } #{ index < array.length -1 ? '| ' : '' }

@@ -1,6 +1,4 @@
 .article {
-	margin-top: -10vw;
-
 	.article__section {
 		max-width: 850px;
 		margin: auto;
@@ -60,17 +58,5 @@
 		padding: 1.6rem;
 		border-radius: 0.8rem;
 		box-shadow: 0px 2px 10px -7px hsl(var(--dark));
-	}
-
-	@media (min-width: $medium) {
-		margin-top: -7vw;
-	}
-
-	@media (min-width: $large) {
-		margin-top: -5vw;
-	}
-
-	@media (min-width: $large) {
-		margin-top: -4vw;
 	}
 }

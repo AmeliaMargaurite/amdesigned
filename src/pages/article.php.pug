@@ -5,7 +5,7 @@ block phpScripts
 	<?php include_once('./load_article.php') ?>
 
 block variables
-	- var mainClass = "<?= $article ? 'article' : 'no-article' ?>";
+	- var pageClass = "<?= $article ? 'article' : 'no-article' ?>";
 	- var title = "<?= $article ? $article->title : 'Whoops!' ?>";
 	- var page_description = "<?= $article ? $article->summary : 'Whoops' ?> ";
 	- var slug = "article/<?= $article ? $article->slug : '' ?>";
@@ -14,8 +14,6 @@ block variables
 
 block content
 	<?php if ($article !== null) :?>
-		<?php $date = new DateTime($article->updated_at); ?>
-
 		span.hero_img
 			<?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
 			<?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
@@ -46,7 +44,14 @@ block content
 					)
 		section.article__section
 			span.section__content
+				span.breadcrumbs
+					span: a(href="/") home
+					span #{ '>' }
+					span: a(href="/articles") articles
+					span #{ '>' }
+					span.current!= "<?= strtolower($article->title) ?>"
 				span.title__wrapper
+					<?php $date = new DateTime($article->updated_at); ?>
 					span.title
 						h1!= "<?= $article->title?>"
 					span.last_updated Last updated

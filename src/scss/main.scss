@@ -32,11 +32,20 @@ body {
 	@media (min-width: $medium) {
 		row-gap: 6.4rem;
 	}
+
+	&.article {
+		row-gap: unset;
+	}
 }
 
 main {
 	display: grid;
 	row-gap: 6.4rem;
+	grid-auto-rows: max-content;
+
+	&.article {
+		row-gap: 3.2rem; // has breadcrumbs
+	}
 }
 
 section .section__content {
@@ -122,5 +131,24 @@ figcaption {
 	justify-content: center;
 	&.active {
 		display: grid;
+	}
+}
+
+.breadcrumbs {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	font-size: 1.4rem;
+
+	span {
+		a {
+			color: hsl(var(--main-color));
+			&:visited {
+				color: hsl(var(--main-color-dark));
+			}
+		}
+		&.current {
+			font-weight: 600;
+		}
 	}
 }
