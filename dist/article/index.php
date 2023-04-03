@@ -19,7 +19,7 @@
     <meta name="twitter:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.1203001ff860640b5a28d7386b3dd572.css" rel="stylesheet" />
+    <link href="/css/main.0515c618d6fce5901c5eb1517c900e12.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -86,7 +86,8 @@
       });
     </script>
   </head>
-  <body><span class="loading__wrapper" id="loading__wrapper"><span class="loader">Loading...</span></span>
+  <body class="<?= $article ? 'article' : 'no-article' ?>"><span class="loading__wrapper" id="loading__wrapper"><span
+        class="loader">Loading...</span></span>
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
         href="/">
         <p class="company-name">AMDesigned</p>
@@ -103,8 +104,7 @@
         </ul>
       </nav>
     </header>
-    <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?>
-      <?php $date = new DateTime($article->updated_at); ?><span
+    <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><span
         class="hero_img"><?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
         <?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
         <?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?><figure
@@ -118,7 +118,11 @@
               width="100%" height="400px" style="height: 400px !important" />
           </picture>
         </figure></span>
-      <section class="article__section"><span class="section__content"><span class="title__wrapper"><span class="title">
+      <section class="article__section"><span class="section__content"><span class="breadcrumbs"><span><a
+                href="/">home</a></span><span>&gt;</span><span><a
+                href="/articles">articles</a></span><span>&gt;</span><span
+              class="current"><?= strtolower($article->title) ?></span></span><span
+            class="title__wrapper"><?php $date = new DateTime($article->updated_at); ?><span class="title">
               <h1><?= $article->title?></h1>
             </span><span class="last_updated">Last updated <?= $date->format('jS F Y') ?></span></span><span
             class="article-content" id="content"><?= $article->content?></span><span id="published_at"></span>
