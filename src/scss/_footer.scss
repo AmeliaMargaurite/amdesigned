@@ -5,19 +5,24 @@ footer {
 	justify-content: space-between;
 	padding: var(--page_padding);
 	color: hsl(var(--text-color));
+	background: hsl(var(--main-color), 0.5);
 
 	ul {
 		padding: 0;
 		li {
+			display: grid; // allows a's padding to move items
 			list-style: none;
 
 			a {
+				--a-padding: 1.2rem;
 				position: relative;
-				font-size: 1.4rem;
+				font-size: 1.6rem;
 				text-transform: uppercase;
 				font-weight: 600;
 				text-decoration: none;
 				color: var(--text-color);
+				padding-block: var(--a-padding);
+				width: max-content;
 
 				&:after {
 					position: absolute;
@@ -25,7 +30,7 @@ footer {
 					height: 0.1em;
 					width: 100%;
 					left: 0;
-					bottom: 0;
+					bottom: var(--a-padding);
 				}
 
 				&.current:after {
@@ -34,7 +39,7 @@ footer {
 
 				&:not(.active):hover {
 					&:after {
-						background: hsl(var(--main-color));
+						background: hsl(var(--light));
 					}
 				}
 			}
