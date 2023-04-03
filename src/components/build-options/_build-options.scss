@@ -53,10 +53,11 @@
 			}
 
 			&.hero {
+				--hero-color: hsl(var(--highlight));
 				background: hsl(var(--light), 0.8);
 				color: hsl(var(--dark));
 				position: relative;
-				border: 2px solid hsl(var(--highlight));
+				border: 2px solid var(--hero-color);
 				margin-top: 4rem;
 				box-shadow: var(--shadow-elevation-high);
 				border-top-right-radius: 0;
@@ -73,11 +74,11 @@
 					text-align: center;
 					width: calc(100% + 4px);
 					left: -2px;
-					background: hsl(var(--highlight));
+					background: var(--hero-color);
 					color: hsl(var(--light));
 					border-top-right-radius: 0.8rem;
 					border-top-left-radius: 0.8rem;
-					border: 2px solid hsl(var(--highlight));
+					border: 2px solid var(--hero-color);
 					font-size: 2.4rem;
 				}
 			}
@@ -85,7 +86,7 @@
 	}
 
 	.note {
-		background: hsl(var(--highlight), 0.1);
+		background: hsl(var(--main-color), 0.1);
 		border-radius: 0.8rem;
 		padding: 1.6rem;
 		font-size: 1.6rem;

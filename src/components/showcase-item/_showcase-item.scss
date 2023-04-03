@@ -76,7 +76,7 @@
 			grid-column: 1;
 			content: attr(data-label);
 			color: hsl(var(--light));
-			background: hsl(var(--highlight));
+			background: hsl(var(--main-color));
 			padding: 0.8rem 1.6rem;
 			display: flex;
 			justify-content: center;
@@ -118,6 +118,7 @@
 			&::after {
 				margin-top: 100%;
 				transition: margin 0.25s ease-in-out;
+				background: hsl(var(--highlight));
 			}
 		}
 	}

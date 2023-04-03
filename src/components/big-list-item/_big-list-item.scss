@@ -19,14 +19,14 @@
 		rotate: -10deg;
 		font-size: 6.4rem;
 		line-height: 1;
-		color: hsl(var(--highlight));
+		color: hsl(var(--main-color));
 		align-self: flex-start;
 		text-shadow: 2px 2px 1px hsl(var(--dark), 0.8);
 
 		&.circle {
 			width: 6.4rem;
 			height: 6.4rem;
-			background: hsl(var(--highlight));
+			background: hsl(var(--main-color));
 			border-radius: 50%;
 			font-size: 2.4rem;
 		}

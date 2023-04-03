@@ -24,22 +24,35 @@ a.btn {
 	cursor: pointer;
 
 	&::before {
+		--hover-mask-color: hsl(var(--main-color), 0.5);
 		position: absolute;
 		z-index: -1;
 		content: "";
 		transform: translateY(-100%);
 		width: 120%;
 		height: 150%;
-		background: hsl(var(--highlight), 0.5);
+		background: (--hover-mask-color);
 		mask-image: url("../images/background-curve.svg");
 		mask-position: bottom center;
 		transition: transform 0.5s ease-in-out;
 	}
 
+	&.cta {
+		--text-color: hsl(var(--dark));
+		background: hsl(var(--highlight));
+
+		&:hover {
+			background: hsl(var(--highlight));
+		}
+		&::before {
+			--hover-mask-color: hsl(var(--main-color));
+		}
+	}
+
 	&.secondary {
 		--text-color: hsl(var(--primary));
 		border: var(--input_border);
-		border-color: hsl(var(--highlight));
+		border-color: hsl(var(--main-color));
 		background: hsl(var(--secondary));
 		box-shadow: var(--shadow-elevation-medium);
 
@@ -61,7 +74,7 @@ a.btn {
 	}
 
 	&:active {
-		background: hsl(var(--highlight));
+		background: hsl(var(--main-color));
 	}
 
 	&.mini {

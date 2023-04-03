@@ -34,7 +34,7 @@ footer {
 
 				&:not(.active):hover {
 					&:after {
-						background: hsl(var(--secondary));
+						background: hsl(var(--main-color));
 					}
 				}
 			}

@@ -22,7 +22,7 @@
 			a {
 				color: hsl(var(--dark));
 				font-weight: 600;
-				text-decoration-color: hsl(var(--highlight));
+				text-decoration-color: hsl(var(--main-color));
 				text-decoration-thickness: 0.2rem;
 			}
 		}
@@ -35,12 +35,12 @@
 		& p {
 			padding: 0 0.8rem;
 			border-radius: 0.8rem;
-			background: hsl(var(--highlight), 0.6);
+			background: hsl(var(--main-color), 0.6);
 		}
 	}
 
 	.categories .content p {
-		background: hsl(var(--highlight), 0.3);
+		background: hsl(var(--main-color), 0.3);
 	}
 
 	.article-content {

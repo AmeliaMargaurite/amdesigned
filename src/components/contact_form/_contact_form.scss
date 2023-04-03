@@ -1,11 +1,11 @@
 .contact-form {
 	& *:not(input[type="checkbox"]):focus {
-		outline: 0.2rem solid hsl(var(--highlight));
+		outline: 0.2rem solid hsl(var(--main-color));
 		outline-offset: 0.2rem;
 	}
 
 	label:has(input[type="checkbox"]:focus) {
-		outline: 0.2rem solid hsl(var(--highlight));
+		outline: 0.2rem solid hsl(var(--main-color));
 		border-radius: var(--input_border_radius);
 	}
 
@@ -50,7 +50,7 @@
 			padding: 0 0.8rem;
 
 			&:hover {
-				background: hsl(var(--highlight), 0.2);
+				background: hsl(var(--main-color), 0.2);
 			}
 
 			& input {

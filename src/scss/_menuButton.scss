@@ -26,7 +26,7 @@
 		position: fixed;
 		span {
 			transition: transform 0.25s ease, background-color 0.5s ease;
-			background: hsl(var(--highlight));
+			background: hsl(var(--main-color));
 		}
 
 		span:nth-child(1) {
