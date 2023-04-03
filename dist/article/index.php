@@ -110,7 +110,7 @@
         <?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?><figure
           class="image-w-placeholder"><img class="placeholder-image"
             src="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg" width="100%" height="400px"
-            style="height: 400px !important" />
+            style="height: 400px !important" alt="Placeholder image for next hero image" />
           <picture>
             <source srcset="<?= $webp_srcset ?>" type="image/webp" width="100%" height="400px" /><img
               sizes="(max-width: 1400px) 100vw, 1400px" srcset="<?= $jpg_srcset ?>"
