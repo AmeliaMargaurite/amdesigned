@@ -108,7 +108,7 @@
             <p>Informative articles for businesses with, or wanting, a website</p>
           </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?>
             <?php $webpFile = $article->hero_img_filename . '.webp'; ?>
-            <?php $small = $img_path . 'large/' . $webpFile . $webpFile . ' 425w' ?>
+            <?php $small = $img_path . 'large/' . $webpFile . ' 425w' ?>
             <?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
             <?php $srcset = array( $small, $medium) ?>
             <?php $srcset = implode(',', $srcset) ?><a class="article__card" href="/article/<?= $article->slug ?>">
