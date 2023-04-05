@@ -48,7 +48,7 @@ module.exports = {
 		contact: "./src/pages/contact.php.pug",
 		confirmation: "./src/pages/confirmation.pug",
 		showcase: "./src/pages/showcase.pug",
-		services: "./src/pages/services.pug",
+		// services: "./src/pages/services.pug",
 		termsConditions: "./src/pages/terms-and-conditions.pug",
 		privacyPolicy: "./src/pages/privacy-policy.pug",
 		articles: "./src/pages/articles.php.pug",
