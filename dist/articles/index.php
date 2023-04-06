@@ -17,7 +17,7 @@
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.17046c12363e696b4313c235d7bad069.css" rel="stylesheet" />
+    <link href="/css/main.d5c8e6bbf3f652ba31f2f7e04a99dd48.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -89,7 +89,7 @@
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
         href="/">
         <p class="company-name">AMDesigned</p>
-        <p class="tagline">Digital services agency for businesses</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
       </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
         aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
           focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
@@ -105,10 +105,12 @@
     <main class="articles" id="main">
       <section class="articles-section"><span class="section__content" id="articles"><span>
             <h1>Recent articles</h1>
-            <p>Informative articles for businesses with, or wanting, a website</p>
-          </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?>
+            <p>Informative articles for businesses with, or wanting, a website</p><?php if (isset($filter)) : ?><a
+              href="/articles">View all articles</a><?php endif ?>
+          </span><?php if (count($articles) > 0) : ?> <span
+            class="articles__wrapper"><?php foreach ($articles as $article): ?>
             <?php $webpFile = $article->hero_img_filename . '.webp'; ?>
-            <?php $small = $img_path . 'large/' . $webpFile . ' 425w' ?>
+            <?php $small = $img_path . 'large/' . $webpFile  . ' 425w' ?>
             <?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
             <?php $srcset = array( $small, $medium) ?>
             <?php $srcset = implode(',', $srcset) ?><a class="article__card" href="/article/<?= $article->slug ?>">
@@ -119,13 +121,19 @@
                     src="<?= $img_path . 'medium/' .  $article->hero_img_filename?>.jpg"
                     alt="<?= $article->hero_img_alt ?>">
                 </picture>
-              </figure><span class="content"><span>
-                  <p class="title"><?= $article->title ?></p>
-                  <p class="author"><?= $article->author_name ?></p>
-                </span>
+              </figure><span class="content"><?php $published_date = new DateTime($article->published_at)  ?><p
+                  class="published_date"><?= $published_date->format('jS M y') ?></p>
+                <p class="title"><?= $article->title ?></p>
                 <p class="summary"><?= $article->summary ?></p>
+                <ul class="categories"><?php if ($article->categories) :?>
+                  <?php foreach (json_decode($article->categories) as $category) : ?><li class="category">
+                    <?= $category ?></li><?php endforeach ?>
+                  <?php endif ?></ul>
               </span>
-            </a><?php endforeach ?></span></span></section>
+            </a><?php endforeach ?>
+            <?php else : ?><span>
+              <p>No articles found</p><?php endif ?>
+            </span></span></span></section>
     </main>
     <script type="application/ld+json">
       {

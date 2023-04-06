@@ -19,7 +19,7 @@
     <meta name="twitter:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.17046c12363e696b4313c235d7bad069.css" rel="stylesheet" />
+    <link href="/css/main.d5c8e6bbf3f652ba31f2f7e04a99dd48.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -91,7 +91,7 @@
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
         href="/">
         <p class="company-name">AMDesigned</p>
-        <p class="tagline">Digital services agency for businesses</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
       </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
         aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
           focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
@@ -104,28 +104,39 @@
         </ul>
       </nav>
     </header>
-    <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><span
-        class="hero_img"><?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
-        <?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
-        <?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?><figure
-          class="image-w-placeholder"><img class="placeholder-image"
-            src="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg" width="100%" height="400px"
-            style="height: 400px !important" alt="Placeholder image for next hero image" />
-          <picture>
-            <source srcset="<?= $webp_srcset ?>" type="image/webp" width="100%" height="400px" /><img
-              sizes="(max-width: 1400px) 100vw, 1400px" srcset="<?= $jpg_srcset ?>"
-              src="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.jpg" alt="<?= $article->hero_img_alt ?>"
-              width="100%" height="400px" style="height: 400px !important" />
-          </picture>
-        </figure></span>
-      <section class="article__section"><span class="section__content"><span class="breadcrumbs"><span><a
+    <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><section><span
+          class="section__content header"><span class="breadcrumbs"><span><a
                 href="/">home</a></span><span>&gt;</span><span><a
                 href="/articles">articles</a></span><span>&gt;</span><span
               class="current"><?= strtolower($article->title) ?></span></span><span
-            class="title__wrapper"><?php $date = new DateTime($article->updated_at); ?><span class="title">
-              <h1><?= $article->title?></h1>
-            </span><span class="last_updated">Last updated <?= $date->format('jS F Y') ?></span></span><span
-            class="article-content" id="content"><?= $article->content?></span><span id="published_at"></span>
+            class="title__wrapper"><?php $created_date = new DateTime($article->created_at)  ?>
+            <?php $created_date_str = $created_date->format('jS F Y') ?>
+            <?php $updated_date = new DateTime($article->updated_at) ?>
+            <?php $updated_date_str = $updated_date->format('jS F Y') ?><h1 class="title"><?= $article->title?></h1>
+            <span class="dates">
+              <p class="last_updated">Created <?= $created_date_str ?></p>
+              <?php if ( strtotime($created_date_str) !==  strtotime($updated_date_str)) : ?><p class="last_updated">
+                Updated <?= $updated_date_str ?></p><?php endif ?>
+            </span></span><span class="hero_img">
+            <figure class="image-w-placeholder" style="max-height: 400px"><img class="placeholder-image"
+                src="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg" width="100%" height="400px"
+                style="height: 400px !important" alt="Placeholder image for next hero image">
+              <picture>
+                <source srcset="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.webp" type="image/webp"
+                  width="100%" height="400px"><img sizes="(max-width: 1400px) 100vw, 1400px"
+                  src="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.jpg"
+                  alt="<?= $article->hero_img_alt ?>" width="100%" height="400px" style="height: 400px !important">
+              </picture>
+            </figure>
+          </span></span></section>
+      <section><span class="section__content"><span class="article-content"
+            id="content"><?= $article->content?></span><span class="categories">
+            <p>Read more about these categories</p>
+            <ul class="horizontal-list pills"><?php if ($article->categories): ?>
+              <?php foreach(json_decode($article->categories) as $category) : ?><li><a
+                  href="/articles/?categories=<?= $category ?>"><?= $category ?></a></li><?php endforeach ?>
+              <?php endif ?></ul>
+          </span>
           <script type="application/ld+json">
             {
               "@content": "https://schema.org",
