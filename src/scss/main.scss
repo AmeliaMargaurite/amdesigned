@@ -174,3 +174,12 @@ ul.horizontal-list {
 		}
 	}
 }
+
+a.link {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	color: hsl(var(--dark));
+	font-weight: 600;
+	text-transform: uppercase;
+}
