@@ -7,48 +7,69 @@ mixin build-options
 			p.subtext Get to know our general website packages. But because we know no two businesses are alike every website package is tailor-made to your needs.
 
 			.options__wrapper
-				span.option
-					p.title Just the basics
+				article.option
+					h3.title Just the basics
 					ul(role="list")
 						li.included Design
+							span.sr-only included
 						li.included Build
+							span.sr-only included
 						li Hosting
+							span.sr-only not included
 						li Domain purchase
+							span.sr-only not included
 						li SEO & Accessibility
+							span.sr-only not included
 						li Analytics set up
+							span.sr-only not included
 					p.price: em Starting at $850AUD
 					+btn({ icon: {class: 'arrow right', side: 'right'}}).full-width.secondary(
-						href="/contact?package=Just the basics&type=low"
+						href="/contact?package=Just the basics&type=low",
+						rel="tag"
 					)
 						| Sign me up!
 
-				span.option.hero
-					p.title Let's split it
+				article.option.hero
+					h3.title Let's split it
 					ul(role="list")
 						li.included Design
+							span.sr-only included
 						li.included Build
+							span.sr-only included
 						li Hosting
+							span.sr-only not included
 						li Domain purchase
+							span.sr-only not included
 						li.included SEO & Accessibility
+							span.sr-only included
 						li.included Analytics set up
+							span.sr-only included
 					p.price: em Starting at $1150AUD
 					+btn({icon: {class: 'arrow right', side: 'right'}}).full-width(
-						href="/contact?package=Let's Split It&type=mid"
+						href="/contact?package=Let's Split It&type=mid",
+						rel="tag"
 					)
 						| This is me
 
-				span.option
-					p.title We'll do it all
+				article.option
+					h3.title We'll do it all
 					ul(role="list")
 						li.included Design
+							span.sr-only included
 						li.included Build
+							span.sr-only included
 						li.included Hosting
+							span.sr-only included
 						li.included Domain purchase
+							span.sr-only included
 						li.included SEO & Accessibility
+							span.sr-only included
 						li.included Analytics set up
+							span.sr-only included
 					p.price: em Starting at $2150AUD
 					+btn({ icon: {class: 'arrow right', side: 'right'}}).full-width.secondary(
-						href="/contact?package=Please do it all&type=high"
+						href="/contact?package=Please do it all&type=high",
+						rel="tag"
 					)
 						| Just what I want
 
