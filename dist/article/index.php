@@ -19,7 +19,7 @@
     <meta name="twitter:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.d5c8e6bbf3f652ba31f2f7e04a99dd48.css" rel="stylesheet" />
+    <link href="/css/main.787e1aac519ac59933783309a37cbc28.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -134,7 +134,7 @@
             <p>Read more about these categories</p>
             <ul class="horizontal-list pills"><?php if ($article->categories): ?>
               <?php foreach(json_decode($article->categories) as $category) : ?><li><a
-                  href="/articles/?categories=<?= $category ?>"><?= $category ?></a></li><?php endforeach ?>
+                  href="/articles/?categories=<?= $category ?>" rel="tag"><?= $category ?></a></li><?php endforeach ?>
               <?php endif ?></ul>
           </span>
           <script type="application/ld+json">

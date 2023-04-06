@@ -17,7 +17,7 @@
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.d5c8e6bbf3f652ba31f2f7e04a99dd48.css" rel="stylesheet" />
+    <link href="/css/main.787e1aac519ac59933783309a37cbc28.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -113,7 +113,7 @@
             <?php $small = $img_path . 'large/' . $webpFile  . ' 425w' ?>
             <?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
             <?php $srcset = array( $small, $medium) ?>
-            <?php $srcset = implode(',', $srcset) ?><a class="article__card" href="/article/<?= $article->slug ?>">
+            <?php $srcset = implode(',', $srcset) ?><article class="article__card">
               <figure class="image-w-placeholder"><img class="placeholder-image"
                   src="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg">
                 <picture>
@@ -121,16 +121,18 @@
                     src="<?= $img_path . 'medium/' .  $article->hero_img_filename?>.jpg"
                     alt="<?= $article->hero_img_alt ?>">
                 </picture>
-              </figure><span class="content"><?php $published_date = new DateTime($article->published_at)  ?><p
-                  class="published_date"><?= $published_date->format('jS M y') ?></p>
-                <p class="title"><?= $article->title ?></p>
+              </figure><span class="content"><?php $published_date = new DateTime($article->published_at)  ?><time
+                  class="published_date"><?= $published_date->format('jS M y') ?></time>
+                <h2 class="title"><?= $article->title ?></h2>
                 <p class="summary"><?= $article->summary ?></p>
                 <ul class="categories"><?php if ($article->categories) :?>
                   <?php foreach (json_decode($article->categories) as $category) : ?><li class="category">
                     <?= $category ?></li><?php endforeach ?>
-                  <?php endif ?></ul>
+                  <?php endif ?></ul><a class="link" href="/article/<?= $article->slug ?>"
+                  title="Read more about <?= $article->title ?>" rel="bookmark">Read more<span
+                    class="icon chevron right"></span></a>
               </span>
-            </a><?php endforeach ?>
+            </article><?php endforeach ?>
             <?php else : ?><span>
               <p>No articles found</p><?php endif ?>
             </span></span></span></section>
