@@ -33,19 +33,15 @@ body {
 		row-gap: 6.4rem;
 	}
 
-	&.article {
-		row-gap: unset;
-	}
+	// &.article {
+	// 	row-gap: unset;
+	// }
 }
 
 main {
 	display: grid;
 	row-gap: 6.4rem;
 	grid-auto-rows: max-content;
-
-	&.article {
-		row-gap: 3.2rem; // has breadcrumbs
-	}
 }
 
 section .section__content {
@@ -149,6 +145,32 @@ figcaption {
 		}
 		&.current {
 			font-weight: 600;
+		}
+	}
+}
+
+ul.horizontal-list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 0.8rem;
+	padding: 0;
+
+	&.pills {
+		li {
+			display: grid;
+			border-radius: 50rem;
+			box-shadow: var(--shadow-elevation-medium);
+			background: hsl(var(--highlight), 0.6);
+			& a {
+				padding: 0.8rem 1.6rem;
+				text-decoration: none;
+				color: inherit;
+			}
+
+			&:hover {
+				box-shadow: var(--shadow-elevation-low);
+			}
 		}
 	}
 }

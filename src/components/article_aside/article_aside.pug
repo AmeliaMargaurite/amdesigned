@@ -1,0 +1,11 @@
+mixin article_aside
+	aside
+		span.content
+			span.tags
+				p Tags
+				ul.horizontal-list.pills
+					<?php if ($article->tags): ?>
+						<?php foreach(json_decode($article->tags) as $tag) : ?>
+							li: a(href!="/articles/?tags=<?= $tag ?>") <?= $tag ?>
+						<?php endforeach ?>
+					<?php endif ?>

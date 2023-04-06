@@ -1,5 +1,7 @@
 extends ../mixins/page_layout.pug
 include ../components/article-schema-json.pug
+include ../components/article_hero_img/article_hero_img.pug
+include ../components/article_aside/article_aside.pug
 
 block phpScripts
 	<?php include_once('./load_article.php') ?>
@@ -14,37 +16,10 @@ block variables
 
 block content
 	<?php if ($article !== null) :?>
-		span.hero_img
-			<?php $sizes = ['small/' => '425w', 'medium/' => '900w', 'large/' => '1024w', 'xLarge/' => '1440w'] ?>
-			<?php $webp_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.webp') ?>
-			<?php $jpg_srcset = buildSrcsets($img_path, $article->hero_img_filename, $sizes, '.jpg') ?>
-			- var img_height = "400px";
-			figure.image-w-placeholder
-				img.placeholder-image(
-					src!="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg",
-					width="100%",
-					height=img_height,
-					style=`height: ${img_height} !important`,
-					alt="Placeholder image for next hero image"
-				)
-				picture
-					source(
-						srcset!="<?= $webp_srcset ?>",
-						type="image/webp",
-						width="100%",
-						height=img_height
-					)
-					img(
-						sizes="(max-width: 1400px) 100vw, 1400px",
-						srcset!="<?= $jpg_srcset ?>",
-						src!="<?= $img_path . 'medium/' . $article->hero_img_filename ?>.jpg",
-						alt!="<?= $article->hero_img_alt ?>",
-						width="100%",
-						height=img_height,
-						style=`height: ${img_height} !important`
-					)
-		section.article__section
-			span.section__content
+		//- +article_aside
+
+		section
+			span.section__content.header
 				span.breadcrumbs
 					span: a(href="/") home
 					span #{ '>' }
@@ -52,19 +27,35 @@ block content
 					span #{ '>' }
 					span.current!= "<?= strtolower($article->title) ?>"
 				span.title__wrapper
-					<?php $date = new DateTime($article->updated_at); ?>
-					span.title
-						h1!= "<?= $article->title?>"
-					span.last_updated Last updated
-						!= " <?= $date->format('jS F Y') ?>"
-				//- span#summary 
-				//- span.tags
-				//- 	span#content.content!= "<?= $article->tags?>"
-				//- span.categories
-				//- 	span.content!= "<?= $article->categories?>"
+					<?php $created_date = new DateTime($article->created_at)  ?>
+					<?php $created_date_str = $created_date->format('jS F Y') ?>
+					<?php $updated_date = new DateTime($article->updated_at) ?>
+					<?php $updated_date_str = $updated_date->format('jS F Y') ?>
+
+					h1.title!= "<?= $article->title?>"
+					span.dates
+						p.last_updated Created
+							!= " <?= $created_date_str ?>"
+						<?php if ( strtotime($created_date_str) !==  strtotime($updated_date_str)) : ?>
+							p.last_updated Updated
+								!= " <?= $updated_date_str ?>"
+						<?php endif ?>
+				+article_hero_img
+
+		section
+			span.section__content
 				span#content.article-content!= "<?= $article->content?>"
-				span#published_at
+				span.categories
+					p Read more about these categories
+					ul.horizontal-list.pills
+						<?php if ($article->categories): ?>
+							<?php foreach(json_decode($article->categories) as $category) : ?>
+								li: a(href!="/articles/?categories=<?= $category ?>") <?= $category ?>
+							<?php endforeach ?>
+						<?php endif ?>
+
 				+article-schema-json
+
 	<?php else : ?>
 	section
 		span.section__content
