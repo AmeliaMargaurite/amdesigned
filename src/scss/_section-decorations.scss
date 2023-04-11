@@ -160,6 +160,7 @@ section.section_decoration {
 		height: var(--height);
 		background-repeat: 3;
 		mask-image: url("../images/svg-path.svg");
+		mask-size: 100vw var(--height);
 	}
 
 	&::after {
