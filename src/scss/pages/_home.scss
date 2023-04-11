@@ -6,19 +6,14 @@
 
 	section {
 		display: grid;
-		// padding: 3.2rem;
 
 		&.textCenter {
 			text-align: center;
 		}
 	}
 
-	section.second {
+	section.center {
 		text-align: center;
-
-		.section__content {
-			// padding-block: 6.4rem;
-		}
 	}
 
 	section.third {
@@ -27,7 +22,7 @@
 		}
 	}
 
-	section.fourth {
+	section.next-steps {
 		.list {
 			display: grid;
 			gap: 3.2rem;
@@ -53,7 +48,7 @@
 			}
 		}
 
-		section.fourth {
+		section.next-steps {
 			.btn {
 				margin-inline: auto;
 			}

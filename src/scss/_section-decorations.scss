@@ -1,12 +1,14 @@
-section.section_decoratation {
-	padding: 6.4rem 3.2rem !important;
+section.section_decoration {
+	padding-block: 6.4rem !important;
+	// padding-inline: 3.2rem;
 }
 
 .diagonal {
-	--skew-angle: -2deg;
+	--skew-angle: 1deg;
 	--skew: skewY(var(--skew-angle));
-	--background: hsl(var(--main-color));
+	--background: hsl(var(--main-color), 0.5);
 	--padding: calc(var(--height) * 2);
+	background: unset !important;
 
 	padding-block: var(--padding);
 	position: relative;
@@ -24,7 +26,7 @@ section.section_decoratation {
 
 .line {
 	position: relative;
-	background: pink;
+	background: hsl(var(--main-color), 0.5);
 
 	&::after {
 		position: absolute;
@@ -36,7 +38,7 @@ section.section_decoratation {
 }
 
 .chevron-both {
-	--background: hsl(var(--main-color), 0.25);
+	--background: hsl(var(--main-color), 0.5);
 	--height: 3.2rem;
 	--padding: calc(var(--height) * 2);
 
@@ -172,8 +174,7 @@ section.section_decoratation {
 	--height: 3.2rem;
 	--padding: calc(var(--height) * 2);
 
-	padding-block: var(--padding);
-
+	padding-block: var(--padding) !important;
 	position: relative;
 	background: var(--background);
 
@@ -200,17 +201,7 @@ section.section_decoratation {
 }
 
 .folds {
-	--peak-color: hsl(var(--main-color), 0.5);
-	--valley-color: hsl(var(--main-color), 0.3);
-
-	--background: linear-gradient(
-		90deg,
-		var(--valley-color),
-		var(--peak-color),
-		var(--valley-color),
-		var(--peak-color),
-		var(--valley-color)
-	);
+	--background: hsl(var(--main-color), 0.5);
 	--height: 3.2rem;
 	--padding: calc(var(--height) * 2);
 
@@ -227,7 +218,7 @@ section.section_decoratation {
 		background: var(--body-bg);
 		background-repeat: 3;
 		mask-image: url("../images/svg-path.svg");
-		mask-size: 50vw var(--height);
+		mask-size: 120vw var(--height);
 	}
 
 	&::before {
@@ -237,6 +228,13 @@ section.section_decoratation {
 	&::after {
 		bottom: 0;
 		transform: rotate(0.5turn);
+	}
+
+	&.opposite {
+		&::before,
+		&::after {
+			mask-size: -120vw var(--height);
+		}
 	}
 }
 

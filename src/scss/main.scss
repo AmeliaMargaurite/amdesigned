@@ -72,6 +72,10 @@ section {
 	}
 }
 
+section:nth-child(even) {
+	background: hsl(var(--main-color), 0.5);
+}
+
 .skip-to-content-link {
 	position: absolute;
 	left: 50%;
@@ -181,7 +185,7 @@ ul.horizontal-list {
 }
 
 a.link {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	gap: 0.4rem;
 	color: hsl(var(--dark));
