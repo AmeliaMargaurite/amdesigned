@@ -20,12 +20,14 @@ block content
 
 		section
 			span.section__content.header
-				span.breadcrumbs
-					span: a(href="/") home
-					span #{ '>' }
-					span: a(href="/articles") articles
-					span #{ '>' }
-					span.current!= "<?= strtolower($article->title) ?>"
+				span.breadcrumbs(aria-label="Breadcrumb")
+					h3.breadcrumbs__title You are here:
+					ul
+						li: a(href="/", rel="bookmark") home
+						span(aria-hidden="true") #{ '>' }
+						li: a(href="/articles", rel="bookmark") articles
+						span(aria-hidden="true") #{ '>' }
+						li.current(aria-current="page")!= "<?= strtolower($article->title) ?>"
 				span.title__wrapper
 					<?php $created_date = new DateTime($article->created_at)  ?>
 					<?php $created_date_str = $created_date->format('jS F Y') ?>

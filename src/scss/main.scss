@@ -131,21 +131,26 @@ figcaption {
 }
 
 .breadcrumbs {
-	display: inline-flex;
-	flex-wrap: wrap;
-	gap: 0.4rem;
+	display: grid;
 	font-size: 1.4rem;
 
-	span {
-		a {
-			color: hsl(var(--main-color));
-			&:visited {
-				color: hsl(var(--main-color-dark));
-			}
+	ul {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		font-size: 1.4rem;
+		list-style: none;
+		padding: 0;
+	}
+
+	a {
+		color: hsl(var(--main-color));
+		&:visited {
+			color: hsl(var(--main-color-dark));
 		}
-		&.current {
-			font-weight: 600;
-		}
+	}
+	&.current {
+		font-weight: 600;
 	}
 }
 

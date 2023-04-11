@@ -16,7 +16,7 @@ mixin articles-section
 					<?php $srcset = array( $small, $medium) ?>
 					<?php $srcset = implode(',', $srcset) ?>
 					article.article__card
-						figure.image-w-placeholder
+						figure.image-w-placeholder(aria-hidden="true")
 							img.placeholder-image(
 								src!="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg"
 							)
@@ -31,8 +31,8 @@ mixin articles-section
 							time.published_date!= "<?= $published_date->format('jS M y') ?>"
 							h2.title!= "<?= $article->title ?>"
 							p.summary!= "<?= $article->summary ?>"
-							ul.categories
-								<?php if ($article->categories) :?>
+							<?php if ($article->categories) :?>
+								ul.categories
 									<?php foreach (json_decode($article->categories) as $category) : ?>
 										li.category!= "<?= $category ?>"
 									<?php endforeach ?>
@@ -43,7 +43,7 @@ mixin articles-section
 								rel="bookmark"
 							) Read more
 								|
-								span.icon.chevron.right
+								span.icon.chevron.right(aria-hidden="true")
 
 				<?php endforeach ?>
 				<?php else : ?>

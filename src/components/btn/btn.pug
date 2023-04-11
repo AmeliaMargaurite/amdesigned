@@ -1,18 +1,17 @@
 mixin btn({icon=undefined, type=undefined})
-
-  if type === 'button' || attributes.onclick && type !== 'a'
-    button.btn(onclick="showLoadingBtn(this)")&attributes(attributes)
-      if icon
-        if icon.side === 'left'
-          span.icon(class=icon.class)
-        block 
-        if icon.side === 'right'
-          span.icon(class=icon.class)
-  else if type === 'a' || attributes.href && type !== 'button'
-    a.btn(onclick="showLoadingBtn(this)")&attributes(attributes)
-      if icon
-        if icon.side === 'left'
-          span.icon(class=icon.class)
-        block
-        if icon.side === 'right'
-          span.icon(class=icon.class)
+	if type === 'button' || attributes.onclick && type !== 'a'
+		button.btn(onclick="showLoadingBtn(this)")&attributes(attributes)
+			if icon
+				if icon.side === 'left'
+					span.icon(class=icon.class, aria-hidden="true")
+				block
+				if icon.side === 'right'
+					span.icon(class=icon.class, aria-hidden="true")
+	else if type === 'a' || attributes.href && type !== 'button'
+		a.btn(onclick="showLoadingBtn(this)")&attributes(attributes)
+			if icon
+				if icon.side === 'left'
+					span.icon(class=icon.class, aria-hidden="true")
+				block
+				if icon.side === 'right'
+					span.icon(class=icon.class, aria-hidden="true")
