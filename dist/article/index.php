@@ -19,7 +19,7 @@
     <meta name="twitter:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.787e1aac519ac59933783309a37cbc28.css" rel="stylesheet" />
+    <link href="/css/main.0a144c9d85e6676be757043b37f0ed12.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -105,11 +105,14 @@
       </nav>
     </header>
     <main class="<?= $article ? 'article' : 'no-article' ?>" id="main"><?php if ($article !== null) :?><section><span
-          class="section__content header"><span class="breadcrumbs"><span><a
-                href="/">home</a></span><span>&gt;</span><span><a
-                href="/articles">articles</a></span><span>&gt;</span><span
-              class="current"><?= strtolower($article->title) ?></span></span><span
-            class="title__wrapper"><?php $created_date = new DateTime($article->created_at)  ?>
+          class="section__content header"><span class="breadcrumbs" aria-label="Breadcrumb">
+            <h3 class="breadcrumbs__title">You are here:</h3>
+            <ul>
+              <li><a href="/" rel="bookmark">home</a></li><span aria-hidden="true">&gt;</span>
+              <li><a href="/articles" rel="bookmark">articles</a></li><span aria-hidden="true">&gt;</span>
+              <li class="current" aria-current="page"><?= strtolower($article->title) ?></li>
+            </ul>
+          </span><span class="title__wrapper"><?php $created_date = new DateTime($article->created_at)  ?>
             <?php $created_date_str = $created_date->format('jS F Y') ?>
             <?php $updated_date = new DateTime($article->updated_at) ?>
             <?php $updated_date_str = $updated_date->format('jS F Y') ?><h1 class="title"><?= $article->title?></h1>
