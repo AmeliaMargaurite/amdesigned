@@ -103,7 +103,6 @@
       <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="/" onclick="closeMenu()">home</a></li>
-          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
           <li><a class="current" href="/contact/" onclick="closeMenu()">contact</a></li>
           <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
           <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
@@ -113,8 +112,8 @@
     <main class="contact" id="main">
       <section><span class="section__content"><span class="contact-form__wrapper">
             <h1>Let's connect</h1><?php require('../php/contact_form.php') ?><form class="contact-form"
-              id="contact-form" action="../php/validate-contact-form.php?back=/contact" method="POST"> <label
-                for="subject">
+              id="contact-form" action="../php/validate-contact-form.php?back=/contact" method="POST">
+              <label for="subject">
                 <p>Subject:</p><input id="subject" type="subject" name="subject" required pattern="string"
                   value="<?= $inputs['subject'] ?? "I'd like a website" ?>" title="Alphanumeric with accents allowed">
                 <p class="warning"></p>
@@ -154,7 +153,8 @@
                 </label><label for="other">
                   <p>Other</p><input id="other" type="checkbox" required value="other" name="services[]">
                 </label>
-              </fieldset><label for="message"> <span>
+              </fieldset><label for="message">
+                <span>
                   <p>Let us know a bit about your business:</p>
                   <p class="subtext">What do you do, what are your customers like, what area do you service.<br>What do
                     you want to achieve with having a website?</p>
@@ -208,7 +208,6 @@
     <footer>
       <ul>
         <li><a href="/">home</a></li>
-        <li><a href="/quote">quote</a></li>
         <li><a class="current" href="/contact/">contact</a></li>
         <li><a href="/showcase/">showcase</a></li>
         <li><a href="/articles/">articles</a></li>

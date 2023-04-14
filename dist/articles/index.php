@@ -96,7 +96,6 @@
       <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="/" onclick="closeMenu()">home</a></li>
-          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
           <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
           <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
           <li><a class="current" href="/articles/" onclick="closeMenu()">articles</a></li>
@@ -163,7 +162,6 @@
     <footer>
       <ul>
         <li><a href="/">home</a></li>
-        <li><a href="/quote">quote</a></li>
         <li><a href="/contact/">contact</a></li>
         <li><a href="/showcase/">showcase</a></li>
         <li><a class="current" href="/articles/">articles</a></li>
