@@ -15,7 +15,7 @@ mixin articles-section
 					<?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
 					<?php $srcset = array( $small, $medium) ?>
 					<?php $srcset = implode(',', $srcset) ?>
-					article.article__card
+					article.article__card(onclick="this.querySelector('a').click()")
 						figure.image-w-placeholder(aria-hidden="true")
 							img.placeholder-image(
 								src!="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg"
@@ -29,21 +29,12 @@ mixin articles-section
 						span.content
 							<?php $published_date = new DateTime($article->published_at)  ?>
 							time.published_date!= "<?= $published_date->format('jS M y') ?>"
-							h2.title!= "<?= $article->title ?>"
-							p.summary!= "<?= $article->summary ?>"
-							<?php if ($article->categories) :?>
-								ul.categories
-									<?php foreach (json_decode($article->categories) as $category) : ?>
-										li.category!= "<?= $category ?>"
-									<?php endforeach ?>
-								<?php endif ?>
-							a.link(
+							h2.title: a(
 								href!="/article/<?= $article->slug ?>",
 								title!="Read more about <?= $article->title ?>",
 								rel="bookmark"
-							) Read more
-								|
-								span.icon.chevron.right(aria-hidden="true")
+							)!= "<?= $article->title ?>"
+							p.summary!= "<?= $article->summary ?>"
 
 				<?php endforeach ?>
 				<?php elseif ($error) : ?>
