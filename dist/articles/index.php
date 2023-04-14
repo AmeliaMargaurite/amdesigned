@@ -17,7 +17,7 @@
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.6cf8052a834df7fa72fe6faad8f3cf7a.css" rel="stylesheet" />
+    <link href="/css/main.65f01c4c2f1fee0e9ebfadb1f428424d.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -113,7 +113,8 @@
             <?php $small = $img_path . 'large/' . $webpFile  . ' 425w' ?>
             <?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
             <?php $srcset = array( $small, $medium) ?>
-            <?php $srcset = implode(',', $srcset) ?><article class="article__card">
+            <?php $srcset = implode(',', $srcset) ?><article class="article__card"
+              onclick="this.querySelector('a').click()">
               <figure class="image-w-placeholder" aria-hidden="true"><img class="placeholder-image"
                   src="<?= $img_path . 'thumbnail/' . $article->hero_img_filename ?>.jpg">
                 <picture>
@@ -123,12 +124,9 @@
                 </picture>
               </figure><span class="content"><?php $published_date = new DateTime($article->published_at)  ?><time
                   class="published_date"><?= $published_date->format('jS M y') ?></time>
-                <h2 class="title"><?= $article->title ?></h2>
-                <p class="summary"><?= $article->summary ?></p><?php if ($article->categories) :?><ul
-                  class="categories"><?php foreach (json_decode($article->categories) as $category) : ?><li
-                    class="category"><?= $category ?></li><?php endforeach ?></ul><?php endif ?><a class="link"
-                  href="/article/<?= $article->slug ?>" title="Read more about <?= $article->title ?>"
-                  rel="bookmark">Read more<span class="icon chevron right" aria-hidden="true"></span></a>
+                <h2 class="title"><a href="/article/<?= $article->slug ?>"
+                    title="Read more about <?= $article->title ?>" rel="bookmark"><?= $article->title ?></a></h2>
+                <p class="summary"><?= $article->summary ?></p>
               </span>
             </article><?php endforeach ?>
             <?php elseif ($error) : ?><span>
