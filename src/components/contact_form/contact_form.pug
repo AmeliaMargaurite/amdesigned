@@ -7,7 +7,9 @@ mixin contact_form
 		method="POST"
 	) 
 		|
+		|
 		label(for="subject") 
+			|
 			|
 			p Subject:
 			input#subject(
@@ -34,6 +36,7 @@ mixin contact_form
 
 		label(for="email") 
 			|
+			|
 			p Email:
 			input#email(
 				type="email",
@@ -48,18 +51,15 @@ mixin contact_form
 			legend#services Services you may be interested in:
 			p.warning
 
-			label(for="design") 
-				|
+			label(for="design")
 				p Design
 				input#design(type="checkbox", required, value="design", name="services[]")
 
-			label(for="build") 
-				|
+			label(for="build")
 				p Build
 				input#build(type="checkbox", required, value="build", name="services[]")
 
-			label(for="hosting") 
-				|
+			label(for="hosting")
 				p Hosting
 				input#hosting(
 					type="checkbox",
@@ -68,8 +68,7 @@ mixin contact_form
 					name="services[]"
 				)
 
-			label(for="domain-purchase") 
-				|
+			label(for="domain-purchase")
 				p Domain purchase
 				input#domain-purchase(
 					type="checkbox",
@@ -78,8 +77,7 @@ mixin contact_form
 					name="services[]"
 				)
 
-			label(for="seo-accessibility") 
-				|
+			label(for="seo-accessibility")
 				p SEO & Accessibility
 				input#seo-accessibility(
 					type="checkbox",
@@ -88,8 +86,7 @@ mixin contact_form
 					name="services[]"
 				)
 
-			label(for="analytics") 
-				|
+			label(for="analytics")
 				p Analytics
 				input#analytics(
 					type="checkbox",
@@ -98,8 +95,7 @@ mixin contact_form
 					name="services[]"
 				)
 
-			label(for="maintenance") 
-				|
+			label(for="maintenance")
 				p Ongoing maintenance
 				input#maintenance(
 					type="checkbox",
@@ -108,8 +104,7 @@ mixin contact_form
 					name="services[]"
 				)
 
-			label(for="ecommerce") 
-				|
+			label(for="ecommerce")
 				p E-commerce / Web store
 				input#ecommerce(
 					type="checkbox",
@@ -118,17 +113,16 @@ mixin contact_form
 					name="services[]"
 				)
 
-			label(for="blog") 
-				|
+			label(for="blog")
 				p Blog
 				input#blog(type="checkbox", required, value="blog", name="services[]")
 
-			label(for="other") 
-				|
+			label(for="other")
 				p Other
 				input#other(type="checkbox", required, value="other", name="services[]")
 
 		label(for="message") 
+			|
 			|
 			span
 				p Let us know a bit about your business:
