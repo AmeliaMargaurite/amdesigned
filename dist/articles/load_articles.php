@@ -19,6 +19,14 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 
 $client = new Client();
-$res = $client->get($base_url . $api_addon);
-$articles = json_decode($res->getBody());
+$articles = null;
+$error = null;
+
+try {
+	$res = $client->get($base_url . $api_addon);
+	$articles = json_decode($res->getBody());
+} catch (Exception $e) {
+	$error = true;
+	error_log($e, 0);
+}
 ?>

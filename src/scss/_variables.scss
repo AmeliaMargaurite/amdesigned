@@ -1,10 +1,10 @@
 :root {
-	--dark: 0, 0%, 0%;
-	--light: 0, 0%, 100%;
+	--dark: 0, 0%;
+	--light: 0, 0%;
 	--primary: var(--dark);
 	--secondary: var(--light);
 
-	--main-color: 157, 94%, 42%;
+	--main-color: 157, 94%;
 	--main-color-dark: 157, 94%, 25%;
 	--highlight: 35, 100%, 51%;
 	--main-colorHEX: #06d083;
@@ -12,13 +12,14 @@
 	--warning: 0, 100%, 50%;
 
 	// SITE BASICS
-	--body-bg: hsl(var(--dark), 0.05);
-	--body-bg: linear-gradient(
-			hsl(var(--highlight), 0.01),
-			hsl(var(--highlight), 0.01)
-		),
-		linear-gradient(hsl(var(--dark), 0.05), hsl(var(--dark), 0.05)),
-		linear-gradient(hsl(var(--light)), hsl(var(--light)));
+	// --body-bg: hsl(var(--dark), 0%, 0.05);
+	// --body-bg: linear-gradient(
+	// 		hsl(var(--highlight), 0.01),
+	// 		hsl(var(--highlight), 0.01)
+	// 	),
+	// 	linear-gradient(hsl(var(--dark), 0%, 0.05), hsl(var(--dark), 0%, 0.05)),
+	// 	linear-gradient(hsl(var(--light), 100%), hsl(var(--light), 100%));
+	--body-bg: hsl(var(--light), 95%);
 
 	// COLOURS
 	--green: 120, 100%, 43%;
@@ -33,7 +34,7 @@
 	--input_padding: 0.8rem;
 
 	// BORDERS
-	--input_border: 1px solid hsl(var(--primary), 0.2);
+	--input_border: 1px solid hsl(var(--primary), 0%, 0.2);
 	--input_border_radius: 0.4rem;
 
 	// SHADOWS

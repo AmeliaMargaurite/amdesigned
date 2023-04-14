@@ -1,6 +1,6 @@
 button.btn,
 a.btn {
-	--text-color: hsl(var(--secondary));
+	--text-color: hsl(var(--secondary), 100%);
 
 	position: relative;
 	display: flex;
@@ -8,10 +8,10 @@ a.btn {
 	justify-content: center;
 	column-gap: 0.5em;
 	padding: 1.6rem;
-	background: hsl(var(--primary));
+	background: hsl(var(--primary), 0%);
 	color: var(--text-color);
 	border-radius: var(--input_border_radius);
-	// box-shadow: inset 0 0 10px hsl(var(--primary)), var(--shadow-elevation-medium);
+	// box-shadow: inset 0 0 10px hsl(var(--primary), 0%), var(--shadow-elevation-medium);
 	box-shadow: var(--shadow-elevation-medium);
 	border: none;
 	font-weight: 600;
@@ -24,7 +24,7 @@ a.btn {
 	cursor: pointer;
 
 	&::before {
-		--hover-mask-color: hsl(var(--main-color), 0.5);
+		--hover-mask-color: hsl(var(--main-color), 50%, 0.6);
 		position: absolute;
 		z-index: -1;
 		content: "";
@@ -39,32 +39,32 @@ a.btn {
 	}
 
 	&.cta {
-		--text-color: hsl(var(--dark));
+		--text-color: hsl(var(--dark), 0%);
 		background: hsl(var(--highlight));
 
 		&:hover {
 			background: hsl(var(--highlight));
 		}
 		&::before {
-			--hover-mask-color: hsl(var(--main-color));
+			--hover-mask-color: hsl(var(--main-color), 42%);
 		}
 	}
 
 	&.secondary {
-		--text-color: hsl(var(--primary));
+		--text-color: hsl(var(--primary), 0%);
 		border: var(--input_border);
-		border-color: hsl(var(--main-color));
-		background: hsl(var(--secondary));
+		border-color: hsl(var(--main-color), 42%);
+		background: hsl(var(--secondary), 100%);
 		box-shadow: var(--shadow-elevation-medium);
 
 		&:hover {
-			background: hsl(var(--primary), 0.05);
+			background: hsl(var(--primary), 0%, 0.05);
 			box-shadow: var(--shadow-elevation-low);
 		}
 	}
 
 	&:hover {
-		background: hsl(var(--primary), 0.8);
+		background: hsl(var(--primary), 0%, 0.8);
 		box-shadow: var(--shadow-elevation-low);
 
 		&::before {
@@ -75,7 +75,7 @@ a.btn {
 	}
 
 	&:active {
-		background: hsl(var(--main-color));
+		background: hsl(var(--main-color), 42%);
 	}
 
 	&.mini {
@@ -89,7 +89,7 @@ a.btn {
 	&.disabled {
 		pointer-events: none;
 		cursor: default;
-		background: hsl(var(--dark), 0.6);
+		background: hsl(var(--dark), 0%, 0.6);
 	}
 
 	@media (min-width: $medium) {

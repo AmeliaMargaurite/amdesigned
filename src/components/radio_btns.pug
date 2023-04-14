@@ -1,0 +1,21 @@
+mixin radio_btns({name, label, required = true, items, checked = false})
+	fieldset(for=name)
+		legend(id=name)
+			p.label!= label
+		if block
+			p.disclaimer: block
+		p.warning
+
+		each item in items 
+			label.radio(for=item.name)
+				p!= item.label
+				input(
+					type="radio",
+					id=item.name,
+					name=name,
+					value=item.name,
+					required=required,
+					aria-required=required ? "true" : "false",
+					checked=item.checked,
+					aria-checked=item.checked ? "true" : "false"
+				)

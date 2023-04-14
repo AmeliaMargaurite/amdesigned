@@ -16,6 +16,7 @@
 @import "./pages/showcase";
 @import "./pages/legals";
 @import "./pages/article";
+@import "./pages/quote";
 
 body {
 	position: relative;
@@ -73,7 +74,7 @@ section {
 }
 
 section:nth-child(even) {
-	background: hsl(var(--main-color), 0.5);
+	background: hsl(var(--main-color), 45%, 0.6);
 }
 
 .skip-to-content-link {
@@ -81,7 +82,7 @@ section:nth-child(even) {
 	left: 50%;
 	transform: translateY(-100%);
 	padding: 0.8rem;
-	border: 1px solid hsl(var(--primary));
+	border: 1px solid hsl(var(--primary), 0%);
 	border-radius: 0.4rem;
 
 	&:focus {
@@ -124,9 +125,9 @@ figcaption {
 	position: fixed;
 	display: none;
 	inset: 0;
-	background: hsl(var(--dark), 0.9);
+	background: hsl(var(--dark), 0%, 0.9);
 	z-index: 100;
-	color: hsl(var(--light));
+	color: hsl(var(--light), 100%);
 	align-items: center;
 	justify-content: center;
 	&.active {
@@ -148,7 +149,7 @@ figcaption {
 	}
 
 	a {
-		color: hsl(var(--main-color));
+		color: hsl(var(--main-color), 42%);
 		&:visited {
 			color: hsl(var(--main-color-dark));
 		}
@@ -185,10 +186,10 @@ ul.horizontal-list {
 }
 
 a.link {
-	display: inline-flex;
+	// display: inline-flex;
 	align-items: center;
 	gap: 0.4rem;
-	color: hsl(var(--dark));
+	color: hsl(var(--dark), 0%);
 	font-weight: 600;
 	text-transform: uppercase;
 }

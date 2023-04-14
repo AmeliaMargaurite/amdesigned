@@ -4,7 +4,7 @@
 	mask-position: center;
 	width: 1.6rem;
 	height: 1.6rem;
-	background-color: hsl(var(--primary));
+	background-color: hsl(var(--primary), 0%);
 
 	&.small {
 		width: 1.2rem;
@@ -22,7 +22,7 @@
 	}
 
 	&.invert {
-		background-color: hsl(var(--secondary));
+		background-color: hsl(var(--secondary), 100%);
 	}
 
 	&.highlight {

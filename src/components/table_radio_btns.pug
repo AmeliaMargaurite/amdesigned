@@ -1,0 +1,22 @@
+mixin table_radio_btns({name, label, required = true, items})
+	fieldset.fieldset_as_row(for=name)
+		span.content__wrapper
+			legend(id=name)
+				p!= label
+			if block
+				p.disclaimer: block
+			p.warning
+			span.radios__wrapper
+				each item in items 
+					label.radio(for=name + "_" + item.name)
+						p!= item.label
+						input(
+							type="radio",
+							id=name + "_" + item.name,
+							name=name,
+							value=name + "_" + item.name,
+							required=required,
+							aria-required=required ? "true" : "false",
+							checked=item.checked,
+							aria-checked=item.checked
+						)

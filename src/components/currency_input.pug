@@ -1,0 +1,16 @@
+mixin currency_input({name, label, required=true})
+	label.currency_input(for=name)
+		p.label!= label
+		if block
+			p.disclaimer: block
+		p.warning
+		.input
+			span $
+			input.no_styling(
+				type="number",
+				name=name,
+				id=name,
+				required=required,
+				aria-required=required ? "true" : "false",
+				value!=`<?= $inputs['${name}'] ?>`
+			)

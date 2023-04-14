@@ -24,7 +24,7 @@
     <meta name="twitter:image"
       content="/assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.922b4adb6e558a33faf61f79d06a105b.css" rel="stylesheet" />
+    <link href="/css/main.6cf8052a834df7fa72fe6faad8f3cf7a.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -103,6 +103,7 @@
       <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
           <li><a class="current" href="/contact/" onclick="closeMenu()">contact</a></li>
           <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
           <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
@@ -112,58 +113,58 @@
     <main class="contact" id="main">
       <section><span class="section__content"><span class="contact-form__wrapper">
             <h1>Let's connect</h1><?php require('../php/contact_form.php') ?><form class="contact-form"
-              action="../php/validate-contact-form.php?back=/contact" method="POST" id="contact-form"> <label
+              id="contact-form" action="../php/validate-contact-form.php?back=/contact" method="POST"> <label
                 for="subject">
-                <p>Subject: </p><input type="subject" id="subject" name="subject" required pattern="string"
+                <p>Subject:</p><input id="subject" type="subject" name="subject" required pattern="string"
                   value="<?= $inputs['subject'] ?? "I'd like a website" ?>" title="Alphanumeric with accents allowed">
                 <p class="warning"></p>
               </label><label for="name">
-                <p>Name:</p><input type="text" id="name" name="name" required pattern="string"
+                <p>Name:</p><input id="name" type="text" name="name" required pattern="string"
                   title="Alphanumeric with accents allowed" value="<?= $inputs['name'] ?? '' ?>">
                 <p class="warning"></p>
               </label><label for="email">
-                <p>Email: </p><input type="email" id="email" name="email" pattern="email" required
+                <p>Email:</p><input id="email" type="email" name="email" pattern="email" required
                   value="<?= $inputs['email'] ?? '' ?>">
                 <p class="warning"></p>
               </label>
               <fieldset for="services">
                 <legend id="services">Services you may be interested in:</legend>
                 <p class="warning"></p><label for="design">
-                  <p>Design</p><input type="checkbox" required id="design" value="design" name="services[]">
+                  <p>Design</p><input id="design" type="checkbox" required value="design" name="services[]">
                 </label><label for="build">
-                  <p>Build</p><input type="checkbox" required id="build" value="build" name="services[]">
+                  <p>Build</p><input id="build" type="checkbox" required value="build" name="services[]">
                 </label><label for="hosting">
-                  <p>Hosting</p><input type="checkbox" required id="hosting" value="hosting" name="services[]">
+                  <p>Hosting</p><input id="hosting" type="checkbox" required value="hosting" name="services[]">
                 </label><label for="domain-purchase">
-                  <p>Domain purchase</p><input type="checkbox" required id="domain-purchase" value="domain-purchase"
+                  <p>Domain purchase</p><input id="domain-purchase" type="checkbox" required value="domain-purchase"
                     name="services[]">
                 </label><label for="seo-accessibility">
-                  <p>SEO & Accessibility</p><input type="checkbox" required id="seo-accessibility"
+                  <p>SEO & Accessibility</p><input id="seo-accessibility" type="checkbox" required
                     value="seo-accessibility" name="services[]">
                 </label><label for="analytics">
-                  <p>Analytics</p><input type="checkbox" required id="analytics" value="analytics" name="services[]">
+                  <p>Analytics</p><input id="analytics" type="checkbox" required value="analytics" name="services[]">
                 </label><label for="maintenance">
-                  <p>Ongoing maintenance</p><input type="checkbox" required id="maintenance" value="maintenance"
+                  <p>Ongoing maintenance</p><input id="maintenance" type="checkbox" required value="maintenance"
                     name="services[]">
                 </label><label for="ecommerce">
-                  <p>E-commerce / Web store</p><input type="checkbox" required id="ecommerce" value="ecommerce"
+                  <p>E-commerce / Web store</p><input id="ecommerce" type="checkbox" required value="ecommerce"
                     name="services[]">
                 </label><label for="blog">
-                  <p>Blog</p><input type="checkbox" required id="blog" value="blog" name="services[]">
+                  <p>Blog</p><input id="blog" type="checkbox" required value="blog" name="services[]">
                 </label><label for="other">
-                  <p>Other</p><input type="checkbox" required id="other" value="other" name="services[]">
+                  <p>Other</p><input id="other" type="checkbox" required value="other" name="services[]">
                 </label>
               </fieldset><label for="message"> <span>
-                  <p>Let us know a bit about your business: </p>
-                  <p class="subtext"> What do you do, what are your customers like, what area do you service.<br>What do
+                  <p>Let us know a bit about your business:</p>
+                  <p class="subtext">What do you do, what are your customers like, what area do you service.<br>What do
                     you want to achieve with having a website?</p>
-                </span><textarea name="message" id="message" cols="30" rows="10" required
+                </span><textarea id="message" name="message" cols="30" rows="10" required
                   title="Not allowed: equals sign, greater than or less than signs, curly or square brackets"><?= $inputs['message'] ?? '' ?></textarea>
                 <p class="warning"></p>
               </label><label for="pot" aria-hidden="true"><input type="hidden" name="pot" readonly></label><input
-                type="hidden" name="token" value="<?= $token ?>"><input type="hidden" name="package_type"
-                id="package-type"><button class="btn primary" onclick="validateCheckboxes()" type="submit" name="submit"
-                value="submit">Send<span class="icon paper-plane" aria-hidden="true"></span></button>
+                type="hidden" name="token" value="<?= $token ?>"><input id="package-type" type="hidden"
+                name="package_type"><button class="btn primary" onclick="validateCheckboxes()" type="submit"
+                name="submit" value="submit">Send<span class="icon paper-plane" aria-hidden="true"></span></button>
             </form>
             <p class="warning">
               <script
@@ -207,6 +208,7 @@
     <footer>
       <ul>
         <li><a href="/">home</a></li>
+        <li><a href="/quote">quote</a></li>
         <li><a class="current" href="/contact/">contact</a></li>
         <li><a href="/showcase/">showcase</a></li>
         <li><a href="/articles/">articles</a></li>

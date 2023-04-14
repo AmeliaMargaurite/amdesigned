@@ -1,0 +1,13 @@
+mixin date_input({name, label, required=true})
+	label(for=name)
+		p.label!= label
+		if block
+			p.disclaimer: block
+		p.warning
+		input.text_input(
+			type="date",
+			name=name,
+			id=name,
+			required=required,
+			aria-required=required ? "true" : "false"
+		)

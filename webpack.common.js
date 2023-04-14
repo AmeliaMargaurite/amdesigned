@@ -53,6 +53,7 @@ module.exports = {
 		privacyPolicy: "./src/pages/privacy-policy.pug",
 		articles: "./src/pages/articles.php.pug",
 		article: "./src/pages/article.php.pug",
+		quote: "./src/pages/quote.pug",
 	},
 	output: {
 		path: path.join(__dirname, "dist/"),

@@ -1,0 +1,46 @@
+mixin checkboxes({name, label, required = false, items=[], other = false})
+	fieldset(for=name)
+		legend(id=name)
+			p.label!= label
+		if block
+			p.disclaimer: block
+		p.warning
+
+		each item in items 
+			label.checkbox(for=`${name}_${item.name}`)
+				p #{ item.label }
+				input(
+					type="checkbox",
+					id=`${name}_${item.name}`,
+					value=`${name}_${item.name}`,
+					name=name + "[]",
+					required=required,
+					aria-required=required ? "true" : "false",
+					onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')",
+					checked=item.checked,
+					aria-checked=item.checked ? "true" : "false"
+				)
+		if (other)
+			label.checkbox(for=`${name}_other`)
+				p Other
+				input(
+					type="checkbox",
+					id=`${name}_other`,
+					value="other",
+					name=name + "[]",
+					required=required,
+					aria-required=required ? "true" : "false",
+					onchange=`toggleCheckboxInputVisibility(event, '${name}-checkbox__input')`
+				)
+			label.other_checkbox_input(
+				for=`${name}-other_checkbox_input`,
+				id=`${name}-checkbox__input`,
+				style="display: none",
+				aria-hidden="true"
+			)
+				p Please explain a little further
+				input(
+					type="hidden",
+					name=`${name}-other_checkbox_input`,
+					id=`${name}-other_checkbox_input`
+				)

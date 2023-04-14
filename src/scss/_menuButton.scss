@@ -22,11 +22,26 @@
 		border-radius: 4rem;
 	}
 
+	&:hover {
+		& span {
+			box-shadow: 2px 2px 1px hsl(var(--highlight));
+		}
+
+		&.open {
+			& span {
+				box-shadow: 2px 2px 1px hsl(var(--light), 100%);
+			}
+			span:nth-child(2) {
+				box-shadow: unset;
+			}
+		}
+	}
+
 	&.open {
 		position: fixed;
 		span {
 			transition: transform 0.25s ease, background-color 0.5s ease;
-			background: hsl(var(--main-color));
+			background: hsl(var(--main-color), 42%);
 		}
 
 		span:nth-child(1) {

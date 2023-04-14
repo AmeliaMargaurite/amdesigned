@@ -17,7 +17,7 @@
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.922b4adb6e558a33faf61f79d06a105b.css" rel="stylesheet" />
+    <link href="/css/main.6cf8052a834df7fa72fe6faad8f3cf7a.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -96,6 +96,7 @@
       <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
           <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
           <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
           <li><a class="current" href="/articles/" onclick="closeMenu()">articles</a></li>
@@ -103,12 +104,12 @@
       </nav>
     </header>
     <main class="articles" id="main">
-      <section class="articles-section"><span class="section__content" id="articles"><span>
+      <section class="articles-section"><span class="section__content"
+          id="articles"><?php if ($articles && count($articles) > 0) : ?> <span>
             <h1>Recent articles</h1>
             <p>Informative articles for businesses with, or wanting, a website</p><?php if (isset($filter)) : ?><a
               href="/articles">View all articles</a><?php endif ?>
-          </span><?php if (count($articles) > 0) : ?> <span
-            class="articles__wrapper"><?php foreach ($articles as $article): ?>
+          </span><span class="articles__wrapper"><?php foreach ($articles as $article): ?>
             <?php $webpFile = $article->hero_img_filename . '.webp'; ?>
             <?php $small = $img_path . 'large/' . $webpFile  . ' 425w' ?>
             <?php $medium = $img_path . 'medium/' . $webpFile . ' 900w' ?>
@@ -131,7 +132,10 @@
                   rel="bookmark">Read more<span class="icon chevron right" aria-hidden="true"></span></a>
               </span>
             </article><?php endforeach ?>
-            <?php else : ?><span>
+            <?php elseif ($error) : ?><span>
+              <h1>Whoops</h1>
+              <p>Something went wrong, we'll get right on that. Please feel free to check back later.</p>
+            </span><?php else : ?><span>
               <p>No articles found</p><?php endif ?>
             </span></span></span></section>
     </main>
@@ -159,6 +163,7 @@
     <footer>
       <ul>
         <li><a href="/">home</a></li>
+        <li><a href="/quote">quote</a></li>
         <li><a href="/contact/">contact</a></li>
         <li><a href="/showcase/">showcase</a></li>
         <li><a class="current" href="/articles/">articles</a></li>

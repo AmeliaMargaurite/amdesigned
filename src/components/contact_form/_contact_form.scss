@@ -1,11 +1,11 @@
 .contact-form {
 	& *:not(input[type="checkbox"]):focus {
-		outline: 0.2rem solid hsl(var(--main-color));
+		outline: 0.2rem solid hsl(var(--main-color), 42%);
 		outline-offset: 0.2rem;
 	}
 
 	label:has(input[type="checkbox"]:focus) {
-		outline: 0.2rem solid hsl(var(--main-color));
+		outline: 0.2rem solid hsl(var(--main-color), 42%);
 		border-radius: var(--input_border_radius);
 	}
 
@@ -50,7 +50,7 @@
 			padding: 0 0.8rem;
 
 			&:hover {
-				background: hsl(var(--main-color), 0.2);
+				background: hsl(var(--main-color), 42%, 0.2);
 			}
 
 			& input {
@@ -59,7 +59,7 @@
 			}
 
 			&:nth-child(even) {
-				background: hsl(var(--dark), 0.06);
+				background: hsl(var(--dark), 0%, 0.06);
 			}
 		}
 	}

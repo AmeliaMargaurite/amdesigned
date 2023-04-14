@@ -1,11 +1,13 @@
 footer {
-	--text-color: hsl(var(--primary));
+	--text-color: hsl(var(--primary), 0%);
 
 	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.6rem;
 	justify-content: space-between;
 	padding: var(--page_padding);
 	color: hsl(var(--text-color));
-	background: hsl(var(--main-color), 0.5);
+	background: hsl(var(--main-color), 50%, 0.6);
 
 	ul {
 		line-height: 1.5;
@@ -40,7 +42,7 @@ footer {
 
 				&:not(.active):hover {
 					&:after {
-						background: hsl(var(--light));
+						background: hsl(var(--light), 100%);
 					}
 				}
 			}

@@ -19,7 +19,7 @@
     <meta name="twitter:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.922b4adb6e558a33faf61f79d06a105b.css" rel="stylesheet" />
+    <link href="/css/main.6cf8052a834df7fa72fe6faad8f3cf7a.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -98,6 +98,7 @@
       <nav id="main-menu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
           <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
           <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
           <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
@@ -164,9 +165,14 @@
               "url": "https://www.amdesigned.com.au/article/<?= $article->slug ?>"
             }
           </script>
-        </span></section><?php else : ?><section><span class="section__content"><span>
+        </span></section><?php elseif ($error) : ?><section><span class="section__content"><span>
             <h1>Whoops</h1>
-            <p>The article you were looking for doesn't seem to exist</p>
+            <p>There seems to have been an error. We'll get right on that. Please do try again later.</p>
+          </span></span></section><?php else : ?><section><span class="section__content"><span>
+            <h1>Whoops</h1>
+            <p>The article you were looking for doesn't seem to exist. Maybe you'll find the one you're after
+              <a class="link" href="/articles/" rel="bookmark">on the articles page.</a>
+            </p>
           </span></span></section><?php endif ?>
     </main>
     <script type="application/ld+json">
@@ -193,6 +199,7 @@
     <footer>
       <ul>
         <li><a href="/">home</a></li>
+        <li><a href="/quote">quote</a></li>
         <li><a href="/contact/">contact</a></li>
         <li><a href="/showcase/">showcase</a></li>
         <li><a href="/articles/">articles</a></li>

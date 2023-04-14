@@ -1,87 +1,161 @@
 include ../btn/btn.pug
 
-mixin contact_form 
-  <?php require('../php/contact_form.php') ?>
-  form.contact-form(action="../php/validate-contact-form.php?back=/contact", method="POST", id="contact-form") 
+mixin contact_form
+	<?php require('../php/contact_form.php') ?>
+	form#contact-form.contact-form(
+		action="../php/validate-contact-form.php?back=/contact",
+		method="POST"
+	) 
+		|
+		label(for="subject") 
+			|
+			p Subject:
+			input#subject(
+				type="subject",
+				name="subject",
+				required,
+				pattern="string",
+				value!="<?= $inputs['subject'] ?? \"I'd like a website\" ?>",
+				title="Alphanumeric with accents allowed"
+			)
+			p.warning
 
-    label(for="subject") 
-      p Subject: 
-      input(type="subject", id="subject", name="subject", required, pattern="string", value!="<?= $inputs['subject'] ?? \"I'd like a website\" ?>", title="Alphanumeric with accents allowed")
-      p.warning
+		label(for="name")
+			p Name:
+			input#name(
+				type="text",
+				name="name",
+				required,
+				pattern="string",
+				title="Alphanumeric with accents allowed",
+				value!="<?= $inputs['name'] ?? '' ?>"
+			)
+			p.warning
 
-    label(for="name")
-      p Name:
-      input(type="text", id="name", name="name", required, pattern='string', title="Alphanumeric with accents allowed", value!="<?= $inputs['name'] ?? '' ?>")
-      p.warning
+		label(for="email") 
+			|
+			p Email:
+			input#email(
+				type="email",
+				name="email",
+				pattern="email",
+				required,
+				value!="<?= $inputs['email'] ?? '' ?>"
+			)
+			p.warning
 
+		fieldset(for="services")
+			legend#services Services you may be interested in:
+			p.warning
 
-    label(for="email") 
-      p Email: 
-      input(type="email", id="email", name="email", pattern="email", required, value!="<?= $inputs['email'] ?? '' ?>")
-      p.warning
+			label(for="design") 
+				|
+				p Design
+				input#design(type="checkbox", required, value="design", name="services[]")
 
-    fieldset(for="services")
-      legend#services Services you may be interested in:
-      p.warning
+			label(for="build") 
+				|
+				p Build
+				input#build(type="checkbox", required, value="build", name="services[]")
 
-      label(for="design") 
-        p Design
-        input(type='checkbox', required, id="design", value="design", name="services[]")
+			label(for="hosting") 
+				|
+				p Hosting
+				input#hosting(
+					type="checkbox",
+					required,
+					value="hosting",
+					name="services[]"
+				)
 
-      label(for="build") 
-        p Build
-        input(type='checkbox', required, id="build", value="build",  name="services[]")
+			label(for="domain-purchase") 
+				|
+				p Domain purchase
+				input#domain-purchase(
+					type="checkbox",
+					required,
+					value="domain-purchase",
+					name="services[]"
+				)
 
-      label(for="hosting") 
-        p Hosting
-        input(type='checkbox', required, id="hosting", value="hosting",  name="services[]")
+			label(for="seo-accessibility") 
+				|
+				p SEO & Accessibility
+				input#seo-accessibility(
+					type="checkbox",
+					required,
+					value="seo-accessibility",
+					name="services[]"
+				)
 
-      label(for="domain-purchase") 
-        p Domain purchase
-        input(type='checkbox', required, id="domain-purchase", value="domain-purchase",  name="services[]")
+			label(for="analytics") 
+				|
+				p Analytics
+				input#analytics(
+					type="checkbox",
+					required,
+					value="analytics",
+					name="services[]"
+				)
 
-      label(for="seo-accessibility") 
-        p SEO & Accessibility
-        input(type='checkbox', required, id="seo-accessibility", value="seo-accessibility",  name="services[]")
+			label(for="maintenance") 
+				|
+				p Ongoing maintenance
+				input#maintenance(
+					type="checkbox",
+					required,
+					value="maintenance",
+					name="services[]"
+				)
 
-      label(for="analytics") 
-        p Analytics
-        input(type='checkbox', required, id="analytics", value="analytics",  name="services[]")
+			label(for="ecommerce") 
+				|
+				p E-commerce / Web store
+				input#ecommerce(
+					type="checkbox",
+					required,
+					value="ecommerce",
+					name="services[]"
+				)
 
-      label(for="maintenance") 
-        p Ongoing maintenance
-        input(type='checkbox', required, id="maintenance", value="maintenance",  name="services[]")
+			label(for="blog") 
+				|
+				p Blog
+				input#blog(type="checkbox", required, value="blog", name="services[]")
 
-      label(for="ecommerce") 
-        p E-commerce / Web store
-        input(type='checkbox', required, id="ecommerce", value="ecommerce",  name="services[]")
+			label(for="other") 
+				|
+				p Other
+				input#other(type="checkbox", required, value="other", name="services[]")
 
-      label(for="blog") 
-        p Blog
-        input(type='checkbox', required, id="blog", value="blog",  name="services[]")
+		label(for="message") 
+			|
+			span
+				p Let us know a bit about your business:
+				p.subtext What do you do, what are your customers like, what area do you service.
+					br
+					| What do you want to achieve with having a website?
+			textarea#message(
+				name="message",
+				cols="30",
+				rows="10",
+				required,
+				title="Not allowed: equals sign, greater than or less than signs, curly or square brackets"
+			) <?= $inputs['message'] ?? '' ?>
+			p.warning
 
-      label(for="other") 
-        p Other
-        input(type='checkbox', required, id="other", value="other",  name="services[]")
+		label(for="pot", aria-hidden="true")
+			input(type="hidden", name="pot", readonly)
 
+		input(type="hidden", name="token", value!="\<?= $token ?\>")
 
-    label(for="message") 
-      span 
-        p Let us know a bit about your business: 
-        p.subtext  What do you do, what are your customers like, what area do you service.
-          br
-          | What do you want to achieve with having a website?
-      textarea(name="message", id="message", cols="30", rows="10", required, title="Not allowed: equals sign, greater than or less than signs, curly or square brackets") <?= $inputs['message'] ?? '' ?>
-      p.warning
+		input#package-type(type="hidden", name="package_type")
+		+btn({icon: {class: "paper-plane", side: 'right'}}).primary(
+			type="submit",
+			name="submit",
+			onclick="validateCheckboxes()",
+			value="submit"
+		) Send
 
-
-    label(for="pot", aria-hidden="true")
-      input(type="hidden", name="pot" readonly)
-    
-    input(type="hidden", name="token" value!="\<?= $token ?\>")
-
-    input(type="hidden", name="package_type", id="package-type")
-    +btn({icon: {class: "paper-plane", side: 'right'}})(type="submit", class="primary", name="submit", onclick="validateCheckboxes()", value="submit") Send
-      
-  p.warning
-    script(src=require("./contact_form.ts")) 
+	p.warning
+		script(src=require("./contact_form.ts")) 

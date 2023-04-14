@@ -2,7 +2,7 @@
 	display: grid;
 	row-gap: 3.2rem;
 	column-gap: 3.2rem;
-	background: hsl(var(--light));
+	background: hsl(var(--light), 100%);
 	padding: 2.4rem;
 	border-radius: 0.8rem;
 	height: max-content;
@@ -19,14 +19,14 @@
 		rotate: -10deg;
 		font-size: 6.4rem;
 		line-height: 1;
-		color: hsl(var(--main-color));
+		color: hsl(var(--main-color), 30%);
 		align-self: flex-start;
-		text-shadow: 2px 2px 1px hsl(var(--dark), 0.8);
+		text-shadow: 2px 2px 1px hsl(var(--main-color), 10%);
 
 		&.circle {
 			width: 6.4rem;
 			height: 6.4rem;
-			background: hsl(var(--main-color));
+			background: hsl(var(--main-color), 42%);
 			border-radius: 50%;
 			font-size: 2.4rem;
 		}

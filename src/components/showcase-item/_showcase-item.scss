@@ -3,8 +3,8 @@
 	grid-template-rows: max-content max-content auto;
 	// padding: 3.2rem;
 	text-decoration: none;
-	color: hsl(var(--dark));
-	box-shadow: 0 0 10px -4px hsl(var(--dark), 0.4);
+	color: hsl(var(--dark), 0%);
+	box-shadow: 0 0 10px -4px hsl(var(--dark), 0%, 0.4);
 	border-radius: 2rem;
 	overflow: hidden;
 	transition: box-shadow 0.5s ease;
@@ -25,7 +25,7 @@
 		.features {
 			line-height: 1.2;
 			font-size: 1.6rem;
-			color: hsl(var(--dark), 0.7);
+			color: hsl(var(--dark), 0%, 0.7);
 
 			& span {
 				position: relative;
@@ -51,7 +51,7 @@
 
 	.name {
 		font-size: 1.6rem;
-		color: hsl(var(--dark), 0.6);
+		color: hsl(var(--dark), 0%, 0.6);
 	}
 
 	.icon__wrapper {
@@ -60,11 +60,11 @@
 		justify-content: center;
 		align-items: center;
 		padding: 1.6rem;
-		background: hsl(var(--dark));
+		background: hsl(var(--dark), 0%);
 		border-radius: 50%;
 
 		.icon {
-			background-color: hsl(var(--light));
+			background-color: hsl(var(--light), 100%);
 		}
 	}
 
@@ -79,7 +79,7 @@
 			position: absolute;
 			inset: 0;
 			z-index: 1;
-			background-color: hsl(var(--dark), 0.4);
+			background-color: hsl(var(--dark), 0%, 0.4);
 			transition: background-color 0.25s ease-in-out;
 		}
 
@@ -88,8 +88,8 @@
 			grid-row: 1;
 			grid-column: 1;
 			content: attr(data-label);
-			color: hsl(var(--light));
-			background: hsl(var(--main-color));
+			color: hsl(var(--light), 100%);
+			background: hsl(var(--main-color), 42%);
 			padding: 0.8rem 1.6rem;
 			display: flex;
 			justify-content: center;
@@ -131,7 +131,7 @@
 			}
 
 			&::before {
-				background-color: hsl(var(--dark), 0);
+				background-color: hsl(var(--dark), 0%, 0);
 				transition: background-color 0.25s ease-in-out;
 			}
 

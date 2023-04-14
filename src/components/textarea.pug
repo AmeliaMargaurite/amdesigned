@@ -1,0 +1,12 @@
+mixin textarea({name, label, required})
+	label(for=name)
+		p.label!= label
+		if block
+			p.disclaimer: block
+		p.warning
+		textarea.textarea(
+			name=name,
+			id=name,
+			required=required,
+			aria-required=required ? "true" : "false"
+		) <?= $inputs['#{ name }'] ?>

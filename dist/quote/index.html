@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote | AMDesigned</title>
+    <meta name="description" content="AMDesigned" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://www.amdesigned.com.au/" />
+    <meta property="og:title" content="Quote | AMDesigned" />
+    <meta property="og:description" content="AMDesigned" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <meta name="twitter:title" content="Quote | AMDesigned" />
+    <meta name="twitter:description" content="AMDesigned" />
+    <meta name="twitter:image" content="" />
+    <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
+    <link href="/css/main.6cf8052a834df7fa72fe6faad8f3cf7a.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.fb29bbf81ec57714.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.f68b7860c31a0afb.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+            (e._i = []),
+            (e.init = function (i, s, a) {
+              function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                  (t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                  });
+              }
+              ((p = t.createElement("script")).type = "text/javascript"), (p.async = !0), (p.src = s.api_host +
+                "/static/array.js"), (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+              var u = e;
+              for (
+                void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags"
+                .split(" "),
+                n = 0; n < o.length; n++
+              )
+                g(u, o[n]);
+              e._i.push([i, s, a]);
+            }),
+            (e.__SV = 1));
+      })(document, window.posthog || []);
+      const getUserId = () => {
+        let user_id;
+        if (window.localStorage.getItem("user_id")) {
+          user_id = JSON.parse(window.localStorage.getItem("user_id"));
+        } else {
+          user_id = Date.now();
+          window.localStorage.setItem("user_id", user_id);
+        }
+        return [user_id];
+      };
+      posthog.init("phc_IECNjEcCsaDAmsFD1y49ormP3Xj7Fzh6aHCqYWd6pNE", {
+        api_host: "https://eu.posthog.com",
+        loaded: (posthog) => {
+          posthog.identify(getUserId());
+          const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get("__posthog");
+          if (toolbarJSON) {
+            posthog.loadToolbar(JSON.parse(toolbarJSON));
+          }
+        },
+        persistence: "memory",
+      });
+    </script>
+  </head>
+  <body class="quote"><span class="loading__wrapper" id="loading__wrapper"><span class="loader">Loading...</span></span>
+    <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
+        href="/">
+        <p class="company-name">AMDesigned</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a class="current" href="/quote" onclick="closeMenu()">quote</a></li>
+          <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
+          <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
+          <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="quote" id="main">
+      <section><span class="section__content">
+          <h1>Quote</h1>
+          <p>Below is an indepth questionnaire to help us provide you with an accurate quote for your exciting project.
+            If it seems a bit overwhelming, or not quite where you're at, please feel free to send a more simple message
+            to us on
+            <a class="link" href="/contact" rel="bookmark">our contact page</a>.
+          </p>
+          <form><label for="contact_name">
+              <p class="label">Contact Person name</p>
+              <p class="warning"></p><input class="text_input" type="text" name="contact_name" id="contact_name"
+                required aria-required="true" pattern="string" value="<?= $inputs['contact_name'] ?>">
+            </label><label for="email">
+              <p class="label">Contact email address</p>
+              <p class="warning"></p><input class="text_input" type="email" name="email" id="email" required
+                aria-required="true" pattern="email" value="<?= $inputs['email'] ?>">
+            </label><label for="company">
+              <p class="label">Company / Organisation name</p>
+              <p class="warning"></p><input class="text_input" type="text" name="company" id="company" required
+                aria-required="true" pattern="string" value="<?= $inputs['company'] ?>"
+                onblur="updateCompanyName(event)">
+            </label><label for="description">
+              <p class="label">Tell us a bit about <span class="company_name">your company / organisation</span></p>
+              <p class="warning"></p><textarea class="textarea" name="description" id="description"
+                aria-required="false"><?= $inputs['description'] ?></textarea>
+            </label>
+            <fieldset for="purchase_domain">
+              <legend id="purchase_domain">
+                <p class="label">Do you need us to buy your domain?</p>
+              </legend>
+              <p class="warning"></p><label class="radio" for="yes">
+                <p>Yes</p><input type="radio" id="yes" name="purchase_domain" value="yes" required aria-required="true"
+                  aria-checked="false">
+              </label><label class="radio" for="no">
+                <p>No</p><input type="radio" id="no" name="purchase_domain" value="no" required aria-required="true"
+                  aria-checked="false">
+              </label><label class="radio" for="unknown">
+                <p>Not sure yet</p><input type="radio" id="unknown" name="purchase_domain" value="unknown" required
+                  aria-required="true" aria-checked="false">
+              </label>
+            </fieldset>
+            <fieldset for="organise_hosting">
+              <legend id="organise_hosting">
+                <p class="label">Do you need us to organise your hosting?</p>
+              </legend>
+              <p class="warning"></p><label class="radio" for="yes">
+                <p>Yes</p><input type="radio" id="yes" name="organise_hosting" value="yes" required aria-required="true"
+                  aria-checked="false">
+              </label><label class="radio" for="no">
+                <p>No</p><input type="radio" id="no" name="organise_hosting" value="no" required aria-required="true"
+                  aria-checked="false">
+              </label><label class="radio" for="unknown">
+                <p>Not sure yet</p><input type="radio" id="unknown" name="organise_hosting" value="unknown" required
+                  aria-required="true" aria-checked="false">
+              </label>
+            </fieldset><label for="deadline">
+              <p class="label">What is your deadline for this project?</p>
+              <p class="warning"></p><input class="text_input" type="date" name="deadline" id="deadline" required
+                aria-required="true">
+            </label><label class="currency_input" for="budget">
+              <p class="label">Could you give us an estimated available budget for this website project?</p>
+              <p class="warning"></p>
+              <div class="input"><span>$</span><input class="no_styling" type="number" name="budget" id="budget"
+                  required aria-required="true" value="<?= $inputs['budget'] ?>"></div>
+            </label>
+            <fieldset for="reasons">
+              <legend id="reasons">
+                <p class="label">I want this site because</p>
+              </legend>
+              <p class="warning"></p><label class="checkbox" for="reasons_awareness">
+                <p>I need to build awareness for my brand</p><input type="checkbox" id="reasons_awareness"
+                  value="reasons_awareness" name="reasons[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="reasons_contact_point">
+                <p>I need to offer a contact point to my clients</p><input type="checkbox" id="reasons_contact_point"
+                  value="reasons_contact_point" name="reasons[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="reasons_improve_image">
+                <p>I need my company to have a better image online</p><input type="checkbox" id="reasons_improve_image"
+                  value="reasons_improve_image" name="reasons[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="reasons_e-commerce">
+                <p>I need to sell my product/service through my site</p><input type="checkbox" id="reasons_e-commerce"
+                  value="reasons_e-commerce" name="reasons[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="reasons_customer_loyalty">
+                <p>I need to use it to build customer loyalty</p><input type="checkbox" id="reasons_customer_loyalty"
+                  value="reasons_customer_loyalty" name="reasons[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="reasons_multilanguage">
+                <p>I need to reach people in many languages</p><input type="checkbox" id="reasons_multilanguage"
+                  value="reasons_multilanguage" name="reasons[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="reasons_promote_latest">
+                <p>I need somewhere to promote my latest product/service</p><input type="checkbox"
+                  id="reasons_promote_latest" value="reasons_promote_latest" name="reasons[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="reasons_other">
+                <p>Other</p><input type="checkbox" id="reasons_other" value="other" name="reasons[]"
+                  aria-required="false" onchange="toggleCheckboxInputVisibility(event, 'reasons-checkbox__input')">
+              </label><label class="other_checkbox_input" for="reasons-other_checkbox_input"
+                id="reasons-checkbox__input" style="display: none" aria-hidden="true">
+                <p>Please explain a little further</p><input type="hidden" name="reasons-other_checkbox_input"
+                  id="reasons-other_checkbox_input">
+              </label>
+            </fieldset>
+            <fieldset for="client_types">
+              <legend id="client_types">
+                <p class="label">My site will be built to target</p>
+              </legend>
+              <p class="warning"></p><label class="checkbox" for="client_types_business_customers">
+                <p>Business customers</p><input type="checkbox" id="client_types_business_customers"
+                  value="client_types_business_customers" name="client_types[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_types_consumers">
+                <p>Consumers</p><input type="checkbox" id="client_types_consumers" value="client_types_consumers"
+                  name="client_types[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_types_awareness">
+                <p>Awareness</p><input type="checkbox" id="client_types_awareness" value="client_types_awareness"
+                  name="client_types[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_types_other">
+                <p>Other</p><input type="checkbox" id="client_types_other" value="other" name="client_types[]"
+                  aria-required="false" onchange="toggleCheckboxInputVisibility(event, 'client_types-checkbox__input')">
+              </label><label class="other_checkbox_input" for="client_types-other_checkbox_input"
+                id="client_types-checkbox__input" style="display: none" aria-hidden="true">
+                <p>Please explain a little further</p><input type="hidden" name="client_types-other_checkbox_input"
+                  id="client_types-other_checkbox_input">
+              </label>
+            </fieldset>
+            <fieldset for="client_ages">
+              <legend id="client_ages">
+                <p class="label">I'd like to target clients who are</p>
+              </legend>
+              <p class="warning"></p><label class="checkbox" for="client_ages_kids_teens">
+                <p>Kids &amp; teens</p><input type="checkbox" id="client_ages_kids_teens" value="client_ages_kids_teens"
+                  name="client_ages[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_ages_twenties">
+                <p>In their 20s</p><input type="checkbox" id="client_ages_twenties" value="client_ages_twenties"
+                  name="client_ages[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_ages_thirties">
+                <p>In their 30s</p><input type="checkbox" id="client_ages_thirties" value="client_ages_thirties"
+                  name="client_ages[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_ages_forties">
+                <p>In their 40s</p><input type="checkbox" id="client_ages_forties" value="client_ages_forties"
+                  name="client_ages[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_ages_fifties">
+                <p>In their 50s</p><input type="checkbox" id="client_ages_fifties" value="client_ages_fifties"
+                  name="client_ages[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="client_ages_seniors">
+                <p>Senior citizens</p><input type="checkbox" id="client_ages_seniors" value="client_ages_seniors"
+                  name="client_ages[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label>
+            </fieldset><label for="seo_keywords">
+              <p class="label">Someone is searching the web for the solution your business provides. What words or
+                phrases are they using to search.</p>
+              <p class="disclaimer"><em>Not including <span class="company_name">your business name</span>; imagine
+                  someone who has never heard of your business</em></p>
+              <p class="warning"></p><textarea class="textarea" name="seo_keywords" id="seo_keywords"
+                aria-required="false"><?= $inputs['seo_keywords'] ?></textarea>
+            </label>
+            <fieldset for="include_in_website">
+              <legend id="include_in_website">
+                <p class="label">Our new website would need to include</p>
+              </legend>
+              <p class="warning"></p><label class="checkbox" for="include_in_website_html">
+                <p>A basic HTML site</p><input type="checkbox" id="include_in_website_html"
+                  value="include_in_website_html" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_html_css">
+                <p>An HTML5/ CSS3 website</p><input type="checkbox" id="include_in_website_html_css"
+                  value="include_in_website_html_css" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_responsive">
+                <p>Responsive design for use on tablets &amp; mobiles</p><input type="checkbox"
+                  id="include_in_website_responsive" value="include_in_website_responsive" name="include_in_website[]"
+                  aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_wordpress">
+                <p>WordPress-based CMS</p><input type="checkbox" id="include_in_website_wordpress"
+                  value="include_in_website_wordpress" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_magazine">
+                <p>Online Magazine</p><input type="checkbox" id="include_in_website_magazine"
+                  value="include_in_website_magazine" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_forum_blog">
+                <p>Online forum/ blog</p><input type="checkbox" id="include_in_website_forum_blog"
+                  value="include_in_website_forum_blog" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_newsletter_system">
+                <p>Newsletter system</p><input type="checkbox" id="include_in_website_newsletter_system"
+                  value="include_in_website_newsletter_system" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_socials_integration">
+                <p>Social network integration</p><input type="checkbox" id="include_in_website_socials_integration"
+                  value="include_in_website_socials_integration" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_multiple_landing_pages">
+                <p>Separate, dedicated landing pages</p><input type="checkbox"
+                  id="include_in_website_multiple_landing_pages" value="include_in_website_multiple_landing_pages"
+                  name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="include_in_website_site_redesign">
+                <p>A redesign of a current website</p><input type="checkbox" id="include_in_website_site_redesign"
+                  value="include_in_website_site_redesign" name="include_in_website[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label>
+            </fieldset>
+            <fieldset for="special_includes">
+              <legend id="special_includes">
+                <p class="label">We want the following special features to be included in our new website</p>
+              </legend>
+              <p class="warning"></p><label class="checkbox" for="special_includes_registration_form">
+                <p>Registration form</p><input type="checkbox" id="special_includes_registration_form"
+                  value="special_includes_registration_form" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_video_streaming">
+                <p>Video streaming</p><input type="checkbox" id="special_includes_video_streaming"
+                  value="special_includes_video_streaming" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_mysql_db">
+                <p>MySQL Database</p><input type="checkbox" id="special_includes_mysql_db"
+                  value="special_includes_mysql_db" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_search_panel">
+                <p>Search panel</p><input type="checkbox" id="special_includes_search_panel"
+                  value="special_includes_search_panel" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_email_sign_up_form">
+                <p>Newsletter/ Email sign up forms</p><input type="checkbox" id="special_includes_email_sign_up_form"
+                  value="special_includes_email_sign_up_form" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_information_request_forms">
+                <p>Information/ request forms</p><input type="checkbox" id="special_includes_information_request_forms"
+                  value="special_includes_information_request_forms" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_uploads_downloads">
+                <p>Uploads/ downloads</p><input type="checkbox" id="special_includes_uploads_downloads"
+                  value="special_includes_uploads_downloads" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_customer_login">
+                <p>Customer login</p><input type="checkbox" id="special_includes_customer_login"
+                  value="special_includes_customer_login" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_registration">
+                <p>Registration</p><input type="checkbox" id="special_includes_registration"
+                  value="special_includes_registration" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_e-commerce">
+                <p>An online store/shopping cart</p><input type="checkbox" id="special_includes_e-commerce"
+                  value="special_includes_e-commerce" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_online_payment_gateway">
+                <p>Online payment gateway</p><input type="checkbox" id="special_includes_online_payment_gateway"
+                  value="special_includes_online_payment_gateway" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_blog_moduel">
+                <p>Blog module</p><input type="checkbox" id="special_includes_blog_moduel"
+                  value="special_includes_blog_moduel" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_image_gallery">
+                <p>Image gallery</p><input type="checkbox" id="special_includes_image_gallery"
+                  value="special_includes_image_gallery" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_image_slider">
+                <p>Image slider</p><input type="checkbox" id="special_includes_image_slider"
+                  value="special_includes_image_slider" name="special_includes[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="special_includes_other">
+                <p>Other</p><input type="checkbox" id="special_includes_other" value="other" name="special_includes[]"
+                  aria-required="false"
+                  onchange="toggleCheckboxInputVisibility(event, 'special_includes-checkbox__input')">
+              </label><label class="other_checkbox_input" for="special_includes-other_checkbox_input"
+                id="special_includes-checkbox__input" style="display: none" aria-hidden="true">
+                <p>Please explain a little further</p><input type="hidden" name="special_includes-other_checkbox_input"
+                  id="special_includes-other_checkbox_input">
+              </label>
+            </fieldset><span class="table_radio_btns__wrapper"><span class="table_radio_btns__legend">
+                <p class="label">Who will provide the following</p>
+              </span>
+              <fieldset class="fieldset_as_row" for="provide_stock_photography"><span class="content__wrapper">
+                  <legend id="provide_stock_photography">
+                    <p>Stock photography</p>
+                  </legend>
+                  <p class="warning"></p><span class="radios__wrapper"><label class="radio"
+                      for="provide_stock_photography_customer">
+                      <p>Us</p><input type="radio" id="provide_stock_photography_customer"
+                        name="provide_stock_photography" value="provide_stock_photography_customer" required
+                        aria-required="true">
+                    </label><label class="radio" for="provide_stock_photography_amdesigned">
+                      <p>AMDesigned</p><input type="radio" id="provide_stock_photography_amdesigned"
+                        name="provide_stock_photography" value="provide_stock_photography_amdesigned" required
+                        aria-required="true">
+                    </label></span>
+                </span></fieldset>
+              <fieldset class="fieldset_as_row" for="provide_company_photography"><span class="content__wrapper">
+                  <legend id="provide_company_photography">
+                    <p>Company photography</p>
+                  </legend>
+                  <p class="warning"></p><span class="radios__wrapper"><label class="radio"
+                      for="provide_company_photography_customer">
+                      <p>Us</p><input type="radio" id="provide_company_photography_customer"
+                        name="provide_company_photography" value="provide_company_photography_customer" required
+                        aria-required="true">
+                    </label><label class="radio" for="provide_company_photography_amdesigned">
+                      <p>AMDesigned</p><input type="radio" id="provide_company_photography_amdesigned"
+                        name="provide_company_photography" value="provide_company_photography_amdesigned" required
+                        aria-required="true">
+                    </label></span>
+                </span></fieldset>
+              <fieldset class="fieldset_as_row" for="provide_artwork_illustrations"><span class="content__wrapper">
+                  <legend id="provide_artwork_illustrations">
+                    <p>Other Artwork/ Illustrations</p>
+                  </legend>
+                  <p class="warning"></p><span class="radios__wrapper"><label class="radio"
+                      for="provide_artwork_illustrations_customer">
+                      <p>Us</p><input type="radio" id="provide_artwork_illustrations_customer"
+                        name="provide_artwork_illustrations" value="provide_artwork_illustrations_customer" required
+                        aria-required="true">
+                    </label><label class="radio" for="provide_artwork_illustrations_amdesigned">
+                      <p>AMDesigned</p><input type="radio" id="provide_artwork_illustrations_amdesigned"
+                        name="provide_artwork_illustrations" value="provide_artwork_illustrations_amdesigned" required
+                        aria-required="true">
+                    </label></span>
+                </span></fieldset>
+              <fieldset class="fieldset_as_row" for="provide_copywriting_text"><span class="content__wrapper">
+                  <legend id="provide_copywriting_text">
+                    <p>Copywriting text</p>
+                  </legend>
+                  <p class="warning"></p><span class="radios__wrapper"><label class="radio"
+                      for="provide_copywriting_text_customer">
+                      <p>Us</p><input type="radio" id="provide_copywriting_text_customer"
+                        name="provide_copywriting_text" value="provide_copywriting_text_customer" required
+                        aria-required="true">
+                    </label><label class="radio" for="provide_copywriting_text_amdesigned">
+                      <p>AMDesigned</p><input type="radio" id="provide_copywriting_text_amdesigned"
+                        name="provide_copywriting_text" value="provide_copywriting_text_amdesigned" required
+                        aria-required="true">
+                    </label></span>
+                </span></fieldset>
+              <fieldset class="fieldset_as_row" for="provide_logo"><span class="content__wrapper">
+                  <legend id="provide_logo">
+                    <p>Professional logo</p>
+                  </legend>
+                  <p class="warning"></p><span class="radios__wrapper"><label class="radio" for="provide_logo_customer">
+                      <p>Us</p><input type="radio" id="provide_logo_customer" name="provide_logo"
+                        value="provide_logo_customer" required aria-required="true">
+                    </label><label class="radio" for="provide_logo_amdesigned">
+                      <p>AMDesigned</p><input type="radio" id="provide_logo_amdesigned" name="provide_logo"
+                        value="provide_logo_amdesigned" required aria-required="true">
+                    </label></span>
+                </span></fieldset>
+              <fieldset class="fieldset_as_row" for="provide_graphic_design"><span class="content__wrapper">
+                  <legend id="provide_graphic_design">
+                    <p>Graphic design</p>
+                  </legend>
+                  <p class="warning"></p><span class="radios__wrapper"><label class="radio"
+                      for="provide_graphic_design_customer">
+                      <p>Us</p><input type="radio" id="provide_graphic_design_customer" name="provide_graphic_design"
+                        value="provide_graphic_design_customer" required aria-required="true">
+                    </label><label class="radio" for="provide_graphic_design_amdesigned">
+                      <p>AMDesigned</p><input type="radio" id="provide_graphic_design_amdesigned"
+                        name="provide_graphic_design" value="provide_graphic_design_amdesigned" required
+                        aria-required="true">
+                    </label></span>
+                </span></fieldset>
+              <fieldset class="fieldset_as_row" for="provide_metatags_descriptions"><span class="content__wrapper">
+                  <legend id="provide_metatags_descriptions">
+                    <p>Metatags/ description</p>
+                  </legend>
+                  <p class="warning"></p><span class="radios__wrapper"><label class="radio"
+                      for="provide_metatags_descriptions_customer">
+                      <p>Us</p><input type="radio" id="provide_metatags_descriptions_customer"
+                        name="provide_metatags_descriptions" value="provide_metatags_descriptions_customer" required
+                        aria-required="true">
+                    </label><label class="radio" for="provide_metatags_descriptions_amdesigned">
+                      <p>AMDesigned</p><input type="radio" id="provide_metatags_descriptions_amdesigned"
+                        name="provide_metatags_descriptions" value="provide_metatags_descriptions_amdesigned" required
+                        aria-required="true">
+                    </label></span>
+                </span></fieldset>
+            </span>
+            <fieldset for="has_design_guides">
+              <legend id="has_design_guides">
+                <p class="label">Does <span class="company_name">your company</span> have a logo/established image &
+                  branding guidelines (eg. fonts, colour schemes)?</p>
+              </legend>
+              <p class="warning"></p><label class="radio" for="yes">
+                <p>Yes</p><input type="radio" id="yes" name="has_design_guides" value="yes" required
+                  aria-required="true" aria-checked="false">
+              </label><label class="radio" for="no">
+                <p>No</p><input type="radio" id="no" name="has_design_guides" value="no" required aria-required="true"
+                  aria-checked="false">
+              </label>
+            </fieldset>
+            <fieldset for="has_print_material">
+              <legend id="has_print_material">
+                <p class="label">Are there print materials (such as business cards or brochures) that we need to match?
+                </p>
+              </legend>
+              <p class="warning"></p><label class="radio" for="yes">
+                <p>Yes</p><input type="radio" id="yes" name="has_print_material" value="yes" required
+                  aria-required="true" aria-checked="false">
+              </label><label class="radio" for="no">
+                <p>No</p><input type="radio" id="no" name="has_print_material" value="no" required aria-required="true"
+                  aria-checked="false">
+              </label>
+            </fieldset><label for="competitors">
+              <p class="label">Could you give us the websites of your top 3 competitors</p>
+              <p class="warning"></p><textarea class="textarea" name="competitors" id="competitors"
+                aria-required="false"><?= $inputs['competitors'] ?></textarea>
+            </label><label for="favourite_websites">
+              <p class="label">If you had to pick 3 websites you would love to have, which would they be and why?</p>
+              <p class="warning"></p><textarea class="textarea" name="favourite_websites" id="favourite_websites"
+                aria-required="false"><?= $inputs['favourite_websites'] ?></textarea>
+            </label>
+            <fieldset for="updates">
+              <legend id="updates">
+                <p class="label">Would you like us to update your website or would you like to be responsible for
+                  updates?</p>
+              </legend>
+              <p class="warning"></p><label class="radio" for="customer_update">
+                <p><span class="company_name">We</span> will update</p><input type="radio" id="customer_update"
+                  name="updates" value="customer_update" required aria-required="true" aria-checked="false">
+              </label><label class="radio" for="builder_update">
+                <p>We want AMDesigned to update the site</p><input type="radio" id="builder_update" name="updates"
+                  value="builder_update" required aria-required="true" aria-checked="false">
+              </label>
+            </fieldset><label for="extra_input">
+              <p class="label">Is there anything else you'd like to tell us?</p>
+              <p class="warning"></p><textarea class="textarea" name="extra_input" id="extra_input"
+                aria-required="false"><?= $inputs['extra_input'] ?></textarea>
+            </label>
+            <fieldset for="extra_services">
+              <legend id="extra_services">
+                <p class="label">Any other service required apart from web development?</p>
+              </legend>
+              <p class="warning"></p><label class="checkbox" for="extra_services_email">
+                <p>Email</p><input type="checkbox" id="extra_services_email" value="extra_services_email"
+                  name="extra_services[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="extra_services_social_media_creation">
+                <p>Social media account creation</p><input type="checkbox" id="extra_services_social_media_creation"
+                  value="extra_services_social_media_creation" name="extra_services[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="extra_services_seo">
+                <p>Search Engine Optimization</p><input type="checkbox" id="extra_services_seo"
+                  value="extra_services_seo" name="extra_services[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="extra_services_email_newsletters">
+                <p>Email Newsletter (Promotional Emails)</p><input type="checkbox" id="extra_services_email_newsletters"
+                  value="extra_services_email_newsletters" name="extra_services[]" aria-required="false"
+                  onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
+                  aria-checked="false">
+              </label><label class="checkbox" for="extra_services_other">
+                <p>Other</p><input type="checkbox" id="extra_services_other" value="other" name="extra_services[]"
+                  aria-required="false"
+                  onchange="toggleCheckboxInputVisibility(event, 'extra_services-checkbox__input')">
+              </label><label class="other_checkbox_input" for="extra_services-other_checkbox_input"
+                id="extra_services-checkbox__input" style="display: none" aria-hidden="true">
+                <p>Please explain a little further</p><input type="hidden" name="extra_services-other_checkbox_input"
+                  id="extra_services-other_checkbox_input">
+              </label>
+            </fieldset><label for="pot" aria-hidden="true"><input type="hidden" name="pot"
+                readonly="readonly" /></label><input type="hidden" name="token" value="<?= $token ?>" /><span
+              class="sr-only" aria-live="polite"></span><button class="btn full-width" onclick="showLoadingBtn(this)"
+              type="submit">Submit<span class="icon paper-plane" aria-hidden="true"></span></button>
+          </form>
+        </span></section>
+      <script src="/js/quote_page.1892a01416cb3cb56432.js"></script>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baarn, The Netherlands",
+          "postalCode": "3743BR",
+          "streetAddress": "Nieuw Baarnstraat"
+        },
+        "email": "hello(at)amdesigned.com.au",
+        "name": "AMDesigned",
+        "currenciesAccepted": "AUD, EUR, USD",
+        "url": "https://amdesigned.com.au",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "hello(at)amdesigned.com.au",
+          "contactType": "customer service"
+        }]
+      }
+    </script>
+    <footer>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a class="current" href="/quote">quote</a></li>
+        <li><a href="/contact/">contact</a></li>
+        <li><a href="/showcase/">showcase</a></li>
+        <li><a href="/articles/">articles</a></li>
+      </ul>
+      <ul>
+        <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
+        <li> <a href="/privacy-policy">Privacy policy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
