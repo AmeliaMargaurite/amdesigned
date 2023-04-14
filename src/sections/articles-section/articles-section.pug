@@ -1,13 +1,13 @@
 mixin articles-section
 	section.articles-section
 		span#articles.section__content
+			<?php if ($articles && count($articles) > 0) : ?>	
 			span
 				h1 Recent articles
 				p Informative articles for businesses with, or wanting, a website
 				<?php if (isset($filter)) : ?>
 					a(href="/articles") View all articles
 				<?php endif ?>
-			<?php if (count($articles) > 0) : ?>	
 			span.articles__wrapper
 				<?php foreach ($articles as $article): ?>
 					<?php $webpFile = $article->hero_img_filename . '.webp'; ?>
@@ -46,6 +46,10 @@ mixin articles-section
 								span.icon.chevron.right(aria-hidden="true")
 
 				<?php endforeach ?>
+				<?php elseif ($error) : ?>
+				span
+					h1 Whoops
+					p Something went wrong, we'll get right on that. Please feel free to check back later.
 				<?php else : ?>
 				span
 					p No articles found

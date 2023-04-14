@@ -6,12 +6,14 @@ use GuzzleHttp\Client;
 
 $article = null;
 $article_slug = null;
+
 if (IS_LIVE) {
   $uri_parts = explode('uri=', $_SERVER["QUERY_STRING"]);
   if ($uri_parts && !empty($uri_parts[1])) {
     $article_slug = '/' . htmlspecialchars($uri_parts[1]);
   }
 } else {
+  // var_dump
   $article_slug = htmlspecialchars($_SERVER['PATH_INFO']);
 
 }
@@ -24,12 +26,20 @@ if ($article_slug) {
   $url = $base_url . $api_addon . $article_slug;
 
   $client = new Client();
-  $res = $client->get($url);
 
-  $article = json_decode($res->getBody());
+  $error = null;
 
-  if ($article && getType($article) === 'array') {
-    $article = $article[0];
+  try {
+    $res = $client->get($url);
+    $article = json_decode($res->getBody());
+
+    if ($article && getType($article) === 'array') {
+      $article = $article[0];
+    }
+  } catch (Exception $e) {
+    $error = true;
   }
+} else {
+  header('Location: /articles');
 }
 ?>

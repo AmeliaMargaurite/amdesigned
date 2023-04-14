@@ -58,10 +58,20 @@ block content
 
 				+article-schema-json
 
+	<?php elseif ($error) : ?>
+		section
+			span.section__content
+				span
+					h1 Whoops
+					p There seems to have been an error. We'll get right on that. Please do try again later.
+
 	<?php else : ?>
 	section
 		span.section__content
 			span
 				h1 Whoops
-				p The article you were looking for doesn't seem to exist
+				p The article you were looking for doesn't seem to exist. Maybe you'll find the one you're after
+					|
+					|
+					a.link(href="/articles/", rel="bookmark") on the articles page.
 	<?php endif ?>
