@@ -23,8 +23,8 @@
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="/assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/common.c749992c2c8f2621a800.js"> </script>
-    <link href="/css/main.96d5c5f12ed0fab8136bb1a8e926eb09.css" rel="stylesheet" />
+    <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.0e5cfe5536d9e4506454.js"> </script>
+    <link href="/css/main.030ffe79efb1730953f19357d26c0cae.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -106,6 +106,7 @@
           <li><a class="current" href="/contact/" onclick="closeMenu()">contact</a></li>
           <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
           <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
+          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
         </ul>
       </nav>
     </header>
@@ -167,7 +168,7 @@
             </form>
             <p class="warning">
               <script
-                src="/js/contact_form.0b3ece09b0466526ae81.js">
+                src="/js/contact_form.dd062537280f1bbfe925.js">
               </script>
             </p>
           </span><span class="mock-chat__wrapper" aria-hidden="true">
@@ -205,13 +206,14 @@
       }
     </script><a class="scroll-to-top" id="scroll-to-top"
       title="Scrolls to top of page and focuses on the header element" onclick="scrollToTop()" tabindex="0"
-      href="/#header"><span class="icon arrow up"></span>Back to Top</a>
+      href="#header"><span class="icon arrow up"></span>Back to Top</a>
     <footer>
       <ul>
         <li><a href="/">home</a></li>
         <li><a class="current" href="/contact/">contact</a></li>
         <li><a href="/showcase/">showcase</a></li>
         <li><a href="/articles/">articles</a></li>
+        <li><a href="/quote">quote</a></li>
       </ul>
       <ul>
         <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
