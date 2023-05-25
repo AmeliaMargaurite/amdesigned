@@ -26,7 +26,7 @@
 	}
 
 	&.highlight {
-		background-color: hsl(var(--highlight));
+		background-color: hsl(var(--highlight), 50%);
 	}
 
 	&.shopping-cart__icon {

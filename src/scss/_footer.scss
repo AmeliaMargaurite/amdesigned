@@ -37,7 +37,7 @@ footer {
 				}
 
 				&.current:after {
-					background: hsl(var(--highlight));
+					background: hsl(var(--highlight), 50%);
 				}
 
 				&:not(.active):hover {

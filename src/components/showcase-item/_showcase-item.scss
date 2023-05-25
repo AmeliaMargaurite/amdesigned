@@ -27,22 +27,6 @@
 			line-height: 1.2;
 			font-size: 1.6rem;
 			color: hsl(var(--base), 0%, 0.7);
-
-			& span {
-				position: relative;
-				line-height: 1;
-				margin-right: 1.6rem;
-				&::before {
-					position: absolute;
-					content: "";
-					background: hsl(var(--highlight));
-					width: 0.8rem;
-					height: 0.8rem;
-					border-radius: 50%;
-					top: 0.8rem;
-					left: -1rem;
-				}
-			}
 		}
 	}
 

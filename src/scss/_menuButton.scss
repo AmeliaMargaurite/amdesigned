@@ -24,7 +24,7 @@
 
 	&:hover {
 		& span {
-			box-shadow: 2px 2px 1px hsl(var(--highlight));
+			box-shadow: 2px 2px 1px hsl(var(--highlight), 50%);
 		}
 
 		&.open {

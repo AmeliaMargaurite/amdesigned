@@ -53,7 +53,7 @@
 			}
 
 			&.hero {
-				--hero-color: hsl(var(--highlight));
+				--hero-color: hsl(var(--highlight), 50%);
 				background: hsl(var(--base), 100%, 0.8);
 				color: hsl(var(--base), 0%);
 				position: relative;

@@ -30,15 +30,6 @@
 		transform: translateY(0);
 		transition: transform 1s ease-in-out;
 	}
-	svg {
-		width: 8rem;
-		height: 8rem;
-		display: block;
-
-		.bulb {
-			fill: hsl(var(--highlight));
-		}
-	}
 
 	@media (min-width: $smedium) {
 		&:hover {
