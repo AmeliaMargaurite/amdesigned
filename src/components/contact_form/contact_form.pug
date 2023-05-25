@@ -114,7 +114,7 @@ mixin contact_form
 		input(type="hidden", name="token", value!="\<?= $token ?\>")
 
 		input#package-type(type="hidden", name="package_type")
-		+btn({icon: {class: "paper-plane", side: 'right'}}).primary(
+		+btn({icon: {class: "paper-plane", side: 'right'}, type: 'button'}).primary(
 			type="submit",
 			name="submit",
 			value="submit"
