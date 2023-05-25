@@ -3,7 +3,7 @@ mixin text_input({name, label, required=false, autocomplete=null})
 		p.label(data-required=required ? "true" : "")!= label
 		if block
 			p.disclaimer: block
-		p.warning
+
 		input.text_input&attributes(attributes)(
 			type="text",
 			name=name,
@@ -14,3 +14,4 @@ mixin text_input({name, label, required=false, autocomplete=null})
 			value!=`<?= $inputs['${name}'] ?? null ?>`,
 			autocomplete=autocomplete
 		)
+		p.warning

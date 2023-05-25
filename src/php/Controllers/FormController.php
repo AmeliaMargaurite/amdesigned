@@ -20,7 +20,12 @@ abstract class FormController
       if (!in_array($key, $ignore)) {
         if (isset($_POST[$key]) && !empty($_POST[$key])) {
           $this->$key = $val;
-          $_SESSION[$type][$key] = $val;
+          if (gettype($val) === 'array') {
+            $_SESSION[$type][$key] = $val;
+          } else {
+            $_SESSION[$type][$key] = htmlspecialchars($val);
+
+          }
 
 
         } else {
@@ -92,7 +97,7 @@ abstract class FormController
       } else if ($field['required'] === true) {
         // use fieldName (which is also the input id) as key to allow 
         // error warnings to appear
-        $errors[$fieldName] = $fieldName . ' not found.';
+        $errors[$fieldName] = $fieldName . ' data missing.';
       }
     }
     if (count($errors) > 0) {

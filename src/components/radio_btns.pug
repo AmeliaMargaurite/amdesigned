@@ -1,6 +1,6 @@
 mixin radio_btns({name, label, required=false, items, checked = false})
 	fieldset
-		legend.countable-label
+		legend.countable-label(id=name)
 			p!= label
 		if block
 			p.disclaimer: block

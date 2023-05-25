@@ -3,10 +3,11 @@ mixin textarea({name, label, required=false})
 		p!= label
 		if block
 			p.disclaimer: block
-		p.warning
+
 		textarea.textarea(
 			name=name,
 			id=name,
 			required=required,
 			aria-required=required ? "true" : "false"
 		) <?= $inputs['#{ name }'] ?? null ?>
+		p.warning

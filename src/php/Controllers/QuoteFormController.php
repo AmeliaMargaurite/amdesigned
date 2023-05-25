@@ -106,23 +106,22 @@ class QuoteFormController extends FormController
 						$input = $key;
 						$reg = "/$input/";
 
-						$test = preg_replace([$reg, '/_/'], ['', ' '], $sub_value);
-						// $print_value = explode($key, $sub_value);
-						// if (isset($print_value[1])) {
-						// 	$print_value = $this->$key ? trim($print_value[1], '_') : '-';
-						// } else
-						// 	$print_value = $print_value[0];
+						$display_value = htmlspecialchars(preg_replace([$reg, '/_/'], ['', ' '], $sub_value));
 						$services .= "<li>													
-													<em>$test<em>
+													<em>$display_value<em>
 													</li>";
 					}
 					$services .= '</ul>';
 				} else {
+					// If the entered value contains the questions key, key is removed and answer
+					// split on '_' per original formatting
 					$print_value = explode($key, $this->$key);
 					if (isset($print_value[1])) {
-						$print_value = $this->$key ? trim($print_value[1], '_') : '-';
-					} else
-						$print_value = $print_value[0];
+						echo $print_value[1];
+						$print_value = $this->$key ? htmlspecialchars(trim($print_value[1], '_')) : '-';
+					} else {
+						$print_value = htmlspecialchars($print_value[0]);
+					}
 					$services .= "<strong>$title</strong><br/><em>$print_value</em><br/>";
 				}
 			}
@@ -132,7 +131,7 @@ class QuoteFormController extends FormController
 
 		$template_variables = [
 			'title' => $title,
-			'preview' => 'This is the preview, do better',
+			'preview' => $this->contact_name . ' has sent you a quote request',
 			'contact_name' => $this->contact_name,
 			'contact_email' => $this->email,
 			'company' => $this->company,
@@ -141,9 +140,12 @@ class QuoteFormController extends FormController
 		];
 
 		$email_template = file_get_contents(MJML_FOLDER . 'quote-enquiry.php');
-
+		var_dump($services);
 
 		foreach ($template_variables as $key => $value) {
+			if (!$value) {
+				$value = '-';
+			}
 			$email_template = str_replace('{{ ' . $key . ' }}', $value, $email_template);
 		}
 
@@ -154,7 +156,7 @@ class QuoteFormController extends FormController
 		$reply_to = new \MailTo;
 		$reply_to->address = $this->email;
 		$reply_to->name = $this->contact_name;
-
+		exit();
 		$siteOwnerError = sendToSiteOwner(email_body: $email_template, subject: $subject, reply_to: $reply_to, email_to: $email_to);
 
 		if ($siteOwnerError) {

@@ -3,7 +3,7 @@ mixin date_input({name, label, required=false})
 		p!= label
 		if block
 			p.disclaimer: block
-		p.warning
+
 		input.text_input(
 			type="date",
 			name=name,
@@ -11,3 +11,4 @@ mixin date_input({name, label, required=false})
 			required=required,
 			aria-required=required ? "true" : "false"
 		)
+		p.warning

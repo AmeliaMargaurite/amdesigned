@@ -3,7 +3,7 @@ mixin currency_input({name, label, required=false})
 		p!= label
 		if block
 			p.disclaimer: block
-		p.warning
+
 		.input
 			span(aria-ignore="true") $
 			input.no_styling(
@@ -14,3 +14,4 @@ mixin currency_input({name, label, required=false})
 				aria-required=required ? "true" : "false",
 				value!=`<?= $inputs['${name}'] ?? null ?>`
 			)
+		p.warning
