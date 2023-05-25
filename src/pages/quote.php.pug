@@ -8,26 +8,36 @@ include ../components/currency_input.pug
 include ../components/table_radio_btns.pug
 include ../components/btn/btn.pug
 include ../components/email_input.pug
-
+include ../components/a11y_date_input/a11y_date_input.pug
 block variables
 	- var title = "Quote";
 
+block phpScripts
+	<?php if (session_status() !== PHP_SESSION_ACTIVE) session_start();?>
+
 block content
 	section
+		<?php include_once('./quote_form.php') ?>
 		span.section__content
-			//- span
 			h1 Quote
-			p Below is an indepth questionnaire to help us provide you with an accurate quote for your exciting project. If it seems a bit overwhelming, or not quite where you're at, please feel free to send a more simple message to us on
-				|
-				|
-				a.link(href="/contact", rel="bookmark") our contact page
-				| .
-			form
-				+text_input({name: 'contact_name', label: 'Contact Person name'})
-				+email_input({name: 'email', label: 'Contact email address'})
+			.wrapper
+				p Below is an indepth questionnaire to help us provide you with an accurate quote for your project. The more information you are able to provide the more accurate a quote we will be able to provide.
+				br
+				p However, if it seems a bit overwhelming, or not quite where you're at, please feel free to send a more simple message to us on
+					|
+					|
+					a.link(href="/contact/", rel="bookmark") our contact page
+					| .
+			form#quote_form(
+				action="../php/validate-quote-form.php?back=/quote/",
+				method="POST"
+			)
+				+text_input({name: 'contact_name', label: 'Contact name', autocomplete: 'name', required: true})
+
+				+email_input({name: 'email', label: 'Contact email address', autocomplete: 'email', required: true})
 
 				//- Company Info
-				+text_input({name:'company', label:'Company / Organisation name'})(
+				+text_input({name:'company', label:'Company / Organisation name', autocomplete: 'organization', required: true})(
 					onblur="updateCompanyName(event)"
 				)
 				+textarea({name: 'description', label: 'Tell us a bit about <span class="company_name">your company / organisation</span>'})
@@ -37,28 +47,28 @@ block content
 				+radio_btns({name: 'organise_hosting', label: 'Do you need us to organise your hosting?', items: [{name: 'yes', label: "Yes"}, {name: 'no', label: 'No'}, {name: 'unknown', label: 'Not sure yet'}]})
 
 				//- Deadline
-				+date_input({name: 'deadline', label: 'What is your deadline for this project?'})
+				+a11y_date_input({name: 'deadline', label: 'What is your deadline for this project?'})
 
 				//- Budget
-				+currency_input({name: 'budget', label: 'Could you give us an estimated available budget for this website project?'})
+				+currency_input({name: 'budget', label: 'What is your estimated available budget for this website project?'})
 
 				//- Reason for website
 				+checkboxes({name: 'reasons', label: 'I want this site because', other: true, items: [ {name: "awareness", label: "I need to build awareness for my brand"}, {name: "contact_point", label: "I need to offer a contact point to my clients"}, {name: "improve_image", label: "I need my company to have a better image online"}, {name: "e-commerce", label: "I need to sell my product/service through my site"}, {name: "customer_loyalty", label: "I need to use it to build customer loyalty"}, {name: "multilanguage", label: "I need to reach people in many languages"}, {name: "promote_latest", label: "I need somewhere to promote my latest product/service"}]})
 
 				//- Target Audience
 				+checkboxes({name: 'client_types', label: 'My site will be built to target', other: true, items: [ {name: 'business_customers', label: "Business customers"}, {name: 'consumers', label: "Consumers"}, {name: 'awareness', label: "Awareness"}]})
-				+checkboxes({name: 'client_ages', label: "I'd like to target clients who are", items: [ {name: 'kids_teens', label: 'Kids & teens'}, {name: 'twenties', label: 'In their 20s'}, {name: 'thirties', label: 'In their 30s'}, {name: 'forties', label: 'In their 40s'}, {name: 'fifties', label: 'In their 50s'}, {name: 'seniors', label: 'Senior citizens'}, ]})
+				+checkboxes({name: 'client_ages', label: "I'd like to target clients who are", items: [ {name: 'kids_teens', label: 'Kids & teens'}, {name: 'twenties', label: 'In their <span aria-hidden="tru">20\'s</span><span class="sr-only">twenties</span>'}, {name: 'thirties', label: 'In their <span aria-hidden="tru">30\'s</span><span class="sr-only">thirties</span>'}, {name: 'forties', label: 'In their <span aria-hidden="tru">40\'s</span><span class="sr-only">forties</span>'}, {name: 'fifties', label: 'In their <span aria-hidden="tru">50\'s</span><span class="sr-only">fifties</span>'}, {name: 'seniors', label: 'Senior citizens'}, ]})
 
 				//- SEO Keywords/phrases
 				+textarea({name: 'seo_keywords', label: 'Someone is searching the web for the solution your business provides. What words or phrases are they using to search.'})
-					em Not including <span class="company_name">your business name</span>; imagine someone who has never heard of your business
+					em Do not include <span class="company_name">your business name</span>; imagine someone who has never heard of your business
 
 				//- Website Includes
 				+checkboxes({name: 'include_in_website', label: 'Our new website would need to include', items: [ {name: 'html' , label: 'A basic HTML site'}, {name: 'html_css' , label: 'An HTML5/ CSS3 website'}, {name: 'responsive' , label: 'Responsive design for use on tablets & mobiles'}, {name: 'wordpress' , label: 'WordPress-based CMS'}, {name: 'magazine' , label: 'Online Magazine'}, {name: 'forum_blog' , label: 'Online forum/ blog'}, {name: 'newsletter_system' , label: 'Newsletter system'}, {name: 'socials_integration' , label: 'Social network integration'}, {name: 'multiple_landing_pages' , label: 'Separate, dedicated landing pages'}, {name: 'site_redesign' , label: 'A redesign of a current website'}, ]})
 
-				+checkboxes({name:'special_includes', label: 'We want the following special features to be included in our new website', other: true, items: [ {name: 'registration_form' , label:'Registration form'}, {name: 'video_streaming' , label:'Video streaming'}, {name: 'mysql_db' , label:'MySQL Database'}, {name: 'search_panel' , label:'Search panel'}, {name: 'email_sign_up_form' , label:'Newsletter/ Email sign up forms'}, {name: 'information_request_forms' , label:'Information/ request forms'}, {name: 'uploads_downloads' , label:'Uploads/ downloads'}, {name: 'customer_login' , label:'Customer login'}, {name: 'registration' , label:'Registration'}, {name: 'e-commerce' , label:'An online store/shopping cart'}, {name: 'online_payment_gateway' , label:'Online payment gateway'}, {name: 'blog_moduel' , label:'Blog module'}, {name: 'image_gallery' , label:'Image gallery'}, {name: 'image_slider' , label:'Image slider'} ]})
+				+checkboxes({name:'special_includes', label: 'We want the following special features to be included in our new website', other: true, items: [ {name: 'registration_form' , label:'Registration form'}, {name: 'video_streaming' , label:'Video streaming'}, {name: 'mysql_db' , label:'MySQL Database'}, {name: 'search_panel' , label:'Search panel'}, {name: 'email_sign_up_form' , label:'Newsletter/ Email sign up forms'}, {name: 'information_request_forms' , label:'Information/ request forms'}, {name: 'uploads_downloads' , label:'Uploads/ downloads'}, {name: 'customer_login' , label:'Customer login'}, {name: 'registration' , label:'Registration'}, {name: 'e-commerce' , label:'An online store/shopping cart'}, {name: 'online_payment_gateway' , label:'Online payment gateway'}, {name: 'blog' , label:'Blog'}, {name: 'image_gallery' , label:'Image gallery'}, {name: 'image_slider' , label:'Image slider'} ]})
 
-				span.table_radio_btns__wrapper
+				span.table_radio_btns__wrapper.countable-label
 					span.table_radio_btns__legend
 						p.label Who will provide the following
 					+table_radio_btns({name: 'provide_stock_photography', label: 'Stock photography', items: [{name: 'customer', label: 'Us'}, {name: 'amdesigned', label: 'AMDesigned'}]})
@@ -81,18 +91,21 @@ block content
 
 				//- Post Delivery
 
-				+radio_btns({name: 'updates', label: 'Would you like us to update your website or would you like to be responsible for updates?', items: [{name: 'customer_update', label: '<span class="company_name">We</span> will update'}, {name: 'builder_update', label: 'We want AMDesigned to update the site'}]})
+				+radio_btns({name: 'updates', label: 'Would you like us to update your website or would you like to be responsible for updates?', items: [{name: 'customer_update', label: 'We will update'}, {name: 'builder_update', label: 'We want A&#8203;M&#8203;Designed to update the site'}]})
 
-				+textarea({name: 'extra_input', label: "Is there anything else you'd like to tell us?"})
+				+textarea({name: 'extra_input', label: "Is there anything else you'd like to tell us?", required: false})
 
-				+checkboxes({name: 'extra_services', label: 'Any other service required apart from web development?', other: true, items: [ {name: 'email' , label: 'Email'}, {name: 'social_media_creation' , label: 'Social media account creation'}, {name: 'seo' , label: 'Search Engine Optimization'}, {name: 'email_newsletters' , label: 'Email Newsletter (Promotional Emails)'}, ]})
+				+checkboxes({name: 'extra_services', label: 'Any other service required apart from web development?', other: true, required: false, items: [ {name: 'email' , label: 'Email'}, {name: 'social_media_creation' , label: 'Social media account creation'}, {name: 'seo' , label: 'Search Engine Optimization'}, {name: 'email_newsletters' , label: 'Email Newsletter (Promotional Emails)'}, ]})
 
 				label(for="pot", aria-hidden="true")
 					input(type="hidden", name="pot", readonly)
 				input(type="hidden", name="token", value!="\<?= $token ?\>")
 				span.sr-only(aria-live="polite")
+
 				+btn({icon:{side: 'right', class: 'paper-plane'}, type: 'button'}).full-width(
-					type="submit"
+					type="submit",
+					value="submit",
+					name="submit"
 				) Submit
 
 	script(src=require("../ts/quote_page.ts"))

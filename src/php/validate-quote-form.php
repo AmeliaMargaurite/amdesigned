@@ -1,6 +1,6 @@
 <?php
 
-use App\Controllers\ContactFormController;
+use App\Controllers\QuoteFormController;
 use App\Helpers\Redirects;
 
 include_once(__DIR__ . '/config.php');
@@ -27,7 +27,7 @@ function exitWithFailure(array $messages)
   if ($buildQueries) {
     $url .= $buildQueries;
   }
-
+  $_SESSION['quote_form_messages'] = $messages;
   Redirects::to($url);
 }
 
@@ -40,19 +40,19 @@ if (
   // Check for correct token
   if (!empty($_POST['token'] && isset($_SESSION['token']))) {
     if (!hash_equals($_SESSION['token'], $_POST['token'])) {
-      exitWithFailure(['contact-form' => '001-a: Form submitted incorrectly']);
+      exitWithFailure(['quote_form' => '001-a: Form submitted incorrectly']);
     }
   } else {
-    exitWithFailure(['contact-form' => '001-b: Form submitted incorrectly']);
+    exitWithFailure(['quote_form' => '001-b: Form submitted incorrectly']);
   }
 
-  $contact_form = new ContactFormController('contact_form');
-  $errors = $contact_form->checkFields();
+  $quote_form = new QuoteFormController('quote_form');
+  $errors = $quote_form->checkFields();
 
   if ($errors && count($errors) > 0) {
     exitWithFailure($errors);
   } else {
-    $sendContactForm_errors = $contact_form->sendForm();
+    $sendContactForm_errors = $quote_form->sendForm();
 
     if ($sendContactForm_errors && count($sendContactForm_errors) > 0) {
       $errors[array_key_first($sendContactForm_errors)] += $sendContactForm_errors[0];
@@ -64,5 +64,5 @@ if (
   }
 } else {
   // use id of form as key to allow error warnings to appear
-  exitWithFailure(['contact-form' => '002: Form submitted incorrectly']);
+  exitWithFailure(['quote_form' => '002: Form submitted incorrectly']);
 }

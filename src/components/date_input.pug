@@ -1,6 +1,6 @@
-mixin date_input({name, label, required=true})
-	label(for=name)
-		p.label!= label
+mixin date_input({name, label, required=false})
+	label.countable-label(for=name)
+		p!= label
 		if block
 			p.disclaimer: block
 		p.warning

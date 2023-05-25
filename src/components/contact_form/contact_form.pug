@@ -5,12 +5,8 @@ mixin contact_form
 	form#contact-form.contact-form(
 		action="../php/validate-contact-form.php?back=/contact",
 		method="POST"
-	) 
-		|
-		|
-		label(for="subject") 
-			|
-			|
+	)
+		label(for="subject")
 			p Subject:
 			input#subject(
 				type="subject",
@@ -34,9 +30,7 @@ mixin contact_form
 			)
 			p.warning
 
-		label(for="email") 
-			|
-			|
+		label(for="email")
 			p Email:
 			input#email(
 				type="email",
@@ -53,77 +47,53 @@ mixin contact_form
 
 			label(for="design")
 				p Design
-				input#design(type="checkbox", required, value="design", name="services[]")
+				input#design(type="checkbox", value="design", name="services[]")
 
 			label(for="build")
 				p Build
-				input#build(type="checkbox", required, value="build", name="services[]")
+				input#build(type="checkbox", value="build", name="services[]")
 
 			label(for="hosting")
 				p Hosting
-				input#hosting(
-					type="checkbox",
-					required,
-					value="hosting",
-					name="services[]"
-				)
+				input#hosting(type="checkbox", value="hosting", name="services[]")
 
 			label(for="domain-purchase")
 				p Domain purchase
 				input#domain-purchase(
 					type="checkbox",
-					required,
 					value="domain-purchase",
 					name="services[]"
 				)
 
 			label(for="seo-accessibility")
-				p SEO & Accessibility
+				p S&#8203;E&#8203;O & Accessibility
 				input#seo-accessibility(
 					type="checkbox",
-					required,
 					value="seo-accessibility",
 					name="services[]"
 				)
 
 			label(for="analytics")
 				p Analytics
-				input#analytics(
-					type="checkbox",
-					required,
-					value="analytics",
-					name="services[]"
-				)
+				input#analytics(type="checkbox", value="analytics", name="services[]")
 
 			label(for="maintenance")
 				p Ongoing maintenance
-				input#maintenance(
-					type="checkbox",
-					required,
-					value="maintenance",
-					name="services[]"
-				)
+				input#maintenance(type="checkbox", value="maintenance", name="services[]")
 
 			label(for="ecommerce")
 				p E-commerce / Web store
-				input#ecommerce(
-					type="checkbox",
-					required,
-					value="ecommerce",
-					name="services[]"
-				)
+				input#ecommerce(type="checkbox", value="ecommerce", name="services[]")
 
 			label(for="blog")
 				p Blog
-				input#blog(type="checkbox", required, value="blog", name="services[]")
+				input#blog(type="checkbox", value="blog", name="services[]")
 
 			label(for="other")
 				p Other
-				input#other(type="checkbox", required, value="other", name="services[]")
+				input#other(type="checkbox", value="other", name="services[]")
 
-		label(for="message") 
-			|
-			|
+		label(for="message")
 			span
 				p Let us know a bit about your business:
 				p.subtext What do you do, what are your customers like, what area do you service.
@@ -147,7 +117,6 @@ mixin contact_form
 		+btn({icon: {class: "paper-plane", side: 'right'}}).primary(
 			type="submit",
 			name="submit",
-			onclick="validateCheckboxes()",
 			value="submit"
 		) Send
 

@@ -3,6 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
 const mjml2html = require("mjml");
+const glob = require("glob");
 
 const path = require("path");
 const sourcePath = path.join(__dirname, "src");
@@ -35,26 +36,40 @@ const alterPugFolderStructure = (pathData) => {
 	return nestedDir ? `${nestedDir}/${name}/index.html` : `${name}/index.html`;
 };
 
-const renameIfFolder = (context) => {
-	console.log(context);
-
-	// path.join(__dirname, "dist/");
-};
-
-module.exports = {
-	entry: {
+const buildEntries = (folders = null) => {
+	const entries = {
 		index: "./src/pages/index.pug",
 		notFound404: "./src/pages/notFound404.pug",
 		contact: "./src/pages/contact.php.pug",
 		confirmation: "./src/pages/confirmation.pug",
 		showcase: "./src/pages/showcase.pug",
-		// services: "./src/pages/services.pug",
 		termsConditions: "./src/pages/terms-and-conditions.pug",
 		privacyPolicy: "./src/pages/privacy-policy.pug",
 		articles: "./src/pages/articles.php.pug",
 		article: "./src/pages/article.php.pug",
-		// quote: "./src/pages/quote.pug",
-	},
+		quote: "./src/pages/quote.php.pug",
+	};
+
+	if (folders) {
+		folders.forEach((folder) => {
+			const files = glob.sync(`./src/pages/${folder}/**.pug`);
+			console.log(files);
+			if (files.length > 0) {
+				files.forEach((filename) => {
+					const file = path.parse(filename);
+
+					entries[file.name] = filename;
+				});
+			}
+		});
+	}
+
+	return entries;
+};
+
+module.exports = {
+	entry: buildEntries(["showcase"]),
+
 	output: {
 		path: path.join(__dirname, "dist/"),
 		publicPath: "/",
@@ -100,6 +115,10 @@ module.exports = {
 				{
 					from: path.join(__dirname, "src/articles/"),
 					to: path.join(__dirname, "dist/articles"),
+				},
+				{
+					from: path.join(__dirname, "src/quote/"),
+					to: path.join(__dirname, "dist/quote"),
 				},
 				{
 					// from regex ignores files starting with _ as they're includes

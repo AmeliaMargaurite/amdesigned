@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 
+use Error;
+
 include_once(SEND_WITH_PHP_MAILER);
 
 /**
@@ -9,13 +11,10 @@ include_once(SEND_WITH_PHP_MAILER);
  */
 abstract class FormController
 {
+  public $inputFields = [];
   public function __construct($type)
   {
-    // check if pot is used, if so fail
-    // check inputs are not empty
-    // check email is email format
-    // trust user is input all other inputs in correct format
-    // but don't trust they're not malicious
+
     $ignore = ['pot', 'token', 'submit'];
     foreach ($_POST as $key => $val) {
       if (!in_array($key, $ignore)) {
@@ -23,11 +22,15 @@ abstract class FormController
           $this->$key = $val;
           $_SESSION[$type][$key] = $val;
 
+
         } else {
           $this->$key = null;
           $_SESSION[$type][$key] = null;
         }
       }
+
+      // dd($key);
+
     }
   }
   /**
@@ -38,11 +41,16 @@ abstract class FormController
 
   abstract public function sendForm();
 
-  public function checkFields(array $fields)
+  public function checkFields()
   {
 
     $errors = [];
-    foreach ($fields as $field) {
+
+    if (!isset($this->inputFields)) {
+      throw new Error('Variable $inputFields has not been set');
+    }
+
+    foreach ($this->inputFields as $field) {
       $fieldName = $field['name'];
 
       // need to send through test to run (string vs email)

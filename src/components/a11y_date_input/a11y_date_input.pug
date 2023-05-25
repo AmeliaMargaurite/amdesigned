@@ -1,0 +1,124 @@
+mixin a11y_date_input({name, label})
+	#a11y_date_picker.datepicker
+		.date
+			label.countable-label(for="id-textbox-1")
+				p!= label
+					|
+					|
+					span#id-description-1.desc (
+						span.sr-only date format:
+						| d&#8203;d/m&#8203;m/y&#8203;y&#8203;y&#8203;y)
+				.input
+					input#id-textbox-1.no_styling(
+						name=name,
+						type="text",
+						placeholder="dd/mm/yyyy",
+						aria-describedby="id-description-1"
+					)
+					button#calendar-btn.calendar-icon.btn(
+						type="button",
+						aria-label="Choose Date"
+					)
+						span.icon.calendar
+
+		#id-datepicker-1.datepicker-dialog(
+			role="dialog",
+			aria-modal="true",
+			aria-label="Choose Date"
+		)
+			.header
+				span.btn__wrapper
+					button.btn.double-chevron.left.prev-year(
+						type="button",
+						aria-label="previous year"
+					)
+						span.icon.chevron.left.medium
+						span.icon.chevron.left.medium
+
+					button.btn.prev-month(type="button", aria-label="previous month")
+						span.icon.chevron.left.medium
+
+				h2#id-grid-label.month-year(aria-live="polite") February 2020
+				span.btn__wrapper
+					button.btn.next-month(type="button", aria-label="next month")
+						span.icon.chevron.right.medium
+
+					button.btn.double-chevron.right.next-year(
+						type="button",
+						aria-label="next year"
+					)
+						span.icon.chevron.right.medium
+						span.icon.chevron.right.medium
+
+			.table-wrap
+				table.dates(role="grid", aria-labelledby="id-grid-label")
+					thead
+						tr
+							th(scope="col", abbr="Sunday") Su
+							th(scope="col", abbr="Monday") Mo
+							th(scope="col", abbr="Tuesday") Tu
+							th(scope="col", abbr="Wednesday") We
+							th(scope="col", abbr="Thursday") Th
+							th(scope="col", abbr="Friday") Fr
+							th(scope="col", abbr="Saturday") Sa
+
+					tbody
+						tr
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td(tabindex="-1", data-date="2020-02-01") 1
+						tr
+							td(tabindex="-1", data-date="2020-02-02") 2
+							td(tabindex="-1", data-date="2020-02-03") 3
+							td(tabindex="-1", data-date="2020-02-04") 4
+							td(tabindex="-1", data-date="2020-02-05") 5
+							td(tabindex="-1", data-date="2020-02-06") 6
+							td(tabindex="-1", data-date="2020-02-07") 7
+							td(tabindex="-1", data-date="2020-02-08") 8
+						tr
+							td(tabindex="-1", data-date="2020-02-09") 9
+							td(tabindex="-1", data-date="2020-02-10") 10
+							td(tabindex="-1", data-date="2020-02-11") 11
+							td(tabindex="-1", data-date="2020-02-12") 12
+							td(tabindex="-1", data-date="2020-02-13") 13
+							td(
+								tabindex="0",
+								data-date="2020-02-14",
+								role="gridcell",
+								aria-selected="true"
+							) 14
+							td(tabindex="-1", data-date="2020-02-15") 15
+						tr
+							td(tabindex="-1", data-date="2020-02-16") 16
+							td(tabindex="-1", data-date="2020-02-17") 17
+							td(tabindex="-1", data-date="2020-02-18") 18
+							td(tabindex="-1", data-date="2020-02-19") 19
+							td(tabindex="-1", data-date="2020-02-20") 20
+							td(tabindex="-1", data-date="2020-02-21") 21
+							td(tabindex="-1", data-date="2020-02-22") 22
+						tr
+							td(tabindex="-1", data-date="2020-02-23") 23
+							td(tabindex="-1", data-date="2020-02-24") 24
+							td(tabindex="-1", data-date="2020-02-25") 25
+							td(tabindex="-1", data-date="2020-02-26") 26
+							td(tabindex="-1", data-date="2020-02-27") 27
+							td(tabindex="-1", data-date="2020-02-28") 28
+							td(tabindex="-1", data-date="2020-02-29") 29
+						tr
+							td(tabindex="-1", data-date="2020-02-30") 30
+							td(tabindex="-1", data-date="2020-02-31") 31
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+							td.disabled(tabindex="-1")
+
+			.dialog-ok-cancel-group
+				button.dialog-button.btn.mini(value="cancel") Cancel
+				button.dialog-button.btn.mini(value="ok") OK
+			.dialog-message(aria-live="polite")
+	script(src=require("./a11y_date_input.ts"))

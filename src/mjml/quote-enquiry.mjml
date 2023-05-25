@@ -1,0 +1,43 @@
+<mjml>
+	<mj-include path="./_head.mjml" />
+	<mj-body background-color="#282828" color="#FFF">
+		<mj-include path="./_header.mjml" />
+
+		<!-- STARTS -->
+		<mj-section padding="0">
+			<mj-column padding="0">
+				<mj-text
+					line-height="38px"
+					font-size="20px"
+					color="#000"
+					font-family="helvetica"
+					padding="0 25px"
+				>
+					You've received an online enquiry:</mj-text
+				>
+				<mj-text font-weight="600" font-size="18px"> From: </mj-text>
+				<mj-text> {{ contact_name }} </mj-text>
+
+				<mj-text font-weight="600" font-size="18px"> Reply e-mail: </mj-text>
+				<mj-text> {{ contact_email }} </mj-text>
+
+				<mj-text font-weight="600" font-size="18px"> Company: </mj-text>
+				<mj-text> {{ company }} </mj-text>
+
+				<mj-text font-weight="600" font-size="18px"> Description: </mj-text>
+				<mj-text> {{ description }} </mj-text>
+
+				<!-- <mj-text font-weight="600" font-size="18px"> Message: </mj-text>
+				<mj-text> {{ user_message }} </mj-text> -->
+
+				<mj-text font-weight="600" font-size="18px">
+					Services
+				</mj-text>
+				<mj-text css-class="list_item"> {{ services }} </mj-text>
+			</mj-column>
+		</mj-section>
+
+		<!-- END -->
+		<mj-include path="./_footer.mjml" />
+	</mj-body>
+</mjml>

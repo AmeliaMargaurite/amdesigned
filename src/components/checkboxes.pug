@@ -1,14 +1,15 @@
-mixin checkboxes({name, label, required = false, items=[], other = false})
+mixin checkboxes({name, label, required=false, items=[], other = false})
 	fieldset(for=name)
-		legend(id=name)
-			p.label!= label
+		legend.countable-label(id=name)
+			p!= label
 		if block
 			p.disclaimer: block
 		p.warning
 
 		each item in items 
 			label.checkbox(for=`${name}_${item.name}`)
-				p #{ item.label }
+				p.label(data-required=required ? "true" : "")!= item.label
+				- var checked = `<?= isset($inputs['${name}']['${name}_${item.name}']) ? 'checked' : null ?>`;
 				input(
 					type="checkbox",
 					id=`${name}_${item.name}`,
@@ -17,12 +18,11 @@ mixin checkboxes({name, label, required = false, items=[], other = false})
 					required=required,
 					aria-required=required ? "true" : "false",
 					onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')",
-					checked=item.checked,
-					aria-checked=item.checked ? "true" : "false"
-				)
+					aria-checked!=item.checked ? "true" : "false"
+				)&attributes({[checked]: checked})
 		if (other)
-			label.checkbox(for=`${name}_other`)
-				p Other
+			label.checkbox(for=`${name}_other`) Other
+				- var checked = `<?= isset($inputs['${name}']['${name}_other']) ? 'checked' : '' ?>`;
 				input(
 					type="checkbox",
 					id=`${name}_other`,
@@ -30,17 +30,17 @@ mixin checkboxes({name, label, required = false, items=[], other = false})
 					name=name + "[]",
 					required=required,
 					aria-required=required ? "true" : "false",
-					onchange=`toggleCheckboxInputVisibility(event, '${name}-checkbox__input')`
-				)
+					onchange=`toggleCheckboxInputVisibility(event, '${name}_checkbox__input')`
+				)&attributes([checked])
 			label.other_checkbox_input(
-				for=`${name}-other_checkbox_input`,
-				id=`${name}-checkbox__input`,
+				for=`${name}_other_checkbox_input`,
+				id=`${name}_checkbox__input`,
 				style="display: none",
 				aria-hidden="true"
 			)
 				p Please explain a little further
 				input(
 					type="hidden",
-					name=`${name}-other_checkbox_input`,
-					id=`${name}-other_checkbox_input`
+					name=`${name}_other_checkbox_input`,
+					id=`${name}_other_checkbox_input`
 				)

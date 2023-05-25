@@ -1,6 +1,6 @@
-mixin email_input({name, label, required=true})
-	label(for=name)
-		p.label!= label
+mixin email_input({name, label, required=false, autocomplete= null})
+	label.countable-label(for=name)
+		p.label(data-required=required ? "true" : "")!= label
 		if block
 			p.disclaimer: block
 		p.warning
@@ -11,5 +11,6 @@ mixin email_input({name, label, required=true})
 			required=required,
 			aria-required=required ? "true" : "false",
 			pattern="email",
-			value!=`<?= $inputs['${name}'] ?>`
+			value!=`<?= $inputs['${name}'] ?? null ?>`,
+			autocomplete=autocomplete
 		)

@@ -114,10 +114,16 @@ const validateCheckboxes = () => {
 	const notCheckedBoxes = checkboxesArray.filter((box) => !box.checked);
 
 	if (notCheckedBoxes.length === checkboxesArray.length) {
-		notCheckedBoxes.forEach((box) => (box.required = true));
+		notCheckedBoxes.forEach((box) => {
+			box.required = true;
+			box.setAttribute("aria-required", "true");
+		});
 		return false;
 	} else {
-		notCheckedBoxes.forEach((box) => (box.required = false));
+		notCheckedBoxes.forEach((box) => {
+			box.required = false;
+			box.setAttribute("aria-required", "false");
+		});
 		return true;
 	}
 };

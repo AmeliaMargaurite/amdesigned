@@ -1,0 +1,230 @@
+.datepicker {
+	margin-top: 1em;
+	position: relative;
+
+	button {
+		display: flex;
+		padding: 0.8rem;
+	}
+
+	button.double-chevron {
+		&.left span:last-child {
+			margin-left: -2.4rem;
+		}
+
+		&.right span:first-child {
+			margin-right: -2.4rem;
+		}
+	}
+
+	.dialog-ok-cancel-group {
+		display: flex;
+		justify-content: space-between;
+		padding: 1.2rem;
+	}
+}
+
+.datepicker .group {
+	display: inline-block;
+	position: relative;
+	// width: 13em;
+}
+
+.datepicker label {
+	// display: block;
+}
+
+.datepicker .date .input {
+	grid-template-columns: auto max-content;
+}
+
+.datepicker button.calendar-icon {
+	padding: 0.8rem;
+}
+
+.datepicker .desc {
+	// position: absolute;
+	// left: 0;
+	// top: 2em;
+}
+
+.datepicker .icon.calendar {
+	color: hsl(var(--highlight));
+}
+
+.datepicker button.calendar-icon:focus {
+}
+
+.datepicker input:focus {
+	// background-color: #def;
+	// outline: 2px solid hsl(var(--highlight));
+	// outline-offset: 1px;
+}
+
+.datepicker-dialog {
+	display: none;
+	align-items: center;
+	position: absolute;
+	z-index: 5;
+	border: 0.4rem solid hsl(var(--highlight));
+	margin-top: 0.15em;
+	border-radius: 5px;
+	padding: 0;
+	background-color: #fff;
+
+	&.open {
+		display: inline-grid;
+	}
+}
+
+.datepicker-dialog .header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.8rem;
+	gap: 0.8rem;
+	cursor: default;
+	background-color: hsl(var(--highlight));
+
+	.btn__wrapper {
+		display: grid;
+		gap: 0.8rem;
+
+		button {
+			width: 100%;
+		}
+	}
+
+	@media (min-width: $xxsmall) {
+		.btn__wrapper {
+			display: flex;
+		}
+	}
+}
+
+.datepicker-dialog h2 {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	font-size: 1em;
+	color: white;
+	text-transform: none;
+	font-weight: bold;
+}
+
+.datepicker-dialog .dates {
+	// width: 320px;
+}
+
+// .datepicker-dialog .prev-year,
+// .datepicker-dialog .prev-month,
+// .datepicker-dialog .next-month,
+// .datepicker-dialog .next-year {
+// 	padding: 4px;
+// 	width: 24px;
+// 	height: 24px;
+// 	color: white;
+// }
+
+// .datepicker-dialog .prev-year:focus,
+// .datepicker-dialog .prev-month:focus,
+// .datepicker-dialog .next-month:focus,
+// .datepicker-dialog .next-year:focus {
+// 	padding: 2px;
+// 	border: 2px solid white;
+// 	border-radius: 4px;
+// 	outline: 0;
+// }
+
+// .datepicker-dialog .prev-year:hover,
+// .datepicker-dialog .prev-month:hover,
+// .datepicker-dialog .next-month:hover,
+// .datepicker-dialog .next-year:hover {
+// 	padding: 3px;
+// 	border: 1px solid white;
+// 	border-radius: 4px;
+// }
+
+.datepicker-dialog .fa-calendar-alt {
+	color: hsl(var(--highlight));
+}
+
+.datepicker-dialog .month-year {
+	display: inline-flex;
+	align-items: center;
+	min-width: 8em;
+	justify-content: center;
+	text-align: center;
+}
+
+.datepicker-dialog table.dates {
+	margin: auto;
+	padding: 1.2rem;
+}
+
+.datepicker-dialog table.dates th,
+.datepicker-dialog table.dates td {
+	text-align: center;
+	cursor: pointer;
+}
+
+.datepicker-dialog table.dates tr {
+	border: 1px solid black;
+}
+
+.datepicker-dialog table.dates td {
+	padding: 3px;
+	margin: 0;
+	line-height: inherit;
+	height: 40px;
+	width: 40px;
+	border-radius: 5px;
+	font-size: 15px;
+	background: #eee;
+}
+
+.datepicker-dialog table.dates td.disabled {
+	padding: 2px;
+	border: none;
+	height: 41px;
+	width: 41px;
+}
+
+.datepicker-dialog table.dates td:focus,
+.datepicker-dialog table.dates td:hover {
+	padding: 0;
+	background-color: hsl(216deg 80% 92%);
+}
+
+.datepicker-dialog table.dates td:focus {
+	padding: 1px;
+	border: 2px solid rgb(100 100 100);
+	outline: 0;
+}
+
+.datepicker-dialog table.dates td:not(.disabled):hover {
+	padding: 2px;
+	border: 1px solid rgb(100 100 100);
+}
+
+.datepicker-dialog table.dates td[aria-selected] {
+	padding: 1px;
+	border: 2px dotted rgb(100 100 100);
+}
+
+.datepicker-dialog table.dates td[aria-selected]:focus {
+	padding: 1px;
+	border: 2px solid rgb(100 100 100);
+}
+
+.datepicker-dialog table.dates td[tabindex="0"] {
+	background-color: hsl(var(--highlight));
+	color: white;
+}
+
+.datepicker-dialog .dialog-message {
+	padding-top: 0.25em;
+	padding-left: 1em;
+	height: 1.75em;
+	background: hsl(var(--highlight));
+	color: white;
+}

@@ -14,7 +14,7 @@
 	font-family: system-ui, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol", "Noto Color Emoji";
 	min-height: 100%;
-	font-size: 0.625rem;
+	font-size: var(--base-text-size);
 }
 
 body {

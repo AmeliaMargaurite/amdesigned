@@ -30,12 +30,15 @@
 	--menu-btn-zIndex: 10;
 
 	// PADDINGS
-	--page_padding: 3.2rem;
+	--page_padding: 1.6rem;
 	--input_padding: 0.8rem;
 
 	// BORDERS
 	--input_border: 1px solid hsl(var(--primary), 0%, 0.2);
 	--input_border_radius: 0.4rem;
+
+	// TEXT
+	--base-text-size: 0.525rem;
 
 	// SHADOWS
 
@@ -50,15 +53,9 @@
 		5.6px 5.1px 10.9px -0.2px hsl(var(--shadow-color) / 0.42),
 		10.2px 9.3px 19.9px -0.3px hsl(var(--shadow-color) / 0.59),
 		18.3px 16.7px 35.7px -0.4px hsl(var(--shadow-color) / 0.76);
+
+	@media (min-width: $xxsmall) {
+		--page_padding: 3.2rem;
+		--base-text-size: 0.625rem;
+	}
 }
-
-// BREAKPOINTS
-
-$xxsmall: 425px;
-$xsmall: 501px;
-$small: 768px;
-$smedium: 900px;
-$medium: 1024px;
-$large: 1440px;
-$xlarge: 2560px;
-$wholeMenuMinWidth: $small;

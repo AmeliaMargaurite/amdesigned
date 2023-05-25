@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-ts": "tsc --noEmitOnError --target es2015",
     "build": "webpack --config webpack.prod.js",
+    "build-dev": "webpack --config webpack.dev.js",
     "start": "webpack server --open --config webpack.dev.js",
     "deploy": "npm run build && git add . && git commit -m 'rebuild' && git push && git push live"
   },

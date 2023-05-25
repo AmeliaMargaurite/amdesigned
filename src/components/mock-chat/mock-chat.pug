@@ -1,14 +1,16 @@
-mixin mock-chat 
-  span.mock-chat__wrapper
-    h3 It usually goes something like...
-    span.mock-chat 
-      span.chat-bubble.you 
-        p.user you
-        p.chat Hi, I need a website, can you help?
-      span.chat-bubble.us 
-        p.chat Absolutely! Let's make something amazing
-        p.user us
-      span.chat-bubble.you
-        p.user you
-        p.chat.emoji &#128170;
-      
+mixin mock-chat
+	span.mock-chat__wrapper(aria-hidden="true")
+		h3 It usually goes something like...
+		span.mock-chat 
+			|
+			span.chat-bubble.you 
+				|
+				p.user you
+				p.chat Hi, I need a website, can you help?
+			span.chat-bubble.us 
+				|
+				p.chat Absolutely! Let's make something amazing
+				p.user us
+			span.chat-bubble.you
+				p.user you
+				p.chat.emoji &#128170;

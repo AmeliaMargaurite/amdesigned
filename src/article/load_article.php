@@ -34,7 +34,9 @@ if ($article_slug) {
     $article = json_decode($res->getBody());
 
     if ($article && getType($article) === 'array') {
-      $article = $article[0];
+      $article = null;
+      $error = true;
+      // This happens when more than one article loads, error in Laravel set up.
     }
   } catch (Exception $e) {
     $error = true;

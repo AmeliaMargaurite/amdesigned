@@ -1,21 +1,22 @@
-mixin radio_btns({name, label, required = true, items, checked = false})
-	fieldset(for=name)
-		legend(id=name)
-			p.label!= label
+mixin radio_btns({name, label, required=false, items, checked = false})
+	fieldset
+		legend.countable-label
+			p!= label
 		if block
 			p.disclaimer: block
 		p.warning
 
 		each item in items 
-			label.radio(for=item.name)
-				p!= item.label
+			label.radio(for=`${name}_${item.name}`)
+				p.label(data-required=required ? "true" : "")!= item.label
 				input(
 					type="radio",
-					id=item.name,
+					id=`${name}_${item.name}`,
 					name=name,
-					value=item.name,
+					value=`${name}_${item.name}`,
 					required=required,
 					aria-required=required ? "true" : "false",
 					checked=item.checked,
-					aria-checked=item.checked ? "true" : "false"
+					aria-checked=item.checked ? "true" : "false",
+					aria-invalid="false"
 				)

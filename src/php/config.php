@@ -1,6 +1,7 @@
 <?php
 $local = '/localhost'; // localhost 
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE)
+  session_start();
 define('IS_LIVE', getenv("ENVIRONMENT") === 'production');
 define('HOME_PATH', IS_LIVE ? '' : $local); // Used in url paths
 define('HOME_URL', IS_LIVE ? '/' : $local); // Used for a direct link to home only
@@ -8,6 +9,8 @@ define('HOME_URL', IS_LIVE ? '/' : $local); // Used for a direct link to home on
 define('ROOTPATH', dirname(__DIR__, 1));
 
 define('VENDOR_AUTOLOAD', dirname(__DIR__, 2) . '/vendor/autoload.php');
+define('MJML_FOLDER', dirname(__DIR__, 1) . '/mjml/');
+
 
 # DOT ENV / ENVIRONMENT VARIABLES
 

@@ -1,6 +1,6 @@
-mixin textarea({name, label, required})
-	label(for=name)
-		p.label!= label
+mixin textarea({name, label, required=false})
+	label.countable-label(for=name)
+		p!= label
 		if block
 			p.disclaimer: block
 		p.warning
@@ -9,4 +9,4 @@ mixin textarea({name, label, required})
 			id=name,
 			required=required,
 			aria-required=required ? "true" : "false"
-		) <?= $inputs['#{ name }'] ?>
+		) <?= $inputs['#{ name }'] ?? null ?>

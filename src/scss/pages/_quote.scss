@@ -2,28 +2,30 @@
 	form {
 		gap: 3.2rem;
 		counter-reset: sections;
-		& > *:not(button):not(a):not([aria-live]) {
-			p.label {
-				position: relative;
-				counter-increment: sections;
-				height: max-content;
-				text-indent: 4rem;
+		& .countable-label {
+			position: relative;
+			counter-increment: sections;
+			height: max-content;
 
-				&::before {
-					position: absolute;
-					content: counter(sections);
-					display: grid;
-					align-items: center;
-					justify-content: center;
-					width: 1.6em;
-					height: 1.6em;
-					border-radius: 50%;
-					color: hsl(var(--highlight));
-					rotate: -15deg;
-					font-size: 2.4rem;
-					top: -0.25em;
-					text-indent: -1rem;
-				}
+			& > :first-child {
+				text-indent: 4rem;
+				line-height: 1.4;
+			}
+
+			&::before {
+				position: absolute;
+				content: counter(sections);
+				display: grid;
+				align-items: center;
+				justify-content: center;
+				width: 1.6em;
+				height: 1.6em;
+				border-radius: 50%;
+				color: hsl(var(--highlight));
+				rotate: -15deg;
+				font-size: 2.4rem;
+				top: -0.25em;
+				text-indent: -1rem;
 			}
 		}
 	}
