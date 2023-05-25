@@ -27,6 +27,7 @@ body {
 	grid-template-rows: max-content auto max-content;
 	background: var(--body-bg);
 	row-gap: 3.2rem;
+	color: hsl(var(--main-text-color));
 
 	@media (min-width: $wholeMenuMinWidth) {
 		overflow-y: auto !important;
@@ -75,8 +76,9 @@ section {
 	}
 }
 
-section:nth-child(even) {
-	background: hsl(var(--main-color), 45%, 0.6);
+section:nth-child(even),
+footer {
+	background: hsl(var(--base), 45%, 0.2);
 }
 
 .skip-to-content-link {
@@ -84,8 +86,9 @@ section:nth-child(even) {
 	left: 50%;
 	transform: translateY(-100%);
 	padding: 0.8rem;
-	border: 1px solid hsl(var(--primary), 0%);
+	border: 1px solid hsl(var(--main-text-color));
 	border-radius: 0.4rem;
+	color: hsl(var(--main-text-color));
 
 	&:focus {
 		transform: translateY(0%);
@@ -127,9 +130,9 @@ figcaption {
 	position: fixed;
 	display: none;
 	inset: 0;
-	background: hsl(var(--dark), 0%, 0.9);
+	background: hsl(var(--base), 0%, 0.9);
 	z-index: 100;
-	color: hsl(var(--light), 100%);
+	color: hsl(var(--base), 100%);
 	align-items: center;
 	justify-content: center;
 	&.active {
@@ -151,9 +154,9 @@ figcaption {
 	}
 
 	a {
-		color: hsl(var(--main-color), 42%);
+		color: hsl(var(--base), 42%);
 		&:visited {
-			color: hsl(var(--main-color-dark));
+			color: hsl(var(--base-dark));
 		}
 	}
 	&.current {
@@ -191,7 +194,7 @@ a.link {
 	// display: inline-flex;
 	align-items: center;
 	gap: 0.4rem;
-	color: hsl(var(--dark), 0%);
+	color: var(--link-text);
 	font-weight: 600;
 	text-transform: uppercase;
 }

@@ -10,7 +10,7 @@
 		padding: 3.2rem;
 
 		&:nth-child(odd) {
-			background: hsl(var(--dark), 0%, 0.025);
+			background: hsl(var(--base), 0%, 0.025);
 		}
 
 		& .title__wrapper {
@@ -19,7 +19,7 @@
 		}
 
 		&.highlight {
-			outline: 2px solid hsl(var(--main-color), 80%);
+			outline: 2px solid hsl(var(--base), 80%);
 			border-radius: 0.4rem;
 		}
 	}

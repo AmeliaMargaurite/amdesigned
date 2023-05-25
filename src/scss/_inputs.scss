@@ -5,7 +5,7 @@ textarea,
 	border-radius: var(--input_border_radius);
 	border: var(--input_border);
 	padding: var(--input_padding);
-	background: hsl(var(--light), 100%);
+	background: hsl(var(--base), 100%);
 }
 
 input.no_styling {
@@ -59,7 +59,7 @@ fieldset {
 		cursor: pointer;
 
 		&:nth-child(even) {
-			background: hsl(var(--dark), 0%, 0.05);
+			background: hsl(var(--base), 0%, 0.05);
 		}
 	}
 
@@ -157,7 +157,7 @@ fieldset.fieldset_as_row {
 	padding: unset;
 
 	&:nth-child(odd) {
-		background: hsl(var(--dark), 0%, 0.05);
+		background: hsl(var(--base), 0%, 0.05);
 	}
 
 	& .content__wrapper {

@@ -1,10 +1,11 @@
 .cta-home .section__content {
+	--background: hsl(var(--main-background-color));
 	display: grid;
 	background: linear-gradient(
 		115deg,
 		transparent,
 		transparent,
-		hsl(var(--light), 100%)
+		var(--background)
 	);
 
 	border-radius: 4rem;
@@ -22,7 +23,7 @@
 			line-height: 1.33;
 
 			.highlight {
-				color: hsl(var(--main-color), 42%, 0.9);
+				color: hsl(var(--base), 42%, 0.9);
 			}
 
 			.stripe {
@@ -36,7 +37,7 @@
 					color: transparent;
 					grid-row: 1;
 					grid-column: 1;
-					background: hsl(var(--main-color), 45%, 0.6);
+					background: hsl(var(--base), 45%, 0.6);
 					transform: rotate(-5deg);
 					width: 110%;
 					margin-left: -5%;
@@ -44,7 +45,7 @@
 				}
 
 				& span:last-child {
-					mix-blend-mode: darken;
+					mix-blend-mode: var(--invert-mix-blend-mode);
 					grid-row: 1;
 					grid-column: 1;
 				}
@@ -72,7 +73,7 @@
 
 	@media (min-width: $small) {
 		background-image: url("./cta-home-background.svg"),
-			linear-gradient(115deg, transparent, transparent, hsl(var(--light), 100%));
+			linear-gradient(115deg, transparent, transparent, var(--background));
 		background-repeat: no-repeat;
 		background-position: right bottom;
 		background-size: contain;

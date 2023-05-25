@@ -1,14 +1,17 @@
 :root {
-	--dark: 0, 0%;
-	--light: 0, 0%;
-	--primary: var(--dark);
-	--secondary: var(--light);
+	--base-h: 157;
+	--base: var(--base-h), 90%;
 
-	--main-color: 157, 94%;
-	--main-color-dark: 157, 94%, 25%;
-	--highlight: 35, 100%, 51%;
-	--main-colorHEX: #06d083;
-	--highlightHEX: #ff9807;
+	// --dark: 0, 0%;
+	// --light: 0, 0%;
+	// --primary: var(--dark);
+	// --secondary: var(--light);
+
+	// --main-color: 157, 94%;
+	// --main-color-dark: 157, 94%, 25%;
+	// --highlight: 35, 100%, 51%;
+	// --main-colorHEX: #06d083;
+	// --highlightHEX: #ff9807;
 	--warning: 0, 100%, 50%;
 
 	// SITE BASICS
@@ -19,7 +22,7 @@
 	// 	),
 	// 	linear-gradient(hsl(var(--dark), 0%, 0.05), hsl(var(--dark), 0%, 0.05)),
 	// 	linear-gradient(hsl(var(--light), 100%), hsl(var(--light), 100%));
-	--body-bg: hsl(var(--light), 95%);
+	// --body-bg: hsl(var(--light), 95%);
 
 	// COLOURS
 	--green: 120, 100%, 43%;
@@ -32,10 +35,6 @@
 	// PADDINGS
 	--page_padding: 1.6rem;
 	--input_padding: 0.8rem;
-
-	// BORDERS
-	--input_border: 1px solid hsl(var(--primary), 0%, 0.2);
-	--input_border_radius: 0.4rem;
 
 	// TEXT
 	--base-text-size: 0.525rem;
@@ -58,4 +57,39 @@
 		--page_padding: 3.2rem;
 		--base-text-size: 0.625rem;
 	}
+
+	&,
+	&[color-mode="light"] {
+		--main-text-color: var(--base), 0%;
+		--main-background-color: var(--base), 100%;
+		--card-text-color: var(--base), 0%;
+		--card-background-color: var(--base), 100%;
+		--body-bg: hsl(var(--base-h), 20%, 95%);
+		--highlight: calc(var(--base-h) - 120), 100%;
+		--highlight-2: calc(var(--base-h) + 120), 100%;
+		--base-color: var(--base), 35%;
+		--blue500: 249, 56%, 23%;
+		--yellow500: 41, 100%, 57%;
+		--invert-mix-blend-mode: darken;
+		--link-text: hsl(var(--highlight-2), 40%);
+	}
+
+	&[color-mode="dark"] {
+		--main-text-color: var(--base-h), 20%, 90%;
+		--main-background-color: var(--base), 0%;
+		--card-text-color: var(--base-h), 20%, 80%;
+		--card-background-color: var(--base-h), 20%, 25%;
+		--body-bg: hsl(var(--base-h), 20%, 15%);
+		--highlight: calc(var(--base-h) - 120), 100%;
+		--highlight-2: calc(var(--base-h) + 120), 100%;
+		--base-color: var(--base), 50%;
+		--blue500: 249, 56%, 45%;
+		--yellow500: 36, 100%, 51%;
+		--invert-mix-blend-mode: lighten;
+		--link-text: hsl(var(--highlight), 60%);
+	}
+
+	// BORDERS
+	--input_border: 1px solid hsl(var(--main-text-color), 0.2);
+	--input_border_radius: 0.4rem;
 }

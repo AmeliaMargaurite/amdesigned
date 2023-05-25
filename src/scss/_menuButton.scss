@@ -29,7 +29,7 @@
 
 		&.open {
 			& span {
-				box-shadow: 2px 2px 1px hsl(var(--light), 100%);
+				box-shadow: 2px 2px 1px hsl(var(--base), 100%);
 			}
 			span:nth-child(2) {
 				box-shadow: unset;
@@ -41,7 +41,7 @@
 		position: fixed;
 		span {
 			transition: transform 0.25s ease, background-color 0.5s ease;
-			background: hsl(var(--main-color), 42%);
+			background: hsl(var(--base), 42%);
 		}
 
 		span:nth-child(1) {

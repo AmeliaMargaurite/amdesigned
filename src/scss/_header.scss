@@ -1,14 +1,14 @@
 @import "./menuButton";
 
 header {
-	--text-color: hsl(var(--light), 100%);
+	--text-color: hsl(var(--base), 100%);
 	display: grid;
 	grid-template-columns: auto auto;
 	padding: 1.6rem var(--page_padding);
 	color: var(--text-color);
 
 	&.chevron-down {
-		--background: hsl(var(--dark), 0%);
+		--background: hsl(var(--base), 0%);
 	}
 
 	a.logo {
@@ -31,7 +31,7 @@ header {
 		line-height: 1;
 		font-size: 1.6rem;
 		letter-spacing: 0.2rem;
-		color: hsl(var(--main-color), 42%);
+		color: hsl(var(--base), 42%);
 		max-width: 75%;
 	}
 
@@ -43,7 +43,7 @@ header {
 }
 
 nav {
-	--mobile-text-color: hsl(var(--secondary), 100%);
+	--mobile-text-color: hsl(var(--main-background-color));
 	// display: grid;
 	// justify-items: flex-end;
 	// align-items: center;
@@ -84,7 +84,7 @@ nav {
 
 				&:not(.active):hover {
 					&:after {
-						background: hsl(var(--main-color), 42%);
+						background: hsl(var(--base), 42%);
 					}
 				}
 			}
@@ -97,7 +97,7 @@ nav {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: hsl(var(--dark), 0%, 0.98);
+		background: hsl(var(--base), 0%, 0.98);
 		z-index: var(--menu-zIndex);
 		grid-template-rows: max-content auto;
 		padding: var(--page_padding);
