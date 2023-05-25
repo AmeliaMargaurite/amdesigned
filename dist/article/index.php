@@ -5,21 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $article ? $article->title : 'Whoops!' ?> | AMDesigned</title>
+    <title><?= $article ? $article->title : 'Whoops!' ?> | A&#8203;M&#8203;Designed</title>
     <meta name="description" content="<?= $article ? $article->summary : 'Whoops' ?> " />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:url" content="https://www.amdesigned.com.au/article/<?= $article ? $article->slug : '' ?>" />
-    <meta property="og:title" content="<?= $article ? $article->title : 'Whoops!' ?> | AMDesigned" />
+    <meta property="og:title" content="<?= $article ? $article->title : 'Whoops!' ?> | A&#8203;M&#8203;Designed" />
     <meta property="og:description" content="<?= $article ? $article->summary : 'Whoops' ?> " />
     <meta property="og:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
     <meta property="og:image:alt" content="<?= $article ? $article->hero_img_alt : ''?>" />
-    <meta name="twitter:title" content="<?= $article ? $article->title : 'Whoops!' ?> | AMDesigned" />
+    <meta name="twitter:title" content="<?= $article ? $article->title : 'Whoops!' ?> | A&#8203;M&#8203;Designed" />
     <meta name="twitter:description" content="<?= $article ? $article->summary : 'Whoops' ?> " />
     <meta name="twitter:image"
       content="<?= $article ? $img_path . 'medium/' . $article->hero_img_filename . '.jpg' : '' ?>" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.65f01c4c2f1fee0e9ebfadb1f428424d.css" rel="stylesheet" />
+    <link href="/css/main.7ac9bbfa46c49b8155bec4fac00c7580.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -90,7 +90,7 @@
         class="loader">Loading...</span></span>
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
         href="/">
-        <p class="company-name">AMDesigned</p>
+        <p class="company-name">A&#8203;M&#8203;Designed</p>
         <p class="tagline">We make and manage customer converting business websites</p>
       </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
         aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"

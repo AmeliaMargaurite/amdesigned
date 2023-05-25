@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | AMDesigned</title>
+    <title>Contact | A&#8203;M&#8203;Designed</title>
     <meta name="description"
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:url" content="https://www.amdesigned.com.au//contact" />
-    <meta property="og:title" content="Contact | AMDesigned" />
+    <meta property="og:title" content="Contact | A&#8203;M&#8203;Designed" />
     <meta property="og:description"
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta property="og:image"
@@ -18,13 +18,13 @@
     <meta property="og:image:alt"
       content="Large computer monitor sitting behind smaller open laptop, both screens showing web sites. Text overlay reads: "
       Let's build something special together. AMDesigned for all your business website needs"" />
-    <meta name="twitter:title" content="Contact | AMDesigned" />
+    <meta name="twitter:title" content="Contact | A&#8203;M&#8203;Designed" />
     <meta name="twitter:description"
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="/assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
     <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.eee5d1964e08124eab65.js"> </script>
-    <link href="/css/main.65f01c4c2f1fee0e9ebfadb1f428424d.css" rel="stylesheet" />
+    <link href="/css/main.7ac9bbfa46c49b8155bec4fac00c7580.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -95,7 +95,7 @@
         class="loader">Loading...</span></span>
     <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
         href="/">
-        <p class="company-name">AMDesigned</p>
+        <p class="company-name">A&#8203;M&#8203;Designed</p>
         <p class="tagline">We make and manage customer converting business websites</p>
       </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
         aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
@@ -112,8 +112,8 @@
     <main class="contact" id="main">
       <section><span class="section__content"><span class="contact-form__wrapper">
             <h1>Let's connect</h1><?php require('../php/contact_form.php') ?><form class="contact-form"
-              id="contact-form" action="../php/validate-contact-form.php?back=/contact" method="POST">
-              <label for="subject">
+              id="contact-form" action="../php/validate-contact-form.php?back=/contact" method="POST"><label
+                for="subject">
                 <p>Subject:</p><input id="subject" type="subject" name="subject" required pattern="string"
                   value="<?= $inputs['subject'] ?? "I'd like a website" ?>" title="Alphanumeric with accents allowed">
                 <p class="warning"></p>
@@ -129,32 +129,31 @@
               <fieldset for="services">
                 <legend id="services">Services you may be interested in:</legend>
                 <p class="warning"></p><label for="design">
-                  <p>Design</p><input id="design" type="checkbox" required value="design" name="services[]">
+                  <p>Design</p><input id="design" type="checkbox" value="design" name="services[]">
                 </label><label for="build">
-                  <p>Build</p><input id="build" type="checkbox" required value="build" name="services[]">
+                  <p>Build</p><input id="build" type="checkbox" value="build" name="services[]">
                 </label><label for="hosting">
-                  <p>Hosting</p><input id="hosting" type="checkbox" required value="hosting" name="services[]">
+                  <p>Hosting</p><input id="hosting" type="checkbox" value="hosting" name="services[]">
                 </label><label for="domain-purchase">
-                  <p>Domain purchase</p><input id="domain-purchase" type="checkbox" required value="domain-purchase"
+                  <p>Domain purchase</p><input id="domain-purchase" type="checkbox" value="domain-purchase"
                     name="services[]">
                 </label><label for="seo-accessibility">
-                  <p>SEO & Accessibility</p><input id="seo-accessibility" type="checkbox" required
+                  <p>S&#8203;E&#8203;O & Accessibility</p><input id="seo-accessibility" type="checkbox"
                     value="seo-accessibility" name="services[]">
                 </label><label for="analytics">
-                  <p>Analytics</p><input id="analytics" type="checkbox" required value="analytics" name="services[]">
+                  <p>Analytics</p><input id="analytics" type="checkbox" value="analytics" name="services[]">
                 </label><label for="maintenance">
-                  <p>Ongoing maintenance</p><input id="maintenance" type="checkbox" required value="maintenance"
+                  <p>Ongoing maintenance</p><input id="maintenance" type="checkbox" value="maintenance"
                     name="services[]">
                 </label><label for="ecommerce">
-                  <p>E-commerce / Web store</p><input id="ecommerce" type="checkbox" required value="ecommerce"
+                  <p>E-commerce / Web store</p><input id="ecommerce" type="checkbox" value="ecommerce"
                     name="services[]">
                 </label><label for="blog">
-                  <p>Blog</p><input id="blog" type="checkbox" required value="blog" name="services[]">
+                  <p>Blog</p><input id="blog" type="checkbox" value="blog" name="services[]">
                 </label><label for="other">
-                  <p>Other</p><input id="other" type="checkbox" required value="other" name="services[]">
+                  <p>Other</p><input id="other" type="checkbox" value="other" name="services[]">
                 </label>
-              </fieldset><label for="message">
-                <span>
+              </fieldset><label for="message"><span>
                   <p>Let us know a bit about your business:</p>
                   <p class="subtext">What do you do, what are your customers like, what area do you service.<br>What do
                     you want to achieve with having a website?</p>
@@ -163,15 +162,14 @@
                 <p class="warning"></p>
               </label><label for="pot" aria-hidden="true"><input type="hidden" name="pot" readonly></label><input
                 type="hidden" name="token" value="<?= $token ?>"><input id="package-type" type="hidden"
-                name="package_type"><button class="btn primary" onclick="validateCheckboxes()" type="submit"
-                name="submit" value="submit">Send<span class="icon paper-plane" aria-hidden="true"></span></button>
+                name="package_type">
             </form>
             <p class="warning">
               <script
-                src="/js/contact_form.9c65c495905ce42e1657.js">
+                src="/js/contact_form.dd062537280f1bbfe925.js">
               </script>
             </p>
-          </span><span class="mock-chat__wrapper">
+          </span><span class="mock-chat__wrapper" aria-hidden="true">
             <h3>It usually goes something like...</h3><span class="mock-chat"> <span class="chat-bubble you">
                 <p class="user">you</p>
                 <p class="chat">Hi, I need a website, can you help?</p>
