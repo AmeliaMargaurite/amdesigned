@@ -2,6 +2,8 @@ include ./page_header.pug
 include ./page_footer.pug
 include ../components/fb-chat-plugin/fb-chat-plugin.pug
 include ../components/business-schema-json.pug
+include ../components/scroll-to-top/scroll-to-top.pug
+
 block variables
 block phpScripts
 doctype html 
@@ -153,4 +155,6 @@ html(lang="en")
 			block content
 
 		+business-schema-json
+
+		+scroll-to-top
 		+page_footer(title)

@@ -8,6 +8,7 @@ declare global {
 		showLoading: () => void;
 		showLoadingBtn: (e?: any) => void;
 		closeMenu: () => void;
+		scrollToTop: () => void;
 	}
 }
 
@@ -113,3 +114,36 @@ document.addEventListener("visibilitychange", resetBtns);
 
 window.showLoadingBtn = showLoadingBtn;
 window.closeMenu = closeMenu;
+
+/**
+ * Scroll To Top Button
+ **/
+const checkScrollHeight = () => {
+	if (window.scrollY >= 600) {
+		showScrollToTopButton();
+	} else hideScrollToTopButton();
+};
+window.addEventListener("scroll", throttleFunction(checkScrollHeight));
+
+const showScrollToTopButton = () => {
+	const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+	scrollToTopBtn?.classList.add("active");
+};
+
+const hideScrollToTopButton = () => {
+	const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+	scrollToTopBtn?.classList.remove("active");
+};
+
+const scrollToTop = () => {
+	document.getElementById("skip-to-content-link")?.focus();
+	hideScrollToTopButton();
+};
+
+window.addEventListener(
+	"resize",
+	throttleFunction(toggleMenuOnWindowSize, 1500)
+);
+window.scrollToTop = scrollToTop;
