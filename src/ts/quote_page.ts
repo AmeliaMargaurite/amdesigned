@@ -16,7 +16,6 @@ const updateCompanyName = (event: FocusEvent) => {
 	const nameSpans = document.querySelectorAll(".company_name");
 	// const companyName = event.
 	const input = event.target as HTMLInputElement;
-	console.log(input?.value);
 	if (input?.value) {
 		nameSpans.forEach((span) => (span.textContent = input.value));
 	}
@@ -36,7 +35,6 @@ const toggleCheckboxInputVisibility = (event: Event, label_id: string) => {
 	const label = document.getElementById(label_id);
 	const checkbox = event.target as HTMLInputElement;
 	const politeAriaLive = document.querySelector('[aria-live="polite"]');
-	console.log(label_id);
 	if (label) {
 		if (checkbox?.checked) {
 			label.style.display = "inherit";

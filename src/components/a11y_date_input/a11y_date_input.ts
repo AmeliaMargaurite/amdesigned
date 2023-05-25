@@ -10,7 +10,6 @@
 interface DatePickerDiaglogType {}
 
 const DatePickerDialog = function (this: any, datePickerEl: HTMLElement) {
-	console.log(this);
 	this.buttonLabelChoose = "Choose Date";
 	this.buttonLabelChange = "Change Date";
 	this.dayLabels = [

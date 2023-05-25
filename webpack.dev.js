@@ -6,7 +6,7 @@ const path = require("path");
 module.exports = merge(common, {
 	mode: "development",
 	// Put temporary entry points here until ready for production
-	entry: { quote: "./src/pages/quote.php.pug" },
+	// entry: { quote: "./src/pages/quote.php.pug" },
 	// inline-source-map not for production use!
 	devtool: "inline-source-map",
 	devServer: {

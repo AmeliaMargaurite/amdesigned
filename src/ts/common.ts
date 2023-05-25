@@ -81,10 +81,14 @@ const showLoading = () => {
 window.showLoading = showLoading;
 
 const showLoadingBtn = (el: HTMLButtonElement | HTMLAnchorElement) => {
+	if (el instanceof HTMLButtonElement && !el.form?.checkValidity()) {
+		return;
+	}
+
 	el.classList.add("disabled");
 	el.classList.add("btn-to-reset");
-	const icon = el.querySelector("span.icon");
 
+	const icon = el.querySelector("span.icon");
 	if (icon) {
 		icon.setAttribute("data-old-classes", icon.className);
 		icon.className = "icon spinner spinner-active";
@@ -106,11 +110,6 @@ const resetBtns = () => {
 	});
 };
 document.addEventListener("visibilitychange", resetBtns);
-
-// window.addEventListener("popstate", (e) => {
-// 	console.log({ e });
-// 	return false;
-// });
 
 window.showLoadingBtn = showLoadingBtn;
 window.closeMenu = closeMenu;
