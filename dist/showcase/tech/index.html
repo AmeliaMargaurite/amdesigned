@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech | A&#8203;M&#8203;Designed</title>
+    <meta name="description" content="AMDesigned" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://www.amdesigned.com.au/" />
+    <meta property="og:title" content="Tech | A&#8203;M&#8203;Designed" />
+    <meta property="og:description" content="AMDesigned" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <meta name="twitter:title" content="Tech | A&#8203;M&#8203;Designed" />
+    <meta name="twitter:description" content="AMDesigned" />
+    <meta name="twitter:image" content="" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/common.c749992c2c8f2621a800.js"> </script>
+    <link href="/css/main.96d5c5f12ed0fab8136bb1a8e926eb09.css" rel="stylesheet" />
+    <link href="/css/main.16230d38fe047761f3172970b16ab3fd.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.fb29bbf81ec57714.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.f68b7860c31a0afb.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+            (e._i = []),
+            (e.init = function (i, s, a) {
+              function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                  (t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                  });
+              }
+              ((p = t.createElement("script")).type = "text/javascript"), (p.async = !0), (p.src = s.api_host +
+                "/static/array.js"), (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+              var u = e;
+              for (
+                void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags"
+                .split(" "),
+                n = 0; n < o.length; n++
+              )
+                g(u, o[n]);
+              e._i.push([i, s, a]);
+            }),
+            (e.__SV = 1));
+      })(document, window.posthog || []);
+      const getUserId = () => {
+        let user_id;
+        if (window.localStorage.getItem("user_id")) {
+          user_id = JSON.parse(window.localStorage.getItem("user_id"));
+        } else {
+          user_id = Date.now();
+          window.localStorage.setItem("user_id", user_id);
+        }
+        return [user_id];
+      };
+      posthog.init("phc_IECNjEcCsaDAmsFD1y49ormP3Xj7Fzh6aHCqYWd6pNE", {
+        api_host: "https://eu.posthog.com",
+        loaded: (posthog) => {
+          posthog.identify(getUserId());
+          const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get("__posthog");
+          if (toolbarJSON) {
+            posthog.loadToolbar(JSON.parse(toolbarJSON));
+          }
+        },
+        persistence: "memory",
+      });
+    </script>
+  </head>
+  <body class="tech basics"><span class="loading__wrapper" id="loading__wrapper"><span
+        class="loader">Loading...</span></span>
+    <header class="chevron-down" id="header"><a class="skip-to-content-link" href="#main">Skip to content</a><a
+        class="logo" href="/">
+        <p class="company-name">A&#8203;M&#8203;Designed</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
+          <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
+          <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="tech basics" id="main">
+      <div class="header-cta__wrapper dark">
+        <header>
+          <p class="logo">Morpheus AI</p>
+        </header>
+        <section class="cta">
+          <div class="section__content split-view">
+            <div class="split-view__left">
+              <div class="wrapper">
+                <p class="subtext top">Top tagline to sound cool</p>
+                <h1>Leaders in robotic AI tech</h1>
+                <p class="subtext bottom">Challenging the Morpheus concept, one AI at a time</p>
+              </div><button class="cta btn">Discover more<span class="icon__wrapper"><span
+                    class="icon arrow right"></span></span></button>
+            </div>
+            <div class="split-view__right"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/robot-girl.4c1849bd276eaef1.png" alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/robot-girl.694afbfb4b83c78c.webp 425w,/assets/img/robot-girl.68b1455c6639fa3c.webp 501w,/assets/img/robot-girl.dac590c3da922969.webp 512w,/assets/img/robot-girl.5586a12208abdeaf.webp 640w,/assets/img/robot-girl.0d2e5a81a55af04f.webp 720w,/assets/img/robot-girl.819b03e89db2cdaf.webp 768w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 501px, (max-width: 768px) 768px, (max-width: 1024px) 512px, (max-width: 1440px) 720px,  640px"
+                      type="image/webp"><img src="/assets/img/robot-girl.662ca96cd6d622a3.png"
+                      alt="rendered image of shiny female robot face"
+                      srcset="/assets/img/robot-girl.467e6dc6c034eb8a.png 425w, /assets/img/robot-girl.eb997b5e1e1be2f5.png 501w, /assets/img/robot-girl.94ece0f8805fef8c.png 512w, /assets/img/robot-girl.ead9a68e73155aa7.png 640w, /assets/img/robot-girl.61ef2c89bc3dd1ef.png 720w, /assets/img/robot-girl.53f6273495dfe72d.png 768w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 501px, (max-width: 768px) 768px, (max-width: 1024px) 512px, (max-width: 1440px) 720px,  640px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span></div>
+          </div>
+        </section>
+      </div>
+      <section class="services__section light-main">
+        <div class="section__content">
+          <p class="section__title">Services</p>
+          <h2 class="subtext">We provide the following amazing services</h2>
+          <div class="cards">
+            <article class="card"><span class="icon--wrapper"><span class="icon laptop-code large"></span></span>
+              <p class="card__title">Machine Learning</p>
+              <p class="card__content paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                perspiciatis quidem itaque iste reprehenderit.</p>
+            </article>
+            <article class="card"><span class="icon--wrapper"><span class="icon glasses large"></span></span>
+              <p class="card__title">Augmented Reality</p>
+              <p class="card__content paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                perspiciatis quidem itaque iste reprehenderit.</p>
+            </article>
+            <article class="card"><span class="icon--wrapper"><span class="icon industry large"></span></span>
+              <p class="card__title">Automation</p>
+              <p class="card__content paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                perspiciatis quidem itaque iste reprehenderit.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="about__section">
+        <div class="section__content split-view">
+          <div class="split-view__left">
+            <div class="wrapper"><span class="img img-1"><span class="image-w-placeholder"><img
+                    class="placeholder-image" src="/assets/img/tech-laptop.b58ad579d77046ca.jpg" alt=""
+                    aria-hidden="true">
+                  <figure>
+                    <picture>
+                      <source
+                        srcset="/assets/img/tech-laptop.63cea46b300fbf41.webp 0w,/assets/img/tech-laptop.63cea46b300fbf41.webp 0w,/assets/img/tech-laptop.63cea46b300fbf41.webp 0w,/assets/img/tech-laptop.8395fb9983940ecc.webp 102w,/assets/img/tech-laptop.20e26f78fe46061f.webp 144w,/assets/img/tech-laptop.fddd7dca48d36189.webp 256w"
+                        sizes="(max-width: 425px) 0px, (max-width: 501px) 0px, (max-width: 768px) 0px, (max-width: 1024px) 102px, (max-width: 1440px) 144px,  256px"
+                        type="image/webp"><img src="/assets/img/tech-laptop.4a90dca000303b65.jpg"
+                        alt="hands on a laptop keyboard"
+                        srcset="/assets/img/tech-laptop.4a90dca000303b65.jpg 0w, /assets/img/tech-laptop.4a90dca000303b65.jpg 0w, /assets/img/tech-laptop.4a90dca000303b65.jpg 0w, /assets/img/tech-laptop.aec21cab4ac3b981.jpg 102w, /assets/img/tech-laptop.08d0e2f955cbad48.jpg 144w, /assets/img/tech-laptop.55d0551aada4c659.jpg 256w"
+                        sizes="(max-width: 425px) 0px, (max-width: 501px) 0px, (max-width: 768px) 0px, (max-width: 1024px) 102px, (max-width: 1440px) 144px,  256px"
+                        height="100%" width="425" max-width="100%">
+                    </picture>
+                  </figure>
+                </span></span><span class="img img-2"><span class="image-w-placeholder"><img class="placeholder-image"
+                    src="/assets/img/tech-microscope.ffdbbeb9bf1af8ae.jpg" alt="" aria-hidden="true">
+                  <figure>
+                    <picture>
+                      <source
+                        srcset="/assets/img/tech-microscope.15fb0f04eb08f593.webp 256w,/assets/img/tech-microscope.cb34e67c869a7d9b.webp 319w,/assets/img/tech-microscope.66ca522ab77accf3.webp 360w,/assets/img/tech-microscope.1339eb5b63cf113e.webp 376w,/assets/img/tech-microscope.4f598e98ccb50998.webp 576w,/assets/img/tech-microscope.50b4026c4be266d3.webp 640w"
+                        sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                        type="image/webp"><img src="/assets/img/tech-microscope.2c053df36b60707c.jpg"
+                        alt="microscope viewing unknown green item"
+                        srcset="/assets/img/tech-microscope.b5da1daf939d723c.jpg 256w, /assets/img/tech-microscope.149c4206d96ce62f.jpg 319w, /assets/img/tech-microscope.7c79ef22935b8fdc.jpg 360w, /assets/img/tech-microscope.60f0d6cb93f871db.jpg 376w, /assets/img/tech-microscope.e60f681b922c07a4.jpg 576w, /assets/img/tech-microscope.0c9108fc8ca69e50.jpg 640w"
+                        sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                        height="100%" width="425" max-width="100%">
+                    </picture>
+                  </figure>
+                </span></span><span class="img img-3"><span class="image-w-placeholder"><img class="placeholder-image"
+                    src="/assets/img/tech-v-reality.a7bf395f1b1f209f.jpg" alt="" aria-hidden="true">
+                  <figure>
+                    <picture>
+                      <source
+                        srcset="/assets/img/tech-v-reality.866ae43ff19197fd.webp 0w,/assets/img/tech-v-reality.866ae43ff19197fd.webp 0w,/assets/img/tech-v-reality.866ae43ff19197fd.webp 0w,/assets/img/tech-v-reality.1020e52ff545e01d.webp 205w,/assets/img/tech-v-reality.36e15a7762275687.webp 288w,/assets/img/tech-v-reality.fade5e01cf446928.webp 512w"
+                        sizes="(max-width: 425px) 0px, (max-width: 501px) 0px, (max-width: 768px) 0px, (max-width: 1024px) 205px, (max-width: 1440px) 288px,  512px"
+                        type="image/webp"><img src="/assets/img/tech-v-reality.656916891cc8692e.jpg"
+                        alt="person wearing virtual reality goggles"
+                        srcset="/assets/img/tech-v-reality.656916891cc8692e.jpg 0w, /assets/img/tech-v-reality.656916891cc8692e.jpg 0w, /assets/img/tech-v-reality.656916891cc8692e.jpg 0w, /assets/img/tech-v-reality.1b78125ce179fe55.jpg 205w, /assets/img/tech-v-reality.fd63df2a4e76383e.jpg 288w, /assets/img/tech-v-reality.96eba48df1c3084f.jpg 512w"
+                        sizes="(max-width: 425px) 0px, (max-width: 501px) 0px, (max-width: 768px) 0px, (max-width: 1024px) 205px, (max-width: 1440px) 288px,  512px"
+                        height="100%" width="425" max-width="100%">
+                    </picture>
+                  </figure>
+                </span></span></div>
+          </div>
+          <div class="split-view__right gap">
+            <div class="wrapper">
+              <p class="section__title left-align">About</p>
+              <h2 class="subtext">We grew from a seed, and now look where we are</h2>
+              <p class="about__content paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+                tempore omnis aut incidunt eum autem rem, facilis quasi vero fugiat? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Totam, suscipit?</p>
+              <ul>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div><button class="btn secondary cta">Discover more<span class="icon__wrapper"><span
+                  class="icon arrow right"></span></span></button>
+          </div>
+        </div>
+      </section>
+      <section class="projects__section dark">
+        <div class="section__content split-view">
+          <div class="split-view__left gap">
+            <div class="wrapper">
+              <p class="section__title left-align">Projects</p>
+              <h2 class="subtext">Just a taste of the projects we've completed</h2>
+              <p class="projects__content paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nam
+                totam magnam rerum officia dicta voluptates necessitatibus asperiores quisquam voluptas dolorum
+                suscipit, neque, itaque est sint natus accusantium, ducimus architecto?</p>
+              <div class="stamps">
+                <article class="stamp"><span class="stamp__icon--wrapper"><span class="icon robot"></span></span>
+                  <div class="content">
+                    <p class="stamp__number">135+</p>
+                    <p class="stamp__title">Finalised projects</p>
+                  </div>
+                </article>
+                <article class="stamp"><span class="stamp__icon--wrapper"><span
+                      class="icon user-astronaut"></span></span>
+                  <div class="content">
+                    <p class="stamp__number">90+</p>
+                    <p class="stamp__title">Happy customers</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="split-view__right">
+            <div class="wrapper"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/tech-shopping-cart.907896193a3b4ad8.png" alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/tech-shopping-cart.0b8d3808db90e900.webp 1024w,/assets/img/tech-shopping-cart.cbbcbef1cb10d1ce.webp 319w,/assets/img/tech-shopping-cart.7643e9ac68d5cfaa.webp 376w,/assets/img/tech-shopping-cart.03e7dcb768783d6e.webp 410w,/assets/img/tech-shopping-cart.f3904ed2ac02506f.webp 576w,/assets/img/tech-shopping-cart.f3904ed2ac02506f.webp 576w"
+                      sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 1024px) 410px, (max-width: 1440px) 576px,  1024px"
+                      type="image/webp"><img src="/assets/img/tech-shopping-cart.0a2a293166bcb124.png" alt="test"
+                      srcset="/assets/img/tech-shopping-cart.991af8a08536c281.png 1024w, /assets/img/tech-shopping-cart.5022e103fe0df8d6.png 319w, /assets/img/tech-shopping-cart.66d7a940eb5a9727.png 376w, /assets/img/tech-shopping-cart.1f61153316bb7f94.png 410w, /assets/img/tech-shopping-cart.62f3b346fee5f301.png 576w, /assets/img/tech-shopping-cart.62f3b346fee5f301.png 576w"
+                      sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 1024px) 410px, (max-width: 1440px) 576px,  1024px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span></div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials__section">
+        <div class="section__content">
+          <p class="section__title">Testimonials</p>
+          <h2 class="subtext">What our clients have to say</h2>
+          <div class="quotes__wrapper">
+            <article class="quote"><span class="icon--wrapper"><span class="icon quote-left large"></span></span><span
+                class="quote__content">
+                <p class="paragraph quote__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+                  possimus praesentium nulla, corporis eum incidunt maxime. Explicabo pariatur aut hic id, consectetur
+                  quae dolore corrupti non atque inventore at doloremque earum. In dignissimos enim maxime hic?
+                  Excepturi non illum facere!</p>
+                <p class="quote__author">Tommy</p>
+                <p class="quote__company">CEO of Tommy's Tings</p>
+              </span></article>
+            <article class="quote"><span class="icon--wrapper"><span class="icon quote-right large"></span></span><span
+                class="quote__content">
+                <p class="paragraph quote__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+                  possimus praesentium nulla, corporis eum incidunt maxime. Explicabo pariatur aut hic id, consectetur
+                  quae dolore corrupti non atque inventore at doloremque earum. In dignissimos enim maxime hic?
+                  Excepturi non illum facere!</p>
+                <p class="quote__author">Sandra Goodens</p>
+                <p class="quote__company">Owner Things 'n' Stuff</p>
+              </span></article>
+          </div>
+        </div>
+      </section>
+      <section class="faq__section light-main">
+        <div class="section__content">
+          <p class="section__title">FAQ</p>
+          <h2 class="subtext center">You have questions, we have answers</h2>
+          <div class="faq__wrapper details__wrapper">
+            <details>
+              <summary>
+                <h3>Lorem ipsum dolor sit.</h3>
+              </summary>
+              <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt
+                  commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate
+                  fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                  <li>item three</li>
+                </ul>
+              </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+            </details>
+            <details>
+              <summary>
+                <h3>Lorem ipsum dolor sit.</h3>
+              </summary>
+              <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt
+                  commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate
+                  fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                  <li>item three</li>
+                </ul>
+              </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+            </details>
+            <details>
+              <summary>
+                <h3>Lorem ipsum dolor sit.</h3>
+              </summary>
+              <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt
+                  commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate
+                  fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                  <li>item three</li>
+                </ul>
+              </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+            </details>
+            <details>
+              <summary>
+                <h3>Lorem ipsum dolor sit.</h3>
+              </summary>
+              <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt
+                  commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate
+                  fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                  <li>item three</li>
+                </ul>
+              </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+            </details>
+            <details>
+              <summary>
+                <h3>Lorem ipsum dolor sit.</h3>
+              </summary>
+              <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt
+                  commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate
+                  fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                  <li>item three</li>
+                </ul>
+              </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+            </details>
+            <details>
+              <summary>
+                <h3>Lorem ipsum dolor sit.</h3>
+              </summary>
+              <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt
+                  commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate
+                  fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                <ul>
+                  <li>item one</li>
+                  <li>item two</li>
+                  <li>item three</li>
+                </ul>
+              </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baarn, The Netherlands",
+          "postalCode": "3743BR",
+          "streetAddress": "Nieuw Baarnstraat"
+        },
+        "email": "hello(at)amdesigned.com.au",
+        "name": "AMDesigned",
+        "currenciesAccepted": "AUD, EUR, USD",
+        "url": "https://amdesigned.com.au",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "hello(at)amdesigned.com.au",
+          "contactType": "customer service"
+        }]
+      }
+    </script><a class="scroll-to-top" id="scroll-to-top"
+      title="Scrolls to top of page and focuses on the header element" onclick="scrollToTop()" tabindex="0"
+      href="/#header"><span class="icon arrow up"></span>Back to Top</a>
+    <footer>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/contact/">contact</a></li>
+        <li><a href="/showcase/">showcase</a></li>
+        <li><a href="/articles/">articles</a></li>
+      </ul>
+      <ul>
+        <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
+        <li> <a href="/privacy-policy">Privacy policy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

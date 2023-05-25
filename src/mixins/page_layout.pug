@@ -49,6 +49,8 @@ html(lang="en")
 
 		script(src=require("../ts/common.ts")) 
 		link(href=require("../scss/main.scss"), rel="stylesheet")
+		block scss-files
+
 		link(
 			rel="apple-touch-icon",
 			sizes="180x180",
@@ -143,15 +145,14 @@ html(lang="en")
 			});
 
 		block scripts
-	body(class!=pageClass ? pageClass : title.toLowerCase())
-		- var pages = { home: "/", contact: "/contact/", showcase: "/showcase/", articles: "/articles/" };
-		//- quote: "/quote",
+	body(class!=pageClass ? pageClass : title.toLowerCase().split(' ').join('-'))
+		- var pages = { home: "/", contact: "/contact/", showcase: "/showcase/", articles: "/articles/", quote: "/quote" };
 		//-,'services': '/services' removed for now
 		span#loading__wrapper.loading__wrapper
 			span.loader Loading...
 
 		+page_header(title)
-		main#main(class!=pageClass ? pageClass : title.toLowerCase())
+		main#main(class!=pageClass ? pageClass : title.toLowerCase().split(' ').join('-'))
 			block content
 
 		+business-schema-json

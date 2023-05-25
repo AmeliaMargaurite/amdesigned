@@ -1,0 +1,27 @@
+mixin image-fixed-size({path=undefined, alt=undefined, size=200}, figcaption=undefined)
+	span.image-w-placeholder&attributes(attributes)
+		img.placeholder-image(
+			src=require("Images/" + path + "?size=100"),
+			alt="",
+			aria-hidden="true"
+		)
+
+		figure
+			picture
+				source(
+					srcset=require("Images/" + path + "?format=webp&size=" + size),
+					type="image/webp"
+				)
+				img(
+					src=require("Images/" + path + "?size=" + size),
+					alt=alt,
+					height="auto",
+					width=size,
+					max-width="100%"
+				)
+
+			if figcaption
+				figcaption #{ figcaption }
+			if block
+				figcaption
+					block

@@ -1,0 +1,52 @@
+.tech .projects__section {
+	.stamps {
+		display: flex;
+		gap: 3.2rem;
+		flex-wrap: wrap;
+
+		.stamp {
+			display: grid;
+			background: hsl(var(--base), 20%, 0.3);
+			padding: 2.4rem;
+			border-radius: 1.8rem;
+			width: 100%;
+
+			&__icon--wrapper {
+				text-align: center;
+			}
+
+			& .icon {
+				background-color: hsl(var(--base), 100%);
+				width: 4rem;
+				height: 4rem;
+			}
+
+			&__title {
+				text-align: center;
+				color: hsl(var(--base), 90%);
+			}
+			&__number {
+				font-size: 4rem;
+				font-weight: 600;
+				line-height: 1;
+				text-align: center;
+			}
+		}
+	}
+
+	.right .wrapper img {
+		padding: 15%;
+	}
+
+	@media (min-width: $xsmall) {
+		.stamps .stamp {
+			width: unset;
+		}
+	}
+
+	@media (min-width: $small) {
+		.right .wrapper img {
+			padding: unset;
+		}
+	}
+}

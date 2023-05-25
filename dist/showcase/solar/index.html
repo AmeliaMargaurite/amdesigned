@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar | A&#8203;M&#8203;Designed</title>
+    <meta name="description" content="AMDesigned" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://www.amdesigned.com.au//" />
+    <meta property="og:title" content="Solar | A&#8203;M&#8203;Designed" />
+    <meta property="og:description" content="AMDesigned" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <meta name="twitter:title" content="Solar | A&#8203;M&#8203;Designed" />
+    <meta name="twitter:description" content="AMDesigned" />
+    <meta name="twitter:image" content="" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/common.c749992c2c8f2621a800.js"> </script>
+    <link href="/css/main.96d5c5f12ed0fab8136bb1a8e926eb09.css" rel="stylesheet" />
+    <link href="/css/main.6f8c5c0125f4d4a511b0322e1af392c8.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.fb29bbf81ec57714.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.f68b7860c31a0afb.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+            (e._i = []),
+            (e.init = function (i, s, a) {
+              function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                  (t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                  });
+              }
+              ((p = t.createElement("script")).type = "text/javascript"), (p.async = !0), (p.src = s.api_host +
+                "/static/array.js"), (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+              var u = e;
+              for (
+                void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags"
+                .split(" "),
+                n = 0; n < o.length; n++
+              )
+                g(u, o[n]);
+              e._i.push([i, s, a]);
+            }),
+            (e.__SV = 1));
+      })(document, window.posthog || []);
+      const getUserId = () => {
+        let user_id;
+        if (window.localStorage.getItem("user_id")) {
+          user_id = JSON.parse(window.localStorage.getItem("user_id"));
+        } else {
+          user_id = Date.now();
+          window.localStorage.setItem("user_id", user_id);
+        }
+        return [user_id];
+      };
+      posthog.init("phc_IECNjEcCsaDAmsFD1y49ormP3Xj7Fzh6aHCqYWd6pNE", {
+        api_host: "https://eu.posthog.com",
+        loaded: (posthog) => {
+          posthog.identify(getUserId());
+          const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get("__posthog");
+          if (toolbarJSON) {
+            posthog.loadToolbar(JSON.parse(toolbarJSON));
+          }
+        },
+        persistence: "memory",
+      });
+    </script>
+  </head>
+  <body class="solar basics"><span class="loading__wrapper" id="loading__wrapper"><span
+        class="loader">Loading...</span></span>
+    <header class="chevron-down" id="header"><a class="skip-to-content-link" href="#main">Skip to content</a><a
+        class="logo" href="/">
+        <p class="company-name">A&#8203;M&#8203;Designed</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
+          <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
+          <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="solar basics" id="main">
+      <div class="header-cta__wrapper-solar dark">
+        <div class="bg-image"><span class="image-w-placeholder"><img class="placeholder-image"
+              src="/assets/img/solar-bg-dark.4eafb3b11d031120.jpg" alt="">
+            <figure>
+              <picture>
+                <source
+                  srcset="/assets/img/solar-bg-dark.9f863f866e64cf1e.webp 600w,/assets/img/solar-bg-dark.3d5bd0a0cc878edf.webp 760w,/assets/img/solar-bg-dark.c75c1c565fc4ea31.webp 920w"
+                  type="image/webp"><img src="/assets/img/solar-bg-dark.79b2d9e291251052.jpg" alt=""
+                  srcset="/assets/img/solar-bg-dark.b992dab966c73dd9.jpg 600w,/assets/img/solar-bg-dark.8407d5ab3e874ffb.jpg 760w,/assets/img/solar-bg-dark.343d08df0cb90872.jpg 920w">
+              </picture>
+            </figure>
+          </span></div>
+        <header>
+          <p class="logo">SunPowr</p>
+        </header>
+        <section class="cta">
+          <div class="section__content">
+            <div class="socials__wrapper"><a href="https://www.facebook.com"><span class="sr-only">Facebook</span><span
+                  class="icon facebook large"></span></a><a href="https://www.youtube.com"><span
+                  class="sr-only">YouTube</span><span class="icon youtube large"> </span></a><a
+                href="https://www.instagram.com"><span class="sr-only">Instagram</span><span
+                  class="icon instagram large"></span></a></div>
+            <div class="cta__content">
+              <div class="wrapper">
+                <p class="subtext top">Relax and breath</p>
+                <h1>Solar and Electrical Solutions for your business and home</h1>
+                <p class="subtext bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.
+                </p>
+              </div><span class="btns__wrapper"><button class="cta btn">What we offer</button><button
+                  class="btn cta secondary">Learn more</button></span>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="light-main services__section">
+        <div class="section__content">
+          <p class="section__title">Services</p>
+          <h2 class="subtext center">Lorem ipsum dolor sit.</h2>
+          <div class="cards__wrapper">
+            <div class="card"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/solar-residential.c4378578120d4ee2.jpg" alt="">
+                <figure>
+                  <picture>
+                    <source srcset="/assets/img/solar-residential.284eec1f17917aae.webp" type="image/webp"><img
+                      src="/assets/img/solar-residential.5afa7dc0842ac2a6.jpg" alt=""
+                      srcset="/assets/img/solar-residential.3b67057f1b1c4dec.jpg">
+                  </picture>
+                </figure>
+              </span><a class="card__title" href="/#residential">Residential</a><a class="card__content">Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Commodi, libero.</a><button class="btn cta mini"
+                onclick="showLoadingBtn(this)" href="/" aria-hidden>Learn more<span class="icon arrow right"
+                  aria-hidden="true"></span></button></div>
+            <div class="card"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/solar-business.d302cec325270472.jpg" alt="">
+                <figure>
+                  <picture>
+                    <source srcset="/assets/img/solar-business.384872a12c1f7f24.webp" type="image/webp"><img
+                      src="/assets/img/solar-business.daf90d8b5c101bef.jpg" alt=""
+                      srcset="/assets/img/solar-business.a574e790f20007ec.jpg">
+                  </picture>
+                </figure>
+              </span><a class="card__title" href="/#business">Business</a><a class="card__content">Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Commodi, libero.</a><button class="btn cta mini"
+                onclick="showLoadingBtn(this)" href="/" aria-hidden>Learn more<span class="icon arrow right"
+                  aria-hidden="true"></span></button></div>
+            <div class="card"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/solar-industry.ca2f24b417181d3b.jpg" alt="">
+                <figure>
+                  <picture>
+                    <source srcset="/assets/img/solar-industry.0c1c74c11ed3dab7.webp" type="image/webp"><img
+                      src="/assets/img/solar-industry.2e70d5daecd11bd6.jpg" alt=""
+                      srcset="/assets/img/solar-industry.8df81708c52c3261.jpg">
+                  </picture>
+                </figure>
+              </span><a class="card__title" href="/#industry">Industry</a><a class="card__content">Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Commodi, libero.</a><button class="btn cta mini"
+                onclick="showLoadingBtn(this)" href="/" aria-hidden>Learn more<span class="icon arrow right"
+                  aria-hidden="true"></span></button></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baarn, The Netherlands",
+          "postalCode": "3743BR",
+          "streetAddress": "Nieuw Baarnstraat"
+        },
+        "email": "hello(at)amdesigned.com.au",
+        "name": "AMDesigned",
+        "currenciesAccepted": "AUD, EUR, USD",
+        "url": "https://amdesigned.com.au",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "hello(at)amdesigned.com.au",
+          "contactType": "customer service"
+        }]
+      }
+    </script><a class="scroll-to-top" id="scroll-to-top"
+      title="Scrolls to top of page and focuses on the header element" onclick="scrollToTop()" tabindex="0"
+      href="/#header"><span class="icon arrow up"></span>Back to Top</a>
+    <footer>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/contact/">contact</a></li>
+        <li><a href="/showcase/">showcase</a></li>
+        <li><a href="/articles/">articles</a></li>
+      </ul>
+      <ul>
+        <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
+        <li> <a href="/privacy-policy">Privacy policy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

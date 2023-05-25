@@ -1,30 +1,28 @@
 .image-w-placeholder {
 	display: grid;
 	overflow: hidden;
-
-	.placeholder-image,
-	picture {
-		grid-row: 1;
-		grid-column: 1;
+	width: 100%;
+	picture,
+	figure {
+		display: grid;
 	}
 
-	// Styling picture incase image fails to load
-	picture {
-		display: grid;
-		background: rgb(0, 98, 99);
-		background: radial-gradient(
-			circle,
-			rgba(0, 98, 99, 1) 0%,
-			rgba(98, 67, 1, 1) 100%
-		);
-		text-align: center;
-		color: white;
+	.placeholder-image,
+	picture,
+	figure {
+		overflow: hidden;
+		grid-row: 1;
+		grid-column: 1;
 	}
 
 	.placeholder-image {
 		position: relative;
 		z-index: -1;
 		object-fit: cover;
+		height: 98%;
+		width: 98%;
+		align-self: center;
+		justify-self: center;
 		filter: blur(2px);
 	}
 
@@ -32,5 +30,16 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	figcaption {
+		background: hsl(var(--base-color));
+	}
+
+	&.contain {
+		.placeholder-image,
+		img {
+			object-fit: contain;
+		}
 	}
 }

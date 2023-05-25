@@ -1,0 +1,77 @@
+extends ../../mixins/page_layout.pug
+include ../../components/image-w-placeholder/image-w-placeholder
+include ../../components/btn/btn
+
+block variables
+	- var title = "Solar";
+	- var page_description = "";
+	- var slug = "/";
+	//- - var page_image = require('../images/web-sites-small-medium-business-ecommerce-seo.jpg')
+	- var page_image_alt = "";
+	- var pageClass = "solar basics";
+
+block scss-files
+	link(href=require("../../solar-page/main.scss"), rel="stylesheet")
+
+block content
+	.header-cta__wrapper-solar.dark
+		.bg-image
+			+image-w-placeholder({path: 'solar-bg-dark.jpg', alt: '', min: 600, max: 1200})
+		header
+			p.logo SunPowr
+
+		section.cta
+			.section__content
+				.socials__wrapper
+					a(href="https://www.facebook.com")
+						span.sr-only Facebook
+						span.icon.facebook.large
+					a(href="https://www.youtube.com")
+						span.sr-only YouTube
+						span.icon.youtube.large 
+					a(href="https://www.instagram.com")
+						span.sr-only Instagram
+						span.icon.instagram.large
+				.cta__content
+					.wrapper
+						p.subtext.top Relax and breath
+						h1 Solar and Electrical Solutions for your business and home
+						p.subtext.bottom Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.
+					span.btns__wrapper
+						button.cta.btn What we offer
+						button.btn.cta.secondary Learn more
+	section.light-main.services__section
+		.section__content
+			p.section__title Services
+			h2.subtext.center Lorem ipsum dolor sit.
+
+			.cards__wrapper
+				.card
+					+image-w-placeholder({path: 'solar-residential.jpg', alt: '', min: 400, max: 600})
+					a.card__title(href="/#residential") Residential
+					a.card__content Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, libero.
+					+btn({icon: {class: 'arrow right', side: 'right'}, type: 'button'}).cta.mini(
+						href="/",
+						aria-hidden
+					)
+						| Learn more
+
+				.card
+					+image-w-placeholder({path: 'solar-business.jpg', alt: '', min: 400, max: 600})
+					a.card__title(href="/#business") Business
+					a.card__content Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, libero.
+					+btn({icon: {class: 'arrow right', side: 'right'}, type: 'button'}).cta.mini(
+						href="/",
+						aria-hidden
+					)
+						| Learn more
+
+				.card
+					+image-w-placeholder({path: 'solar-industry.jpg', alt: '', min: 400, max: 600})
+					a.card__title(href="/#industry") Industry
+					a.card__content Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, libero.
+					+btn({icon: {class: 'arrow right', side: 'right'}, type: 'button'}).cta.mini(
+						href="/",
+						aria-hidden
+					)
+						| Learn more

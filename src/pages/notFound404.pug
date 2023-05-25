@@ -1,22 +1,21 @@
 extends ../mixins/page_layout.pug
-include ../components/image-w-placeholder/image-w-placeholder.pug
+include ../components/images/image-size-fraction
 
 block variables
-  - var title = 'not-found'
+	- var title = "not-found";
 
 block content
-  section
-    span.section__content
-      span.first
-        h1 Whoops...
-        span
-          p Well... this is awkward. We're not sure where you were heading, but it seems that place doesn't exist. 
-          p Maybe it was one of these popular pages?
-          ul
-            li: a(href="/") Home 
-            li: a(href="/contact") Contact 
-            li: a(href="/services") Services  
-      span.second
-        +image-w-placeholder({path: '../images/page-not-found.jpg', alt: 'test'})
-          | Photo by <a href="https://unsplash.com/@jerroams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeremy Allouche</a> on <a href="https://unsplash.com/photos/Y5LbTY_0MMU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
+	section
+		span.section__content
+			span.first
+				h1 Whoops...
+				span
+					p Well... this is awkward. We're not sure where you were heading, but it seems that place doesn't exist.
+					p Maybe it was one of these popular pages?
+					ul
+						li: a(href="/") Home
+						li: a(href="/contact") Contact
+						li: a(href="/services") Services
+			span.second
+				+image-size-fraction({path: 'page-not-found.jpg', alt: '', fractions: [0.75, 0.75, 0.75, 0.4, 0.4, 0.4]})
+					| Photo by <a href="https://unsplash.com/@jerroams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeremy Allouche</a> on <a href="https://unsplash.com/photos/Y5LbTY_0MMU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

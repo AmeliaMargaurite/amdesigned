@@ -1,0 +1,33 @@
+.tech .testimonials__section {
+	h2 {
+		text-align: center;
+	}
+	.quotes__wrapper {
+		display: grid;
+		gap: 6.4rem;
+		.quote {
+			display: grid;
+			align-content: center;
+			text-align: center;
+			gap: 2.4rem;
+
+			&__author {
+				font-weight: 600;
+				color: hsl(var(--base-color));
+			}
+
+			&__company {
+				color: hsl(var(--dark), 0.8);
+				font-size: 1.6rem;
+				letter-spacing: -0.05em;
+			}
+		}
+	}
+
+	@media (min-width: $small) {
+		.quote {
+			max-width: 80%;
+			margin: auto;
+		}
+	}
+}

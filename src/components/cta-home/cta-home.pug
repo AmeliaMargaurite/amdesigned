@@ -7,6 +7,7 @@ mixin cta-home
 				p.text.top: em: strong Unique builds
 				p.sr-only Because one size doesn't fit all.
 				p.cta-heading(aria-hidden="true") Because
+					//- Leave these extra | gives space between words
 					|
 					|
 					span.highlight one size
@@ -16,6 +17,6 @@ mixin cta-home
 					| fit all
 				p.text.bottom: em Let us make your business shine with a custom built website
 				+btn({icon: {class: 'arrow right', side: 'right'}, type: 'a'}).cta(
-					href="/contact/"
-				) Get in touch
+					href="/quote/"
+				) Get a quote
 			//- img(src=require('./cta-home-background.svg'))

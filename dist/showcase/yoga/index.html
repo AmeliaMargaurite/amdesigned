@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga | A&#8203;M&#8203;Designed</title>
+    <meta name="description" content="AMDesigned" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://www.amdesigned.com.au//" />
+    <meta property="og:title" content="Yoga | A&#8203;M&#8203;Designed" />
+    <meta property="og:description" content="AMDesigned" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <meta name="twitter:title" content="Yoga | A&#8203;M&#8203;Designed" />
+    <meta name="twitter:description" content="AMDesigned" />
+    <meta name="twitter:image" content="" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/common.c749992c2c8f2621a800.js"> </script>
+    <link href="/css/main.96d5c5f12ed0fab8136bb1a8e926eb09.css" rel="stylesheet" />
+    <link href="/css/main.e97a6787c2e4fc6a6d85edec2595bf48.css" rel="stylesheet" data-type="yoga" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.fb29bbf81ec57714.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.f68b7860c31a0afb.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+            (e._i = []),
+            (e.init = function (i, s, a) {
+              function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                  (t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                  });
+              }
+              ((p = t.createElement("script")).type = "text/javascript"), (p.async = !0), (p.src = s.api_host +
+                "/static/array.js"), (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+              var u = e;
+              for (
+                void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags"
+                .split(" "),
+                n = 0; n < o.length; n++
+              )
+                g(u, o[n]);
+              e._i.push([i, s, a]);
+            }),
+            (e.__SV = 1));
+      })(document, window.posthog || []);
+      const getUserId = () => {
+        let user_id;
+        if (window.localStorage.getItem("user_id")) {
+          user_id = JSON.parse(window.localStorage.getItem("user_id"));
+        } else {
+          user_id = Date.now();
+          window.localStorage.setItem("user_id", user_id);
+        }
+        return [user_id];
+      };
+      posthog.init("phc_IECNjEcCsaDAmsFD1y49ormP3Xj7Fzh6aHCqYWd6pNE", {
+        api_host: "https://eu.posthog.com",
+        loaded: (posthog) => {
+          posthog.identify(getUserId());
+          const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get("__posthog");
+          if (toolbarJSON) {
+            posthog.loadToolbar(JSON.parse(toolbarJSON));
+          }
+        },
+        persistence: "memory",
+      });
+    </script>
+  </head>
+  <body class="yoga basics"><span class="loading__wrapper" id="loading__wrapper"><span
+        class="loader">Loading...</span></span>
+    <header class="chevron-down" id="header"><a class="skip-to-content-link" href="#main">Skip to content</a><a
+        class="logo" href="/">
+        <p class="company-name">A&#8203;M&#8203;Designed</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
+          <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
+          <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="yoga basics" id="main">
+      <div class="header-cta__wrapper dark">
+        <header>
+          <p class="logo">Yogamania</p>
+        </header>
+        <section class="cta">
+          <div class="section__content split-view">
+            <div class="split-view__left">
+              <div class="wrapper">
+                <p class="subtext top">Relax and breath</p>
+                <h1>Breathing calm and strength into your life</h1>
+                <p class="subtext bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.
+                </p>
+              </div><button class="cta btn">Discover more</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="services__section light-main">
+        <div class="section__content">
+          <p class="section__title">Services</p>
+          <h2 class="subtext center">We provide the following amazing services</h2>
+          <div class="cards">
+            <article class="card"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/yoga-twisty.3265993f73d69613.jpg" alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/yoga-twisty.3e3db7c33425b8cf.webp 192w,/assets/img/yoga-twisty.73dcc4daccdf74aa.webp 256w,/assets/img/yoga-twisty.004e932189cecf4e.webp 360w,/assets/img/yoga-twisty.4b763da27ad0580d.webp 376w,/assets/img/yoga-twisty.f151ef2e427574a1.webp 425w,/assets/img/yoga-twisty.42d72b608c3c6ad6.webp 640w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 376px, (max-width: 768px) 192px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                      type="image/webp"><img src="/assets/img/yoga-twisty.2e410270a242ee42.jpg"
+                      alt="lady performing yoga stretch"
+                      srcset="/assets/img/yoga-twisty.a63653a2caebbf68.jpg 192w, /assets/img/yoga-twisty.d53b3cf75acbb08d.jpg 256w, /assets/img/yoga-twisty.d001315896e5adfe.jpg 360w, /assets/img/yoga-twisty.347c0503dfe0cdb4.jpg 376w, /assets/img/yoga-twisty.92427113cc89c9e3.jpg 425w, /assets/img/yoga-twisty.be4c33f492557fc8.jpg 640w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 376px, (max-width: 768px) 192px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span><span class="card__content--wrapper">
+                <p class="card__title">Stretches</p>
+                <p class="card__content paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  perspiciatis quidem itaque iste reprehenderit.</p>
+              </span></article>
+            <article class="card"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/yoga-citrus.3d66f6c4a488cff6.jpg" alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/yoga-citrus.9facf64279735a27.webp 192w,/assets/img/yoga-citrus.e1418388d997fcf1.webp 256w,/assets/img/yoga-citrus.bd8d2c05aad542ae.webp 360w,/assets/img/yoga-citrus.725272d6b1fe9982.webp 376w,/assets/img/yoga-citrus.1f768b5095fe8d9c.webp 425w,/assets/img/yoga-citrus.9ed6e5812372b9ab.webp 640w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 376px, (max-width: 768px) 192px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                      type="image/webp"><img src="/assets/img/yoga-citrus.2235542a524b7a46.jpg"
+                      alt="bright coloured, diverse citrus fruits sliced in half"
+                      srcset="/assets/img/yoga-citrus.51375fa5002e9e3a.jpg 192w, /assets/img/yoga-citrus.af1c0dbf5c725617.jpg 256w, /assets/img/yoga-citrus.57d72d3a9af78f66.jpg 360w, /assets/img/yoga-citrus.9d8e0ac2bb7724fe.jpg 376w, /assets/img/yoga-citrus.8f04def76bc948e5.jpg 425w, /assets/img/yoga-citrus.ed472e8ca0cbc7ef.jpg 640w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 376px, (max-width: 768px) 192px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span><span class="card__content--wrapper">
+                <p class="card__title">Nutrition</p>
+                <p class="card__content paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  perspiciatis quidem itaque iste reprehenderit.</p>
+              </span></article>
+            <article class="card"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/yoga-meditation.d8f2017c95826084.jpg" alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/yoga-meditation.9491e569d89807cf.webp 192w,/assets/img/yoga-meditation.15bf9ca46cdeaec8.webp 256w,/assets/img/yoga-meditation.46994decbb6ee505.webp 360w,/assets/img/yoga-meditation.94c329492a2fc925.webp 376w,/assets/img/yoga-meditation.49ef332a1dee6dd0.webp 425w,/assets/img/yoga-meditation.855e5cc7fac18595.webp 640w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 376px, (max-width: 768px) 192px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                      type="image/webp"><img src="/assets/img/yoga-meditation.6026ae2b31e54bff.jpg"
+                      alt="lady sitting on wooden walkway with water in background, meditating"
+                      srcset="/assets/img/yoga-meditation.f33a0c7b048147a0.jpg 192w, /assets/img/yoga-meditation.eca6bce9b49f4d91.jpg 256w, /assets/img/yoga-meditation.f94210846a5ca466.jpg 360w, /assets/img/yoga-meditation.b9ef7a1de334b68b.jpg 376w, /assets/img/yoga-meditation.b6e60a746606e829.jpg 425w, /assets/img/yoga-meditation.037d75d822ea37b8.jpg 640w"
+                      sizes="(max-width: 425px) 425px, (max-width: 501px) 376px, (max-width: 768px) 192px, (max-width: 1024px) 256px, (max-width: 1440px) 360px,  640px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span><span class="card__content--wrapper">
+                <p class="card__title">Mindfulness</p>
+                <p class="card__content paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  perspiciatis quidem itaque iste reprehenderit.</p>
+              </span></article>
+          </div>
+        </div>
+      </section>
+      <section class="about__section">
+        <div class="section__content split-view">
+          <div class="split-view__left">
+            <div class="wrapper"><span class="image-w-placeholder drip"><img class="placeholder-image"
+                  src="/assets/img/yoga-pose.921e808700a74c62.jpg" alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/yoga-pose.c39d957ce4d20739.webp 319w,/assets/img/yoga-pose.33990fc80e5ed343.webp 338w,/assets/img/yoga-pose.e7539600784eccff.webp 376w,/assets/img/yoga-pose.a7e769a38f3d366c.webp 475w,/assets/img/yoga-pose.5fbcc1f020367e00.webp 576w,/assets/img/yoga-pose.6d02f01e432cc105.webp 845w"
+                      sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 1024px) 338px, (max-width: 1440px) 475px,  845px"
+                      type="image/webp"><img src="/assets/img/yoga-pose.3f9208d034395fbb.jpg"
+                      alt="lady meditating with hands together"
+                      srcset="/assets/img/yoga-pose.906b9206a6a84022.jpg 319w, /assets/img/yoga-pose.f877cee5d69b1ef1.jpg 338w, /assets/img/yoga-pose.467bb976dbd452b5.jpg 376w, /assets/img/yoga-pose.4a35f4d8f70d10ec.jpg 475w, /assets/img/yoga-pose.0ccd00bb7f484285.jpg 576w, /assets/img/yoga-pose.3dfb6f3236505550.jpg 845w"
+                      sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 1024px) 338px, (max-width: 1440px) 475px,  845px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span></div>
+          </div>
+          <div class="split-view__right gap">
+            <div class="wrapper">
+              <p class="section__title left-align">About</p>
+              <h2 class="subtext">How we came to be</h2>
+              <p class="about__content paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+                tempore omnis aut incidunt eum autem rem, facilis quasi vero fugiat? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Totam, suscipit?</p>
+            </div><button class="btn secondary cta">Discover more</button>
+          </div>
+        </div>
+      </section>
+      <section class="projects__section dark pattern">
+        <div class="section__content split-view">
+          <div class="split-view__left gap">
+            <div class="wrapper">
+              <p class="section__title left-align">Projects</p>
+              <h2 class="subtext">A Taste of our Projects</h2>
+            </div>
+            <p class="projects__content paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nam
+              totam magnam rerum officia dicta voluptates necessitatibus asperiores quisquam voluptas dolorum suscipit,
+              neque, itaque est sint natus accusantium, ducimus architecto?</p>
+            <ul>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+          </div>
+          <div class="split-view__right">
+            <div class="wrapper yoga-mask"></div>
+          </div>
+        </div>
+      </section>
+      <section class="why-us__section light-main">
+        <div class="section__content">
+          <div class="wrapper">
+            <p class="section__title">Reasons</p>
+            <h2 class="subtext center">Services we specialise in</h2>
+          </div>
+          <p class="projects__content paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nam
+            totam magnam rerum officia dicta voluptates necessitatibus asperiores quisquam voluptas dolorum suscipit,
+            neque, itaque est sint natus accusantium, ducimus architecto?</p>
+          <div class="dl__wrapper">
+            <dl class="left">
+              <div class="detail__wrapper">
+                <dt>Bhakti Yoga</dt>
+                <dd>A spiritual practice focused on loving devotion towards a personal deity</dd>
+              </div>
+              <div class="detail__wrapper">
+                <dt>Pranayama</dt>
+                <dd>Focus on breathing with this yogic practice to gain control</dd>
+              </div>
+              <div class="detail__wrapper">
+                <dt>Bikram Yoga</dt>
+                <dd>Also known as hot yoga, a type of exercise</dd>
+              </div>
+              <div class="detail__wrapper">
+                <dt>Kundalini Yoga</dt>
+                <dd>Release the kundalini energy in this spiritual and physical practice</dd>
+              </div>
+            </dl><span class="center__wrapper"><span class="image-w-placeholder"><img class="placeholder-image"
+                  src="/assets/img/yoga-flower.09f6e16123c5ab97.jpg" alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/yoga-flower.393264d572c641d2.webp 0w,/assets/img/yoga-flower.393264d572c641d2.webp 0w,/assets/img/yoga-flower.393264d572c641d2.webp 0w,/assets/img/yoga-flower.bd2202a70ab4b1e0.webp 307w,/assets/img/yoga-flower.624d89f9f1be83d3.webp 432w,/assets/img/yoga-flower.97b273bc827b0c3e.webp 768w"
+                      sizes="(max-width: 425px) 0px, (max-width: 501px) 0px, (max-width: 768px) 0px, (max-width: 1024px) 307px, (max-width: 1440px) 432px,  768px"
+                      type="image/webp"><img src="/assets/img/yoga-flower.130e67c3c69f3cb8.jpg" alt="pink lily in water"
+                      srcset="/assets/img/yoga-flower.c84139cbb982a47b.jpg 0w, /assets/img/yoga-flower.c84139cbb982a47b.jpg 0w, /assets/img/yoga-flower.c84139cbb982a47b.jpg 0w, /assets/img/yoga-flower.73bc4b55554bda73.jpg 307w, /assets/img/yoga-flower.3cec637a21584d57.jpg 432w, /assets/img/yoga-flower.ce11b9f660c343e8.jpg 768w"
+                      sizes="(max-width: 425px) 0px, (max-width: 501px) 0px, (max-width: 768px) 0px, (max-width: 1024px) 307px, (max-width: 1440px) 432px,  768px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span></span>
+            <dl class="right">
+              <div class="detail__wrapper">
+                <dt>Iyengar Yoga</dt>
+                <dd>Yoga postures performed and practice with precision and emphasis on the detail</dd>
+              </div>
+              <div class="detail__wrapper">
+                <dt>Ashtanga Vinyasa Yoga</dt>
+                <dd>Following eight movements, a form of classical Indian yoga</dd>
+              </div>
+              <div class="detail__wrapper">
+                <dt>Yin Yoga</dt>
+                <dd>Slow paced, and holding poses longer than other yoga styles</dd>
+              </div>
+              <div class="detail__wrapper">
+                <dt>Jivamukti Yoga</dt>
+                <dd>A combination of vinyasa-based yoga and vigorous yoga as exercise</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials__section">
+        <div class="section__content">
+          <div class="wrapper">
+            <p class="section__title">imonials</p>
+            <h2 class="subtext center">What our clients have to say</h2>
+          </div>
+          <div class="quotes__wrapper">
+            <article class="quote"><span class="quote__content">
+                <p class="paragraph quote__paragraph">Explicabo pariatur aut hic id, consectetur quae dolore corrupti
+                  non atque inventore at doloremque earum. In dignissimos enim maxime hic? Excepturi non illum facere!
+                </p>
+              </span><span class="quote__footer"><span>
+                  <p class="quote__author">Erika Kaster</p>
+                  <p class="quote__company">CEO, Tommy's Tings</p>
+                </span>
+                <div class="image--wrapper"><span class="image-w-placeholder"><img class="placeholder-image"
+                      src="/assets/img/quote-person-1.d472a0941bbc1b93.jpg" alt="" aria-hidden="true">
+                    <figure>
+                      <picture>
+                        <source srcset="/assets/img/quote-person-1.ed7d028a7015cc81.webp" type="image/webp"><img
+                          src="/assets/img/quote-person-1.d472a0941bbc1b93.jpg" alt="" height="auto" width="100"
+                          max-width="100%">
+                      </picture>
+                    </figure>
+                  </span></div>
+              </span></article>
+            <article class="quote"><span class="quote__content">
+                <p class="paragraph quote__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+                  possimus praesentium nulla, corporis eum incidunt maxime. Explicabo pariatur aut hic id, consectetur
+                  quae dolore corrupti non atque inventore at doloremque earum.</p>
+              </span><span class="quote__footer"><span>
+                  <p class="quote__author">Sandra Goodens</p>
+                  <p class="quote__company">Owner, Things 'n' Stuff</p>
+                </span>
+                <div class="image--wrapper"><span class="image-w-placeholder"><img class="placeholder-image"
+                      src="/assets/img/quote-person-2.8ab58a801bdf5bae.jpg" alt="" aria-hidden="true">
+                    <figure>
+                      <picture>
+                        <source srcset="/assets/img/quote-person-2.702915b988abc78f.webp" type="image/webp"><img
+                          src="/assets/img/quote-person-2.8ab58a801bdf5bae.jpg" alt="" height="auto" width="100"
+                          max-width="100%">
+                      </picture>
+                    </figure>
+                  </span></div>
+              </span></article>
+            <article class="quote"><span class="quote__content">
+                <p class="paragraph quote__paragraph">In dignissimos enim maxime hic? Excepturi non illum facere!</p>
+              </span><span class="quote__footer"><span>
+                  <p class="quote__author">Tommy Pauls</p>
+                  <p class="quote__company">Owner, Things 'n' Stuff</p>
+                </span>
+                <div class="image--wrapper"><span class="image-w-placeholder"><img class="placeholder-image"
+                      src="/assets/img/quote-person-3.a17617a32a352f70.jpg" alt="" aria-hidden="true">
+                    <figure>
+                      <picture>
+                        <source srcset="/assets/img/quote-person-3.38b3fb6bbf696be9.webp" type="image/webp"><img
+                          src="/assets/img/quote-person-3.a17617a32a352f70.jpg" alt="" height="auto" width="100"
+                          max-width="100%">
+                      </picture>
+                    </figure>
+                  </span></div>
+              </span></article>
+          </div>
+        </div>
+      </section>
+      <section class="faq__section light-main">
+        <div class="section__content split-view">
+          <div class="split-view__left">
+            <div class="wrapper question-mark"></div>
+          </div>
+          <div class="split-view__right">
+            <p class="section__title left-align">FAQ</p>
+            <h2 class="subtext">You ask, we answer</h2>
+            <div class="content">
+              <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia distinctio vel
+                incidunt magni id officia unde dolorem numquam quis. Sed.</p>
+              <div class="faq__wrapper details__wrapper">
+                <details>
+                  <summary>
+                    <h3>How are you so good at what you do?</h3>
+                  </summary>
+                  <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi,
+                      sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi
+                      voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                    <ul>
+                      <li>item one</li>
+                      <li>item two</li>
+                      <li>item three</li>
+                    </ul>
+                  </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+                </details>
+                <details>
+                  <summary>
+                    <h3>Can you teach me your ways?</h3>
+                  </summary>
+                  <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi,
+                      sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi
+                      voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                    <ul>
+                      <li>item one</li>
+                      <li>item two</li>
+                      <li>item three</li>
+                    </ul>
+                  </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+                </details>
+                <details>
+                  <summary>
+                    <h3>Is your website vegan?</h3>
+                  </summary>
+                  <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi,
+                      sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi
+                      voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                    <ul>
+                      <li>item one</li>
+                      <li>item two</li>
+                      <li>item three</li>
+                    </ul>
+                  </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+                </details>
+                <details>
+                  <summary>
+                    <h3>Lorem ipsum dolor sit.</h3>
+                  </summary>
+                  <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi,
+                      sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi
+                      voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                    <ul>
+                      <li>item one</li>
+                      <li>item two</li>
+                      <li>item three</li>
+                    </ul>
+                  </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+                </details>
+                <details>
+                  <summary>
+                    <h3>Lorem ipsum dolor sit.</h3>
+                  </summary>
+                  <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi,
+                      sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi
+                      voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                    <ul>
+                      <li>item one</li>
+                      <li>item two</li>
+                      <li>item three</li>
+                    </ul>
+                  </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+                </details>
+                <details>
+                  <summary>
+                    <h3>Lorem ipsum dolor sit.</h3>
+                  </summary>
+                  <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi,
+                      sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi
+                      voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.</p>
+                    <ul>
+                      <li>item one</li>
+                      <li>item two</li>
+                      <li>item three</li>
+                    </ul>
+                  </div><button class="inline" onclick="this.parentElement.removeAttribute('open')">Close</button>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baarn, The Netherlands",
+          "postalCode": "3743BR",
+          "streetAddress": "Nieuw Baarnstraat"
+        },
+        "email": "hello(at)amdesigned.com.au",
+        "name": "AMDesigned",
+        "currenciesAccepted": "AUD, EUR, USD",
+        "url": "https://amdesigned.com.au",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "hello(at)amdesigned.com.au",
+          "contactType": "customer service"
+        }]
+      }
+    </script><a class="scroll-to-top" id="scroll-to-top"
+      title="Scrolls to top of page and focuses on the header element" onclick="scrollToTop()" tabindex="0"
+      href="/#header"><span class="icon arrow up"></span>Back to Top</a>
+    <footer>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/contact/">contact</a></li>
+        <li><a href="/showcase/">showcase</a></li>
+        <li><a href="/articles/">articles</a></li>
+      </ul>
+      <ul>
+        <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
+        <li> <a href="/privacy-policy">Privacy policy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

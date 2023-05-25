@@ -1,0 +1,35 @@
+mixin image-size-fraction({path=undefined, alt=undefined, fraction= undefined, fractions= undefined}, figcaption=undefined)
+	- const calcImageData = require("../../../image-helpers.js");
+	- var breakpoints = [425, 501, 768, 1024, 1440, 2560];
+	- var { intrinsicSizes, sizes, largestNum } = calcImageData(fraction, fractions, breakpoints, path);
+	- var srcs = intrinsicSizes.map((size) => `${require("Images/" + path + "?size=" + size)} ${size}w`);
+	- var webPsrcs = intrinsicSizes.map((size) => `${require("Images/" + path + "?format=webp&size=" + size)} ${size}w`);
+
+	span.image-w-placeholder&attributes(attributes)
+		img.placeholder-image(
+			src=require("Images/" + path + "?size=100"),
+			alt="",
+			aria-hidden="true"
+		)
+
+		figure
+			picture
+				source(
+					srcset=webPsrcs.join(","),
+					sizes=sizes.join(", "),
+					type="image/webp"
+				)
+				img(
+					src=require("Images/" + path + "?size=" + breakpoints[breakpoints.length - 1]),
+					alt=alt,
+					srcset=srcs.join(", "),
+					sizes=sizes.join(", "),
+					height="100%",
+					width=breakpoints[0],
+					max-width="100%"
+				)
+			if figcaption
+				figcaption #{ figcaption }
+			if block
+				figcaption
+					block

@@ -1,0 +1,191 @@
+@import "../scss/scss-variables";
+@import "../scss/basics";
+@import "./services";
+@import "../scss/mixins/resp-bg-image-gradient";
+
+.basics.solar {
+	--base-h: 200;
+	--base: var(--base-h), 40%;
+	--base-color: var(--base), 43%;
+	--offset-color-hue: calc(var(--base-h) + 20);
+	--offset-color-base: var(--offset-color-hue), 80%;
+
+	--opposite-color-hue: calc(var(--base-h) + 180);
+
+	--triadic-color-hue-1: calc(var(--base-h) + 120);
+	--triadic-color-hue-2: calc(var(--base-h) - 120);
+
+	--split-comp-color-hue-1: calc(var(--base-h) + 50);
+	--split-comp-color-hue-2: calc(var(--base-h) + 210);
+
+	// --dark-bg-img: "Images/solar-bg-dark.jpg";
+	--light-bg-img: url("Images/yoga-filigree.svg");
+
+	--highlight-base: var(--triadic-color-hue-1), 80%;
+
+	--light-bg: linear-gradient(
+		90deg,
+		hsl(var(--base), 96%),
+		hsl(var(--base), 88%)
+	);
+
+	header .tagline {
+		color: hsl(var(--base), 60%);
+	}
+
+	section.light-main {
+		background: var(--light-bg);
+	}
+
+	overflow: hidden;
+
+	.header-cta__wrapper-solar {
+		background: unset;
+
+		header,
+		section.cta {
+			position: relative;
+		}
+
+		.cta .section__content {
+			position: relative;
+			isolation: isolate;
+			padding: 3.2rem;
+
+			&::before {
+				position: absolute;
+				content: "";
+				inset: 0;
+				background: hsl(var(--base), 20%);
+				z-index: -1;
+				width: 120vw;
+				left: -20%;
+			}
+
+			.cta__content {
+				display: grid;
+				gap: 3.2rem;
+				& .wrapper {
+					display: grid;
+					gap: 1.6rem;
+				}
+			}
+		}
+		.bg-image {
+			position: absolute;
+			height: 100%;
+			overflow: hidden;
+
+			.image-w-placeholder {
+				height: 100%;
+			}
+
+			img {
+				object-fit: cover;
+			}
+
+			&::before {
+				position: absolute;
+				inset: 0;
+				content: "";
+				background: hsl(var(--base), 50%);
+				mix-blend-mode: lighten;
+				opacity: 0.7;
+			}
+		}
+	}
+
+	.dark {
+		position: relative;
+		@include resp-bg-image-gradient("Images/solar-bg-dark", ".jpg");
+		background-position: center !important; // important used because main class has cover
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: white;
+		background-blend-mode: multiply;
+
+		// Bright point in header area
+
+		&::after {
+			--height: 8rem;
+			position: absolute;
+			content: "";
+			width: 120%;
+			height: var(--height);
+			background: hsl(var(--triadic-color-hue-2), 50%, 45%);
+			mask-image: url("../images/bg-jag-sml.svg");
+			mask-size: 100%;
+			top: calc(100% - var(--height));
+			left: -13%;
+		}
+
+		&::before {
+			--height: 6rem;
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: var(--height);
+			background: var(--light-bg);
+			mask-image: url("../images/bg-jag-lrg.svg");
+			mask-size: 100%;
+			top: calc(100% - var(--height) + 0.3%);
+			// left: -25%;
+			z-index: 10;
+		}
+	}
+
+	.cta {
+		.section__content {
+			display: flex;
+			gap: 3.2rem;
+			align-items: center;
+		}
+
+		.socials__wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 1.6rem;
+
+			a {
+				&:hover {
+					.icon {
+						background-color: hsl(var(--triadic-color-hue-2), 50%, 60%);
+						transition: background-color 0.2s ease-in-out;
+					}
+				}
+			}
+			& .icon {
+				background-color: hsl(var(--base));
+				transition: background-color 0.2s ease-in-out;
+			}
+		}
+	}
+
+	.cards {
+		display: flex;
+		gap: 3.2rem;
+		.card {
+			background: hsl(var(--base));
+			display: grid;
+			grid-template-rows: 3fr 1fr;
+
+			img {
+				object-fit: cover;
+			}
+		}
+	}
+
+	.btns__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.6rem;
+
+		.btn {
+			// box-shadow: ;
+		}
+	}
+
+	.btn {
+		border-radius: 0.4rem;
+	}
+}

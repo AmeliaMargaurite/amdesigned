@@ -1,0 +1,236 @@
+extends ../../mixins/page_layout.pug
+include ../../components/image-w-placeholder/image-w-placeholder
+include ../../components/images/image-size-fraction
+include ../../components/images/image-fixed-size
+
+block variables
+	- var title = "Yoga";
+	- var page_description = "";
+	- var slug = "/";
+	//- - var page_image = require('../images/web-sites-small-medium-business-ecommerce-seo.jpg')
+	- var page_image_alt = "";
+	- var pageClass = "yoga basics";
+
+block scss-files
+	link(
+		href=require("../../yoga-page/main.scss"),
+		rel="stylesheet",
+		data-type="yoga"
+	)
+
+block content
+	.header-cta__wrapper.dark
+		header
+			p.logo Yogamania
+
+		section.cta
+			.section__content.split-view
+				.split-view__left
+					.wrapper
+						p.subtext.top Relax and breath
+						h1 Breathing calm and strength into your life
+						p.subtext.bottom Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.
+					button.cta.btn Discover more
+
+	section.services__section.light-main
+		.section__content
+			p.section__title Services
+			h2.subtext.center We provide the following amazing services
+			.cards
+				article.card
+					+image-size-fraction({path: 'yoga-twisty.jpg', alt: 'lady performing yoga stretch', fractions: [1, 0.75, 0.25,0.25, 0.25, 0.25]})
+					span.card__content--wrapper
+						p.card__title Stretches
+						p.card__content.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perspiciatis quidem itaque iste reprehenderit.
+
+				article.card
+					+image-size-fraction({path: 'yoga-citrus.jpg', alt: 'bright coloured, diverse citrus fruits sliced in half', fractions: [1, 0.75, 0.25, 0.25,0.25, 0.25]})
+					span.card__content--wrapper
+						p.card__title Nutrition
+						p.card__content.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perspiciatis quidem itaque iste reprehenderit.
+
+				article.card
+					+image-size-fraction({path: 'yoga-meditation.jpg', alt: 'lady sitting on wooden walkway with water in background, meditating', fractions: [1, 0.75, 0.25, 0.25, 0.25, 0.25]})
+					span.card__content--wrapper
+						p.card__title Mindfulness
+						p.card__content.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perspiciatis quidem itaque iste reprehenderit.
+
+	section.about__section
+		.section__content.split-view
+			.split-view__left
+				.wrapper
+					+image-size-fraction({path: 'yoga-pose.jpg', alt: 'lady meditating with hands together', fractions: [0.75, 0.75, 0.75, 0.33, 0.33, 0.33]}).drip
+			.split-view__right.gap
+				.wrapper
+					p.section__title.left-align About
+					h2.subtext How we came to be
+					p.about__content.paragraph Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempore omnis aut incidunt eum autem rem, facilis quasi vero fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, suscipit?
+
+				button.btn.secondary.cta Discover more
+
+	section.projects__section.dark.pattern
+		.section__content.split-view
+			.split-view__left.gap
+				.wrapper
+					p.section__title.left-align Projects
+					h2.subtext A Taste of our Projects
+				p.projects__content.paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nam totam magnam rerum officia dicta voluptates necessitatibus asperiores quisquam voluptas dolorum suscipit, neque, itaque est sint natus accusantium, ducimus architecto?
+
+				ul
+					li Lorem ipsum dolor sit.
+					li Lorem ipsum dolor sit amet consectetur.
+					li Lorem ipsum dolor sit amet.
+
+			.split-view__right
+				.wrapper.yoga-mask
+
+	section.why-us__section.light-main
+		.section__content
+			.wrapper
+				p.section__title Reasons
+				h2.subtext.center Services we specialise in
+			p.projects__content.paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nam totam magnam rerum officia dicta voluptates necessitatibus asperiores quisquam voluptas dolorum suscipit, neque, itaque est sint natus accusantium, ducimus architecto?
+
+			.dl__wrapper
+				dl.left
+					.detail__wrapper
+						dt Bhakti Yoga
+						dd A spiritual practice focused on loving devotion towards a personal deity
+
+					.detail__wrapper
+						dt Pranayama
+						dd Focus on breathing with this yogic practice to gain control
+
+					.detail__wrapper
+						dt Bikram Yoga
+						dd Also known as hot yoga, a type of exercise
+
+					.detail__wrapper
+						dt Kundalini Yoga
+						dd Release the kundalini energy in this spiritual and physical practice
+				span.center__wrapper
+					+image-size-fraction({path: 'yoga-flower.jpg', alt: 'pink lily in water', fractions: [0.1,0.1,0.1, 0.3, 0.3, 0.3]})
+				dl.right
+					.detail__wrapper
+						dt Iyengar Yoga
+						dd Yoga postures performed and practice with precision and emphasis on the detail
+
+					.detail__wrapper
+						dt Ashtanga Vinyasa Yoga
+						dd Following eight movements, a form of classical Indian yoga
+
+					.detail__wrapper
+						dt Yin Yoga
+						dd Slow paced, and holding poses longer than other yoga styles
+
+					.detail__wrapper
+						dt Jivamukti Yoga
+						dd A combination of vinyasa-based yoga and vigorous yoga as exercise
+
+	section.testimonials__section
+		.section__content
+			.wrapper
+				p.section__title imonials
+				h2.subtext.center What our clients have to say
+
+			.quotes__wrapper
+				article.quote
+					span.quote__content
+						p.paragraph.quote__paragraph Explicabo pariatur aut hic id, consectetur quae dolore corrupti non atque inventore at doloremque earum. In dignissimos enim maxime hic? Excepturi non illum facere!
+					span.quote__footer
+						span
+							p.quote__author Erika Kaster
+							p.quote__company CEO, Tommy's Tings
+						.image--wrapper
+							+image-fixed-size({path: 'quote-person-1.jpg', alt: '', size: 100})
+
+				article.quote
+					span.quote__content
+						p.paragraph.quote__paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat possimus praesentium nulla, corporis eum incidunt maxime. Explicabo pariatur aut hic id, consectetur quae dolore corrupti non atque inventore at doloremque earum.
+					span.quote__footer
+						span
+							p.quote__author Sandra Goodens
+							p.quote__company Owner, Things 'n' Stuff
+						.image--wrapper
+							+image-fixed-size({path: 'quote-person-2.jpg', alt: '', size: 100})
+
+				article.quote
+					span.quote__content
+						p.paragraph.quote__paragraph In dignissimos enim maxime hic? Excepturi non illum facere!
+					span.quote__footer
+						span
+							p.quote__author Tommy Pauls
+							p.quote__company Owner, Things 'n' Stuff
+						.image--wrapper
+							+image-fixed-size({path: 'quote-person-3.jpg', alt: '', size: 100})
+
+	section.faq__section.light-main
+		.section__content.split-view
+			.split-view__left
+				.wrapper.question-mark
+
+			.split-view__right
+				p.section__title.left-align FAQ
+				h2.subtext You ask, we answer
+				.content
+					p.paragraph Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia distinctio vel incidunt magni id officia unde dolorem numquam quis. Sed.
+					.faq__wrapper.details__wrapper
+						details
+							summary: h3 How are you so good at what you do?
+							div
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+								ul
+									li item one
+									li item two
+									li item three
+							button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+						details
+							summary: h3 Can you teach me your ways?
+							div
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+								ul
+									li item one
+									li item two
+									li item three
+							button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+						details
+							summary: h3 Is your website vegan?
+							div
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+								ul
+									li item one
+									li item two
+									li item three
+							button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+						details
+							summary: h3 Lorem ipsum dolor sit.
+							div
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+								ul
+									li item one
+									li item two
+									li item three
+							button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+						details
+							summary: h3 Lorem ipsum dolor sit.
+							div
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+								ul
+									li item one
+									li item two
+									li item three
+							button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+						details
+							summary: h3 Lorem ipsum dolor sit.
+							div
+								p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+								ul
+									li item one
+									li item two
+									li item three
+							button.inline(onclick="this.parentElement.removeAttribute('open')") Close

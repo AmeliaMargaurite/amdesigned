@@ -1,20 +1,14 @@
 include ../btn/btn.pug
-include ../image-w-placeholder/image-w-placeholder.pug
+include ../images/image-size-fraction
 
 mixin showcase-item({type, name, features, link, icon, img, img_alt})
 	a.showcase-item__wrapper&attributes(attributes)(href=link, target="_blank")
 		span.content__wrapper
 			span.img__wrapper(data-label=type)
-				figure
-					img.placeholder-image(src=require("../../images/" + img + "?size=100"))
-					picture
-						source(
-							srcset=require("../../images/" + img + "?format=webp"),
-							type="image/webp"
-						)
-						img(src=require("../../images/" + img), alt=img_alt)
+				+image-size-fraction({path: '' + img, alt: img_alt, fractions: [0.75, 0.75, 0.75, 0.33, 0.33, 0.33]})
 
 			span.footer
+				p.name #{ name }
 				p.features
 					- var array = features.split(",");
 					each feature, index in array

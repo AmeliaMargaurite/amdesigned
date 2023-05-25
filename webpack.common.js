@@ -7,6 +7,7 @@ const glob = require("glob");
 
 const path = require("path");
 const sourcePath = path.join(__dirname, "src");
+const calcImageData = require("./image-helpers.js");
 
 const alterPugFolderStructure = (pathData) => {
 	// console.log({ pathData });
@@ -93,6 +94,7 @@ module.exports = {
 			css: {
 				filename: "/css/[name].[contenthash].css",
 			},
+			locals: calcImageData,
 		}),
 		new CopyPlugin({
 			patterns: [

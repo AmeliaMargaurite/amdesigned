@@ -1,0 +1,33 @@
+.basics.solar {
+	.services__section {
+		.cards__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 3.2rem;
+			& .card {
+				background: hsl(var(--base));
+				display: grid;
+				justify-content: center;
+				text-align: center;
+				gap: 1.6rem;
+				flex: 1 1 20rem;
+				border-radius: 0.8rem;
+				box-shadow: 0 0 10px -4px hsl(var(--base), 30%);
+				padding: 3.2rem;
+
+				button {
+					margin: auto;
+					text-align: center;
+					border: 1px solid var(--text-color);
+				}
+
+				.image-w-placeholder {
+					aspect-ratio: 4/3;
+					img {
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}

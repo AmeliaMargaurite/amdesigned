@@ -1,0 +1,74 @@
+@mixin resp-bg-image-gradient(
+	$filename,
+	$ext,
+	$gradient:
+		linear-gradient(
+			45deg,
+			hsl(var(--base), 50%, 0.8),
+			hsl(var(--base), 50%, 0.8)
+		)
+) {
+	$ogImage: $filename + $ext;
+	$image: $ogImage + "?size=" + $small;
+	$webpImage: url($ogImage + "?format=webp&size=" + $small);
+	background-image: $gradient, url($image);
+
+	@supports (background-image: $webpImage) {
+		background-image: $gradient, $webpImage;
+	}
+
+	@media (min-width: $small) {
+		$image: $ogImage + "?size=" + $smedium;
+		$webpImage: url($ogImage + "?format=webp&size=" + $smedium);
+
+		background-image: $gradient, url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $gradient, $webpImage;
+		}
+	}
+
+	@media (min-width: $smedium) {
+		$image: $ogImage + "?size=" + $medium;
+		$webpImage: url($ogImage + "?format=webp&size=" + $medium);
+
+		background-image: $gradient, url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $gradient, $webpImage;
+		}
+	}
+
+	@media (min-width: $medium) {
+		$image: $ogImage + "?size=" + $large;
+		$webpImage: url($ogImage + "?format=webp&size=" + $large);
+
+		background-image: $gradient, url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $gradient, $webpImage;
+		}
+	}
+
+	@media (min-width: $large) {
+		$image: $ogImage + "?size=" + $xlarge;
+		$webpImage: url($ogImage + "?format=webp&size=" + $xlarge);
+
+		background-image: $gradient, url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $gradient, $webpImage;
+		}
+	}
+
+	@media (min-width: $xlarge) {
+		$image: $ogImage + "?size=" + $xlarge + 500;
+		$webpImage: url($ogImage + "?format=webp&size=" + $xlarge + 500);
+
+		background-image: $gradient, url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $gradient, $webpImage;
+		}
+	}
+}

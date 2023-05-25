@@ -1,0 +1,48 @@
+@import "../scss/scss-variables";
+@import "../scss/basics";
+@import "./header-cta";
+@import "./services";
+@import "./about";
+@import "./projects";
+@import "./testimonials";
+@import "./faq";
+@import "../scss/mixins/resp-bg-image-gradient";
+
+.tech {
+	--base-h: 220;
+	--base: var(--base-h), 75%;
+	--base-color: var(--base), 43%;
+	--offset-color-hue: 190;
+	--offset-color-base: var(--offset-color-hue), 80%;
+	--dark-bg-img: "Images/tech-bg-grey.jpg";
+	$dark-bg-img: "Images/tech-bg-grey.jpg";
+
+	--light-bg-img: url("Images/tech-swirl.svg");
+
+	section:not(.cta) {
+		padding-block: 12rem !important;
+	}
+
+	header .tagline {
+		color: hsl(var(--base), 70%);
+	}
+
+	.dark {
+		--bk-img: $dark-bg-img + "?size=200";
+
+		@include resp-bg-image-gradient("Images/tech-bg-grey", ".jpg");
+		background-position: center !important; // important used because main class has cover
+		background-blend-mode: unset;
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: white;
+
+		.section__title {
+			color: inherit;
+		}
+
+		.paragraph {
+			color: inherit;
+		}
+	}
+}

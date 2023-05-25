@@ -1,0 +1,194 @@
+extends ../../mixins/page_layout.pug
+include ../../components/image-w-placeholder/image-w-placeholder
+include ../../components/images/image-size-fraction
+
+block variables
+	- var title = "Examples";
+	- var page_description = "";
+	- var slug = "/";
+	//- - var page_image = require('../images/web-sites-small-medium-business-ecommerce-seo.jpg')
+	- var page_image_alt = "";
+
+block variables
+	- var title = "Tech";
+	- var pageClass = "tech basics";
+
+block scss-files
+	link(href=require("../../tech-page/main.scss"), rel="stylesheet")
+
+block content
+	.header-cta__wrapper.dark
+		header
+			p.logo Morpheus AI
+
+		section.cta
+			.section__content.split-view
+				.split-view__left
+					.wrapper
+						p.subtext.top Top tagline to sound cool
+						h1 Leaders in robotic AI tech
+						p.subtext.bottom Challenging the Morpheus concept, one AI at a time
+					button.cta.btn Discover more
+						span.icon__wrapper
+							span.icon.arrow.right
+				.split-view__right
+					+image-size-fraction({path: "robot-girl.png", alt: 'rendered image of shiny female robot face', fractions: [1, 1, 1, 0.5, 0.5, 0.25]})
+
+	section.services__section.light-main
+		.section__content
+			p.section__title Services
+			h2.subtext We provide the following amazing services
+			.cards
+				article.card
+					span.icon--wrapper
+						span.icon.laptop-code.large
+					p.card__title Machine Learning
+					p.card__content.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perspiciatis quidem itaque iste reprehenderit.
+				article.card
+					span.icon--wrapper
+						span.icon.glasses.large
+					p.card__title Augmented Reality
+					p.card__content.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perspiciatis quidem itaque iste reprehenderit.
+				article.card
+					span.icon--wrapper
+						span.icon.industry.large
+					p.card__title Automation
+					p.card__content.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perspiciatis quidem itaque iste reprehenderit.
+
+	section.about__section
+		.section__content.split-view
+			.split-view__left
+				.wrapper
+					span.img.img-1
+						+image-size-fraction({path: "tech-laptop.jpg", alt:"hands on a laptop keyboard", fractions: [0, 0, 0, 0.1, 0.1, 0.1]})
+					span.img.img-2
+						+image-size-fraction({path: "tech-microscope.jpg", alt:"microscope viewing unknown green item", fractions: [0.75, 0.75, 0.75, 0.25, 0.25, 0.25]})
+					span.img.img-3
+						+image-size-fraction({path: "tech-v-reality.jpg", alt:"person wearing virtual reality goggles", fractions: [0, 0, 0, 0.2, 0.2, 0.2]})
+			.split-view__right.gap
+				.wrapper
+					p.section__title.left-align About
+					h2.subtext We grew from a seed, and now look where we are
+					p.about__content.paragraph Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempore omnis aut incidunt eum autem rem, facilis quasi vero fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, suscipit?
+					ul
+						li Lorem ipsum dolor sit.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet.
+				button.btn.secondary.cta Discover more
+					span.icon__wrapper
+						span.icon.arrow.right
+
+	section.projects__section.dark
+		.section__content.split-view
+			.split-view__left.gap
+				.wrapper
+					p.section__title.left-align Projects
+					h2.subtext Just a taste of the projects we've completed
+					p.projects__content.paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nam totam magnam rerum officia dicta voluptates necessitatibus asperiores quisquam voluptas dolorum suscipit, neque, itaque est sint natus accusantium, ducimus architecto?
+
+					.stamps
+						article.stamp
+							span.stamp__icon--wrapper
+								span.icon.robot
+							.content
+								p.stamp__number 135+
+								p.stamp__title Finalised projects
+
+						article.stamp
+							span.stamp__icon--wrapper
+								span.icon.user-astronaut
+							.content
+								p.stamp__number 90+
+								p.stamp__title Happy customers
+
+			.split-view__right
+				.wrapper
+					+image-size-fraction({path: "tech-shopping-cart.png", alt: 'test', fractions: [0.75, 0.75, 0.75, 0.4, 0.4, 0.4]})
+
+	section.testimonials__section
+		.section__content
+			p.section__title Testimonials
+			h2.subtext What our clients have to say
+
+			.quotes__wrapper
+				article.quote
+					span.icon--wrapper
+						span.icon.quote-left.large
+					span.quote__content
+						p.paragraph.quote__paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat possimus praesentium nulla, corporis eum incidunt maxime. Explicabo pariatur aut hic id, consectetur quae dolore corrupti non atque inventore at doloremque earum. In dignissimos enim maxime hic? Excepturi non illum facere!
+						p.quote__author Tommy
+						p.quote__company CEO of Tommy's Tings
+
+				article.quote
+					span.icon--wrapper
+						span.icon.quote-right.large
+					span.quote__content
+						p.paragraph.quote__paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat possimus praesentium nulla, corporis eum incidunt maxime. Explicabo pariatur aut hic id, consectetur quae dolore corrupti non atque inventore at doloremque earum. In dignissimos enim maxime hic? Excepturi non illum facere!
+						p.quote__author Sandra Goodens
+						p.quote__company Owner Things 'n' Stuff
+
+	section.faq__section.light-main
+		.section__content
+			p.section__title FAQ
+			h2.subtext.center You have questions, we have answers
+
+			.faq__wrapper.details__wrapper
+				details
+					summary: h3 Lorem ipsum dolor sit.
+					div
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+						ul
+							li item one
+							li item two
+							li item three
+					button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+				details
+					summary: h3 Lorem ipsum dolor sit.
+					div
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+						ul
+							li item one
+							li item two
+							li item three
+					button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+				details
+					summary: h3 Lorem ipsum dolor sit.
+					div
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+						ul
+							li item one
+							li item two
+							li item three
+					button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+				details
+					summary: h3 Lorem ipsum dolor sit.
+					div
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+						ul
+							li item one
+							li item two
+							li item three
+					button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+				details
+					summary: h3 Lorem ipsum dolor sit.
+					div
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+						ul
+							li item one
+							li item two
+							li item three
+					button.inline(onclick="this.parentElement.removeAttribute('open')") Close
+
+				details
+					summary: h3 Lorem ipsum dolor sit.
+					div
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab illo natus mollitia earum animi, sunt commodi exercitationem quam alias nulla totam cupiditate modi magni veniam voluptas cum nisi voluptate fugiat reiciendis, itaque distinctio ut? Architecto enim eos fuga alias aspernatur.
+						ul
+							li item one
+							li item two
+							li item three
+					button.inline(onclick="this.parentElement.removeAttribute('open')") Close

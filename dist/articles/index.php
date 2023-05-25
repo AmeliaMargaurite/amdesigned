@@ -16,8 +16,8 @@
     <meta name="twitter:title" content="Articles | A&#8203;M&#8203;Designed" />
     <meta name="twitter:description" content="AMDesigned" />
     <meta name="twitter:image" content="" />
-    <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.79b0b6501afe15220e8a.js"> </script>
-    <link href="/css/main.7ac9bbfa46c49b8155bec4fac00c7580.css" rel="stylesheet" />
+    <script src="/js/runtime.6924b43834953277efd8.js"> </script><script src="/js/common.c749992c2c8f2621a800.js"> </script>
+    <link href="/css/main.96d5c5f12ed0fab8136bb1a8e926eb09.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -86,8 +86,8 @@
   </head>
   <body class="articles"><span class="loading__wrapper" id="loading__wrapper"><span
         class="loader">Loading...</span></span>
-    <header class="chevron-down"><a class="skip-to-content-link" href="#main">Skip to content</a><a class="logo"
-        href="/">
+    <header class="chevron-down" id="header"><a class="skip-to-content-link" href="#main">Skip to content</a><a
+        class="logo" href="/">
         <p class="company-name">A&#8203;M&#8203;Designed</p>
         <p class="tagline">We make and manage customer converting business websites</p>
       </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
@@ -156,7 +156,9 @@
           "contactType": "customer service"
         }]
       }
-    </script>
+    </script><a class="scroll-to-top" id="scroll-to-top"
+      title="Scrolls to top of page and focuses on the header element" onclick="scrollToTop()" tabindex="0"
+      href="/#header"><span class="icon arrow up"></span>Back to Top</a>
     <footer>
       <ul>
         <li><a href="/">home</a></li>

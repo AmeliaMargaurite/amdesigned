@@ -1,20 +1,29 @@
 mixin image-w-placeholder({path=undefined, alt=undefined, min=undefined, max=undefined}, figcaption=undefined)
-  -  max = max ? max : 1920
-  -  min = min ? min : 100
-  -  var sizes = ['sizes[]=' + min ]
-  -  var diff = 160
+	- max = max ? max : 1920;
+	- min = min ? min : 100;
+	- var sizes = [];
+	- var diff = 160;
 
-  -  for (var start = min; (start + diff) <= max; start += diff)
-  -   sizes.push('sizes[]=' + start)
+	- for (var start = min; (start + diff) <= max; start += diff)
+	- sizes.push("sizes[]=" + start);
 
-  figure.image-w-placeholder 
-    img(src=require('../'+ path + '?size=100'), class="placeholder-image")
-    picture
-      //- source(srcset=require('../'+ path + '?format=webp&sizes[]=480,sizes[]=640,sizes[]=800,sizes[]=1024,sizes[]=1450,sizes[]=1920'), type="image/webp")
-      source(srcset=require('../'+ path + '?format=webp&'+ sizes.join(',')), type="image/webp")
-      img(src=require('../'+ path), alt=alt)
-    if figcaption
-      figcaption #{figcaption}
-    if block 
-      figcaption
-        block
+	span.image-w-placeholder&attributes(attributes)
+		|
+		img.placeholder-image(src=require("Images/" + path + "?size=100"), alt=alt)
+		figure
+			picture
+				source(
+					srcset=require("Images/" + path + "?format=webp&" + sizes.join(",")),
+					type="image/webp"
+				)
+				img(
+					src=require("Images/" + path),
+					alt=alt,
+					srcset=require("Images/" + path + "?" + sizes.join(","))
+				)
+
+			if figcaption
+				figcaption #{ figcaption }
+			if block
+				figcaption
+					block

@@ -1,0 +1,66 @@
+@mixin resp-bg-image($filename, $ext, $fraction: 1) {
+	$ogImage: $filename + $ext;
+	$image: $ogImage + "?size=" + $small * $fraction;
+	$webpImage: url($ogImage + "?format=webp&size=" + $small*$fraction);
+
+	background-image: url($image);
+
+	@supports (background-image: $webpImage) {
+		background-image: $webpImage;
+	}
+
+	@media (min-width: $small) {
+		$image: $ogImage + "?size=" + ($smedium * $fraction);
+		$webpImage: url($ogImage + "?format=webp&size=" + ($smedium*$fraction));
+
+		background-image: url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $webpImage;
+		}
+	}
+
+	@media (min-width: $smedium) {
+		$image: $ogImage + "?size=" + ($medium * $fraction);
+		$webpImage: url($ogImage + "?format=webp&size=" + ($medium*$fraction));
+
+		background-image: url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $webpImage;
+		}
+	}
+
+	@media (min-width: $medium) {
+		$image: $ogImage + "?size=" + ($large * $fraction);
+		$webpImage: url($ogImage + "?format=webp&size=" + ($large*$fraction));
+
+		background-image: url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $webpImage;
+		}
+	}
+
+	@media (min-width: $large) {
+		$image: $ogImage + "?size=" + ($xlarge * $fraction);
+		$webpImage: url($ogImage + "?format=webp&size=" + ($xlarge*$fraction));
+
+		background-image: url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $webpImage;
+		}
+	}
+
+	@media (min-width: $xlarge) {
+		$image: $ogImage + "?size=" + ($xlarge * $fraction) + 500;
+		$webpImage: url($ogImage + "?format=webp&size=" + ($xlarge*$fraction) + 500);
+
+		background-image: url($image);
+
+		@supports (background-image: $webpImage) {
+			background-image: $webpImage;
+		}
+	}
+}

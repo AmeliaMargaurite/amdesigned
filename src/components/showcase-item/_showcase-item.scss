@@ -3,8 +3,9 @@
 	grid-template-rows: max-content max-content auto;
 	// padding: 3.2rem;
 	text-decoration: none;
-	color: hsl(var(--base), 0%);
-	box-shadow: 0 0 10px -4px hsl(var(--base), 0%, 0.4);
+	background: hsl(var(--card-background-color));
+	color: hsl(var(--card-text-color));
+	box-shadow: 0 0 10px -4px hsl(var(--base), 0.4);
 	border-radius: 2rem;
 	overflow: hidden;
 	transition: box-shadow 0.5s ease;
@@ -51,7 +52,7 @@
 
 	.name {
 		font-size: 1.6rem;
-		color: hsl(var(--base), 0%, 0.6);
+		color: hsl(var(--main-text-color), 60%);
 	}
 
 	.icon__wrapper {
@@ -60,7 +61,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 1.6rem;
-		background: hsl(var(--base), 0%);
+		background: hsl(var(--base));
 		border-radius: 50%;
 
 		.icon {
@@ -79,7 +80,7 @@
 			position: absolute;
 			inset: 0;
 			z-index: 1;
-			background-color: hsl(var(--base), 0%, 0.4);
+			background-color: hsl(var(--base), 5%, 0.4);
 			transition: background-color 0.25s ease-in-out;
 		}
 
@@ -138,7 +139,7 @@
 			&::after {
 				margin-top: 100%;
 				transition: margin 0.25s ease-in-out;
-				background: hsl(var(--highlight));
+				background: hsl(var(--highlight), 50%);
 			}
 		}
 	}
