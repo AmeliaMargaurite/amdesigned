@@ -162,7 +162,8 @@
                 <p class="warning"></p>
               </label><label for="pot" aria-hidden="true"><input type="hidden" name="pot" readonly></label><input
                 type="hidden" name="token" value="<?= $token ?>"><input id="package-type" type="hidden"
-                name="package_type">
+                name="package_type"><button class="btn primary" onclick="showLoadingBtn(this)" type="submit"
+                name="submit" value="submit">Send<span class="icon paper-plane" aria-hidden="true"></span></button>
             </form>
             <p class="warning">
               <script
