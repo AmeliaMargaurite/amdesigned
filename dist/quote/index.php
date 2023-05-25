@@ -114,26 +114,28 @@
           </div>
           <form id="quote_form" action="../php/validate-quote-form.php?back=/quote/" method="POST"><label
               class="countable-label" for="contact_name">
-              <p class="label" data-required="true">Contact name</p>
-              <p class="warning"></p><input class="text_input" type="text" name="contact_name" id="contact_name"
-                required aria-required="true" pattern="string" value="<?= $inputs['contact_name'] ?? null ?>"
-                autocomplete="name">
+              <p class="label" data-required="true">Contact name</p><input class="text_input" type="text"
+                name="contact_name" id="contact_name" required aria-required="true" pattern="string"
+                value="<?= $inputs['contact_name'] ?? null ?>" autocomplete="name">
+              <p class="warning"></p>
             </label><label class="countable-label" for="email">
-              <p class="label" data-required="true">Contact email address</p>
-              <p class="warning"></p><input class="text_input" type="email" name="email" id="email" required
-                aria-required="true" pattern="email" value="<?= $inputs['email'] ?? null ?>" autocomplete="email">
+              <p class="label" data-required="true">Contact email address</p><input class="text_input" type="email"
+                name="email" id="email" required aria-required="true" pattern="email"
+                value="<?= $inputs['email'] ?? null ?>" autocomplete="email">
+              <p class="warning"></p>
             </label><label class="countable-label" for="company">
-              <p class="label" data-required="true">Company / Organisation name</p>
-              <p class="warning"></p><input class="text_input" type="text" name="company" id="company" required
-                aria-required="true" pattern="string" value="<?= $inputs['company'] ?? null ?>"
-                autocomplete="organization" onblur="updateCompanyName(event)">
+              <p class="label" data-required="true">Company / Organisation name</p><input class="text_input" type="text"
+                name="company" id="company" required aria-required="true" pattern="string"
+                value="<?= $inputs['company'] ?? null ?>" autocomplete="organization" onblur="updateCompanyName(event)">
+              <p class="warning"></p>
             </label><label class="countable-label" for="description">
-              <p>Tell us a bit about <span class="company_name">your company / organisation</span></p>
-              <p class="warning"></p><textarea class="textarea" name="description" id="description"
+              <p>Tell us a bit about <span class="company_name">your company / organisation</span></p><textarea
+                class="textarea" name="description" id="description"
                 aria-required="false"><?= $inputs['description'] ?? null ?></textarea>
+              <p class="warning"></p>
             </label>
             <fieldset>
-              <legend class="countable-label">
+              <legend class="countable-label" id="purchase_domain">
                 <p>Do you need us to buy your domain?</p>
               </legend>
               <p class="warning"></p><label class="radio" for="purchase_domain_yes">
@@ -151,7 +153,7 @@
               </label>
             </fieldset>
             <fieldset>
-              <legend class="countable-label">
+              <legend class="countable-label" id="organise_hosting">
                 <p>Do you need us to organise your hosting?</p>
               </legend>
               <p class="warning"></p><label class="radio" for="organise_hosting_yes">
@@ -272,9 +274,9 @@
               src="/js/a11y_date_input.884f55066408cddeb929.js">
             </script><label class="currency_input countable-label" for="budget">
               <p>What is your estimated available budget for this website project?</p>
-              <p class="warning"></p>
               <div class="input"><span aria-ignore="true">$</span><input class="no_styling" type="number" name="budget"
                   id="budget" aria-required="false" value="<?= $inputs['budget'] ?? null ?>"></div>
+              <p class="warning"></p>
             </label>
             <fieldset for="reasons">
               <legend class="countable-label" id="reasons">
@@ -418,9 +420,9 @@
               <p>Someone is searching the web for the solution your business provides. What words or phrases are they
                 using to search.</p>
               <p class="disclaimer"><em>Do not include <span class="company_name">your business name</span>; imagine
-                  someone who has never heard of your business</em></p>
-              <p class="warning"></p><textarea class="textarea" name="seo_keywords" id="seo_keywords"
-                aria-required="false"><?= $inputs['seo_keywords'] ?? null ?></textarea>
+                  someone who has never heard of your business</em></p><textarea class="textarea" name="seo_keywords"
+                id="seo_keywords" aria-required="false"><?= $inputs['seo_keywords'] ?? null ?></textarea>
+              <p class="warning"></p>
             </label>
             <fieldset for="include_in_website">
               <legend class="countable-label" id="include_in_website">
@@ -682,7 +684,7 @@
                 </span></fieldset>
             </span>
             <fieldset>
-              <legend class="countable-label">
+              <legend class="countable-label" id="has_design_guides">
                 <p>Does <span class="company_name">your company</span> have a logo/established image & branding
                   guidelines (eg. fonts, colour schemes)?</p>
               </legend>
@@ -697,7 +699,7 @@
               </label>
             </fieldset>
             <fieldset>
-              <legend class="countable-label">
+              <legend class="countable-label" id="has_print_material">
                 <p>Are there print materials (such as business cards or brochures) that we need to match?</p>
               </legend>
               <p class="warning"></p><label class="radio" for="has_print_material_yes">
@@ -710,16 +712,18 @@
                   aria-invalid="false">
               </label>
             </fieldset><label class="countable-label" for="competitors">
-              <p>Could you give us the websites of your top 3 competitors</p>
-              <p class="warning"></p><textarea class="textarea" name="competitors" id="competitors"
+              <p>Could you give us the websites of your top 3 competitors</p><textarea class="textarea"
+                name="competitors" id="competitors"
                 aria-required="false"><?= $inputs['competitors'] ?? null ?></textarea>
+              <p class="warning"></p>
             </label><label class="countable-label" for="favourite_websites">
-              <p>If you had to pick 3 websites you would love to have, which would they be and why?</p>
-              <p class="warning"></p><textarea class="textarea" name="favourite_websites" id="favourite_websites"
+              <p>If you had to pick 3 websites you would love to have, which would they be and why?</p><textarea
+                class="textarea" name="favourite_websites" id="favourite_websites"
                 aria-required="false"><?= $inputs['favourite_websites'] ?? null ?></textarea>
+              <p class="warning"></p>
             </label>
             <fieldset>
-              <legend class="countable-label">
+              <legend class="countable-label" id="updates">
                 <p>Would you like us to update your website or would you like to be responsible for updates?</p>
               </legend>
               <p class="warning"></p><label class="radio" for="updates_customer_update">
@@ -732,9 +736,9 @@
                   aria-required="false" aria-checked="false" aria-invalid="false">
               </label>
             </fieldset><label class="countable-label" for="extra_input">
-              <p>Is there anything else you'd like to tell us?</p>
-              <p class="warning"></p><textarea class="textarea" name="extra_input" id="extra_input"
-                aria-required="false"><?= $inputs['extra_input'] ?? null ?></textarea>
+              <p>Is there anything else you'd like to tell us?</p><textarea class="textarea" name="extra_input"
+                id="extra_input" aria-required="false"><?= $inputs['extra_input'] ?? null ?></textarea>
+              <p class="warning"></p>
             </label>
             <fieldset for="extra_services">
               <legend class="countable-label" id="extra_services">
@@ -782,7 +786,7 @@
                 aria-hidden="true"></span></button>
           </form>
         </span></section>
-      <script src="/js/quote_page.19c59f8ccb674346bcdb.js"></script>
+      <script src="/js/quote_page.4f6a63fb8e2d010b2765.js"></script>
     </main>
     <script type="application/ld+json">
       {
