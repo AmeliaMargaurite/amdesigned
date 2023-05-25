@@ -156,7 +156,6 @@ class QuoteFormController extends FormController
 		$reply_to = new \MailTo;
 		$reply_to->address = $this->email;
 		$reply_to->name = $this->contact_name;
-		exit();
 		$siteOwnerError = sendToSiteOwner(email_body: $email_template, subject: $subject, reply_to: $reply_to, email_to: $email_to);
 
 		if ($siteOwnerError) {
