@@ -1,7 +1,7 @@
 mixin section-title({title})
 	- var id = title.toLowerCase().replace(/[^\w\s]|!/g, "").split(" ").join("-");
 
-	h3.section-title(id=id) #{ title }
+	h2.section-title(id=id) #{ title }
 		button.icon-only__btn(
 			onclick=`copyLink(window.event, "#${id}")`,
 			aria-label="Copy url to this title"

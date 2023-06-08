@@ -138,6 +138,7 @@ body.article {
 		gap: 0.8rem;
 		position: relative;
 		max-width: max-content;
+		font-weight: 500;
 
 		& .icon {
 			background-color: hsl(var(--main-text-color), 0.5);
