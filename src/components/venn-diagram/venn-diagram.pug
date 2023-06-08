@@ -1,0 +1,37 @@
+mixin venn-diagram
+	.venn-diagram
+		article.section.first
+			h4.title Environmental Impact
+			ul.content
+				li Sustainable hosting
+				li Local to user/business hosting
+
+		article.section.second.empty
+			h4.title Accessibility
+
+		article.section.third.empty
+			h4.title User-Friendly Experience
+
+		article.overlap.firstsecond.empty
+			h4.title Environmental Impact + Accessibility
+
+		article.overlap.firstthird
+			h4.title Environmental Impact + User-Friendly Experience
+			ul.content
+				li Minimise external scripts/calls
+				li Responsive per device
+				li Image-optimisation
+
+		article.overlap.firstsecondthird
+			h4.title Environmental Impact + Accessibility + User-Friendly Experience
+			ul.content
+				li Minimise video use
+				li Responsive per network connection
+				li Use of system fonts
+				li Minimise and optimise Javascript
+
+		article.overlap.secondthird
+			h4.title Accessibility + User-Friendly Experience
+			ul.content
+				li Responsive per preference
+				li Semantic HTML

@@ -2,13 +2,13 @@ include ../btn/btn.pug
 include ../images/image-size-fraction
 
 mixin showcase-item({type, name, features, link, icon, img, img_alt})
-	a.showcase-item__wrapper&attributes(attributes)(href=link, target="_blank")
+	article.showcase-item__wrapper&attributes(attributes)
 		span.content__wrapper
 			span.img__wrapper(data-label=type)
-				+image-size-fraction({path: '' + img, alt: img_alt, fractions: [0.75, 0.75, 0.75, 0.33, 0.33, 0.33]})
+				+image-size-fraction({path: '' + img, alt: img_alt, fractions: [0.75, 0.75, 0.75, 0.75, 0.33, 0.33, 0.33]})
 
 			span.footer
-				p.name #{ name }
+				a.name(href=link, target="_blank") #{ name }
 				p.features
 					- var array = features.split(",");
 					each feature, index in array

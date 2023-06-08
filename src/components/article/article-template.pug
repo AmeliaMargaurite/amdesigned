@@ -1,0 +1,23 @@
+include ../../components/article-schema-json.pug
+include ../../components/article_hero_img/article_hero_img.pug
+include ../../components/article/section-title
+include ../../components/article/section
+include ../../components/article/content-list
+include ../../components/images/blob-image
+include ../../components/share-bar/share-bar
+
+mixin article-template
+	block variables
+		- var pageClass = "article";
+		- var sections = [];
+	.article__header
+		h1 #{ title }
+		date #{ date_created }
+		+blob-image({path: header_image, alt: page_image_alt, fractions: [0.75, 0.75, 0.75, 0.75, 0.5, 0.3, 0.3]}).hero_img
+	content-list
+	block
+	replace
+		+content-list
+	+share-bar({url: base_url + slug, title: title, summary: page_description, source: companyName})
+	block footerScripts
+	script(src=require("TS/article.ts"))

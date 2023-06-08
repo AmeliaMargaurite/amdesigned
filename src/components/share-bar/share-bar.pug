@@ -1,0 +1,40 @@
+mixin share-bar({url, title, summary, source})
+	section.share-bar
+		.share-bar__wrapper
+			p Sharing is caring
+			ul
+				//- Facebook
+				li: a.item(
+					title="Facebook - Share this article",
+					href=`https://www.facebook.com/sharer/sharer.php?u=${url} `
+				)
+					span.icon.facebook
+				//- LinkedIn
+				li: a.item(
+					title="LinkedIn - Share this article",
+					href=`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${summary}&source=${source} `
+				)
+					span.icon.linkedin
+				//- Mastadon -- Needs more formatting
+				li: a.item(title="Mastadon - Share this article", href=" ")
+					span.icon.mastadon
+
+				//- Reddit
+				li: a.item(
+					title="Reddit - Share this article",
+					href=`https://www.reddit.com/submit?url=${url}&title=${title}`
+				)
+					span.icon.reddit
+				//- WhatsApp -- Needs more formatting
+				li: a.item(
+					title="WhatsApp - Share this article",
+					href=`https://api.whatsapp.com/send?text=${title} ${url} `
+				)
+					span.icon.whatsapp
+
+				//- Email -- Needs more formatting
+				li: a.item(
+					title="Email - Share this article",
+					href=`mailto:?subject=${title}&body=%body%%0A${url}`
+				)
+					span.icon.envelope

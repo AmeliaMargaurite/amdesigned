@@ -1,0 +1,13 @@
+mixin content-list
+	aside#content-list.article-content-list.fly-out-tab(
+		aria-label="article-content__btn",
+		aria-expanded="false"
+	)
+		button#article-content__btn.fly-out-tab__btn(
+			onclick="toggleContentList()",
+			aria-controls="content-list"
+		) In this article:
+		ul.wrapper
+			each section in sections
+				li
+					a(href=`#${section.id}`) #{ section.title }

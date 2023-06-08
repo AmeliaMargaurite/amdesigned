@@ -1,0 +1,56 @@
+extends ../mixins/page_layout
+include ../sections/articles-section/articles-section
+include ../components/images/image-size-fraction
+
+block variables
+	- var title = "Articles";
+	- var featured = "mission-statement";
+
+block content
+	- const load_articles = require("JS/load_articles.js");
+	- const { articles, tags } = load_articles();
+
+	aside#tags.tags.fly-out-tab(aria-label="tags__btn", aria-expanded="false")
+		if (tags)
+			- var totalTags = Object.keys(tags).length;
+			button#tags__btn.fly-out-tab__btn(
+				onclick="toggleTagsAside()",
+				aria-controls="tags"
+			) Tags (#{ totalTags })
+			.tags__wrapper.wrapper
+				each num, tag in tags 
+					button.tag(
+						id=tag.split(" ").join("-"),
+						style={ width: `calc(var(--width) + ${(num / totalTags) * 100}%)`, "--num": (num / totalTags) * 180 }
+					) #{ tag } (#{ num })
+	section
+		.section__content
+			- const keys = Object.keys(tags);
+
+			h1 Articles
+			p At A&#8203;M&#8203;Designed we're passionate about what we do, and we like to talk about it. Here we'll share with you our thoughts on a number of topics, mostly centred around
+				|
+				|
+				button.tag(id=keys[0].split(" ").join("-")) #{ keys[0] }
+				| ,
+				|
+				button.tag(id=keys[1].split(" ").join("-")) #{ keys[1] }
+				|
+				| and
+				|
+				button.tag(id=keys[2].split(" ").join("-")) #{ keys[2] }
+				| , and their impact within website development.
+
+			.articles__wrapper
+				each article in articles
+					- isFeatured = article.slug === featured;
+					article(class=`${isFeatured ? "featured" : ''} ${article.classNames} article`)
+						if article.image
+							+image-size-fraction({path: article.image, alt: '', fractions: [0.9,0.9, 0.9, 0.9, 0.9, 0.25, 0.25]}).op-top
+
+						.content
+							a.title(href="/articles/" + article.slug) #{ article.title }
+							if isFeatured && article.pageDescription
+								p.description #{ article.pageDescription }
+
+	script(src=require("TS/articles.ts"))

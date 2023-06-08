@@ -7,7 +7,10 @@ const glob = require("glob");
 
 const path = require("path");
 const sourcePath = path.join(__dirname, "src");
+
 const calcImageData = require("./image-helpers.js");
+const load_articles = require("./src/js/load_articles.js");
+const rerenderContentList = require("./src/js/rerenderContentList.js");
 
 const alterPugFolderStructure = (pathData) => {
 	// console.log({ pathData });
@@ -46,8 +49,8 @@ const buildEntries = (folders = null) => {
 		showcase: "./src/pages/showcase.pug",
 		termsConditions: "./src/pages/terms-and-conditions.pug",
 		privacyPolicy: "./src/pages/privacy-policy.pug",
-		articles: "./src/pages/articles.php.pug",
-		article: "./src/pages/article.php.pug",
+		articles: "./src/pages/articles.pug",
+		// article: "./src/pages/article.php.pug",
 		quote: "./src/pages/quote.php.pug",
 	};
 
@@ -69,7 +72,7 @@ const buildEntries = (folders = null) => {
 };
 
 module.exports = {
-	entry: buildEntries(["showcase"]),
+	entry: buildEntries(["showcase", "articles"]),
 
 	output: {
 		path: path.join(__dirname, "dist/"),
@@ -80,6 +83,8 @@ module.exports = {
 		alias: {
 			Images: path.join(__dirname, "./src/images/"),
 			Gallery: path.join(__dirname, "./src/components/gallery"),
+			TS: path.join(__dirname, "./src/ts"),
+			JS: path.join(__dirname, "./src/js"),
 		},
 		extensions: [".tsx", ".ts", ".js"],
 	},
@@ -94,7 +99,25 @@ module.exports = {
 			css: {
 				filename: "/css/[name].[contenthash].css",
 			},
-			locals: calcImageData,
+			locals: [calcImageData, load_articles, rerenderContentList],
+			postprocess: (content, info) => {
+				const regex = /articles\/(.*)\/index.html/;
+				const filename = info.assetFile.match(regex);
+
+				if (!filename) return content;
+
+				// article-template file has <replace> el to render content-list
+				const replaceRegex = /<replace>(.*)<\/replace>/s;
+				const contentListMatch = content.match(replaceRegex);
+
+				if (!contentListMatch) return content;
+				const contentList = contentListMatch[1];
+
+				const contentListRegex = /<content-list>(.*)<\/content-list>/s;
+				const newContent = content.replace(contentListRegex, contentList);
+
+				return newContent.replace(replaceRegex, "");
+			},
 		}),
 		new CopyPlugin({
 			patterns: [

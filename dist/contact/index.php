@@ -23,8 +23,8 @@
       content="Contact us now for a fast, easy website for your business. SEO and accessibility focused, your customers will love your new website" />
     <meta name="twitter:image"
       content="/assets/img/amdesigned-business-websites-australia-get-online.f6cc952806268e89.png" />
-    <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.0e5cfe5536d9e4506454.js"> </script>
-    <link href="/css/main.c83fa6217b392748770f9c0b88d2d01e.css" rel="stylesheet" />
+    <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.6dfe874d4eed07968fc9.js"> </script>
+    <link href="/css/main.4e5e74f547015abafd36c0839d2543d2.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
@@ -168,7 +168,7 @@
             </form>
             <p class="warning">
               <script
-                src="/js/contact_form.dd062537280f1bbfe925.js">
+                src="/js/contact_form.0a1d9470141bb46463ae.js">
               </script>
             </p>
           </span><span class="mock-chat__wrapper" aria-hidden="true">

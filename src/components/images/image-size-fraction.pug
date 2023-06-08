@@ -1,6 +1,6 @@
 mixin image-size-fraction({path=undefined, alt=undefined, fraction= undefined, fractions= undefined}, figcaption=undefined)
 	- const calcImageData = require("../../../image-helpers.js");
-	- var breakpoints = [425, 501, 768, 1024, 1440, 2560];
+	- var breakpoints = [425, 501, 768, 900, 1024, 1440, 2560];
 	- var { intrinsicSizes, sizes, largestNum } = calcImageData(fraction, fractions, breakpoints, path);
 	- var srcs = intrinsicSizes.map((size) => `${require("Images/" + path + "?size=" + size)} ${size}w`);
 	- var webPsrcs = intrinsicSizes.map((size) => `${require("Images/" + path + "?format=webp&size=" + size)} ${size}w`);

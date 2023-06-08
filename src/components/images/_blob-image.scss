@@ -1,0 +1,33 @@
+.blob-image__wrapper {
+	--blob: url("Images/blob.svg");
+	position: relative;
+	display: grid;
+
+	.image {
+		position: relative;
+		mask-image: var(--blob);
+		mask-size: contain;
+		mask-repeat: no-repeat;
+	}
+
+	.blob {
+		$color-1: hsl(var(--base-h), 90%, 50%, 30%);
+		$color-2: hsl(calc(var(--base-h) + 90), 75%, 50%, 30%);
+		position: absolute;
+		inset: 0;
+		left: -1.6rem;
+		right: -0.8rem;
+		// top: 7.6rem;
+		rotate: -5deg;
+		background: linear-gradient(300deg, $color-2, $color-1);
+		mask-image: var(--blob);
+		mask-size: contain;
+		mask-repeat: no-repeat;
+	}
+
+	.image,
+	.blob {
+		grid-row: 1;
+		grid-column: 1;
+	}
+}

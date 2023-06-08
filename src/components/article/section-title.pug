@@ -1,0 +1,11 @@
+mixin section-title({title})
+	- var id = title.toLowerCase().replace(/[^\w\s]|!/g, "").split(" ").join("-");
+
+	h3.section-title(id=id) #{ title }
+		button.icon-only__btn(
+			onclick=`copyLink(window.event, "#${id}")`,
+			aria-label="Copy url to this title"
+		): span.icon.anchor.copyable
+	- sections.push({ id, title });
+	if block
+		block

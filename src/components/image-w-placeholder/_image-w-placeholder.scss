@@ -2,11 +2,19 @@
 	display: grid;
 	overflow: hidden;
 	width: 100%;
+
 	picture,
 	figure {
 		display: grid;
 	}
 
+	picture {
+		source,
+		img {
+			grid-row: 1;
+			grid-column: 1;
+		}
+	}
 	.placeholder-image,
 	picture,
 	figure {

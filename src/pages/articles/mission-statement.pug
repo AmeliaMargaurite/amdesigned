@@ -1,0 +1,121 @@
+extends ../../mixins/page_layout.pug
+include ../../components/article/article-template
+include ../../components/venn-diagram/venn-diagram
+
+block variables
+	- var title = "Mission Statement";
+	- var page_description = "AMDesigned's mission statement; Our focus and determination in making fast, high-quality, environmentally conscious websites. The why and the how.";
+	- var slug = "articles/mission-statement";
+	- var page_image = require("Images/mission-statement-road-ahead-sign-environmental-web-design.jpg");
+	- var page_image_alt = "";
+	- var tags = "mission statement, environment, sustainability, images";
+	- var pageClass = "article";
+	- var header_image = "mission-statement-road-ahead-sign-environmental-web-design.jpg";
+	- var date_created = "26th May 2023";
+	- var sections = [];
+
+block content
+	+article-template
+		+section
+			+section-title({title: "Goals"})
+			span
+				p At
+					span!= ` ${addSpaces("AMD")}esigned `
+					| we are focused on <em><strong>building better websites, for a better future</strong></em>. This one goal informs all aspects of building, deploying and maintaining our websites.
+			span
+				p To achieve this goal we ask ourselves, how can we best:
+				ul
+					li Minimise the <strong>Environmental</strong> Impact
+					li Provide the highest <strong>Accessibility</strong> for users
+					li Provide the best <strong>User-Friendly Experience</strong>
+			span
+				p What we have found is a huge overlap in best practices when focusing on these three aspects. What is good for one, tends to also improve the other two. With the added bonuses of improved
+					span!= ` ${addSpaces("SEO")} `
+					| ranking.
+
+		+section
+			+section-title({title: "Environmental impact"})
+			span
+				p A website is not good for the environment. There's no two ways about it. Much like anything in the modern life, every aspect of a website can do harm to the environment, from the power needed to run the device viewing the site, to how efficient the website is, to how the server which hosts the website is powered (dirty vs green energy). So there's just no way to say a website is environmentally friendly or 'green'.
+			span
+				p We can, however, make a conscious decision to build websites which lessen the impact, and attempt to make up for what damage it may potentially be causing. And we must.
+			span
+				p And there are other huge benefits to building websites like this. These websites are fast, super user-friendly, don't run your battery low and are lovingly decluttered. They are websites which are fun and easy to use. A website that gets to the point and gives your customers what they want.
+
+		+section
+			+section-title({title: "Accessibility"})
+			span
+				p We believe that everyone benefits when websites are built to be used well by people from all walks of life. This means ensuring that users who have limited or no vision still have a clear and informative experience on our websites. For those who can only use, or simply prefer to use, a keyboard or other peripheral devices to navigate are given the same experience.
+
+			span
+				p With a focus on clean, clear design with limited distractions we attempt to lower the potential taxing nature of navigating a new website. A website shouldn't be a test you need to pass to find the information you're after. And yet it sometimes seems that way.
+			span
+				p We don't participate in <a href="https://www.deceptive.design/" target="_blank" class="link">deceptive patterns</a>, obtrusive pop-ups or purposeful complex use of language. We believe the internet should be enjoyable to use, informative, and helpful.
+
+		+section
+			+section-title({title: "User-Friendly Experience"})
+			span
+				p No one wants to wait ages for a website to load. Or thinking that the website has loaded, attempting to click a button, only for the page to shift and accidentally clicking something unrelated. Who wants to search high and low for basic information. Or to be greeted by an obnoxious newsletter/discount/cookies pop-up. Our mobile devices only have limited screen space, so why would we want that covered top and bottom with banners and advertisements or links we don't need?
+
+			span
+				p We're not sure when the web got so cluttered, but we're determined to make things better. To put the user (for businesses, these are your customers) first, to make our websites little havens of easily accessible information. If you don't focus on your user, what even is the point?
+
+			span
+				p Here we focus on loading time, use easy-to-understand language, and clean and uncluttered design, amongst other things.
+
+		+section
+			+section-title({title: "Our Commitment (In technical terms)"})
+			p Here are a minimum of the ways we consciously build and maintain our websites for high user impact while maintaining our focus on Environmental Impact, Accessibility and User-Friendly Experience.
+			span
+				ul
+					li Use semantic HTML5 elements
+					li Highly optimise images to display the best quality at the lowest size per device
+					li Responsive site design
+						ul
+							li per device,
+							li per preference (light/dark mode, reduced motion etc),
+							li per network connnection (load fast even on bad connections)
+					li Will not auto-load videos and highly discourage the use of videos in general
+					li Minimise the use of Javascript, optimise what Javascript is used, revisit code to improve and reduce workload
+					li Minimise use of external scripts/calls
+					li Hosting with green certified companies, local to the business and website users (as far as possible)
+					li Relying first and foremost on standard web languages and processes which are less likely to need updating or upgrading over time
+					li Use great design choices with existing system fonts, rather than loading external fonts
+					li Use tools like <a href="https://www.websitecarbon.com" target="_blank" class="link">Website Carbon</a> to monitor and assess our sites carbon impact
+					li Offset carbon emissions caused by website use (increasing as use increases) through environmental conservation
+					li Use tools like <a href="https://pagespeed.web.dev" class="link"target="_blank">Google's Page Speed</a> to test and improve Performance, Accessibility, Speed and SEO basics
+
+		section.venn-diagram__section
+			.section__content
+				+section-title({title: "The intersection of Our Commitment"})
+				span
+					p As you can see below there is a lot of overlap with these three focuses, and it becomes clearer why this approach makes so much sense.
+			+venn-diagram
+		+section
+			+section-title({title: "Tangible outcomes"})
+				span
+					p Fast load time <strong><em>equals</em></strong> lower bounce rate <em>(the percentage of visitors that leave a webpage without taking an action)</em>.
+				span
+					p Clean, accessible, intuative design <strong><em>equals</em></strong> great user experience.
+				span
+					p Enjoyable experience <strong><em>equals</em></strong> improved user rapport with business.
+				span
+					p Lower carbon emissions <strong><em>equals</em></strong> a better tomorrow for all.
+
+		+section
+			+section-title({title: "The device factor"})
+			span
+				p Other factors that impact the effect of the website on the environment is the device the site is viewed on. Now this isn't something we can influence. We can, and do, however build our sites to be viewable and usable on as broad a range of devices as we can. This means that users don't need to have the latest and greatest mobile device to view these sites.
+			span
+				p And nor should they. Yet the way modern websites are built quite often is with no regard to users interating on devices that aren't top of the line. Some developers seem to think that everyone has the newest phone, is using the best internet connection and have unlimited downloads. But it's just not the case.
+			span
+				p An awful lot of resources go into creating electronic devices, and the largest carbon emissions contribution <a href="https://devblogs.microsoft.com/sustainable-software/examining-the-carbon-footprint-of-devices/" class="link" target="_blank">occurs during manufacturing</a>. We hope to play some small part in encouraging longer use of electronic devices.
+
+		+section
+			+section-title({title: "Summary of sorts"})
+			span
+				p
+					span!= `${addSpaces("AMD")}esigned `
+					| believes in not just building great websites, but building a better future. A future of automatic inclusion, reduced environmental impact, and a fun, easy experience for all users.
+			span
+				p With our added committment to continual learning and development you know

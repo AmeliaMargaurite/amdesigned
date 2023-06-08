@@ -7,5 +7,66 @@
 @import "../components/image-w-placeholder/image-w-placeholder";
 @import "../components/showcase-item/showcase-item";
 @import "../components/scroll-to-top/scroll-to-top";
+@import "../components/images/blob-image";
+@import "../components/share-bar/share-bar";
+@import "../components/venn-diagram/venn-diagram";
 // @import "../components/checkbox/checkbox";
 // @import "../components/google_map/google-map";
+
+.fly-out-tab {
+	--transform-initial: translate(-65%, 125%);
+	--transform-open: translate(0, 0);
+	--padding: 1.6rem;
+
+	position: absolute;
+	top: 3.2rem;
+	rotate: -90deg;
+	font-size: 1.6rem;
+	transform: var(--transform-initial);
+	background: hsl(var(--card-background-color));
+	color: hsl(var(--card-text-color));
+	box-shadow: 0 0 19px -4px hsl(var(--base-h), 10%, 50%);
+	right: 0;
+	border-radius: 0.8rem 0.8rem 0 0;
+	transition: rotate 0.2s ease-in-out;
+	z-index: 5;
+
+	.wrapper {
+		display: none;
+		gap: 0.8rem;
+		// width: var(--width);
+		padding-inline: var(--padding);
+	}
+
+	&__btn {
+		appearance: none;
+		border: none;
+		background: transparent;
+		padding-inline: var(--padding);
+		padding-block: calc(var(--padding) / 2);
+		color: hsl(var(--card-text-color));
+
+		cursor: pointer;
+	}
+
+	&.open {
+		transform: var(--transform-open);
+		rotate: 0deg;
+		border-radius: 0.8rem 0 0 0.8rem;
+		transition: rotate 0.2s ease-in-out;
+		.wrapper {
+			display: block;
+		}
+	}
+
+	@media (min-width: $xxsmall) {
+		font-size: inherit;
+	}
+	@media (prefers-reduced-motion) {
+		transition: none;
+
+		&.open {
+			transition: none;
+		}
+	}
+}

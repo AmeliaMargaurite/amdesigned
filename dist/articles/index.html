@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | A&#8203;M&#8203;Designed</title>
+    <meta name="description" content="AMDesigned" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://www.amdesigned.com.au/" />
+    <meta property="og:title" content="Articles | A&#8203;M&#8203;Designed" />
+    <meta property="og:description" content="AMDesigned" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <meta name="twitter:title" content="Articles | A&#8203;M&#8203;Designed" />
+    <meta name="twitter:description" content="AMDesigned" />
+    <meta name="twitter:image" content="" />
+    <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.6dfe874d4eed07968fc9.js"> </script>
+    <link href="/css/main.4e5e74f547015abafd36c0839d2543d2.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.fb29bbf81ec57714.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.f68b7860c31a0afb.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+            (e._i = []),
+            (e.init = function (i, s, a) {
+              function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                  (t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                  });
+              }
+              ((p = t.createElement("script")).type = "text/javascript"), (p.async = !0), (p.src = s.api_host +
+                "/static/array.js"), (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+              var u = e;
+              for (
+                void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags"
+                .split(" "),
+                n = 0; n < o.length; n++
+              )
+                g(u, o[n]);
+              e._i.push([i, s, a]);
+            }),
+            (e.__SV = 1));
+      })(document, window.posthog || []);
+      const getUserId = () => {
+        let user_id;
+        if (window.localStorage.getItem("user_id")) {
+          user_id = JSON.parse(window.localStorage.getItem("user_id"));
+        } else {
+          user_id = Date.now();
+          window.localStorage.setItem("user_id", user_id);
+        }
+        return [user_id];
+      };
+      posthog.init("phc_IECNjEcCsaDAmsFD1y49ormP3Xj7Fzh6aHCqYWd6pNE", {
+        api_host: "https://eu.posthog.com",
+        loaded: (posthog) => {
+          posthog.identify(getUserId());
+          const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get("__posthog");
+          if (toolbarJSON) {
+            posthog.loadToolbar(JSON.parse(toolbarJSON));
+          }
+        },
+        persistence: "memory",
+      });
+    </script>
+  </head>
+  <body class="articles"><span class="loading__wrapper" id="loading__wrapper"><span
+        class="loader">Loading...</span></span>
+    <header class="chevron-down" id="header"><a class="skip-to-content-link" href="#main">Skip to content</a><a
+        class="logo" href="/">
+        <p class="company-name">A&#8203;M&#8203;Designed</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
+          <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
+          <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
+          <li><a class="current" href="/articles/" onclick="closeMenu()">articles</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="articles" id="main">
+      <aside class="tags fly-out-tab" id="tags" aria-label="tags__btn" aria-expanded="false"><button
+          class="fly-out-tab__btn" id="tags__btn" onclick="toggleTagsAside()" aria-controls="tags">Tags (8)</button>
+        <div class="tags__wrapper wrapper"><button class="tag" id="images"
+            style="width:calc(var(--width) + 37.5%);--num:67.5;">images (3)</button><button class="tag"
+            id="optimisation" style="width:calc(var(--width) + 25%);--num:45;">optimisation (2)</button><button
+            class="tag" id="speed" style="width:calc(var(--width) + 12.5%);--num:22.5;">speed (1)</button><button
+            class="tag" id="mission-statement" style="width:calc(var(--width) + 12.5%);--num:22.5;">mission statement
+            (1)</button><button class="tag" id="environment"
+            style="width:calc(var(--width) + 12.5%);--num:22.5;">environment (1)</button><button class="tag"
+            id="sustainability" style="width:calc(var(--width) + 12.5%);--num:22.5;">sustainability (1)</button><button
+            class="tag" id="fonts" style="width:calc(var(--width) + 12.5%);--num:22.5;">fonts (1)</button><button
+            class="tag" id="accessibility" style="width:calc(var(--width) + 12.5%);--num:22.5;">accessibility
+            (1)</button></div>
+      </aside>
+      <section>
+        <div class="section__content">
+          <h1>Articles</h1>
+          <p>At A&#8203;M&#8203;Designed we're passionate about what we do, and we like to talk about it. Here we'll
+            share with you our thoughts on a number of topics, mostly centred around
+            <button class="tag" id="images">images</button>,
+            <button class="tag" id="optimisation">optimisation</button>
+            and
+            <button class="tag" id="speed">speed</button>, and their impact within website development.
+          </p>
+          <div class="articles__wrapper">
+            <article class=" images optimisation speed article"><span class="image-w-placeholder op-top"><img
+                  class="placeholder-image"
+                  src="/assets/img/image-optimisation-website-sustainable-design.cab231edc2dea864.jpg" alt=""
+                  aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/image-optimisation-website-sustainable-design.7a65267d65c59527.webp 360w,/assets/img/image-optimisation-website-sustainable-design.fc3b780dcf94c19e.webp 383w,/assets/img/image-optimisation-website-sustainable-design.8dc40642e1ad1614.webp 451w,/assets/img/image-optimisation-website-sustainable-design.34da9e1beaf08925.webp 640w,/assets/img/image-optimisation-website-sustainable-design.93937959d2904d12.webp 691w,/assets/img/image-optimisation-website-sustainable-design.83ab211db9d7c2b7.webp 810w,/assets/img/image-optimisation-website-sustainable-design.88e92afb79beb7ef.webp 922w"
+                      sizes="(max-width: 425px) 383px, (max-width: 501px) 451px, (max-width: 768px) 691px, (max-width: 900px) 810px, (max-width: 1024px) 922px, (max-width: 1440px) 360px,  640px"
+                      type="image/webp"><img
+                      src="/assets/img/image-optimisation-website-sustainable-design.8b7c03436bbdd63f.jpg" alt=""
+                      srcset="/assets/img/image-optimisation-website-sustainable-design.e5ec413675a3e02b.jpg 360w, /assets/img/image-optimisation-website-sustainable-design.5787307773ecd730.jpg 383w, /assets/img/image-optimisation-website-sustainable-design.77b93f4a5cd2f4f8.jpg 451w, /assets/img/image-optimisation-website-sustainable-design.ea13a928cf97b1a5.jpg 640w, /assets/img/image-optimisation-website-sustainable-design.b37bdfccc27587cc.jpg 691w, /assets/img/image-optimisation-website-sustainable-design.bb0212222003cafc.jpg 810w, /assets/img/image-optimisation-website-sustainable-design.1f64adaf99232125.jpg 922w"
+                      sizes="(max-width: 425px) 383px, (max-width: 501px) 451px, (max-width: 768px) 691px, (max-width: 900px) 810px, (max-width: 1024px) 922px, (max-width: 1440px) 360px,  640px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span>
+              <div class="content"><a class="title" href="/articles/lets-talk-about-images">Lets talk about images</a>
+              </div>
+            </article>
+            <article class="featured mission-statement environment sustainability images article"><span
+                class="image-w-placeholder op-top"><img class="placeholder-image"
+                  src="/assets/img/mission-statement-road-ahead-sign-environmental-web-design.196e216be41b35d3.jpg"
+                  alt="" aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/mission-statement-road-ahead-sign-environmental-web-design.a3c88803dff5dc34.webp 360w,/assets/img/mission-statement-road-ahead-sign-environmental-web-design.901dc8020b91cf32.webp 383w,/assets/img/mission-statement-road-ahead-sign-environmental-web-design.3862152a9dcf0a32.webp 451w,/assets/img/mission-statement-road-ahead-sign-environmental-web-design.d7d84a2110a47b53.webp 640w,/assets/img/mission-statement-road-ahead-sign-environmental-web-design.99c0fb1d69ed7328.webp 691w,/assets/img/mission-statement-road-ahead-sign-environmental-web-design.97185366d7363350.webp 810w,/assets/img/mission-statement-road-ahead-sign-environmental-web-design.b2472b3009017478.webp 922w"
+                      sizes="(max-width: 425px) 383px, (max-width: 501px) 451px, (max-width: 768px) 691px, (max-width: 900px) 810px, (max-width: 1024px) 922px, (max-width: 1440px) 360px,  640px"
+                      type="image/webp"><img
+                      src="/assets/img/mission-statement-road-ahead-sign-environmental-web-design.581ce60f3dd2f78a.jpg"
+                      alt=""
+                      srcset="/assets/img/mission-statement-road-ahead-sign-environmental-web-design.01681838c32b4ae0.jpg 360w, /assets/img/mission-statement-road-ahead-sign-environmental-web-design.30fe480f33a992cf.jpg 383w, /assets/img/mission-statement-road-ahead-sign-environmental-web-design.e19294e7db99377d.jpg 451w, /assets/img/mission-statement-road-ahead-sign-environmental-web-design.c8955b06f2035c3e.jpg 640w, /assets/img/mission-statement-road-ahead-sign-environmental-web-design.21bc0cc9f4a74d11.jpg 691w, /assets/img/mission-statement-road-ahead-sign-environmental-web-design.23194795e6c5415b.jpg 810w, /assets/img/mission-statement-road-ahead-sign-environmental-web-design.9478b292659184fe.jpg 922w"
+                      sizes="(max-width: 425px) 383px, (max-width: 501px) 451px, (max-width: 768px) 691px, (max-width: 900px) 810px, (max-width: 1024px) 922px, (max-width: 1440px) 360px,  640px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span>
+              <div class="content"><a class="title" href="/articles/mission-statement">Mission Statement</a>
+                <p class="description">AMDesigned's mission statement; Our focus and determination in making fast,
+                  high-quality, environmentally conscious websites. The why and the how.</p>
+              </div>
+            </article>
+            <article class=" images fonts optimisation accessibility article"><span
+                class="image-w-placeholder op-top"><img class="placeholder-image"
+                  src="/assets/img/sustainable-web-design-approach-business-websites.7de6042ef7891fb7.jpg" alt=""
+                  aria-hidden="true">
+                <figure>
+                  <picture>
+                    <source
+                      srcset="/assets/img/sustainable-web-design-approach-business-websites.215fb2d7ca668431.webp 360w,/assets/img/sustainable-web-design-approach-business-websites.82d8c7f762d19a39.webp 383w,/assets/img/sustainable-web-design-approach-business-websites.80a60d3dfdc50f2c.webp 451w,/assets/img/sustainable-web-design-approach-business-websites.8a3b0bbc32fa274b.webp 640w,/assets/img/sustainable-web-design-approach-business-websites.df1d27976256bfac.webp 691w,/assets/img/sustainable-web-design-approach-business-websites.2bc8a18562c0e3e4.webp 810w,/assets/img/sustainable-web-design-approach-business-websites.a5390fc4ce503dae.webp 922w"
+                      sizes="(max-width: 425px) 383px, (max-width: 501px) 451px, (max-width: 768px) 691px, (max-width: 900px) 810px, (max-width: 1024px) 922px, (max-width: 1440px) 360px,  640px"
+                      type="image/webp"><img
+                      src="/assets/img/sustainable-web-design-approach-business-websites.765050fe3f1b1c1d.jpg" alt=""
+                      srcset="/assets/img/sustainable-web-design-approach-business-websites.b2bfb697b5c74d1e.jpg 360w, /assets/img/sustainable-web-design-approach-business-websites.7a65baeeb29787aa.jpg 383w, /assets/img/sustainable-web-design-approach-business-websites.612ef5c0845b9f37.jpg 451w, /assets/img/sustainable-web-design-approach-business-websites.6b38154280ed388c.jpg 640w, /assets/img/sustainable-web-design-approach-business-websites.bae945e78d4f5e56.jpg 691w, /assets/img/sustainable-web-design-approach-business-websites.f0b720290a79fb76.jpg 810w, /assets/img/sustainable-web-design-approach-business-websites.799bfa768933dde0.jpg 922w"
+                      sizes="(max-width: 425px) 383px, (max-width: 501px) 451px, (max-width: 768px) 691px, (max-width: 900px) 810px, (max-width: 1024px) 922px, (max-width: 1440px) 360px,  640px"
+                      height="100%" width="425" max-width="100%">
+                  </picture>
+                </figure>
+              </span>
+              <div class="content"><a class="title" href="/articles/our-approach">Our Approach</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <script src="/js/articles.1.324445cb360823d4f7e0.js"></script>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baarn, The Netherlands",
+          "postalCode": "3743BR",
+          "streetAddress": "Nieuw Baarnstraat"
+        },
+        "email": "hello(at)amdesigned.com.au",
+        "name": "AMDesigned",
+        "currenciesAccepted": "AUD, EUR, USD",
+        "url": "https://amdesigned.com.au",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "hello(at)amdesigned.com.au",
+          "contactType": "customer service"
+        }]
+      }
+    </script><a class="scroll-to-top" id="scroll-to-top"
+      title="Scrolls to top of page and focuses on the header element" onclick="scrollToTop()" tabindex="0"
+      href="#header"><span class="icon arrow up"></span>Back to Top</a>
+    <footer>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/quote">quote</a></li>
+        <li><a href="/contact/">contact</a></li>
+        <li><a href="/showcase/">showcase</a></li>
+        <li><a class="current" href="/articles/">articles</a></li>
+      </ul>
+      <ul>
+        <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
+        <li> <a href="/privacy-policy">Privacy policy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

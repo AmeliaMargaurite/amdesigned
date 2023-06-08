@@ -2,8 +2,8 @@ include ../btn/btn.pug
 
 mixin cta-home
 	section.cta-home
-		span.section__content
-			span.wrapper
+		span.section__content.split-view
+			.wrapper.top.left
 				p.text.top: em: strong Unique builds
 				p.sr-only Because one size doesn't fit all.
 				p.cta-heading(aria-hidden="true") Because
@@ -20,3 +20,4 @@ mixin cta-home
 					href="/quote/"
 				) Get a quote
 			//- img(src=require('./cta-home-background.svg'))
+			.bottom.right 

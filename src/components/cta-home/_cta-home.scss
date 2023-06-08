@@ -1,12 +1,12 @@
 .cta-home .section__content {
-	--background: hsl(var(--main-background-color));
+	// --background: hsl(var(--main-background-color));
 	display: grid;
-	background: linear-gradient(
-		115deg,
-		transparent,
-		transparent,
-		var(--background)
-	);
+	// background: linear-gradient(
+	// 	115deg,
+	// 	transparent,
+	// 	transparent,
+	// 	var(--background)
+	// );
 
 	border-radius: 4rem;
 	padding: 0;
@@ -18,7 +18,7 @@
 		padding: 3.2rem;
 
 		.cta-heading {
-			font-size: 6.4rem;
+			font-size: clamp(1.6rem, 16vw, 6.4rem);
 			font-weight: 600;
 			line-height: 1.33;
 
@@ -72,12 +72,22 @@
 	}
 
 	@media (min-width: $small) {
-		background-image: url("./cta-home-background.svg"),
-			linear-gradient(115deg, transparent, transparent, var(--background));
-		background-repeat: no-repeat;
-		background-position: right bottom;
-		background-size: contain;
+		&.split-view {
+			div.right {
+				$color-1: hsl(var(--base-h), 50%, 50%, 0.6);
+				$color-2: hsl(calc(var(--base-h) + 20), 50%, 50%, 0.5);
+				$color-3: hsl(calc(var(--base-h) - 20), 50%, 50%, 0.8);
 
+				background: radial-gradient(ellipse at top, $color-1, transparent),
+					radial-gradient(ellipse at left, transparent, $color-2),
+					radial-gradient(ellipse at right, transparent, $color-3);
+
+				mask-image: url("Images/abstracts/nature-group.svg");
+				mask-repeat: no-repeat;
+				mask-size: contain;
+				mask-position: center bottom;
+			}
+		}
 		.btn {
 			width: max-content;
 		}

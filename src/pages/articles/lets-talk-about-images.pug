@@ -1,0 +1,59 @@
+extends ../../mixins/page_layout.pug
+include ../../components/article/article-template
+
+block variables
+	- var title = "Lets talk about images";
+	- var page_description = "A discussion about images, image optimisation and speed";
+	- var slug = "articles/lets-talk-about-images";
+	- var page_image = require("Images/image-optimisation-website-sustainable-design.jpg");
+	- var page_image_alt = "";
+	- var tags = "images, optimisation, speed";
+	- var pageClass = "article";
+	- var date_created = "14th March 2023";
+	- var header_image = "image-optimisation-website-sustainable-design.jpg";
+	- var sections = [];
+block content
+	+article-template
+		+section
+			p Images can be a great addition to any website. They can catch the eye of the site user, give an insight into what the business behind the website is about and add visual context to the text on page. However, there are many pitfalls to images.
+
+			p Here we'll go through some of those pitfalls.
+		+section
+			+section-title({title: "Images are heavy"})
+			p For most people, snapping a high-quality photo is a trivially easy task these days. If you have a smart phone, you're golden. Have an actual camera? Even better. You've probably also realised that a higher quality image also means a larger file size. What sometimes goes unacknowledged is that when you view images online, your device is actually downloading them for you. Now this download is only temporary (unless you request to save the image) and gets written over, over time. However, that still means the data is being transferred, using up your data limits and energy of your device.
+
+		+section
+			+section-title({title: "So, let's make them smaller!"})
+			p When including images on a website we need to keep in mind the file size of these images. Large images take longer to download. They also use more data to download. These are two things we definitely want to avoid when building a fast, user-friendly website.
+
+			p We ensure user-friendliness by compressing images at different sizes for different device sizes. If the website is being viewed on a smaller device, for example a smart phone, the image being shown can generally be much smaller than that same website being viewed on a desktop monitor. An image displayed on a desktop monitor doesn't need to be the same quality as one would need to print and hang it in a gallery. If you're working on your own website, a tool like ResponsiveBreakpoints can be really helpful.
+
+		+section
+			+section-title({title: "Basic image types - JPEG/JPG & PNG"})
+			p Before we get too ahead, let's clear up the difference between JPEG and JPG. There is none! Adobe have it covered in this snippet. That was nice and easy.
+
+			p There is, however, a very real difference between JPEG's and PNG's, and as such they're used for different purposes. JPEG's are able to compress effeciently into significantly smaller file sizes. There is a downside though, they lose data on the way. Ever see an image that just seems really 'blocky'? Chances are it has been compressed too far and lost to much information to be shown at the size you see it. But when compressed properly JPEG's can deliver a great experience, for a low, low file size.
+
+			p One big positive of using PNG's is they can handle when you want something in your image to be transparent. JPEG's don't support this, and instead fills the transparent space with white. This is especially important on a website for areas such as the logo, as it's very rare for them to be solid rectangles of colour. Unfortunately PNG's also tend to be much larger file sizes.
+
+		+section
+			+section-title({title: "Exciting image types - SVG & WebP"})
+			p In steps SVG's! SVG stands for Scalable Vector Graphics and they are super website friendly. Instead of being saved as thousands of pixels, like JPEG's and PNG's, SVG's are stored as code which describes how to draw the image in the browser. The file sizes can be tiny compared to other file types, so of course we love them for websites! And as the name suggests, they're scalable, which means you can in theory create a logo in one size as an SVG and use it in many different settings, at different sizes without any of the nasty 'blockiness' of a smaller image.
+
+			p Another amazing step forward in image types is WebP. Here's a great, though detailed, explanation of WebP, but basically it's an even better compression option for showing images online. It compressed into even smaller file sizes than JPEG, with less of the loss of data JPEG suffers from. It's supported by most modern browsers, though older browsers might still need to be served with the JPEG versions.
+
+			p By having both the JPEG and WebP versions available the browser can choose between the two for what it can show the user. We give the browser the option to load the better options first, and if it can't it will fall back to the JPEG option.
+
+		+section
+			+section-title({title: "Proper use"})
+			p Images should serve a purpose on a website, not just fill space, and not just to look ‘pretty'. When used selectively they give the user an impression of the business/people behind the site.
+
+			p They should also be placed in content that matches the image. This serves the purpose of actually improving the users experience, and in doing so goes towards improving search engines rating of the website.
+
+		+section.bonus-tip
+			+section-title({title: "BONUS TIP #1:"})
+			p You don't need a carousel (sideways scrolling) of images anywhere, but especially not on the homepage. These are frustrating to the user, add no benefit and require more time to download multiple images to be functional. Instead, it is better to show these images and context in a linear way down the page.
+
+		+section.bonus-tip
+			+section-title({title: "BONUS TIP #2:"})
+			p You don't need video in your banner, or your homepage. Especially not one that autoplays. At some point in the last decade this trend really caught on. But all it does is slow down websites, create big moving areas that cause disorientation and requires our devices to download entire video clips which are much larger than images.

@@ -1,0 +1,70 @@
+extends ../../mixins/page_layout.pug
+include ../../components/article/article-template
+
+block variables
+	- var title = "Our Approach";
+	- var page_description = "How we do what we do";
+	- var slug = "articles/our-approach";
+	- var page_image = require("Images/sustainable-web-design-approach-business-websites.jpg");
+	- var page_image_alt = "";
+	- var tags = "images, fonts, optimisation, accessibility";
+	- var pageClass = "article";
+	- var date_created = "8th March 2023";
+	- var header_image = "sustainable-web-design-approach-business-websites.jpg";
+	- var sections = [];
+
+block content
+	+article-template
+		+section
+			+section-title({title: "Motivation"})
+
+			p Over the years we've noticed websites loading slower and slower. Every day brings a new popup you need to close and conditions you need to acknowledge before you can even start to scroll. There are the pages which appear to have finished loading, only for everything on screen to suddenly jump as it continues loading. Ever tried to click a link in this time and manage to click a completely different link?
+
+			p These are major pain points for internet users. Web developers seem to have forgotten that not everyone has the very latest smart phone, laptop etc nor are they all on the best internet connection in the world. Yet this is how these websites are built.
+
+			p AMDesigned are different.
+
+			p Our focus is to make great, fast, user-friendly websites that are a pleasure to visit. We hate slow, bulky websites like the rest of them, and thankfully, we have the ability to make a change.
+
+		+section
+			+section-title({title: "What we don't do"})
+			p This change starts right at the beginning with our choice of what we build our sites with. We steer clear of big systems such as Wordpress, Wix, and Shopify. These are great options if the website owner is very DIY and hands on, however without a lot of extra work they tend to be much slower to load. A lot of optimisations, improving SEO (Search Engine Optimisation) and Accessibility factors require the use of extra plugins and custom code which all add to slowing down the site, and in some cases making the site more vulnerable to hackers.
+
+			p There has also been an increase in developers building websites as ‘apps'. These are actually called Single Page Applications (SPA), and they use a Javascript
+
+		+section
+			+section-title({title: "What we do instead"})
+			p There are often multiple ways of achieving the same outcome, and our rule of thumb is to do it in the least resource-intensive way for the user. As an example, that might mean if we need the website to sort some data, we tell the websites server to do it. An alternative to this might be the make the users device do this hard work, but our devices, mobile phones especially, just aren't made to do these things. So, we end up with drained batteries and slow phones, and in some cases higher data usage bills.
+
+			p Another benefit of the way we build our websites is that SEO and Accessibility are a focus right from the start. We want all visitors to our websites to be able to use them as easily as possible. And while how this is achieved is constantly changing and improving, Accessibility especially, we work to stay up to date and improve our processes regularly. Not only does this focus give users a much better experience, it can also improve the websites standing in search results. It has been known for a long time that search engines, Google in particular, favour sites which are easy to use and quick to load. And that we have in spades.
+
+		+section
+			p But wait, there's more
+			+section-title({title: "Image optimisation"})
+			p Pre-formatting images in varying sizes and coding the website to use only the smallest image size necessary at for screen size being used. This means someone on a mobile device should only have to load an image meant for a small screen, instead of a much larger image that would be good on a big 32” 4k computer monitor. Loading that larger image instead doesn't just slow down the website, but if you're out in the wild on mobile data, wowee that's going to eat through your phone credit. At the end of the day it's just wasted energy. Let's save some energy here, hey?
+
+			p You can read more about the why and how of what we do for image optimisation here in this article
+
+			p Using appropriate naming for the image itself as well as accurate and informative alternative texts on all images. These two steps improves the site experience for people using screen reading technology, as well as improving search results standing.
+
+		+section
+			+section-title({title: "Fonts"})
+			p We basically don't use fonts which aren't already on the user's device. There may be some small exceptions here and there, but the rule here is if it can be done without loading a whole font file, then that's the way we go. Using a fancy font can slow down the loading of the website. It either has to load early on and stops the rest of the site loading while it does, or it's one of the reasons a page might jump while loading, as it switches fonts part way through the load.
+
+			p Not all fonts should be on the web. We've all been to websites where the font may be pretty but it's too thing or too decorative to read easily. We want none of that. That's why we focus on getting the most appealing design using very basic fonts.
+
+		+section
+			+section-title({title: "Analytics"})
+			p As important as some analytics are most businesses really don't need much more than knowing how many people are visiting and from where. Unfortunately most analytics systems are greedy for more information, even if you don't need it. These scripts are some of the biggest reasons web sites these days are so dang slow.
+
+			p Because of this we aim to use a very lightweight analytics system which only obtains small amount of data; just the amount a normal business would need. We're constantly on the look out to improve our options in this area, and especially to help our client comply with laws such as GDPR.
+
+		+section
+			+section-title({title: "Wrap up"})
+			p These are just some of the reasons why we do what we do, and some of the processes that help us along the way. Our aim is to help our clients by building beautiful, fast, sleek websites usable to all. Less bulk
+
+			p Honestly, we could go on. And we will, in a future post. For now it's time to get back to building these super fast, amazing sites for our customers. If you'd like to get in touch to book one of these site builds for yourself, drop us a line through our contact form.
+
+			p Til next time,
+
+			p Amelia

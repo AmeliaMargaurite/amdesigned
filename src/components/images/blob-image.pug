@@ -1,0 +1,6 @@
+include ../../components/images/image-size-fraction
+
+mixin blob-image({path=undefined, alt=undefined, fraction= undefined, fractions= undefined}, figcaption=undefined)
+	span.blob-image__wrapper&attributes(attributes)
+		span.blob
+		+image-size-fraction({path: path, alt: alt, fractions: fractions, fraction: fraction, figcaption: figcaption}).image

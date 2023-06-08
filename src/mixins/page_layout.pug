@@ -10,6 +10,7 @@ doctype html
 
 - var companyName = "A&#8203;M&#8203;Designed";
 - var base_url = "https://www.amdesigned.com.au/";
+- var addSpaces = (text) => text.split("").join("&#8203;");
 
 html(lang="en")
 	head
@@ -153,9 +154,11 @@ html(lang="en")
 
 		+page_header(title)
 		main#main(class!=pageClass ? pageClass : title.toLowerCase().split(' ').join('-'))
+			block pre
 			block content
 
 		+business-schema-json
 
 		+scroll-to-top
 		+page_footer(title)
+		block footerScripts

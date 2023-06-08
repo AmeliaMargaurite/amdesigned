@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Approach | A&#8203;M&#8203;Designed</title>
+    <meta name="description" content="How we do what we do" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://www.amdesigned.com.au/articles/our-approach" />
+    <meta property="og:title" content="Our Approach | A&#8203;M&#8203;Designed" />
+    <meta property="og:description" content="How we do what we do" />
+    <meta property="og:image"
+      content="/assets/img/sustainable-web-design-approach-business-websites.5bf03d71f62cf630.jpg" />
+    <meta property="og:image:alt" content="" />
+    <meta name="twitter:title" content="Our Approach | A&#8203;M&#8203;Designed" />
+    <meta name="twitter:description" content="How we do what we do" />
+    <meta name="twitter:image"
+      content="/assets/img/sustainable-web-design-approach-business-websites.5bf03d71f62cf630.jpg" />
+    <script src="/js/runtime.6215ad7d9669b3713aae.js"> </script><script src="/js/common.6dfe874d4eed07968fc9.js"> </script>
+    <link href="/css/main.4e5e74f547015abafd36c0839d2543d2.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.478ba290519eb28e.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.7445bebac609ad72.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.cf989685129b62c1.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.fb29bbf81ec57714.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.f68b7860c31a0afb.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+            (e._i = []),
+            (e.init = function (i, s, a) {
+              function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                  (t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                  });
+              }
+              ((p = t.createElement("script")).type = "text/javascript"), (p.async = !0), (p.src = s.api_host +
+                "/static/array.js"), (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+              var u = e;
+              for (
+                void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags"
+                .split(" "),
+                n = 0; n < o.length; n++
+              )
+                g(u, o[n]);
+              e._i.push([i, s, a]);
+            }),
+            (e.__SV = 1));
+      })(document, window.posthog || []);
+      const getUserId = () => {
+        let user_id;
+        if (window.localStorage.getItem("user_id")) {
+          user_id = JSON.parse(window.localStorage.getItem("user_id"));
+        } else {
+          user_id = Date.now();
+          window.localStorage.setItem("user_id", user_id);
+        }
+        return [user_id];
+      };
+      posthog.init("phc_IECNjEcCsaDAmsFD1y49ormP3Xj7Fzh6aHCqYWd6pNE", {
+        api_host: "https://eu.posthog.com",
+        loaded: (posthog) => {
+          posthog.identify(getUserId());
+          const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get("__posthog");
+          if (toolbarJSON) {
+            posthog.loadToolbar(JSON.parse(toolbarJSON));
+          }
+        },
+        persistence: "memory",
+      });
+    </script>
+  </head>
+  <body class="article"><span class="loading__wrapper" id="loading__wrapper"><span
+        class="loader">Loading...</span></span>
+    <header class="chevron-down" id="header"><a class="skip-to-content-link" href="#main">Skip to content</a><a
+        class="logo" href="/">
+        <p class="company-name">A&#8203;M&#8203;Designed</p>
+        <p class="tagline">We make and manage customer converting business websites</p>
+      </a><button class="menu__button" id="hamburger" onclick="toggleMenu()" tabindex="0" aria-controls="main-menu"
+        aria-label="Open the menu"><span aria-hidden="true" focusable="false"></span><span aria-hidden="true"
+          focusable="false"></span><span aria-hidden="true" focusable="false"></span></button>
+      <nav id="main-menu" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="/" onclick="closeMenu()">home</a></li>
+          <li><a href="/quote" onclick="closeMenu()">quote</a></li>
+          <li><a href="/contact/" onclick="closeMenu()">contact</a></li>
+          <li><a href="/showcase/" onclick="closeMenu()">showcase</a></li>
+          <li><a href="/articles/" onclick="closeMenu()">articles</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="article" id="main">
+      <div class="article__header">
+        <h1>Our Approach</h1>
+        <date>8th March 2023</date><span class="blob-image__wrapper hero_img"><span class="blob"></span><span
+            class="image-w-placeholder image"><img class="placeholder-image"
+              src="/assets/img/sustainable-web-design-approach-business-websites.7de6042ef7891fb7.jpg" alt=""
+              aria-hidden="true">
+            <figure>
+              <picture>
+                <source
+                  srcset="/assets/img/sustainable-web-design-approach-business-websites.6ef520ea6f0d1722.webp 319w,/assets/img/sustainable-web-design-approach-business-websites.6f1be09f1f3a0e1c.webp 376w,/assets/img/sustainable-web-design-approach-business-websites.bc8a3cb510b3697d.webp 432w,/assets/img/sustainable-web-design-approach-business-websites.c09f6726e55c8291.webp 512w,/assets/img/sustainable-web-design-approach-business-websites.80f115d93888aa54.webp 576w,/assets/img/sustainable-web-design-approach-business-websites.b6bdf6387e72d221.webp 675w,/assets/img/sustainable-web-design-approach-business-websites.f6f4c214b19d8e93.webp 768w"
+                  sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 900px) 675px, (max-width: 1024px) 512px, (max-width: 1440px) 432px,  768px"
+                  type="image/webp"><img
+                  src="/assets/img/sustainable-web-design-approach-business-websites.765050fe3f1b1c1d.jpg" alt=""
+                  srcset="/assets/img/sustainable-web-design-approach-business-websites.e8faa31cf635aab9.jpg 319w, /assets/img/sustainable-web-design-approach-business-websites.db7309cefba97cec.jpg 376w, /assets/img/sustainable-web-design-approach-business-websites.9089ed592a087729.jpg 432w, /assets/img/sustainable-web-design-approach-business-websites.8adc0cd41ef7925d.jpg 512w, /assets/img/sustainable-web-design-approach-business-websites.1aa14a33791fd35f.jpg 576w, /assets/img/sustainable-web-design-approach-business-websites.39567018f2535cc4.jpg 675w, /assets/img/sustainable-web-design-approach-business-websites.0b876504a19352b2.jpg 768w"
+                  sizes="(max-width: 425px) 319px, (max-width: 501px) 376px, (max-width: 768px) 576px, (max-width: 900px) 675px, (max-width: 1024px) 512px, (max-width: 1440px) 432px,  768px"
+                  height="100%" width="425" max-width="100%">
+              </picture>
+            </figure>
+          </span></span>
+      </div>
+        <aside class="article-content-list fly-out-tab" id="content-list" aria-label="article-content__btn"
+          aria-expanded="false"><button class="fly-out-tab__btn" id="article-content__btn" onclick="toggleContentList()"
+            aria-controls="content-list">In this article:</button>
+          <ul class="wrapper">
+            <li><a href="#motivation">Motivation</a></li>
+            <li><a href="#what-we-dont-do">What we don't do</a></li>
+            <li><a href="#what-we-do-instead">What we do instead</a></li>
+            <li><a href="#image-optimisation">Image optimisation</a></li>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#wrap-up">Wrap up</a></li>
+          </ul>
+        </aside>
+      
+      <section>
+        <div class="section__content">
+          <h3 class="section-title" id="motivation">Motivation<button class="icon-only__btn"
+              onclick="copyLink(window.event, &quot;#motivation&quot;)" aria-label="Copy url to this title"><span
+                class="icon anchor copyable"></span></button></h3>
+          <p>Over the years we've noticed websites loading slower and slower. Every day brings a new popup you need to
+            close and conditions you need to acknowledge before you can even start to scroll. There are the pages which
+            appear to have finished loading, only for everything on screen to suddenly jump as it continues loading.
+            Ever tried to click a link in this time and manage to click a completely different link?</p>
+          <p>These are major pain points for internet users. Web developers seem to have forgotten that not everyone has
+            the very latest smart phone, laptop etc nor are they all on the best internet connection in the world. Yet
+            this is how these websites are built.</p>
+          <p>AMDesigned are different.</p>
+          <p>Our focus is to make great, fast, user-friendly websites that are a pleasure to visit. We hate slow, bulky
+            websites like the rest of them, and thankfully, we have the ability to make a change.</p>
+        </div>
+      </section>
+      <section>
+        <div class="section__content">
+          <h3 class="section-title" id="what-we-dont-do">What we don't do<button class="icon-only__btn"
+              onclick="copyLink(window.event, &quot;#what-we-dont-do&quot;)" aria-label="Copy url to this title"><span
+                class="icon anchor copyable"></span></button></h3>
+          <p>This change starts right at the beginning with our choice of what we build our sites with. We steer clear
+            of big systems such as Wordpress, Wix, and Shopify. These are great options if the website owner is very DIY
+            and hands on, however without a lot of extra work they tend to be much slower to load. A lot of
+            optimisations, improving SEO (Search Engine Optimisation) and Accessibility factors require the use of extra
+            plugins and custom code which all add to slowing down the site, and in some cases making the site more
+            vulnerable to hackers.</p>
+          <p>There has also been an increase in developers building websites as ‘apps'. These are actually called Single
+            Page Applications (SPA), and they use a Javascript</p>
+        </div>
+      </section>
+      <section>
+        <div class="section__content">
+          <h3 class="section-title" id="what-we-do-instead">What we do instead<button class="icon-only__btn"
+              onclick="copyLink(window.event, &quot;#what-we-do-instead&quot;)"
+              aria-label="Copy url to this title"><span class="icon anchor copyable"></span></button></h3>
+          <p>There are often multiple ways of achieving the same outcome, and our rule of thumb is to do it in the least
+            resource-intensive way for the user. As an example, that might mean if we need the website to sort some
+            data, we tell the websites server to do it. An alternative to this might be the make the users device do
+            this hard work, but our devices, mobile phones especially, just aren't made to do these things. So, we end
+            up with drained batteries and slow phones, and in some cases higher data usage bills.</p>
+          <p>Another benefit of the way we build our websites is that SEO and Accessibility are a focus right from the
+            start. We want all visitors to our websites to be able to use them as easily as possible. And while how this
+            is achieved is constantly changing and improving, Accessibility especially, we work to stay up to date and
+            improve our processes regularly. Not only does this focus give users a much better experience, it can also
+            improve the websites standing in search results. It has been known for a long time that search engines,
+            Google in particular, favour sites which are easy to use and quick to load. And that we have in spades.</p>
+        </div>
+      </section>
+      <section>
+        <div class="section__content">
+          <p>But wait, there's more</p>
+          <h3 class="section-title" id="image-optimisation">Image optimisation<button class="icon-only__btn"
+              onclick="copyLink(window.event, &quot;#image-optimisation&quot;)"
+              aria-label="Copy url to this title"><span class="icon anchor copyable"></span></button></h3>
+          <p>Pre-formatting images in varying sizes and coding the website to use only the smallest image size necessary
+            at for screen size being used. This means someone on a mobile device should only have to load an image meant
+            for a small screen, instead of a much larger image that would be good on a big 32” 4k computer monitor.
+            Loading that larger image instead doesn't just slow down the website, but if you're out in the wild on
+            mobile data, wowee that's going to eat through your phone credit. At the end of the day it's just wasted
+            energy. Let's save some energy here, hey?</p>
+          <p>You can read more about the why and how of what we do for image optimisation here in this article</p>
+          <p>Using appropriate naming for the image itself as well as accurate and informative alternative texts on all
+            images. These two steps improves the site experience for people using screen reading technology, as well as
+            improving search results standing.</p>
+        </div>
+      </section>
+      <section>
+        <div class="section__content">
+          <h3 class="section-title" id="fonts">Fonts<button class="icon-only__btn"
+              onclick="copyLink(window.event, &quot;#fonts&quot;)" aria-label="Copy url to this title"><span
+                class="icon anchor copyable"></span></button></h3>
+          <p>We basically don't use fonts which aren't already on the user's device. There may be some small exceptions
+            here and there, but the rule here is if it can be done without loading a whole font file, then that's the
+            way we go. Using a fancy font can slow down the loading of the website. It either has to load early on and
+            stops the rest of the site loading while it does, or it's one of the reasons a page might jump while
+            loading, as it switches fonts part way through the load.</p>
+          <p>Not all fonts should be on the web. We've all been to websites where the font may be pretty but it's too
+            thing or too decorative to read easily. We want none of that. That's why we focus on getting the most
+            appealing design using very basic fonts.</p>
+        </div>
+      </section>
+      <section>
+        <div class="section__content">
+          <h3 class="section-title" id="analytics">Analytics<button class="icon-only__btn"
+              onclick="copyLink(window.event, &quot;#analytics&quot;)" aria-label="Copy url to this title"><span
+                class="icon anchor copyable"></span></button></h3>
+          <p>As important as some analytics are most businesses really don't need much more than knowing how many people
+            are visiting and from where. Unfortunately most analytics systems are greedy for more information, even if
+            you don't need it. These scripts are some of the biggest reasons web sites these days are so dang slow.</p>
+          <p>Because of this we aim to use a very lightweight analytics system which only obtains small amount of data;
+            just the amount a normal business would need. We're constantly on the look out to improve our options in
+            this area, and especially to help our client comply with laws such as GDPR.</p>
+        </div>
+      </section>
+      <section>
+        <div class="section__content">
+          <h3 class="section-title" id="wrap-up">Wrap up<button class="icon-only__btn"
+              onclick="copyLink(window.event, &quot;#wrap-up&quot;)" aria-label="Copy url to this title"><span
+                class="icon anchor copyable"></span></button></h3>
+          <p>These are just some of the reasons why we do what we do, and some of the processes that help us along the
+            way. Our aim is to help our clients by building beautiful, fast, sleek websites usable to all. Less bulk</p>
+          <p>Honestly, we could go on. And we will, in a future post. For now it's time to get back to building these
+            super fast, amazing sites for our customers. If you'd like to get in touch to book one of these site builds
+            for yourself, drop us a line through our contact form.</p>
+          <p>Til next time,</p>
+          <p>Amelia</p>
+        </div>
+      </section>
+      
+      <section class="share-bar">
+        <div class="share-bar__wrapper">
+          <p>Sharing is caring</p>
+          <ul>
+            <li><a class="item" title="Facebook - Share this article"
+                href="https://www.facebook.com/sharer/sharer.php?u=https://www.amdesigned.com.au/articles/our-approach "><span
+                  class="icon facebook"></span></a></li>
+            <li><a class="item" title="LinkedIn - Share this article"
+                href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.amdesigned.com.au/articles/our-approach&amp;title=Our Approach&amp;summary=How we do what we do&amp;source=A&amp;#8203;M&amp;#8203;Designed "><span
+                  class="icon linkedin"></span></a></li>
+            <li><a class="item" title="Mastadon - Share this article" href=" "><span class="icon mastadon"></span></a>
+            </li>
+            <li><a class="item" title="Reddit - Share this article"
+                href="https://www.reddit.com/submit?url=https://www.amdesigned.com.au/articles/our-approach&amp;title=Our Approach"><span
+                  class="icon reddit"></span></a></li>
+            <li><a class="item" title="WhatsApp - Share this article"
+                href="https://api.whatsapp.com/send?text=Our Approach https://www.amdesigned.com.au/articles/our-approach "><span
+                  class="icon whatsapp"></span></a></li>
+            <li><a class="item" title="Email - Share this article"
+                href="mailto:?subject=Our Approach&amp;body=%body%%0Ahttps://www.amdesigned.com.au/articles/our-approach"><span
+                  class="icon envelope"></span></a></li>
+          </ul>
+        </div>
+      </section>
+      <script src="/js/article.45783cc82a4a567560b9.js"></script>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baarn, The Netherlands",
+          "postalCode": "3743BR",
+          "streetAddress": "Nieuw Baarnstraat"
+        },
+        "email": "hello(at)amdesigned.com.au",
+        "name": "AMDesigned",
+        "currenciesAccepted": "AUD, EUR, USD",
+        "url": "https://amdesigned.com.au",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "hello(at)amdesigned.com.au",
+          "contactType": "customer service"
+        }]
+      }
+    </script><a class="scroll-to-top" id="scroll-to-top"
+      title="Scrolls to top of page and focuses on the header element" onclick="scrollToTop()" tabindex="0"
+      href="#header"><span class="icon arrow up"></span>Back to Top</a>
+    <footer>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/quote">quote</a></li>
+        <li><a href="/contact/">contact</a></li>
+        <li><a href="/showcase/">showcase</a></li>
+        <li><a href="/articles/">articles</a></li>
+      </ul>
+      <ul>
+        <li> <a href="/terms-and-conditions">Terms and conditions</a></li>
+        <li> <a href="/privacy-policy">Privacy policy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
