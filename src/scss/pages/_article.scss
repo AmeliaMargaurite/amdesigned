@@ -119,7 +119,7 @@ body.article {
 		}
 	}
 
-	section::before {
+	section::before:not(.share-bar) {
 		position: absolute;
 		content: "";
 		inset: 0;

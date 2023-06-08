@@ -31,17 +31,18 @@ const showOnlyTagged = (event: MouseEvent) => {
 		event.target instanceof HTMLButtonElement &&
 		event.target.classList.contains("tag")
 	) {
-		const id = event.target.id;
-
-		const articles = document.querySelectorAll(
-			"article.article"
-		) as NodeListOf<HTMLElement>;
-		articles.forEach((el) =>
-			el.classList.contains(id)
-				? el.classList.remove("hidden")
-				: el.classList.add("hidden")
-		);
-		toggleTagsAside();
+		const { tag } = event.target.dataset;
+		if (tag) {
+			const articles = document.querySelectorAll(
+				"article.article"
+			) as NodeListOf<HTMLElement>;
+			articles.forEach((el) =>
+				el.classList.contains(tag)
+					? el.classList.remove("hidden")
+					: el.classList.add("hidden")
+			);
+			toggleTagsAside();
+		}
 	}
 };
 

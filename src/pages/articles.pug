@@ -20,7 +20,7 @@ block content
 			.tags__wrapper.wrapper
 				each num, tag in tags 
 					button.tag(
-						id=tag.split(" ").join("-"),
+						data-tag=tag.split(" ").join("-"),
 						style={ width: `calc(var(--width) + ${(num / totalTags) * 100}%)`, "--num": (num / totalTags) * 180 }
 					) #{ tag } (#{ num })
 	section
@@ -31,14 +31,14 @@ block content
 			p At A&#8203;M&#8203;Designed we're passionate about what we do, and we like to talk about it. Here we'll share with you our thoughts on a number of topics, mostly centred around
 				|
 				|
-				button.tag(id=keys[0].split(" ").join("-")) #{ keys[0] }
+				button.tag(data-tag=keys[0].split(" ").join("-")) #{ keys[0] }
 				| ,
 				|
-				button.tag(id=keys[1].split(" ").join("-")) #{ keys[1] }
+				button.tag(data-tag=keys[1].split(" ").join("-")) #{ keys[1] }
 				|
 				| and
 				|
-				button.tag(id=keys[2].split(" ").join("-")) #{ keys[2] }
+				button.tag(data-tag=keys[2].split(" ").join("-")) #{ keys[2] }
 				| , and their impact within website development.
 
 			.articles__wrapper
