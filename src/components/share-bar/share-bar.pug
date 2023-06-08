@@ -16,8 +16,8 @@ mixin share-bar({url, title, summary, source})
 				)
 					span.icon.linkedin
 				//- Mastadon -- Needs more formatting
-				li: a.item(title="Mastadon - Share this article", href=" ")
-					span.icon.mastadon
+				//- li: a.item(title="Mastadon - Share this article", href=" ")
+				//- 	span.icon.mastadon
 
 				//- Reddit
 				li: a.item(
@@ -33,8 +33,9 @@ mixin share-bar({url, title, summary, source})
 					span.icon.whatsapp
 
 				//- Email -- Needs more formatting
+				- var text = `Check out this awesome article by AMDesigned titled ${title}: ${url}`;
 				li: a.item(
 					title="Email - Share this article",
-					href=`mailto:?subject=${title}&body=%body%%0A${url}`
+					href=`mailto:?subject=${title}&body=${text.replace(' ', '%20')}`
 				)
 					span.icon.envelope
