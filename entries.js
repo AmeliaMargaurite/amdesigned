@@ -2,7 +2,7 @@ const glob = require("glob");
 const path = require("path");
 const fs = require("fs");
 
-const url = "https://www.amdesigned.com.au/";
+const url = "https://www.amdesigned.nl/";
 
 const entries = (folders = null, isProduction = false) => {
 	const entries = {
@@ -19,8 +19,15 @@ const entries = (folders = null, isProduction = false) => {
 	// const regex = /\.\/src\/pages\/(.*).*/;
 	const regex = /\.\/src\/pages\/(.*?)\./;
 
-	const urlList = Object.keys(entries).map(
-		(entry) => url + entries[entry].match(regex)[1] + "/"
+	const ignore = [
+		"termsConditions",
+		"privacyPolicy",
+		"notFound404",
+		"index",
+		"confirmation",
+	];
+	const urlList = Object.keys(entries).map((entry) =>
+		ignore.includes(entry) ? null : url + entries[entry].match(regex)[1] + "/"
 	);
 
 	if (folders) {
@@ -40,9 +47,8 @@ const entries = (folders = null, isProduction = false) => {
 	}
 
 	if (isProduction) {
-		// create robots file if mode=production
-		console.log(__dirname + "\\dist\\");
-		const text = urlList.join("\n");
+		urlList.unshift(url);
+		const text = urlList.filter((url) => url).join("\n");
 		const file = __dirname + "\\dist\\sitemap.txt";
 		fs.writeFile(file, text, (err) => console.error(err));
 	}
