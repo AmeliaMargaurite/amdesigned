@@ -2,7 +2,7 @@ const glob = require("glob");
 const path = require("path");
 const fs = require("fs");
 
-const url = "https://www.amdesigned.nl/";
+const url = "https://www.amdesigned.com.au/";
 
 const entries = (folders = null, isProduction = false) => {
 	const entries = {
