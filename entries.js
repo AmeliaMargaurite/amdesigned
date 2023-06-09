@@ -49,7 +49,7 @@ const entries = (folders = null, isProduction = false) => {
 	if (isProduction) {
 		urlList.unshift(url);
 		const text = urlList.filter((url) => url).join("\n");
-		const file = __dirname + "\\src\\root-files\\sitemap.txt";
+		const file = __dirname + "\\dist\\sitemap.txt";
 		fs.writeFile(file, text, (err) => console.error(err));
 	}
 	return entries;
