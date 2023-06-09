@@ -44,9 +44,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, "dist/"),
 		publicPath: "/",
-		clean: {
-			keep: /sitemap.txt/,
-		},
+		clean: true,
 	},
 	resolve: {
 		alias: {

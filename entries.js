@@ -2,7 +2,7 @@ const glob = require("glob");
 const path = require("path");
 const fs = require("fs");
 
-const url = "https://www.amdesigned.nl/";
+const url = "https://www.amdesigned.com.au/";
 
 const entries = (folders = null, isProduction = false) => {
 	const entries = {
@@ -49,7 +49,7 @@ const entries = (folders = null, isProduction = false) => {
 	if (isProduction) {
 		urlList.unshift(url);
 		const text = urlList.filter((url) => url).join("\n");
-		const file = __dirname + "\\dist\\sitemap.txt";
+		const file = __dirname + "\\src\\root-files\\sitemap.txt";
 		fs.writeFile(file, text, (err) => console.error(err));
 	}
 	return entries;
