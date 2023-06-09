@@ -40,40 +40,7 @@ const alterPugFolderStructure = (pathData) => {
 	return nestedDir ? `${nestedDir}/${name}/index.html` : `${name}/index.html`;
 };
 
-const buildEntries = (folders = null) => {
-	const entries = {
-		index: "./src/pages/index.pug",
-		notFound404: "./src/pages/notFound404.pug",
-		contact: "./src/pages/contact.php.pug",
-		confirmation: "./src/pages/confirmation.pug",
-		showcase: "./src/pages/showcase.pug",
-		termsConditions: "./src/pages/terms-and-conditions.pug",
-		privacyPolicy: "./src/pages/privacy-policy.pug",
-		articles: "./src/pages/articles.pug",
-		// article: "./src/pages/article.php.pug",
-		quote: "./src/pages/quote.php.pug",
-	};
-
-	if (folders) {
-		folders.forEach((folder) => {
-			const files = glob.sync(`./src/pages/${folder}/**.pug`);
-			console.log(files);
-			if (files.length > 0) {
-				files.forEach((filename) => {
-					const file = path.parse(filename);
-
-					entries[file.name] = filename;
-				});
-			}
-		});
-	}
-
-	return entries;
-};
-
 module.exports = {
-	entry: buildEntries(["showcase", "articles"]),
-
 	output: {
 		path: path.join(__dirname, "dist/"),
 		publicPath: "/",
