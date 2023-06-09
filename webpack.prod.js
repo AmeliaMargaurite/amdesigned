@@ -15,6 +15,10 @@ module.exports = merge(common, {
 					from: path.join(__dirname, "robots.txt"),
 					to: path.join(__dirname, "dist"),
 				},
+				{
+					from: path.join(__dirname, "sitemap.txt"),
+					to: path.join(__dirname, "dist"),
+				},
 			],
 		}),
 	],
