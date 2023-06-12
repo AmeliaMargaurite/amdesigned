@@ -1,13 +1,5 @@
 .cta-home .section__content {
-	// --background: hsl(var(--main-background-color));
 	display: grid;
-	// background: linear-gradient(
-	// 	115deg,
-	// 	transparent,
-	// 	transparent,
-	// 	var(--background)
-	// );
-
 	border-radius: 4rem;
 	padding: 0;
 
@@ -23,7 +15,7 @@
 			line-height: 1.33;
 
 			.highlight {
-				color: hsl(var(--base), 42%, 0.9);
+				color: hsl(var(--base), 35%, 0.9);
 			}
 
 			.stripe {
