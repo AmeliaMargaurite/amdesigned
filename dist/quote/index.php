@@ -217,7 +217,7 @@
               src="/js/a11y_date_input.030ee332f63fdfe9d29f.js">
             </script><label class="currency_input countable-label" for="budget">
               <p>What is your estimated available budget for this website project?</p>
-              <div class="input"><span aria-ignore="true">$</span><input class="no_styling" type="number" name="budget"
+              <div class="input"><span aria-hidden="true">$</span><input class="no_styling" type="number" name="budget"
                   id="budget" aria-required="false" value="<?= $inputs['budget'] ?? null ?>"></div>
               <p class="warning"></p>
             </label>
@@ -325,28 +325,28 @@
                   aria-checked="false"
                   <?= isset($inputs['client_ages']['client_ages_kids_teens']) ? 'checked' : null ?>="<?= isset($inputs['client_ages']['client_ages_kids_teens']) ? 'checked' : null ?>">
               </label><label class="checkbox" for="client_ages_twenties">
-                <p class="label" data-required="">In their <span aria-hidden="tru">20's</span><span
+                <p class="label" data-required="">In their <span aria-hidden="true">20's</span><span
                     class="sr-only">twenties</span></p><input type="checkbox" id="client_ages_twenties"
                   value="client_ages_twenties" name="client_ages[]" aria-required="false"
                   onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
                   aria-checked="false"
                   <?= isset($inputs['client_ages']['client_ages_twenties']) ? 'checked' : null ?>="<?= isset($inputs['client_ages']['client_ages_twenties']) ? 'checked' : null ?>">
               </label><label class="checkbox" for="client_ages_thirties">
-                <p class="label" data-required="">In their <span aria-hidden="tru">30's</span><span
+                <p class="label" data-required="">In their <span aria-hidden="true">30's</span><span
                     class="sr-only">thirties</span></p><input type="checkbox" id="client_ages_thirties"
                   value="client_ages_thirties" name="client_ages[]" aria-required="false"
                   onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
                   aria-checked="false"
                   <?= isset($inputs['client_ages']['client_ages_thirties']) ? 'checked' : null ?>="<?= isset($inputs['client_ages']['client_ages_thirties']) ? 'checked' : null ?>">
               </label><label class="checkbox" for="client_ages_forties">
-                <p class="label" data-required="">In their <span aria-hidden="tru">40's</span><span
+                <p class="label" data-required="">In their <span aria-hidden="true">40's</span><span
                     class="sr-only">forties</span></p><input type="checkbox" id="client_ages_forties"
                   value="client_ages_forties" name="client_ages[]" aria-required="false"
                   onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
                   aria-checked="false"
                   <?= isset($inputs['client_ages']['client_ages_forties']) ? 'checked' : null ?>="<?= isset($inputs['client_ages']['client_ages_forties']) ? 'checked' : null ?>">
               </label><label class="checkbox" for="client_ages_fifties">
-                <p class="label" data-required="">In their <span aria-hidden="tru">50's</span><span
+                <p class="label" data-required="">In their <span aria-hidden="true">50's</span><span
                     class="sr-only">fifties</span></p><input type="checkbox" id="client_ages_fifties"
                   value="client_ages_fifties" name="client_ages[]" aria-required="false"
                   onchange="this.checked ? this.setAttribute('aria-checked', 'true') : this.setAttribute('aria-checked', 'false')"
