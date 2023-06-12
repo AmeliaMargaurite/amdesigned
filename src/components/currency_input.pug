@@ -5,7 +5,7 @@ mixin currency_input({name, label, required=false})
 			p.disclaimer: block
 
 		.input
-			span(aria-ignore="true") $
+			span(aria-hidden="true") $
 			input.no_styling(
 				type="number",
 				name=name,
